@@ -11,7 +11,7 @@ import { useLanguage } from '@/contexts/language-context';
 export function Hero() {
   const { t } = useLanguage();
   return (
-    <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16 text-center">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-16 pb-40 text-center">
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
       </div>
@@ -54,6 +54,16 @@ export function Hero() {
           </Link>
         </div>
       </Container>
+
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center gap-2 text-slate-400">
+          <span className="text-xs uppercase tracking-widest opacity-50">
+            Scroll
+          </span>
+          <Icons.Mouse className="h-6 w-6" />
+          <Icons.ChevronDown className="h-4 w-4" />
+        </div>
+      </div>
     </section>
   );
 }
