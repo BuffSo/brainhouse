@@ -424,8 +424,9 @@ export const translations = {
             'We maximize the value of your technology and establish roadmaps to proactively respond to future trends.',
           details: [
             'Tech valuation and commercialization strategy',
-            'ICT-based new service planning consulting',
-            'Government R&D proposal support',
+            'Platform service planning and Business Model (BM) design',
+            'ICT-based new service/product planning consulting',
+            'Government R&D program planning and proposal support',
             'Mid-to-long term Technology Roadmap (TRM)',
           ],
         },
@@ -435,9 +436,10 @@ export const translations = {
             'We diagnose internal capabilities and design optimal business models for sustainable growth.',
           details: [
             'ICT policy research and market analysis',
-            'Corporate diagnosis and innovation strategy',
+            'ICT convergence service demonstration and commercialization',
+            'Corporate capability diagnosis and innovation strategy',
             'Entrepreneurship education and internal venture fostering',
-            'Startup BM refinement and mentoring',
+            'Startup Business Model (BM) refinement and mentoring',
           ],
         },
         {
