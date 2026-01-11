@@ -5,6 +5,7 @@ export const translations = {
     header: {
       about: '회사 소개',
       business: '사업 영역',
+      services: '서비스',
       portfolio: '포트폴리오',
       contact: '문의하기',
       getStarted: '상담 문의',
@@ -93,6 +94,41 @@ export const translations = {
             '메타버스/블록체인 기반 신사업 발굴 컨설팅',
             '디지털 콘텐츠 서비스화 전략 수립',
             'ICT 융합 서비스 실증 및 상용화 지원',
+          ],
+        },
+      ],
+    },
+    ourServices: {
+      title: 'Our Services',
+      subtitle: 'ICT 전문 서비스',
+      description: '브레인하우스만의 차별화된 3가지 핵심 서비스를 소개합니다.',
+      items: [
+        {
+          title: 'ICT 전략·정책컨설팅',
+          description:
+            '기업과 공공의 미래 경쟁력을 확보하기 위한 최적의 ICT 전략과 정책을 수립합니다.',
+          steps: ['환경 분석', '역량 진단', '전략 수립', '실행 계획'],
+        },
+        {
+          title: 'ICT 융합 기술 컨설팅',
+          description:
+            '4차 산업혁명 핵심 기술(메타버스, 블록체인, AI)을 비즈니스에 접목하여 새로운 가치를 창출합니다.',
+          details: [
+            '플랫폼 서비스 기획 및 비즈니스 모델(BM) 설계',
+            '메타버스/블록체인 기반 신사업 발굴 컨설팅',
+            '디지털 콘텐츠 서비스화 전략 수립',
+            'ICT 융합 서비스 실증 및 상용화 지원',
+          ],
+        },
+        {
+          title: '창업지원사업 One-Stop Total 서비스',
+          description:
+            '스타트업의 시작부터 성장(Scale-up), 투자 유치까지 전 주기를 밀착 지원하는 통합 솔루션입니다.',
+          details: [
+            '정부 R&D/창업지원사업 기획 및 제안서 작성 지원',
+            '스타트업 비즈니스 모델(BM) 고도화 및 멘토링',
+            '투자 유치 전략(IR) 수립 및 기업 가치 평가(Valuation)',
+            'VC/AC 네트워크 연계 및 자금 조달 자문',
           ],
         },
       ],
@@ -198,6 +234,7 @@ export const translations = {
     header: {
       about: 'About',
       business: 'Business',
+      services: 'Services',
       portfolio: 'Portfolio',
       contact: 'Contact',
       getStarted: 'Get Started',
@@ -286,6 +323,47 @@ export const translations = {
             'Metaverse/Blockchain business discovery',
             'Digital content servitization strategy',
             'ICT convergence service demonstration support',
+          ],
+        },
+      ],
+    },
+    ourServices: {
+      title: 'Our Services',
+      subtitle: 'ICT Professional Services',
+      description:
+        'Introducing 3 specialized key services unique to Brain House.',
+      items: [
+        {
+          title: 'ICT Strategy & Policy Consulting',
+          description:
+            'We establish optimal ICT strategies and policies to secure future competitiveness for companies and public sectors.',
+          steps: [
+            'Environment Analysis',
+            'Competency Diagnosis',
+            'Strategy Establishment',
+            'Action Plan',
+          ],
+        },
+        {
+          title: 'ICT Convergence Technology Consulting',
+          description:
+            'We create new value by applying core 4IR technologies (Metaverse, Blockchain, AI) to business.',
+          details: [
+            'Platform service planning and BM design',
+            'Metaverse/Blockchain business discovery',
+            'Digital content servitization strategy',
+            'ICT convergence service demonstration support',
+          ],
+        },
+        {
+          title: 'Startup Support One-Stop Total Service',
+          description:
+            'An integrated solution that closely supports the entire lifecycle of startups from inception to scale-up and investment.',
+          details: [
+            'Government R&D/Startup support program planning & proposal',
+            'Startup BM refinement and mentoring',
+            'Investment strategy (IR) & Valuation',
+            'VC/AC networking and fundraising advisory',
           ],
         },
       ],

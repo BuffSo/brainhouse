@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, RootState } from '@react-three/fiber';
 import * as THREE from 'three';
 
 export function Network({
@@ -29,7 +29,7 @@ export function Network({
 
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
-  useFrame((state) => {
+  useFrame((state: RootState) => {
     if (!mesh.current) return;
 
     // Rotate the whole group slowly
@@ -118,7 +118,7 @@ export function BrainNetwork({
     return temp;
   }, []);
 
-  useFrame((state) => {
+  useFrame((state: RootState) => {
     if (!mesh.current) return;
 
     // Global rotation

@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Icons } from '@/components/ui/icons';
 
 import { cn } from '@/lib/utils';
@@ -17,6 +18,7 @@ export function Header() {
   const navigation = [
     { name: t.header.about, href: '#about' },
     { name: t.header.business, href: '#business' },
+    { name: t.header.services, href: '#services' },
     { name: t.header.portfolio, href: '#portfolio' },
     { name: t.header.contact, href: '#contact' },
   ];
@@ -26,7 +28,15 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="relative h-6 w-6 overflow-hidden">
+                <Image
+                  src="/images/logo.png"
+                  alt="Brain House Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <span className="text-xl font-bold tracking-tight text-primary">
                 Brain House
               </span>
