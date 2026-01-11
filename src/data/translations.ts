@@ -121,7 +121,7 @@ export const translations = {
       title: 'Our Services',
       subtitle: 'Guru형 전문 컨설팅',
       description:
-        '10년 이상 경력의 시니어 전문가가 직접 수행하는 차별화된 서비스를 제공합니다.',
+        '각 분야 전문가가 직접 수행하는 Guru형 컨설팅으로 차별화된 서비스를 제공합니다.',
       items: [
         {
           title: 'ICT 전략·정책 컨설팅',
@@ -165,77 +165,131 @@ export const translations = {
       ],
     },
     portfolio: {
-      title: 'Portfolio & Track Record',
+      title: 'Portfolio',
       description:
-        '브레인하우스는 다양한 산업 분야에서 성공적인 레퍼런스를 만들어가고 있습니다.',
-      projects: [
+        '브레인하우스는 공공기관·기업의 ICT 전략 수립부터 스타트업의 서비스 개발까지 다양한 프로젝트를 수행하고 있습니다.',
+      categories: [
         {
-          year: '2023',
+          id: 'ict-strategy',
+          title: 'ICT 전략·정책 컨설팅',
+          description: '정부 R&D 기획, 기술사업화 전략, 정책연구 등',
           items: [
             {
-              title: '글로벌 시니어 테크산업 벤치마킹',
-              description:
-                'KOICA | 글로벌 시니어 테크산업 해외 사례 조사 및 동향 분석',
+              title: '생성형 AI 기반 SW하우스 체험 과정',
+              client: 'IITP',
+              year: '2024',
             },
             {
-              title: 'K-로봇산업 육성 전략 기획',
-              description:
-                'KIAT | K-로봇산업 글로벌 경쟁력 확보를 위한 중장기 육성 전략 수립',
+              title: 'AI 기반 클리닉 매칭 플랫폼 고도화 전략 컨설팅',
+              client: '중부권',
+              year: '2024',
             },
             {
-              title: '메타버스 콘텐츠 활성화 정책연구',
-              description:
-                'KOCCA | 메타버스 콘텐츠 생태계 활성화를 위한 정책 방향 연구',
+              title: '디지털 웰니스 생태계 구축 기술개발 지원체계 기획',
+              client: '한국연구재단',
+              year: '2023',
+            },
+            {
+              title: '초연결 리빙랩 운영 및 플랫폼 자립화 전략 수립',
+              client: '한국네트워크산업협회',
+              year: '2023',
+            },
+            {
+              title: '스마트시티 해외진출 전략 조사용역',
+              client: 'KOTRA',
+              year: '2023',
+            },
+            {
+              title: '경북·Apple 스마트 제조 혁신전략 수립',
+              client: '대구경북연구원',
+              year: '2022',
+            },
+            {
+              title: '아제르바이잔 혁신로드맵 수립 컨설팅',
+              client: 'KOICA',
+              year: '2021',
+            },
+            {
+              title: '기술수준평가 (초연결 사물인터넷 기술)',
+              client: 'KISTEP',
+              year: '2020',
+            },
+            {
+              title: '안산시 스마트시티 특화전략 및 기본구상',
+              client: '안산시',
+              year: '2018',
+            },
+            {
+              title: '산업기술 R&D 경제·사회적 효과분석 연구',
+              client: 'KEIT',
+              year: '2018',
             },
           ],
         },
         {
-          year: '2022',
+          id: 'bm-software',
+          title: '비즈니스모델 기획 및 소프트웨어 개발',
+          description: '플랫폼 서비스 기획, BM 수립, MVP 개발 등',
           items: [
             {
-              title: '창업지원사업 멘토링 및 컨설팅',
-              description:
-                '다수 기업 | 예비/초기 창업 기업 사업계획서 고도화 및 멘토링',
+              title: 'AI 기반 맞춤형 문해력 학습 플랫폼',
+              client: 'N사',
+              year: '2023',
             },
             {
-              title: '시니어 메타버스 사업화 전략',
-              description:
-                '농진청 | 시니어 대상 메타버스 기반 서비스 사업화 전략 수립',
+              title: '디지털 치료제(DTx) 기술개발 로드맵 수립',
+              client: 'M사',
+              year: '2023',
             },
             {
-              title: 'K-로봇산업 정책연구',
-              description:
-                'KEIT | 로봇산업 정책 동향 분석 및 신규 정책 과제 발굴',
-            },
-          ],
-        },
-        {
-          year: '2021',
-          items: [
-            {
-              title: '중소기업 R&D 기술개발 컨설팅',
-              description:
-                'TIPA | 중소기업 기술개발 역량 진단 및 R&D 전략 수립 지원',
+              title: '메타버스 신규 사업 발굴 및 사업화 전략',
+              client: 'J사',
+              year: '2022',
             },
             {
-              title: '로봇산업 정책연구',
-              description:
-                'KEIT | 국내외 로봇산업 정책 분석 및 시사점 도출 연구',
-            },
-          ],
-        },
-        {
-          year: '2020',
-          items: [
-            {
-              title: '블록체인 공공 서비스 리빙랩',
-              description:
-                'NIA | 블록체인 기반 공공 서비스 발굴 및 실증 사업 기획',
+              title: 'AI 실시간 온라인 스터디 서비스 사업화',
+              client: 'M사',
+              year: '2022',
             },
             {
-              title: '중소기업 기술개발 기획',
-              description:
-                'TIPA | 중소기업 기술개발 지원사업 기획 및 평가 지원',
+              title: '헬스케어 서비스 글로벌 진출전략 수립',
+              client: 'A사',
+              year: '2022',
+            },
+            {
+              title: '당뇨·비만 식단관리 플랫폼',
+              client: 'C사',
+              year: '2021',
+            },
+            {
+              title: '외국인 의료서비스 플랫폼',
+              client: 'A사',
+              year: '2021',
+            },
+            {
+              title: '노인·장애인 돌봄 서비스 플랫폼',
+              client: 'I사',
+              year: '2021',
+            },
+            {
+              title: 'VR 기반 예술 작품 전시 플랫폼',
+              client: 'O사',
+              year: '2019',
+            },
+            {
+              title: 'Virtual Avatar 3D 캐릭터 방송 서비스',
+              client: 'V사',
+              year: '2019',
+            },
+            {
+              title: 'AR 디지털콘텐츠 개발 (볼슈팅, 트램플린)',
+              client: 'J사',
+              year: '2019',
+            },
+            {
+              title: '분산에너지 관리 및 운영 플랫폼 개발',
+              client: 'E사',
+              year: '2019',
             },
           ],
         },
@@ -415,7 +469,7 @@ export const translations = {
       title: 'Our Services',
       subtitle: 'Guru-Type Expert Consulting',
       description:
-        'Differentiated services delivered directly by senior experts with 10+ years of experience.',
+        'Differentiated Guru-type consulting services delivered directly by domain experts.',
       items: [
         {
           title: 'ICT Strategy & Policy Consulting',
@@ -464,77 +518,131 @@ export const translations = {
       ],
     },
     portfolio: {
-      title: 'Portfolio & Track Record',
+      title: 'Portfolio',
       description:
-        'Brain House is building a legacy of success across various industries.',
-      projects: [
+        'Brain House delivers diverse projects from ICT strategy for government & enterprises to service development for startups.',
+      categories: [
         {
-          year: '2023',
+          id: 'ict-strategy',
+          title: 'ICT Strategy & Policy Consulting',
+          description: 'Government R&D planning, technology commercialization, policy research',
           items: [
             {
-              title: 'Global Senior Tech Industry Benchmarking',
-              description:
-                'KOICA | Research on global senior tech industry trends and case studies',
+              title: 'Generative AI-based SW House Experience Program',
+              client: 'IITP',
+              year: '2024',
             },
             {
-              title: 'K-Robot Industry Development Strategy',
-              description:
-                'KIAT | Mid-to-long term strategy for K-Robot industry global competitiveness',
+              title: 'AI Clinic Matching Platform Enhancement Strategy',
+              client: 'Jungbu Region',
+              year: '2024',
             },
             {
-              title: 'Metaverse Content Activation Policy Research',
-              description:
-                'KOCCA | Policy direction research for metaverse content ecosystem activation',
+              title: 'Digital Wellness Ecosystem R&D Support Planning',
+              client: 'NRF Korea',
+              year: '2023',
+            },
+            {
+              title: 'Hyper-connected Living Lab Operation & Platform Strategy',
+              client: 'KNIA',
+              year: '2023',
+            },
+            {
+              title: 'Smart City Global Expansion Strategy Research',
+              client: 'KOTRA',
+              year: '2023',
+            },
+            {
+              title: 'Gyeongbuk-Apple Smart Manufacturing Innovation Strategy',
+              client: 'DGI',
+              year: '2022',
+            },
+            {
+              title: 'Azerbaijan Innovation Roadmap Consulting',
+              client: 'KOICA',
+              year: '2021',
+            },
+            {
+              title: 'Technology Level Assessment (Hyper-connected IoT)',
+              client: 'KISTEP',
+              year: '2020',
+            },
+            {
+              title: 'Ansan Smart City Strategy & Master Plan',
+              client: 'Ansan City',
+              year: '2018',
+            },
+            {
+              title: 'Industrial Technology R&D Economic Impact Analysis',
+              client: 'KEIT',
+              year: '2018',
             },
           ],
         },
         {
-          year: '2022',
+          id: 'bm-software',
+          title: 'Business Model Planning & Software Development',
+          description: 'Platform service planning, BM development, MVP development',
           items: [
             {
-              title: 'Startup Support Program Mentoring',
-              description:
-                'Multiple Firms | Business plan refinement and mentoring for early-stage startups',
+              title: 'AI-based Personalized Literacy Learning Platform',
+              client: 'Company N',
+              year: '2023',
             },
             {
-              title: 'Senior Metaverse Commercialization Strategy',
-              description:
-                'RDA | Metaverse-based service commercialization strategy for senior citizens',
+              title: 'Digital Therapeutics (DTx) Technology Roadmap',
+              client: 'Company M',
+              year: '2023',
             },
             {
-              title: 'K-Robot Industry Policy Research',
-              description:
-                'KEIT | Robot industry policy trend analysis and new policy task discovery',
-            },
-          ],
-        },
-        {
-          year: '2021',
-          items: [
-            {
-              title: 'SME R&D Technology Development Consulting',
-              description:
-                'TIPA | SME technology development capability diagnosis and R&D strategy support',
+              title: 'Metaverse New Business Discovery & Commercialization',
+              client: 'Company J',
+              year: '2022',
             },
             {
-              title: 'Robot Industry Policy Research',
-              description:
-                'KEIT | Domestic and international robot industry policy analysis research',
-            },
-          ],
-        },
-        {
-          year: '2020',
-          items: [
-            {
-              title: 'Blockchain Public Service Living Lab',
-              description:
-                'NIA | Blockchain-based public service discovery and demonstration project planning',
+              title: 'AI Real-time Online Study Service Commercialization',
+              client: 'Company M',
+              year: '2022',
             },
             {
-              title: 'SME Technology Development Planning',
-              description:
-                'TIPA | SME technology development support program planning and evaluation',
+              title: 'Healthcare Service Global Expansion Strategy',
+              client: 'Company A',
+              year: '2022',
+            },
+            {
+              title: 'Diabetes & Obesity Diet Management Platform',
+              client: 'Company C',
+              year: '2021',
+            },
+            {
+              title: 'Foreign Medical Service Platform',
+              client: 'Company A',
+              year: '2021',
+            },
+            {
+              title: 'Senior & Disability Care Service Platform',
+              client: 'Company I',
+              year: '2021',
+            },
+            {
+              title: 'VR-based Art Exhibition Platform',
+              client: 'Company O',
+              year: '2019',
+            },
+            {
+              title: 'Virtual Avatar 3D Character Broadcasting Service',
+              client: 'Company V',
+              year: '2019',
+            },
+            {
+              title: 'AR Digital Content Development (Ball Shooting, Trampoline)',
+              client: 'Company J',
+              year: '2019',
+            },
+            {
+              title: 'Distributed Energy Management & Operation Platform',
+              client: 'Company E',
+              year: '2019',
             },
           ],
         },
