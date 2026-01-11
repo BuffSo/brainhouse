@@ -80,7 +80,7 @@ export function About() {
               {t.about.clients.desc}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {['KOICA', 'ETRI', 'TIPA', 'NIPA'].map((client) => (
+              {t.about.clients.list?.map((client) => (
                 <span
                   key={client}
                   className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-800"

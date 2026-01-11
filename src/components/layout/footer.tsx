@@ -39,17 +39,17 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#about" className="hover:text-white">
+                <Link href="/about" className="hover:text-white">
                   {t.footer.links.about}
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-white">
+                <Link href="/about" className="hover:text-white">
                   {t.footer.links.history}
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-white">
+                <Link href="/about" className="hover:text-white">
                   {t.footer.links.vision}
                 </Link>
               </li>
@@ -62,17 +62,17 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#business" className="hover:text-white">
+                <Link href="/business" className="hover:text-white">
                   {t.footer.links.tech}
                 </Link>
               </li>
               <li>
-                <Link href="#business" className="hover:text-white">
+                <Link href="/business" className="hover:text-white">
                   {t.footer.links.mgmt}
                 </Link>
               </li>
               <li>
-                <Link href="#business" className="hover:text-white">
+                <Link href="/business" className="hover:text-white">
                   {t.footer.links.invest}
                 </Link>
               </li>

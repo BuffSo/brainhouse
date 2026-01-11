@@ -7,14 +7,14 @@ import { StrategyFlow } from './strategy-flow';
 
 const serviceIcons = [
   Icons.TrendingUp, // ICT Strategy
-  Icons.Layers, // ICT Convergence
-  Icons.Briefcase, // Startup Support
+  Icons.Lightbulb, // Technology Commercialization
+  Icons.Briefcase, // Startup & Investment
+  Icons.Code, // Software Development
 ];
 
 export function Services() {
   const { t } = useLanguage();
 
-  // Guard clause if translations aren't updated yet or type definition is missing
   if (!t.ourServices) return null;
 
   return (
@@ -32,7 +32,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="space-y-24">
+        <div className="space-y-16">
           {/* Service 1: ICT Strategy (Featured with Diagram) */}
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="order-2 lg:order-1">
@@ -54,32 +54,32 @@ export function Services() {
             </div>
           </div>
 
-          {/* Services 2 & 3: Standard Cards */}
-          <div className="grid gap-8 md:grid-cols-2">
+          {/* Services 2, 3, 4: Cards Grid */}
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {t.ourServices.items.slice(1).map((service, index) => {
               const Icon = serviceIcons[index + 1];
               return (
                 <div
                   key={service.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:shadow-md"
+                  className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:border-blue-200 hover:shadow-lg"
                 >
-                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-base text-slate-600">
+                  <p className="mt-3 text-base text-slate-600">
                     {service.description}
                   </p>
                   {service.details && (
-                    <ul className="mt-6 space-y-3 border-t border-slate-100 pt-6">
+                    <ul className="mt-6 space-y-2.5 border-t border-slate-100 pt-6">
                       {service.details.map((detail, i) => (
                         <li
                           key={i}
                           className="flex items-start text-sm text-slate-500"
                         >
-                          <span className="mr-2 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+                          <Icons.Check className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" />
                           {detail}
                         </li>
                       ))}

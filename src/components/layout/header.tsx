@@ -16,11 +16,11 @@ export function Header() {
   const { language, toggleLanguage, t } = useLanguage();
 
   const navigation = [
-    { name: t.header.about, href: '#about' },
-    { name: t.header.business, href: '#business' },
-    { name: t.header.services, href: '#services' },
-    { name: t.header.portfolio, href: '#portfolio' },
-    { name: t.header.contact, href: '#contact' },
+    { name: t.header.about, href: '/about' },
+    { name: t.header.business, href: '/business' },
+    { name: t.header.services, href: '/services' },
+    { name: t.header.portfolio, href: '/portfolio' },
+    { name: t.header.contact, href: '/contact' },
   ];
 
   return (
@@ -108,7 +108,7 @@ export function Header() {
                 )}
               </div>
               <Link
-                href="#contact"
+                href="/contact"
                 className={cn(buttonVariants({ size: 'sm' }))}
               >
                 {t.header.getStarted}
@@ -175,7 +175,7 @@ export function Header() {
             ))}
             <div className="pt-4">
               <Link
-                href="#contact"
+                href="/contact"
                 className={cn(buttonVariants({ className: 'w-full' }))}
                 onClick={() => setMobileMenuOpen(false)}
               >

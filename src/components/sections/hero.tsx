@@ -35,7 +35,7 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
-            href="#contact"
+            href="/contact"
             className={cn(
               buttonVariants({ size: 'lg' }),
               'min-w-[160px] text-base'
@@ -44,7 +44,7 @@ export function Hero() {
             {t.hero.contactBtn} <Icons.ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <Link
-            href="#business"
+            href="/services"
             className={cn(
               buttonVariants({ size: 'lg', variant: 'outline' }),
               'min-w-[160px] border-slate-700 bg-transparent text-white hover:bg-slate-800 hover:text-white'

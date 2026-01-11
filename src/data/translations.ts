@@ -11,11 +11,11 @@ export const translations = {
       getStarted: '상담 문의',
     },
     hero: {
-      tag: 'Digital Transformation Partner',
+      tag: 'AI Transformation Partner',
       title: '지식과 경험을 공유하는',
       subtitle: '연결된 소셜 브레인',
       description:
-        '브레인하우스는 기술과 비즈니스의 경계를 허무는 ICT 전문 파트너입니다. 28년의 독보적인 현장 경험과 깊이 있는 통찰력을 바탕으로, 고객의 디지털 혁신(DX)을 성공으로 이끄는 최적의 전략을 제시합니다.',
+        '브레인하우스는 DX를 넘어 AX(AI Transformation) 시대를 선도하는 ICT 전문 파트너입니다. 28년의 독보적인 현장 경험과 AI 전문성을 바탕으로, 에이전틱 AI와 생성형 AI를 활용한 기업 혁신 전략을 제시합니다.',
       contactBtn: '프로젝트 문의',
       businessBtn: '서비스 보기',
     },
@@ -26,18 +26,18 @@ export const translations = {
         '브레인하우스(Brain House)는 2020년 5월, ICT 분야의 전문가들이 모여 설립한 디지털 혁신 컨설팅 기업입니다. 우리는 단순한 기술 도입을 넘어, 기술이 창출할 수 있는 비즈니스 가치에 집중합니다. 복잡한 기술 트렌드 속에서 기업이 나아가야 할 명확한 방향을 제시하고, 실질적인 성장을 돕는 파트너가 되겠습니다.',
       vision: {
         title: '비전 (Vision)',
-        desc: '디지털 대전환(DX)을 선도하는 신뢰받는 성장 파트너',
+        desc: 'DX를 넘어 AX(AI Transformation) 시대를 선도하는 성장 파트너',
         details: [
-          '고객 가치 중심의 혁신 전략 수립',
-          '지속 가능한 디지털 생태계 조성',
-          '기술과 사람을 연결하는 소셜 브레인',
+          'AI 에이전트 기반 업무 혁신 및 워크플로우 재설계',
+          '에이전틱 AI·생성형 AI 도입을 통한 기업 경쟁력 강화',
+          'AI-Ready 조직 문화 구축 및 인재 육성 지원',
         ],
       },
       expertise: {
         title: '핵심 역량 (Core Competency)',
         desc: 'ICT, AI, 메타버스 분야 28년 이상의 현장 경험과 노하우',
         details: [
-          '정부 R&D 과제 기획 및 수주 성공률 90% 이상',
+          '국가 R&D 기획/평가 및 정책연구 풍부한 경험 보유',
           '다양한 산업군(제조, 서비스, 공공) DX 컨설팅 수행',
           '스타트업부터 중견기업까지 단계별 맞춤 성장 지원',
         ],
@@ -45,6 +45,22 @@ export const translations = {
       clients: {
         title: '주요 고객 (Clients)',
         desc: '정부 공공기관 및 혁신 기업들과 함께하고 있습니다.',
+        list: [
+          'KISTI',
+          'KOICA',
+          '대구경북연구원',
+          'ETRI',
+          'KISTEP',
+          'KIAT',
+          'KEIT',
+          '경기테크노파크',
+          '안산시',
+          '서울바이오시스',
+          '창업진흥원',
+          '기술보증기금',
+          'KOTRA',
+          '한국연구재단',
+        ],
       },
     },
     business: {
@@ -58,6 +74,7 @@ export const translations = {
             '기업이 보유한 기술의 가치를 극대화하고, 미래 기술 트렌드에 선제적으로 대응하기 위한 로드맵을 수립합니다.',
           details: [
             '기술 가치 평가 및 기술 사업화 전략 수립',
+            '플랫폼 서비스 기획 및 비즈니스 모델(BM) 설계',
             'ICT 기반 신규 서비스/상품 기획 컨설팅',
             '정부 R&D 지원사업 기획 및 제안서 작성 지원',
             '중장기 기술 개발 로드맵(TRM) 구축',
@@ -69,6 +86,7 @@ export const translations = {
             '지속 가능한 성장을 위해 기업의 내부 역량을 진단하고, 시장 환경에 맞는 최적의 비즈니스 모델을 설계합니다.',
           details: [
             'ICT 정책 조사/연구 및 시장 분석',
+            'ICT 융합 서비스 실증 및 상용화 지원',
             '기업 역량 진단 및 경영 혁신 전략 수립',
             '기업가 정신 교육 및 사내 벤처 육성',
             '스타트업 비즈니스 모델(BM) 고도화 및 멘토링',
@@ -86,49 +104,62 @@ export const translations = {
           ],
         },
         {
-          title: '플랫폼 비즈니스 (Platform)',
+          title: '소프트웨어 개발 (Software Dev)',
           description:
-            '4차 산업혁명의 핵심인 플랫폼 비즈니스와 메타버스 등 신기술 기반의 새로운 사업 기회를 발굴하고 실현합니다.',
+            '일반적인 홈페이지부터 기술 집약형 서비스까지, 기획-설계-개발-운영의 전 과정을 지원하는 맞춤형 소프트웨어 개발 서비스를 제공합니다.',
           details: [
-            '플랫폼 서비스 기획 및 비즈니스 모델(BM) 설계',
-            '메타버스/블록체인 기반 신사업 발굴 컨설팅',
-            '디지털 콘텐츠 서비스화 전략 수립',
-            'ICT 융합 서비스 실증 및 상용화 지원',
+            '기업 홈페이지 및 브랜드 사이트 기획·개발',
+            '웹/모바일 애플리케이션 설계 및 개발',
+            'AI·LLM 기반 서비스 기획 및 MVP 개발',
+            '클라우드 기반 시스템 구축 및 운영 지원',
+            '기존 시스템 고도화 및 유지보수',
           ],
         },
       ],
     },
     ourServices: {
       title: 'Our Services',
-      subtitle: 'ICT 전문 서비스',
-      description: '브레인하우스만의 차별화된 3가지 핵심 서비스를 소개합니다.',
+      subtitle: 'Guru형 전문 컨설팅',
+      description:
+        '10년 이상 경력의 시니어 전문가가 직접 수행하는 차별화된 서비스를 제공합니다.',
       items: [
         {
-          title: 'ICT 전략·정책컨설팅',
+          title: 'ICT 전략·정책 컨설팅',
           description:
-            '기업과 공공의 미래 경쟁력을 확보하기 위한 최적의 ICT 전략과 정책을 수립합니다.',
-          steps: ['환경 분석', '역량 진단', '전략 수립', '실행 계획'],
+            '정부 R&D 기획부터 ICT 정책연구까지, 공공기관과 기업의 미래 경쟁력 확보를 위한 전략을 수립합니다.',
+          steps: ['환경 분석', '역량 진단', '전략 수립', '실행 지원'],
         },
         {
-          title: 'ICT 융합 기술 컨설팅',
+          title: '기술사업화 컨설팅',
           description:
-            '4차 산업혁명 핵심 기술(메타버스, 블록체인, AI)을 비즈니스에 접목하여 새로운 가치를 창출합니다.',
+            '보유 기술의 시장 가치를 극대화하고, 사업화 성공을 위한 체계적인 로드맵을 제시합니다.',
           details: [
-            '플랫폼 서비스 기획 및 비즈니스 모델(BM) 설계',
-            '메타버스/블록체인 기반 신사업 발굴 컨설팅',
-            '디지털 콘텐츠 서비스화 전략 수립',
+            '기술 가치 평가 및 사업화 전략 수립',
+            '정부 R&D 지원사업 기획 및 제안서 작성',
+            '기술 로드맵(TRM) 및 IPR 전략 설계',
             'ICT 융합 서비스 실증 및 상용화 지원',
           ],
         },
         {
-          title: '창업지원사업 One-Stop Total 서비스',
+          title: '창업·투자 컨설팅',
           description:
-            '스타트업의 시작부터 성장(Scale-up), 투자 유치까지 전 주기를 밀착 지원하는 통합 솔루션입니다.',
+            '예비창업자부터 스케일업 기업까지, 성장 단계별 맞춤형 멘토링과 투자 유치를 지원합니다.',
           details: [
-            '정부 R&D/창업지원사업 기획 및 제안서 작성 지원',
-            '스타트업 비즈니스 모델(BM) 고도화 및 멘토링',
-            '투자 유치 전략(IR) 수립 및 기업 가치 평가(Valuation)',
-            'VC/AC 네트워크 연계 및 자금 조달 자문',
+            '비즈니스 모델(BM) 수립 및 고도화 멘토링',
+            '투자 유치 전략(IR) 및 기업가치 평가(Valuation)',
+            'VC/AC/엔젤 네트워크 연계 및 자금조달 자문',
+            'IPO 및 M&A 전략 자문',
+          ],
+        },
+        {
+          title: '소프트웨어 개발',
+          description:
+            '기업 홈페이지부터 AI 기반 서비스까지, 기획-설계-개발-운영의 전 과정을 원스톱으로 지원합니다.',
+          details: [
+            '기업 홈페이지 및 브랜드 사이트 기획·개발',
+            '웹/모바일 애플리케이션 설계 및 개발',
+            'AI·LLM 기반 서비스 기획 및 MVP 개발',
+            '클라우드 시스템 구축 및 유지보수',
           ],
         },
       ],
@@ -142,19 +173,19 @@ export const translations = {
           year: '2023',
           items: [
             {
-              title: 'AI 기반 디지털 헬스케어 플랫폼 기획',
+              title: '글로벌 시니어 테크산업 벤치마킹',
               description:
-                'S사 | 만성질환 관리를 위한 AI 맞춤형 헬스케어 서비스 BM 수립 및 UI/UX 기획',
+                'KOICA | 글로벌 시니어 테크산업 해외 사례 조사 및 동향 분석',
             },
             {
-              title: '스마트시티 챌린지 예비사업 컨설팅',
+              title: 'K-로봇산업 육성 전략 기획',
               description:
-                'K시 | 시민 체감형 스마트시티 서비스 발굴 및 거버넌스 구축 전략 수립',
+                'KIAT | K-로봇산업 글로벌 경쟁력 확보를 위한 중장기 육성 전략 수립',
             },
             {
-              title: '에듀테크 스타트업 Series A 투자 유치',
+              title: '메타버스 콘텐츠 활성화 정책연구',
               description:
-                'E사 | 30억 규모 투자 유치를 위한 IR Deck 스토리텔링 및 디자인 개선',
+                'KOCCA | 메타버스 콘텐츠 생태계 활성화를 위한 정책 방향 연구',
             },
           ],
         },
@@ -162,19 +193,19 @@ export const translations = {
           year: '2022',
           items: [
             {
-              title: '공공기관 메타버스 교육 연수원 구축 자문',
+              title: '창업지원사업 멘토링 및 컨설팅',
               description:
-                'I원 | 비대면 교육 효과 제고를 위한 메타버스 플랫폼 도입 타당성 분석 및 로드맵',
+                '다수 기업 | 예비/초기 창업 기업 사업계획서 고도화 및 멘토링',
             },
             {
-              title: 'ICT 규제 샌드박스 실증 특례 지원',
+              title: '시니어 메타버스 사업화 전략',
               description:
-                'M사 | 모빌리티 서비스 규제 샌드박스 신청 논리 개발 및 대응 지원',
+                '농진청 | 시니어 대상 메타버스 기반 서비스 사업화 전략 수립',
             },
             {
-              title: '초기 창업패키지 선정 멘토링',
+              title: 'K-로봇산업 정책연구',
               description:
-                '다수 기업 | 예비/초기 창업 기업 사업계획서 고도화 및 발표 코칭',
+                'KEIT | 로봇산업 정책 동향 분석 및 신규 정책 과제 발굴',
             },
           ],
         },
@@ -182,14 +213,29 @@ export const translations = {
           year: '2021',
           items: [
             {
-              title: '중소기업 제조 데이터 분석 과제 기획',
+              title: '중소기업 R&D 기술개발 컨설팅',
               description:
-                'TIPA 과제 | 제조 현장 데이터 수집/분석을 통한 공정 최적화 R&D 기획',
+                'TIPA | 중소기업 기술개발 역량 진단 및 R&D 전략 수립 지원',
             },
             {
-              title: '지역 소프트웨어 산업 진흥 전략 연구',
+              title: '로봇산업 정책연구',
               description:
-                'G재단 | 지역 특화 SW 산업 육성을 위한 중장기 발전 계획 수립 연구 용역',
+                'KEIT | 국내외 로봇산업 정책 분석 및 시사점 도출 연구',
+            },
+          ],
+        },
+        {
+          year: '2020',
+          items: [
+            {
+              title: '블록체인 공공 서비스 리빙랩',
+              description:
+                'NIA | 블록체인 기반 공공 서비스 발굴 및 실증 사업 기획',
+            },
+            {
+              title: '중소기업 기술개발 기획',
+              description:
+                'TIPA | 중소기업 기술개발 지원사업 기획 및 평가 지원',
             },
           ],
         },
@@ -229,6 +275,28 @@ export const translations = {
         terms: '이용약관',
       },
     },
+    pageHeader: {
+      about: {
+        title: '회사 소개',
+        subtitle: '디지털 대전환 시대의 네비게이터',
+      },
+      business: {
+        title: '사업 영역',
+        subtitle: '성장 단계에 맞춘 4가지 핵심 솔루션',
+      },
+      services: {
+        title: '서비스',
+        subtitle: 'ICT 전문 서비스',
+      },
+      portfolio: {
+        title: '포트폴리오',
+        subtitle: '다양한 산업 분야의 성공 레퍼런스',
+      },
+      contact: {
+        title: '문의하기',
+        subtitle: '성공적인 비즈니스를 위한 첫 걸음',
+      },
+    },
   },
   en: {
     header: {
@@ -240,11 +308,11 @@ export const translations = {
       getStarted: 'Get Started',
     },
     hero: {
-      tag: 'Digital Transformation Partner',
+      tag: 'AI Transformation Partner',
       title: 'Connected Social Brains',
       subtitle: 'Sharing Knowledge & Experience',
       description:
-        'Brain House is your premier ICT consulting partner, blurring the lines between technology and business. With over 28 years of unrivaled field experience, we provide optimal strategies to lead your Digital Transformation (DX) to success.',
+        'Brain House is your premier ICT consulting partner leading the AX (AI Transformation) era beyond DX. With over 28 years of field experience and AI expertise, we deliver enterprise innovation strategies powered by Agentic AI and Generative AI.',
       contactBtn: 'Contact Us',
       businessBtn: 'Our Services',
     },
@@ -255,18 +323,18 @@ export const translations = {
         'Established in May 2020 by a group of ICT experts, Brain House is a consulting firm dedicated to digital innovation. We focus on the real business value technology creates. We aim to be a partner that provides clear direction amidst complex trends and drives tangible growth.',
       vision: {
         title: 'Vision',
-        desc: 'Trusted Growth Partner Leading Digital Transformation',
+        desc: 'Growth Partner Leading the AX (AI Transformation) Era Beyond DX',
         details: [
-          'Innovation strategy centered on customer value',
-          'Creating a sustainable digital ecosystem',
-          'Social brains connecting technology and people',
+          'AI agent-driven business innovation and workflow redesign',
+          'Enhancing enterprise competitiveness through Agentic AI & Generative AI',
+          'Building AI-Ready organizational culture and talent development',
         ],
       },
       expertise: {
         title: 'Core Competency',
         desc: 'Over 28 years of expertise in ICT, AI, and Metaverse',
         details: [
-          'Over 90% success rate in Government R&D planning',
+          'Extensive experience in National R&D planning and policy research',
           'Diverse DX consulting (Manufacturing, Service, Public)',
           'Tailored growth support from startups to mid-sized firms',
         ],
@@ -274,6 +342,21 @@ export const translations = {
       clients: {
         title: 'Clients',
         desc: 'We collaborate with major government agencies and innovative enterprises.',
+        list: [
+          'KISTI',
+          'KOICA',
+          'ETRI',
+          'KISTEP',
+          'KIAT',
+          'KEIT',
+          'KOTRA',
+          'NRF',
+          'Gyeonggi Technopark',
+          'Ansan City',
+          'Seoul Viosys',
+          'KISED',
+          'KIBO',
+        ],
       },
     },
     business: {
@@ -315,55 +398,67 @@ export const translations = {
           ],
         },
         {
-          title: 'Platform Business',
+          title: 'Software Development',
           description:
-            'We discover and realize new business opportunities based on new technologies like Metaverse and Blockchain.',
+            'We provide customized software development services covering the entire process from planning to design, development, and operations—from simple websites to technology-intensive services.',
           details: [
-            'Platform service planning and BM design',
-            'Metaverse/Blockchain business discovery',
-            'Digital content servitization strategy',
-            'ICT convergence service demonstration support',
+            'Corporate website and brand site planning & development',
+            'Web/mobile application design and development',
+            'AI & LLM-powered service planning and MVP development',
+            'Cloud-based system development and operation support',
+            'Legacy system enhancement and maintenance',
           ],
         },
       ],
     },
     ourServices: {
       title: 'Our Services',
-      subtitle: 'ICT Professional Services',
+      subtitle: 'Guru-Type Expert Consulting',
       description:
-        'Introducing 3 specialized key services unique to Brain House.',
+        'Differentiated services delivered directly by senior experts with 10+ years of experience.',
       items: [
         {
           title: 'ICT Strategy & Policy Consulting',
           description:
-            'We establish optimal ICT strategies and policies to secure future competitiveness for companies and public sectors.',
+            'From government R&D planning to ICT policy research, we establish strategies to secure future competitiveness for public institutions and enterprises.',
           steps: [
             'Environment Analysis',
-            'Competency Diagnosis',
-            'Strategy Establishment',
-            'Action Plan',
+            'Capability Diagnosis',
+            'Strategy Development',
+            'Execution Support',
           ],
         },
         {
-          title: 'ICT Convergence Technology Consulting',
+          title: 'Technology Commercialization',
           description:
-            'We create new value by applying core 4IR technologies (Metaverse, Blockchain, AI) to business.',
+            'We maximize the market value of your technology and provide systematic roadmaps for successful commercialization.',
           details: [
-            'Platform service planning and BM design',
-            'Metaverse/Blockchain business discovery',
-            'Digital content servitization strategy',
-            'ICT convergence service demonstration support',
+            'Technology valuation and commercialization strategy',
+            'Government R&D program planning and proposal writing',
+            'Technology Roadmap (TRM) and IPR strategy design',
+            'ICT convergence service demonstration and commercialization',
           ],
         },
         {
-          title: 'Startup Support One-Stop Total Service',
+          title: 'Startup & Investment Consulting',
           description:
-            'An integrated solution that closely supports the entire lifecycle of startups from inception to scale-up and investment.',
+            'From pre-founders to scale-up companies, we provide tailored mentoring and investment support for each growth stage.',
           details: [
-            'Government R&D/Startup support program planning & proposal',
-            'Startup BM refinement and mentoring',
-            'Investment strategy (IR) & Valuation',
-            'VC/AC networking and fundraising advisory',
+            'Business Model (BM) development and refinement mentoring',
+            'Investment strategy (IR) and Valuation',
+            'VC/AC/Angel network connection and fundraising advisory',
+            'IPO and M&A strategy consulting',
+          ],
+        },
+        {
+          title: 'Software Development',
+          description:
+            'From corporate websites to AI-powered services, we provide one-stop support for the entire process of planning, design, development, and operations.',
+          details: [
+            'Corporate website and brand site planning & development',
+            'Web/mobile application design and development',
+            'AI & LLM-powered service planning and MVP development',
+            'Cloud system development and maintenance',
           ],
         },
       ],
@@ -377,19 +472,19 @@ export const translations = {
           year: '2023',
           items: [
             {
-              title: 'AI Healthcare Platform Planning',
+              title: 'Global Senior Tech Industry Benchmarking',
               description:
-                'Company S | BM and UI/UX planning for AI-based chronic disease management service',
+                'KOICA | Research on global senior tech industry trends and case studies',
             },
             {
-              title: 'Smart City Challenge Consulting',
+              title: 'K-Robot Industry Development Strategy',
               description:
-                'City K | Discovery of citizen-centric smart city services and governance strategy',
+                'KIAT | Mid-to-long term strategy for K-Robot industry global competitiveness',
             },
             {
-              title: 'Edutech Startup Series A Funding',
+              title: 'Metaverse Content Activation Policy Research',
               description:
-                'Company E | IR Deck storytelling and design for 3B KRW investment attraction',
+                'KOCCA | Policy direction research for metaverse content ecosystem activation',
             },
           ],
         },
@@ -397,19 +492,19 @@ export const translations = {
           year: '2022',
           items: [
             {
-              title: 'Metaverse Education Center Advisory',
+              title: 'Startup Support Program Mentoring',
               description:
-                'Institute I | Feasibility analysis and roadmap for public metaverse education platform',
+                'Multiple Firms | Business plan refinement and mentoring for early-stage startups',
             },
             {
-              title: 'ICT Regulatory Sandbox Support',
+              title: 'Senior Metaverse Commercialization Strategy',
               description:
-                'Company M | Logic development and support for mobility service regulatory sandbox application',
+                'RDA | Metaverse-based service commercialization strategy for senior citizens',
             },
             {
-              title: 'Startup Package Mentoring',
+              title: 'K-Robot Industry Policy Research',
               description:
-                'Multiple Firms | Business plan refinement and pitch coaching for early-stage startups',
+                'KEIT | Robot industry policy trend analysis and new policy task discovery',
             },
           ],
         },
@@ -417,14 +512,29 @@ export const translations = {
           year: '2021',
           items: [
             {
-              title: 'SME Manufacturing Data Analysis',
+              title: 'SME R&D Technology Development Consulting',
               description:
-                'TIPA Project | R&D planning for process optimization using field data analysis',
+                'TIPA | SME technology development capability diagnosis and R&D strategy support',
             },
             {
-              title: 'Regional SW Industry Strategy',
+              title: 'Robot Industry Policy Research',
               description:
-                'Foundation G | Research on mid-to-long term development plan for regional SW industry',
+                'KEIT | Domestic and international robot industry policy analysis research',
+            },
+          ],
+        },
+        {
+          year: '2020',
+          items: [
+            {
+              title: 'Blockchain Public Service Living Lab',
+              description:
+                'NIA | Blockchain-based public service discovery and demonstration project planning',
+            },
+            {
+              title: 'SME Technology Development Planning',
+              description:
+                'TIPA | SME technology development support program planning and evaluation',
             },
           ],
         },
@@ -462,6 +572,28 @@ export const translations = {
         invest: 'Investment Strategy',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
+      },
+    },
+    pageHeader: {
+      about: {
+        title: 'About Us',
+        subtitle: 'Navigator for the Digital Era',
+      },
+      business: {
+        title: 'Business Areas',
+        subtitle: 'Four Core Solutions for Your Growth Stage',
+      },
+      services: {
+        title: 'Services',
+        subtitle: 'ICT Professional Services',
+      },
+      portfolio: {
+        title: 'Portfolio',
+        subtitle: 'Success References Across Industries',
+      },
+      contact: {
+        title: 'Contact Us',
+        subtitle: 'Your First Step to Successful Business',
       },
     },
   },
