@@ -5,7 +5,7 @@ import { translations, Language } from '@/data/translations';
 
 interface LanguageContextType {
   language: Language;
-  toggleLanguage: () => void;
+  setLanguage: (lang: Language) => void;
   t: typeof translations.ko;
 }
 
@@ -14,16 +14,16 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('ko');
+  const [language, setLanguageState] = useState<Language>('ko');
 
-  const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'ko' ? 'en' : 'ko'));
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
   };
 
   const t = translations[language];
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -13,7 +13,7 @@ import { useLanguage } from '@/contexts/language-context';
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = React.useState(false);
-  const { language, toggleLanguage, t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
     { name: t.header.about, href: '/about' },
@@ -63,7 +63,7 @@ export function Header() {
                 >
                   <Icons.Globe className="h-4 w-4 text-slate-500" />
                   <span className="text-sm font-medium text-slate-700">
-                    {language === 'ko' ? '한국어' : 'English'}
+                    {language === 'ko' ? '한국어' : language === 'en' ? 'English' : '日本語'}
                   </span>
                   <Icons.ChevronDown className="h-3 w-3 text-slate-400" />
                 </Button>
@@ -78,7 +78,7 @@ export function Header() {
                       <div className="py-1">
                         <button
                           onClick={() => {
-                            if (language !== 'ko') toggleLanguage();
+                            setLanguage('ko');
                             setIsLangMenuOpen(false);
                           }}
                           className={cn(
@@ -91,7 +91,7 @@ export function Header() {
                         </button>
                         <button
                           onClick={() => {
-                            if (language !== 'en') toggleLanguage();
+                            setLanguage('en');
                             setIsLangMenuOpen(false);
                           }}
                           className={cn(
@@ -101,6 +101,19 @@ export function Header() {
                           )}
                         >
                           English
+                        </button>
+                        <button
+                          onClick={() => {
+                            setLanguage('ja');
+                            setIsLangMenuOpen(false);
+                          }}
+                          className={cn(
+                            'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                            language === 'ja' &&
+                              'bg-slate-50 font-semibold text-blue-600'
+                          )}
+                        >
+                          日本語
                         </button>
                       </div>
                     </div>
@@ -116,35 +129,46 @@ export function Header() {
             </div>
           </div>
           <div className="md:hidden flex items-center gap-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 px-2"
-            >
+            <div className="flex items-center gap-1 px-2">
               <Icons.Globe className="h-5 w-5 text-slate-500" />
               <div className="flex items-center text-xs font-medium">
-                <span
+                <button
+                  onClick={() => setLanguage('ko')}
                   className={cn(
+                    'px-1 transition-colors',
                     language === 'ko'
                       ? 'font-bold text-slate-900'
-                      : 'text-slate-400'
+                      : 'text-slate-400 hover:text-slate-600'
                   )}
                 >
                   KOR
-                </span>
-                <span className="mx-1 text-slate-300">|</span>
-                <span
+                </button>
+                <span className="text-slate-300">|</span>
+                <button
+                  onClick={() => setLanguage('en')}
                   className={cn(
+                    'px-1 transition-colors',
                     language === 'en'
                       ? 'font-bold text-slate-900'
-                      : 'text-slate-400'
+                      : 'text-slate-400 hover:text-slate-600'
                   )}
                 >
                   ENG
-                </span>
+                </button>
+                <span className="text-slate-300">|</span>
+                <button
+                  onClick={() => setLanguage('ja')}
+                  className={cn(
+                    'px-1 transition-colors',
+                    language === 'ja'
+                      ? 'font-bold text-slate-900'
+                      : 'text-slate-400 hover:text-slate-600'
+                  )}
+                >
+                  JPN
+                </button>
               </div>
-            </Button>
+            </div>
             <Button
               variant="ghost"
               size="icon"
