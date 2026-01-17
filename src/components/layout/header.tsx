@@ -28,16 +28,15 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative h-6 w-6 overflow-hidden">
-                <Image
-                  src="/images/logo.png"
-                  alt="Brain House Logo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-primary">
+            <Link href="/" className="flex items-center space-x-2.5 group">
+              <Image
+                src="/images/logo-new.png"
+                alt="Brain House Logo"
+                width={36}
+                height={36}
+                className="transition-transform group-hover:scale-105"
+              />
+              <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-clip-text text-transparent">
                 Brain House
               </span>
             </Link>
