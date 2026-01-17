@@ -2,7 +2,7 @@
 
 export function StrategyFlow({ steps }: { steps: string[] }) {
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+    <div className="relative w-full overflow-hidden rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200 sm:rounded-2xl sm:p-6">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-transparent" />
 
       {/* Flow Diagram */}
@@ -14,11 +14,11 @@ export function StrategyFlow({ steps }: { steps: string[] }) {
               className="flex flex-1 flex-col items-center gap-4 md:flex-row md:gap-2"
             >
               {/* Box */}
-              <div className="flex h-24 w-full flex-col items-center justify-center rounded-xl bg-white p-4 text-center shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md hover:ring-blue-200 md:h-28 md:w-full">
-                <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600">
+              <div className="flex h-20 w-full flex-col items-center justify-center rounded-lg bg-white p-3 text-center shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md hover:ring-blue-200 sm:h-24 sm:rounded-xl sm:p-4 md:h-28 md:w-full">
+                <div className="mb-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600 sm:mb-2 sm:h-8 sm:w-8">
                   {index + 1}
                 </div>
-                <span className="text-sm font-semibold text-slate-900">
+                <span className="text-xs font-semibold text-slate-900 sm:text-sm">
                   {step}
                 </span>
               </div>

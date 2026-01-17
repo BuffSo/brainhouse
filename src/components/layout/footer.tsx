@@ -8,83 +8,28 @@ import { useLanguage } from '@/contexts/language-context';
 export function Footer() {
   const { t } = useLanguage();
   return (
-    <footer className="bg-slate-900 py-12 text-slate-400">
+    <footer className="bg-slate-900 py-8 text-slate-400 sm:py-10">
       <Container>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="md:col-span-1">
-            <Link href="/" className="mb-4 flex items-center space-x-2">
-              <span className="text-xl font-bold text-white">
-                {t.footer.companyName}
-              </span>
-            </Link>
-            <div className="space-y-2 text-sm">
-              <p className="flex items-center">
-                <Icons.MapPin className="mr-2 h-4 w-4" />
-                {t.footer.address}
-              </p>
-              <p className="flex items-center">
-                <Icons.Mail className="mr-2 h-4 w-4" />
-                comfamil@gmail.com
-              </p>
-            </div>
-          </div>
+        <div className="flex flex-col items-center text-center">
+          <Link href="/" className="mb-4">
+            <span className="text-lg font-bold text-white sm:text-xl">
+              {t.footer.companyName}
+            </span>
+          </Link>
 
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              {t.footer.sections.company}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/about" className="hover:text-white">
-                  {t.footer.links.about}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              {t.footer.sections.business}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/business" className="hover:text-white">
-                  {t.footer.links.tech}
-                </Link>
-              </li>
-              <li>
-                <Link href="/business" className="hover:text-white">
-                  {t.footer.links.mgmt}
-                </Link>
-              </li>
-              <li>
-                <Link href="/business" className="hover:text-white">
-                  {t.footer.links.invest}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              {t.footer.sections.legal}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#" className="hover:text-white">
-                  {t.footer.links.privacy}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  {t.footer.links.terms}
-                </Link>
-              </li>
-            </ul>
+          <div className="flex flex-col items-center gap-2 text-xs sm:flex-row sm:gap-6 sm:text-sm">
+            <p className="flex items-center">
+              <Icons.MapPin className="mr-2 h-4 w-4 flex-shrink-0" />
+              {t.footer.address}
+            </p>
+            <p className="flex items-center">
+              <Icons.Mail className="mr-2 h-4 w-4 flex-shrink-0" />
+              comfamil@gmail.com
+            </p>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-800 pt-8 text-center text-sm">
+        <div className="mt-6 border-t border-slate-800 pt-6 text-center text-xs sm:text-sm">
           <p>{t.footer.rights}</p>
         </div>
       </Container>

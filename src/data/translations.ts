@@ -368,7 +368,7 @@ export const translations = {
     footer: {
       companyName: '(주)브레인하우스',
       address: '서울시 강남구 학동로 2길 19, 세일빌딩 2층 (논현동)',
-      rights: '© 2024 Brain House Co., Ltd. All rights reserved.',
+      rights: '© 2026 Brain House Co., Ltd. All rights reserved.',
       sections: {
         company: '회사 소개',
         business: '사업 영역',
@@ -778,7 +778,7 @@ export const translations = {
     footer: {
       companyName: 'Brain House Co., Ltd.',
       address: '2F Seil Building, 19 Hakdong-ro 2-gil, Gangnam-gu, Seoul',
-      rights: '© 2024 Brain House Co., Ltd. All rights reserved.',
+      rights: '© 2026 Brain House Co., Ltd. All rights reserved.',
       sections: {
         company: 'Company',
         business: 'Business',

@@ -7,21 +7,21 @@ import { useLanguage } from '@/contexts/language-context';
 export function About() {
   const { t } = useLanguage();
   return (
-    <section id="about" className="bg-slate-50 py-20">
+    <section id="about" className="bg-slate-50 py-16 sm:py-20">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
             {t.about.title}
           </h2>
-          <p className="mt-6 text-lg leading-8 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
             {t.about.description}
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
-              <Icons.TrendingUp className="h-6 w-6" />
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md sm:p-8">
+            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
+              <Icons.TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-slate-900 text-center">
               {t.about.vision.title}
@@ -44,9 +44,9 @@ export function About() {
             )}
           </div>
 
-          <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
-              <Icons.Layers className="h-6 w-6" />
+          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md sm:p-8">
+            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
+              <Icons.Layers className="h-5 w-5 sm:h-6 sm:w-6" />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-slate-900 text-center">
               {t.about.expertise.title}
@@ -69,9 +69,9 @@ export function About() {
             )}
           </div>
 
-          <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
-              <Icons.Briefcase className="h-6 w-6" />
+          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md sm:p-8">
+            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
+              <Icons.Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />
             </div>
             <h3 className="mt-4 text-lg font-semibold text-slate-900 text-center">
               {t.about.clients.title}
