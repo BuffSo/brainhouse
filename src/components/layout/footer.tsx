@@ -23,10 +23,6 @@ export function Footer() {
                 {t.footer.address}
               </p>
               <p className="flex items-center">
-                <Icons.Phone className="mr-2 h-4 w-4" />
-                070-4355-5498
-              </p>
-              <p className="flex items-center">
                 <Icons.Mail className="mr-2 h-4 w-4" />
                 comfamil@gmail.com
               </p>
@@ -41,16 +37,6 @@ export function Footer() {
               <li>
                 <Link href="/about" className="hover:text-white">
                   {t.footer.links.about}
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-white">
-                  {t.footer.links.history}
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-white">
-                  {t.footer.links.vision}
                 </Link>
               </li>
             </ul>

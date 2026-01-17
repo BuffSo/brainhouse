@@ -53,9 +53,6 @@ export const translations = {
           'KISTEP',
           'KIAT',
           'KEIT',
-          '경기테크노파크',
-          '안산시',
-          '서울바이오시스',
           '창업진흥원',
           '기술보증기금',
           'KOTRA',
@@ -175,13 +172,18 @@ export const translations = {
           description: '정부 R&D 기획, 기술사업화 전략, 정책연구 등',
           items: [
             {
-              title: '생성형 AI 기반 SW하우스 체험 과정',
+              title: '유무선 통신 소프트웨어 하우스 체계 개발',
               client: 'IITP',
+              year: '2025',
+            },
+            {
+              title: '인공지능 기반 모바일에지 클라우드 서비스 플랫폼 사업화 전략 컨설팅',
+              client: 'ICT기업',
               year: '2024',
             },
             {
-              title: 'AI 기반 클리닉 매칭 플랫폼 고도화 전략 컨설팅',
-              client: '중부권',
+              title: '클라우드 네트워킹 서비스 플랫폼의 기술사업화 전략 수립',
+              client: 'ICT기업',
               year: '2024',
             },
             {
@@ -200,13 +202,33 @@ export const translations = {
               year: '2023',
             },
             {
+              title: '디지털 헬스케어·디지털 치료제 ICT융합 기술 및 산업 동향 분석',
+              client: '산업융합원',
+              year: '2023',
+            },
+            {
               title: '경북·Apple 스마트 제조 혁신전략 수립',
               client: '대구경북연구원',
               year: '2022',
             },
             {
-              title: '아제르바이잔 혁신로드맵 수립 컨설팅',
-              client: 'KOICA',
+              title: '초연결 네트워킹 인프라 기반 서비스·BM 및 PoC 활용 성과창출 전략',
+              client: 'KANI',
+              year: '2022',
+            },
+            {
+              title: 'IT 분야 Community 버전 국내·외 서비스 리서치',
+              client: '한국과학기술정보연구원',
+              year: '2022',
+            },
+            {
+              title: '초연결 네트워킹 서비스의 리빙랩 구축 및 운영 방안 조사·분석 연구',
+              client: 'KANI',
+              year: '2021',
+            },
+            {
+              title: 'ICT 기술사업화 전략 컨설팅 (VR, AI, 메타버스 비즈니스 모델 발굴)',
+              client: 'ICT기업',
               year: '2021',
             },
             {
@@ -215,14 +237,14 @@ export const translations = {
               year: '2020',
             },
             {
-              title: '안산시 스마트시티 특화전략 및 기본구상',
-              client: '안산시',
-              year: '2018',
+              title: '인공지능 기반 네트워크 플랫폼 기술사업화 전략 컨설팅',
+              client: 'ICT기업',
+              year: '2020',
             },
             {
-              title: '산업기술 R&D 경제·사회적 효과분석 연구',
-              client: 'KEIT',
-              year: '2018',
+              title: 'ICT 기술사업화 전략 컨설팅 (ICT 기반 기업성장 로드맵 수립)',
+              client: 'ICT기업',
+              year: '2020',
             },
           ],
         },
@@ -274,12 +296,32 @@ export const translations = {
             {
               title: 'VR 기반 예술 작품 전시 플랫폼',
               client: 'O사',
-              year: '2019',
+              year: '2020',
             },
             {
               title: 'Virtual Avatar 3D 캐릭터 방송 서비스',
               client: 'V사',
-              year: '2019',
+              year: '2020',
+            },
+            {
+              title: '푸드 Tech 플랫폼 사업화 컨설팅',
+              client: 'M사',
+              year: '2020',
+            },
+            {
+              title: '인디 개발자용 브라우저 멀티 게임 제작 툴',
+              client: 'I사',
+              year: '2020',
+            },
+            {
+              title: '팬과 아티스트를 직접 연결하는 엔터테인먼트 블록체인 투자 플랫폼',
+              client: 'E사',
+              year: '2020',
+            },
+            {
+              title: '외국인 여행자 다국어 지원 택시투어 플랫폼',
+              client: 'U사',
+              year: '2020',
             },
             {
               title: 'AR 디지털콘텐츠 개발 (볼슈팅, 트램플린)',
@@ -289,6 +331,21 @@ export const translations = {
             {
               title: '분산에너지 관리 및 운영 플랫폼 개발',
               client: 'E사',
+              year: '2019',
+            },
+            {
+              title: '머신러닝 기반 무인 외국동전 포인트 전환 키오스크',
+              client: 'C사',
+              year: '2019',
+            },
+            {
+              title: 'VR(가상현실) 피트니스 서비스',
+              client: 'F사',
+              year: '2019',
+            },
+            {
+              title: '중소기업을 위한 인플루언서 마케팅 플랫폼',
+              client: 'I사',
               year: '2019',
             },
           ],
@@ -304,7 +361,6 @@ export const translations = {
         lastName: '성',
         company: '회사/기관명',
         email: '이메일 주소',
-        phone: '연락처',
         message: '문의 내용 (프로젝트 개요, 예산, 일정 등)',
         submit: '문의하기',
       },
@@ -320,8 +376,6 @@ export const translations = {
       },
       links: {
         about: '소개',
-        history: '연혁',
-        vision: '비전',
         tech: '기술 전략',
         mgmt: '경영 전략',
         invest: '투자 전략',
@@ -399,17 +453,15 @@ export const translations = {
         list: [
           'KISTI',
           'KOICA',
+          'DGI',
           'ETRI',
           'KISTEP',
           'KIAT',
           'KEIT',
-          'KOTRA',
-          'NRF',
-          'Gyeonggi Technopark',
-          'Ansan City',
-          'Seoul Viosys',
           'KISED',
           'KIBO',
+          'KOTRA',
+          'NRF',
         ],
       },
     },
@@ -530,13 +582,18 @@ export const translations = {
           description: 'Government R&D planning, technology commercialization, policy research',
           items: [
             {
-              title: 'Generative AI-based SW House Experience Program',
+              title: 'Wired/Wireless Communication SW House System Development',
               client: 'IITP',
+              year: '2025',
+            },
+            {
+              title: 'AI-based Mobile Edge Cloud Service Platform Commercialization Strategy',
+              client: 'ICT Company',
               year: '2024',
             },
             {
-              title: 'AI Clinic Matching Platform Enhancement Strategy',
-              client: 'Jungbu Region',
+              title: 'Cloud Networking Service Platform Tech Commercialization Strategy',
+              client: 'ICT Company',
               year: '2024',
             },
             {
@@ -555,13 +612,33 @@ export const translations = {
               year: '2023',
             },
             {
+              title: 'Digital Healthcare & DTx ICT Convergence Technology Analysis',
+              client: 'Industrial Convergence Institute',
+              year: '2023',
+            },
+            {
               title: 'Gyeongbuk-Apple Smart Manufacturing Innovation Strategy',
               client: 'DGI',
               year: '2022',
             },
             {
-              title: 'Azerbaijan Innovation Roadmap Consulting',
-              client: 'KOICA',
+              title: 'Hyper-connected Networking Service/BM & PoC Performance Strategy',
+              client: 'KANI',
+              year: '2022',
+            },
+            {
+              title: 'IT Community Version Service Research (Domestic & International)',
+              client: 'KISTI',
+              year: '2022',
+            },
+            {
+              title: 'Hyper-connected Networking Living Lab Development & Operation Research',
+              client: 'KANI',
+              year: '2021',
+            },
+            {
+              title: 'ICT Tech Commercialization Consulting (VR, AI, Metaverse BM)',
+              client: 'ICT Company',
               year: '2021',
             },
             {
@@ -570,14 +647,14 @@ export const translations = {
               year: '2020',
             },
             {
-              title: 'Ansan Smart City Strategy & Master Plan',
-              client: 'Ansan City',
-              year: '2018',
+              title: 'AI-based Network Platform Tech Commercialization Consulting',
+              client: 'ICT Company',
+              year: '2020',
             },
             {
-              title: 'Industrial Technology R&D Economic Impact Analysis',
-              client: 'KEIT',
-              year: '2018',
+              title: 'ICT Tech Commercialization Consulting (Enterprise Growth Roadmap)',
+              client: 'ICT Company',
+              year: '2020',
             },
           ],
         },
@@ -629,12 +706,32 @@ export const translations = {
             {
               title: 'VR-based Art Exhibition Platform',
               client: 'Company O',
-              year: '2019',
+              year: '2020',
             },
             {
               title: 'Virtual Avatar 3D Character Broadcasting Service',
               client: 'Company V',
-              year: '2019',
+              year: '2020',
+            },
+            {
+              title: 'Food Tech Platform Commercialization Consulting',
+              client: 'Company M',
+              year: '2020',
+            },
+            {
+              title: 'Browser Multi-game Development Tool for Indie Developers',
+              client: 'Company I',
+              year: '2020',
+            },
+            {
+              title: 'Entertainment Blockchain Investment Platform',
+              client: 'Company E',
+              year: '2020',
+            },
+            {
+              title: 'Multilingual Taxi Tour Platform for Foreign Travelers',
+              client: 'Company U',
+              year: '2020',
             },
             {
               title: 'AR Digital Content Development (Ball Shooting, Trampoline)',
@@ -644,6 +741,21 @@ export const translations = {
             {
               title: 'Distributed Energy Management & Operation Platform',
               client: 'Company E',
+              year: '2019',
+            },
+            {
+              title: 'ML-based Unmanned Foreign Coin Exchange Kiosk',
+              client: 'Company C',
+              year: '2019',
+            },
+            {
+              title: 'VR Fitness Service',
+              client: 'Company F',
+              year: '2019',
+            },
+            {
+              title: 'Influencer Marketing Platform for SMEs',
+              client: 'Company I',
               year: '2019',
             },
           ],
@@ -659,7 +771,6 @@ export const translations = {
         lastName: 'Last Name',
         company: 'Company/Org',
         email: 'Email Address',
-        phone: 'Phone Number',
         message: 'Message (Project outline, budget, schedule, etc.)',
         submit: 'Send Message',
       },
@@ -675,8 +786,6 @@ export const translations = {
       },
       links: {
         about: 'About',
-        history: 'History',
-        vision: 'Vision',
         tech: 'Technical Strategy',
         mgmt: 'Management Strategy',
         invest: 'Investment Strategy',
