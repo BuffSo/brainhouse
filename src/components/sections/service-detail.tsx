@@ -36,18 +36,18 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 sm:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-12 sm:py-16 md:py-24">
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-20" />
         <Container className="relative z-10">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-4 inline-flex items-center rounded-full bg-blue-500/20 px-4 py-1.5 text-sm font-medium text-blue-300">
-              <Icons.Rocket className="mr-2 h-4 w-4" />
+          <div className="mx-auto max-w-3xl text-center px-1">
+            <div className="mb-3 sm:mb-4 inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm font-medium text-blue-300">
+              <Icons.Rocket className="mr-1.5 h-3.5 w-3.5 sm:mr-2 sm:h-4 sm:w-4" />
               New Service
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+            <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {serviceDetails.title}
             </h1>
-            <p className="mt-4 text-lg text-blue-100 sm:text-xl">
+            <p className="mt-3 text-base text-blue-100 sm:mt-4 sm:text-lg md:text-xl">
               {serviceDetails.subtitle}
             </p>
           </div>
@@ -56,21 +56,21 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
 
       {/* Coming Soon Notice */}
       {isComingSoon && (
-        <section className="bg-amber-50 py-8">
+        <section className="bg-amber-50 py-4 sm:py-6 md:py-8">
           <Container>
-            <div className="flex items-center justify-center gap-3 text-amber-800">
-              <Icons.Lightbulb className="h-5 w-5" />
-              <p className="font-medium">{ui.comingSoonMessage}</p>
+            <div className="flex items-center justify-center gap-2 sm:gap-3 text-amber-800">
+              <Icons.Lightbulb className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
+              <p className="text-sm sm:text-base font-medium text-center">{ui.comingSoonMessage}</p>
             </div>
           </Container>
         </section>
       )}
 
       {/* Description Section */}
-      <section className="py-12 sm:py-16">
+      <section className="py-8 sm:py-12 md:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <p className="text-lg leading-relaxed text-slate-600 sm:text-xl">
+            <p className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
               {serviceDetails.description}
             </p>
           </div>
@@ -79,23 +79,23 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
 
       {/* Target Customers Section - MVP Development Only */}
       {'targetCustomers' in serviceDetails && serviceDetails.targetCustomers && (
-        <section className="bg-slate-50 py-12 sm:py-16">
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
           <Container>
             <div className="mx-auto max-w-4xl">
-              <div className="mb-8 text-center">
-                <div className="mb-2 flex items-center justify-center gap-2 text-blue-600">
-                  <Icons.Users className="h-5 w-5" />
-                  <span className="text-sm font-semibold uppercase tracking-wider">{ui.targetCustomersLabel}</span>
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Users className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">{ui.targetCustomersLabel}</span>
                 </div>
-                <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
                   {ui.targetCustomersTitle}
                 </h2>
               </div>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 {serviceDetails.targetCustomers.map((customer, index) => (
                   <span
                     key={index}
-                    className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition-all hover:ring-blue-200 hover:shadow-md"
+                    className="inline-flex items-center rounded-full bg-white px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm font-medium text-slate-700 shadow-sm ring-1 ring-slate-200 transition-all hover:ring-blue-200 hover:shadow-md"
                   >
                     {customer}
                   </span>
@@ -108,15 +108,15 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
 
       {/* Process Steps Section */}
       {'processSteps' in serviceDetails && serviceDetails.processSteps && (
-        <section className="py-12 sm:py-16">
+        <section className="py-8 sm:py-12 md:py-16">
           <Container>
             <div className="mx-auto max-w-4xl">
-              <div className="mb-8 text-center">
-                <div className="mb-2 flex items-center justify-center gap-2 text-blue-600">
-                  <Icons.Target className="h-5 w-5" />
-                  <span className="text-sm font-semibold uppercase tracking-wider">{ui.processLabel}</span>
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Target className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">{ui.processLabel}</span>
                 </div>
-                <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
                   {ui.processTitle}
                 </h2>
               </div>
@@ -128,17 +128,17 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
 
       {/* Tech Domains Section - MVP Development Only */}
       {'techDomains' in serviceDetails && serviceDetails.techDomains && serviceDetails.techDomains.length > 0 && (
-        <section className="bg-slate-50 py-12 sm:py-16">
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
           <Container>
-            <div className="mb-10 text-center">
-              <div className="mb-2 flex items-center justify-center gap-2 text-blue-600">
-                <Icons.Layers className="h-5 w-5" />
-                <span className="text-sm font-semibold uppercase tracking-wider">{ui.techDomainsLabel}</span>
+            <div className="mb-6 sm:mb-8 md:mb-10 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Layers className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">{ui.techDomainsLabel}</span>
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
                 {ui.techDomainsTitle}
               </h2>
-              <p className="mx-auto mt-3 max-w-2xl text-slate-600">
+              <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
                 {ui.techDomainsDescription}
               </p>
             </div>
@@ -148,19 +148,19 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
       )}
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-12 sm:py-16">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-10 sm:py-12 md:py-16">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
               {ui.ctaTitle}
             </h2>
-            <p className="mt-3 text-blue-100">
+            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-blue-100">
               {ui.ctaDescription}
             </p>
-            <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-5 sm:mt-6 flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-blue-600 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="w-full sm:w-auto inline-flex h-10 sm:h-11 items-center justify-center rounded-md bg-white px-6 sm:px-8 text-sm font-medium text-blue-600 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 {ui.ctaButton}
               </Link>
