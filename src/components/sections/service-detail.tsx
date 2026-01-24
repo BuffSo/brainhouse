@@ -6,8 +6,6 @@ import { Icons } from '@/components/ui/icons';
 import { useLanguage } from '@/contexts/language-context';
 import { StrategyFlow } from './strategy-flow';
 import { TechDomainGrid } from './tech-domain-grid';
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 interface ServiceDetailProps {
   slug: string;
@@ -161,10 +159,7 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
             <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className={cn(
-                  buttonVariants({ size: 'lg' }),
-                  'bg-white text-blue-600 hover:bg-blue-50'
-                )}
+                className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-blue-600 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 프로젝트 문의하기
               </Link>
