@@ -357,12 +357,14 @@ export const translations = {
       description:
         '성공적인 비즈니스를 위한 첫 걸음, 브레인하우스가 함께하겠습니다. 프로젝트 문의나 파트너십 제안 등 언제든 편하게 문의해주세요.',
       form: {
-        firstName: '이름',
-        lastName: '성',
+        name: '이름',
         company: '회사/기관명',
         email: '이메일 주소',
         message: '문의 내용 (프로젝트 개요, 예산, 일정 등)',
         submit: '문의하기',
+        submitting: '전송 중...',
+        success: '문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변 드리겠습니다.',
+        error: '메시지 전송에 실패했습니다. 잠시 후 다시 시도해주세요.',
       },
     },
     footer: {
@@ -767,12 +769,14 @@ export const translations = {
       description:
         'Your first step towards successful business. Brain House is here to help. Feel free to contact us for projects or partnerships.',
       form: {
-        firstName: 'First Name',
-        lastName: 'Last Name',
+        name: 'Name',
         company: 'Company/Org',
         email: 'Email Address',
         message: 'Message (Project outline, budget, schedule, etc.)',
         submit: 'Send Message',
+        submitting: 'Sending...',
+        success: 'Your message has been sent successfully. We will get back to you soon.',
+        error: 'Failed to send message. Please try again later.',
       },
     },
     footer: {
@@ -1172,12 +1176,14 @@ export const translations = {
       description:
         '成功するビジネスへの第一歩、ブレインハウスが共にします。プロジェクトのご相談やパートナーシップのご提案など、お気軽にお問い合わせください。',
       form: {
-        firstName: '名',
-        lastName: '姓',
+        name: 'お名前',
         company: '会社/機関名',
         email: 'メールアドレス',
         message: 'お問い合わせ内容（プロジェクト概要、予算、スケジュールなど）',
         submit: 'お問い合わせ',
+        submitting: '送信中...',
+        success: 'お問い合わせが正常に送信されました。近日中にご連絡いたします。',
+        error: 'メッセージの送信に失敗しました。後でもう一度お試しください。',
       },
     },
     footer: {
