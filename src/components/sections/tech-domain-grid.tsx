@@ -23,6 +23,7 @@ const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   Building: Icons.Building,
   Wallet: Icons.Wallet,
   Shield: Icons.Shield,
+  Umbrella: Icons.Umbrella,
   GraduationCap: Icons.GraduationCap,
   Scale: Icons.Scale,
   PawPrint: Icons.PawPrint,

@@ -14,15 +14,16 @@ interface ServiceDetailProps {
 export function ServiceDetail({ slug }: ServiceDetailProps) {
   const { t } = useLanguage();
   const serviceDetails = t.serviceDetails?.[slug as keyof typeof t.serviceDetails];
+  const ui = t.serviceDetailUI;
 
   if (!serviceDetails) {
     return (
       <section className="py-16 sm:py-24">
         <Container>
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-slate-900">서비스를 찾을 수 없습니다</h1>
+            <h1 className="text-2xl font-bold text-slate-900">{ui.notFound}</h1>
             <Link href="/services" className="mt-4 text-blue-600 hover:underline">
-              전체 서비스 보기
+              {ui.viewAllServices}
             </Link>
           </div>
         </Container>
@@ -59,7 +60,7 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
           <Container>
             <div className="flex items-center justify-center gap-3 text-amber-800">
               <Icons.Lightbulb className="h-5 w-5" />
-              <p className="font-medium">상세 내용이 준비 중입니다. 곧 업데이트 예정입니다.</p>
+              <p className="font-medium">{ui.comingSoonMessage}</p>
             </div>
           </Container>
         </section>
@@ -84,10 +85,10 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
               <div className="mb-8 text-center">
                 <div className="mb-2 flex items-center justify-center gap-2 text-blue-600">
                   <Icons.Users className="h-5 w-5" />
-                  <span className="text-sm font-semibold uppercase tracking-wider">Target Customers</span>
+                  <span className="text-sm font-semibold uppercase tracking-wider">{ui.targetCustomersLabel}</span>
                 </div>
                 <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-                  서비스 대상 고객
+                  {ui.targetCustomersTitle}
                 </h2>
               </div>
               <div className="flex flex-wrap justify-center gap-3">
@@ -113,10 +114,10 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
               <div className="mb-8 text-center">
                 <div className="mb-2 flex items-center justify-center gap-2 text-blue-600">
                   <Icons.Target className="h-5 w-5" />
-                  <span className="text-sm font-semibold uppercase tracking-wider">Process</span>
+                  <span className="text-sm font-semibold uppercase tracking-wider">{ui.processLabel}</span>
                 </div>
                 <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-                  서비스 진행 프로세스
+                  {ui.processTitle}
                 </h2>
               </div>
               <StrategyFlow steps={serviceDetails.processSteps} />
@@ -132,13 +133,13 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
             <div className="mb-10 text-center">
               <div className="mb-2 flex items-center justify-center gap-2 text-blue-600">
                 <Icons.Layers className="h-5 w-5" />
-                <span className="text-sm font-semibold uppercase tracking-wider">Tech Domains</span>
+                <span className="text-sm font-semibold uppercase tracking-wider">{ui.techDomainsLabel}</span>
               </div>
               <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-                지원 가능한 Tech Domain
+                {ui.techDomainsTitle}
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-                다양한 산업 분야에서 혁신적인 사업 아이템을 발굴하고 MVP를 개발합니다.
+                {ui.techDomainsDescription}
               </p>
             </div>
             <TechDomainGrid domains={serviceDetails.techDomains} />
@@ -151,23 +152,23 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
-              프로젝트를 시작해 보세요
+              {ui.ctaTitle}
             </h2>
             <p className="mt-3 text-blue-100">
-              브레인하우스와 함께 혁신적인 서비스를 만들어 보세요.
+              {ui.ctaDescription}
             </p>
             <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
                 className="inline-flex h-11 items-center justify-center rounded-md bg-white px-8 text-sm font-medium text-blue-600 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
-                프로젝트 문의하기
+                {ui.ctaButton}
               </Link>
               <Link
                 href="/services"
                 className="text-sm font-medium text-white hover:text-blue-100"
               >
-                전체 서비스 보기 →
+                {ui.ctaViewAll}
               </Link>
             </div>
           </div>
