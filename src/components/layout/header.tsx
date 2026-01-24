@@ -13,12 +13,14 @@ import { useLanguage } from '@/contexts/language-context';
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = React.useState(false);
+  const [isServicesMenuOpen, setIsServicesMenuOpen] = React.useState(false);
+  const [mobileServicesExpanded, setMobileServicesExpanded] = React.useState(false);
   const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
     { name: t.header.about, href: '/about' },
     { name: t.header.business, href: '/business' },
-    { name: t.header.services, href: '/services' },
+    { name: t.header.services, href: '/services', hasSubmenu: true },
     { name: t.header.portfolio, href: '/portfolio' },
     { name: t.header.contact, href: '/contact' },
   ];
@@ -43,15 +45,64 @@ export function Header() {
           </div>
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) =>
+                item.hasSubmenu ? (
+                  <div key={item.name} className="relative">
+                    <button
+                      onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
+                      className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {item.name}
+                      <Icons.ChevronDown
+                        className={cn(
+                          'h-3 w-3 transition-transform',
+                          isServicesMenuOpen && 'rotate-180'
+                        )}
+                      />
+                    </button>
+                    {isServicesMenuOpen && (
+                      <>
+                        <div
+                          className="fixed inset-0 z-10"
+                          onClick={() => setIsServicesMenuOpen(false)}
+                        />
+                        <div className="absolute left-0 top-full z-20 mt-2 w-64 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                          <div className="py-1">
+                            <Link
+                              href="/services"
+                              onClick={() => setIsServicesMenuOpen(false)}
+                              className="flex w-full items-center px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100"
+                            >
+                              {t.servicesMenu?.viewAll || '전체 서비스 보기'}
+                            </Link>
+                            {t.servicesMenu?.items?.map((service) => (
+                              <Link
+                                key={service.slug}
+                                href={service.hasPage ? `/services/${service.slug}` : '/services'}
+                                onClick={() => setIsServicesMenuOpen(false)}
+                                className="flex w-full items-center px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+                              >
+                                {service.title}
+                                {service.hasPage && (
+                                  <span className="ml-auto text-xs text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">NEW</span>
+                                )}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
               {/* Desktop Language Selector */}
               <div className="relative">
                 <Button
@@ -186,16 +237,57 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) =>
+              item.hasSubmenu ? (
+                <div key={item.name}>
+                  <button
+                    onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}
+                    className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {item.name}
+                    <Icons.ChevronDown
+                      className={cn(
+                        'h-4 w-4 transition-transform',
+                        mobileServicesExpanded && 'rotate-180'
+                      )}
+                    />
+                  </button>
+                  {mobileServicesExpanded && (
+                    <div className="ml-4 mt-1 space-y-1 border-l-2 border-slate-200 pl-3">
+                      <Link
+                        href="/services"
+                        className="block rounded-md px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {t.servicesMenu?.viewAll || '전체 서비스 보기'}
+                      </Link>
+                      {t.servicesMenu?.items?.map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={service.hasPage ? `/services/${service.slug}` : '/services'}
+                          className="flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.shortTitle}
+                          {service.hasPage && (
+                            <span className="ml-2 text-xs text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">NEW</span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
             <div className="pt-4">
               <Link
                 href="/contact"

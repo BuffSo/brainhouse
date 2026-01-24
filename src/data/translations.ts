@@ -407,6 +407,190 @@ export const translations = {
         subtitle: '성공적인 비즈니스를 위한 첫 걸음',
       },
     },
+    servicesMenu: {
+      viewAll: '전체 서비스 보기',
+      items: [
+        { slug: 'mvp-development', title: '아이템 기획 & MVP', shortTitle: 'MVP 개발', hasPage: true },
+        { slug: 'ax-consulting', title: 'AX 컨설팅', shortTitle: 'AX 컨설팅', hasPage: true },
+        { slug: 'ict-strategy', title: 'ICT 전략·정책 컨설팅', shortTitle: 'ICT 전략', hasPage: false },
+        { slug: 'tech-commercialization', title: '기술사업화 컨설팅', shortTitle: '기술사업화', hasPage: false },
+        { slug: 'startup-investment', title: '창업·투자 컨설팅', shortTitle: '창업·투자', hasPage: false },
+        { slug: 'software-development', title: '소프트웨어 개발', shortTitle: 'SW 개발', hasPage: false },
+      ],
+    },
+    serviceDetails: {
+      'mvp-development': {
+        title: '사업 아이템 기획(발굴) 및 MVP 개발',
+        subtitle: 'Tech Domain별 사업 아이템 기획 및 MVP 개발 서비스',
+        description: '다양한 테크 도메인에서 사업 아이템을 발굴하고, 빠른 시장 검증을 위한 MVP(Minimum Viable Product)를 개발합니다. 28년의 ICT 현장 경험을 바탕으로 실현 가능한 비즈니스 모델을 설계하고, AI 기술을 활용한 혁신적인 서비스를 구현합니다.',
+        targetCustomers: [
+          '프리랜서',
+          '퇴사준비자',
+          '예비창업자',
+          '초기창업자',
+          '스타트업',
+          '중소기업',
+          '중견기업',
+        ],
+        processSteps: ['아이디어 발굴', '시장 분석', 'BM 설계', 'MVP 개발', '시장 검증'],
+        techDomains: [
+          {
+            id: 'ax',
+            name: 'AX (AI Transformation)',
+            icon: 'Brain',
+            examples: [
+              'AI 기반 대화형 쇼핑 비서가 탑재된 쇼핑몰 통합 솔루션 서비스',
+              '시니어를 위한 AI 기반 영상 자서전(라이프 스토리) 제작 플랫폼',
+              'AI 기반 데이터분석과 오류검증, SaaS시스템이 합류된 스토리텔링 관리 도구',
+              'AI 활용한 이력서 관리 및 매칭 시스템',
+              'AI 기술이 적용된 고객경험 통찰 인공지능 (CX Insight AI)',
+            ],
+          },
+          {
+            id: 'o2o',
+            name: 'O2O (Online to Offline)',
+            icon: 'Store',
+            examples: [
+              '차량의 매입부터 상품화 및 판매까지 한 번에 제공하는 올인원 서비스',
+              '위치 기반 몰입형 메타버스 플랫폼',
+              '디지털 마케팅 중개 플랫폼',
+              '비대면 무인 상점 기반 중고 거래 플랫폼',
+              '크롤링을 이용한 인스타툰(짧은툰) 어그리게이션 및 큐레이션 플랫폼 서비스',
+              '지오캐싱(geocaching)을 활용한 위치기반 SNS',
+              'GPS 기반 기프티콘 지갑 및 기프티콘 활용한 광고·홍보 서비스',
+            ],
+          },
+          {
+            id: 'wellnesstech',
+            name: '웰니스테크',
+            icon: 'Heart',
+            examples: [
+              '시니어를 위한 멘탈 케어 메이트 매칭 웰니스 플랫폼',
+              '데이터 기반 개인 맞춤형 건강관리 및 건강기능식품 구독 서비스',
+              '음성 분석 기반 정신질환 디지털 치료기기',
+              '성인ADHD 치료를 위한 모바일 어플리케이션',
+              'AI 기반 심리 건강 관리 플랫폼',
+              'AI 기반 아동·청소년 심리 상담 애플리케이션',
+              'RFID/QR 기반의 실버카 연동 신체활동 측정 및 포인트 적립의 노인 맞춤형 헬스케어 리워드 시스템',
+              '수면 중 신체정보(안구/뒤척임/체온/소음/코골이 등) 추적 기술이 적용된 AI기반 수면 안대, 배게 및 모바일 어플리케이션',
+              '고령자 및 취약 계층 위한 맞춤형 안전 모니터링과 케어를 제공하는 AI 기반 돌봄 서비스',
+            ],
+          },
+          {
+            id: 'traveltech',
+            name: '트래블테크',
+            icon: 'Plane',
+            examples: [
+              'AR(증강현실)과 메타버스 게임을 접목시킨 로컬 투어 어플리케이션',
+            ],
+          },
+          {
+            id: 'sportstech',
+            name: '스포츠테크',
+            icon: 'Trophy',
+            examples: [
+              '웹 서비스 기술이 적용된 클라이밍 플랫폼 서비스',
+              '장거리 산행을 쉽게 해주는 버스 픽업 서비스',
+              '생활체육 종합 플랫폼 O2O + 소셜 서비스',
+              '실시간 스포츠 경기 분석 대화형 챗봇 서비스',
+              'NFC 기반 자동 운동 루틴 기록, 위치기반 헬스 트레이너 매칭 및 교육용 헬스 플랫폼 서비스',
+            ],
+          },
+          {
+            id: 'foodtech',
+            name: '푸드테크',
+            icon: 'Utensils',
+            examples: [
+              'AI기술과 빅데이터 기술을 접목한 음식 추천 서비스',
+              '대체육을 사용한 고객 맞춤형 비건 밀키트',
+              '개인화 AI 기반 3인 미만 가구 대상 구독형 생수 배송 B2C 서비스',
+            ],
+          },
+          {
+            id: 'proptech',
+            name: '프롭테크',
+            icon: 'Building',
+            examples: [
+              'AI·IoT 결합한 개인 맞춤형 인테리어 앱 서비스',
+              'cGAN AI를 활용한 인테리어 중개 플랫폼',
+            ],
+          },
+          {
+            id: 'fintech',
+            name: '핀테크',
+            icon: 'Wallet',
+            examples: [
+              '펌뱅킹 기술에 AI가 적용된 자산 최적화 기능의 자산 관리 플랫폼',
+            ],
+          },
+          {
+            id: 'insurtech',
+            name: '인슈테크',
+            icon: 'Shield',
+            examples: [
+              '맞춤형 보험 추천 플랫폼',
+              '보험 청구 자동화 시스템',
+              '디지털 보험 가입 서비스',
+              'AI 기반 리스크 분석 솔루션',
+            ],
+          },
+          {
+            id: 'edutech',
+            name: '에듀테크',
+            icon: 'GraduationCap',
+            examples: [
+              '초중고 대상 게이미피케이션 기반의 코딩 학습 앱 서비스',
+              '머신러닝 기술이 적용된 요약본 및 기출문제 생성 기능의 스터디 서비스',
+              '기업 확정 연계형 SW(소프트웨어) 개발자 교육 플랫폼',
+              '시니어를 위한 영어 스피킹 과외 매칭 플랫폼',
+              '전문가가 목표 도전을 도와주는 비대면 자기계발 플랫폼',
+            ],
+          },
+          {
+            id: 'legaltech',
+            name: '리걸테크',
+            icon: 'Scale',
+            examples: [
+              'AI 기반 지능형 법률 문서 플랫폼 및 리걸테크 서비스',
+            ],
+          },
+          {
+            id: 'pettech',
+            name: '펫테크',
+            icon: 'PawPrint',
+            examples: [
+              'AI 기반 슬개골 탈구를 진단하는 동물 진단 앱',
+              '유기동물 보호소와 연계된 종합 펫 플랫폼',
+              '반려동물용 스마트 웨어러블 디바이스를 활용한 종합 펫케어 플랫폼',
+            ],
+          },
+          {
+            id: 'agtech',
+            name: '애그테크',
+            icon: 'Leaf',
+            examples: [
+              '자율농기계 사용 컨설팅 및 판매 중개 플랫폼',
+              'IoT 기반 스마트 과일 재배 시스템',
+            ],
+          },
+          {
+            id: 'fashiontech',
+            name: '패션테크',
+            icon: 'Shirt',
+            examples: [
+              '1인 디자이너 및 소규모 패션 브랜드를 위한 원스톱 의류 디자인·생산 플랫폼',
+              '가상 피팅 서비스를 제공하는 어플리케이션',
+            ],
+          },
+        ],
+      },
+      'ax-consulting': {
+        title: 'AX 컨설팅',
+        subtitle: 'AI Transformation 컨설팅',
+        description: '기업의 AI 전환을 위한 전략 수립부터 실행까지 지원합니다. 상세 내용은 준비 중입니다.',
+        comingSoon: true,
+      },
+    },
   },
   en: {
     header: {
@@ -819,6 +1003,41 @@ export const translations = {
         subtitle: 'Your First Step to Successful Business',
       },
     },
+    servicesMenu: {
+      viewAll: 'View All Services',
+      items: [
+        { slug: 'mvp-development', title: 'Item Planning & MVP', shortTitle: 'MVP Dev', hasPage: true },
+        { slug: 'ax-consulting', title: 'AX Consulting', shortTitle: 'AX Consulting', hasPage: true },
+        { slug: 'ict-strategy', title: 'ICT Strategy & Policy Consulting', shortTitle: 'ICT Strategy', hasPage: false },
+        { slug: 'tech-commercialization', title: 'Tech Commercialization Consulting', shortTitle: 'Tech Comm.', hasPage: false },
+        { slug: 'startup-investment', title: 'Startup & Investment Consulting', shortTitle: 'Startup', hasPage: false },
+        { slug: 'software-development', title: 'Software Development', shortTitle: 'SW Dev', hasPage: false },
+      ],
+    },
+    serviceDetails: {
+      'mvp-development': {
+        title: 'Business Item Planning & MVP Development',
+        subtitle: 'Tech Domain-specific Business Item Planning & MVP Development Service',
+        description: 'We discover business items across various tech domains and develop MVPs (Minimum Viable Products) for rapid market validation. Based on 28 years of ICT field experience, we design viable business models and implement innovative services utilizing AI technology.',
+        targetCustomers: [
+          'Freelancers',
+          'Career Changers',
+          'Pre-founders',
+          'Early-stage Founders',
+          'Startups',
+          'SMEs',
+          'Mid-sized Companies',
+        ],
+        processSteps: ['Idea Discovery', 'Market Analysis', 'BM Design', 'MVP Development', 'Market Validation'],
+        techDomains: [],
+      },
+      'ax-consulting': {
+        title: 'AX Consulting',
+        subtitle: 'AI Transformation Consulting',
+        description: 'We support from strategy development to execution for enterprise AI transformation. Detailed content coming soon.',
+        comingSoon: true,
+      },
+    },
   },
   ja: {
     header: {
@@ -1224,6 +1443,41 @@ export const translations = {
       contact: {
         title: 'お問い合わせ',
         subtitle: '成功するビジネスへの第一歩',
+      },
+    },
+    servicesMenu: {
+      viewAll: '全サービスを見る',
+      items: [
+        { slug: 'mvp-development', title: 'アイテム企画 & MVP', shortTitle: 'MVP開発', hasPage: true },
+        { slug: 'ax-consulting', title: 'AXコンサルティング', shortTitle: 'AXコンサル', hasPage: true },
+        { slug: 'ict-strategy', title: 'ICT戦略・政策コンサルティング', shortTitle: 'ICT戦略', hasPage: false },
+        { slug: 'tech-commercialization', title: '技術事業化コンサルティング', shortTitle: '技術事業化', hasPage: false },
+        { slug: 'startup-investment', title: '創業・投資コンサルティング', shortTitle: '創業・投資', hasPage: false },
+        { slug: 'software-development', title: 'ソフトウェア開発', shortTitle: 'SW開発', hasPage: false },
+      ],
+    },
+    serviceDetails: {
+      'mvp-development': {
+        title: '事業アイテム企画（発掘）およびMVP開発',
+        subtitle: 'Tech Domain別事業アイテム企画およびMVP開発サービス',
+        description: '様々なテックドメインで事業アイテムを発掘し、迅速な市場検証のためのMVP（Minimum Viable Product）を開発します。28年のICT現場経験を基に実現可能なビジネスモデルを設計し、AI技術を活用した革新的なサービスを実装します。',
+        targetCustomers: [
+          'フリーランサー',
+          '退職準備者',
+          '予備創業者',
+          '初期創業者',
+          'スタートアップ',
+          '中小企業',
+          '中堅企業',
+        ],
+        processSteps: ['アイデア発掘', '市場分析', 'BM設計', 'MVP開発', '市場検証'],
+        techDomains: [],
+      },
+      'ax-consulting': {
+        title: 'AXコンサルティング',
+        subtitle: 'AI Transformationコンサルティング',
+        description: '企業のAI転換のための戦略策定から実行まで支援します。詳細内容は準備中です。',
+        comingSoon: true,
       },
     },
   },
