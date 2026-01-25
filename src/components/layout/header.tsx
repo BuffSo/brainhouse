@@ -13,6 +13,7 @@ import { useLanguage } from '@/contexts/language-context';
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = React.useState(false);
+  const [isMobileLangMenuOpen, setIsMobileLangMenuOpen] = React.useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = React.useState(false);
   const [mobileServicesExpanded, setMobileServicesExpanded] = React.useState(false);
   const { language, setLanguage, t } = useLanguage();
@@ -175,46 +176,69 @@ export function Header() {
               </Link>
             </div>
           </div>
-          <div className="md:hidden flex items-center gap-4">
-            <div className="flex items-center gap-1 px-2">
-              <Icons.Globe className="h-5 w-5 text-slate-500" />
-              <div className="flex items-center text-xs font-medium">
-                <button
-                  onClick={() => setLanguage('ko')}
-                  className={cn(
-                    'px-1 transition-colors',
-                    language === 'ko'
-                      ? 'font-bold text-slate-900'
-                      : 'text-slate-400 hover:text-slate-600'
-                  )}
-                >
-                  KOR
-                </button>
-                <span className="text-slate-300">|</span>
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={cn(
-                    'px-1 transition-colors',
-                    language === 'en'
-                      ? 'font-bold text-slate-900'
-                      : 'text-slate-400 hover:text-slate-600'
-                  )}
-                >
-                  ENG
-                </button>
-                <span className="text-slate-300">|</span>
-                <button
-                  onClick={() => setLanguage('ja')}
-                  className={cn(
-                    'px-1 transition-colors',
-                    language === 'ja'
-                      ? 'font-bold text-slate-900'
-                      : 'text-slate-400 hover:text-slate-600'
-                  )}
-                >
-                  JPN
-                </button>
-              </div>
+          <div className="md:hidden flex items-center gap-2">
+            <div className="relative">
+              <button
+                onClick={() => setIsMobileLangMenuOpen(!isMobileLangMenuOpen)}
+                className="flex items-center gap-1 px-2 py-1.5 rounded-md hover:bg-slate-100 transition-colors"
+              >
+                <Icons.Globe className="h-4 w-4 text-slate-500" />
+                <span className="text-xs font-medium text-slate-700">
+                  {language === 'ko' ? 'KOR' : language === 'en' ? 'ENG' : 'JPN'}
+                </span>
+                <Icons.ChevronDown className={cn(
+                  'h-3 w-3 text-slate-400 transition-transform',
+                  isMobileLangMenuOpen && 'rotate-180'
+                )} />
+              </button>
+              {isMobileLangMenuOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-10"
+                    onClick={() => setIsMobileLangMenuOpen(false)}
+                  />
+                  <div className="absolute right-0 top-full z-20 mt-1 w-24 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="py-1">
+                      <button
+                        onClick={() => {
+                          setLanguage('ko');
+                          setIsMobileLangMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                          language === 'ko' && 'bg-slate-50 font-semibold text-blue-600'
+                        )}
+                      >
+                        KOR
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('en');
+                          setIsMobileLangMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                          language === 'en' && 'bg-slate-50 font-semibold text-blue-600'
+                        )}
+                      >
+                        ENG
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('ja');
+                          setIsMobileLangMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                          language === 'ja' && 'bg-slate-50 font-semibold text-blue-600'
+                        )}
+                      >
+                        JPN
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
             <Button
               variant="ghost"
