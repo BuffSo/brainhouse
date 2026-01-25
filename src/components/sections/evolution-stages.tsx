@@ -61,36 +61,36 @@ export function EvolutionStages({ stages }: EvolutionStagesProps) {
 
       {/* Mobile: Vertical Timeline */}
       <div className="md:hidden">
-        <div className="relative space-y-6">
+        <div className="relative space-y-5 sm:space-y-6">
           {stages.map((stage, index) => (
-            <div key={stage.step} className="relative flex gap-4">
+            <div key={stage.step} className="relative flex gap-3 sm:gap-4">
               {/* Vertical Line */}
               {index < stages.length - 1 && (
-                <div className="absolute left-6 top-14 bottom-0 w-0.5 bg-gradient-to-b from-slate-300 to-blue-400" />
+                <div className="absolute left-5 sm:left-6 top-12 sm:top-14 bottom-0 w-0.5 bg-gradient-to-b from-slate-300 to-blue-400" />
               )}
 
               {/* Step Circle */}
               <div
                 className={`
-                  relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-3
+                  relative z-10 flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full border-2
                   ${index === stages.length - 1
                     ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200'
                     : 'bg-white border-slate-300 text-slate-600'
                   }
                 `}
               >
-                <span className="text-lg font-bold">{stage.step}</span>
+                <span className="text-base sm:text-lg font-bold">{stage.step}</span>
               </div>
 
               {/* Content */}
-              <div className="flex-1 pb-6">
-                <h3 className={`text-base font-bold ${index === stages.length - 1 ? 'text-blue-600' : 'text-slate-900'}`}>
+              <div className="flex-1 pb-5 sm:pb-6 min-w-0">
+                <h3 className={`text-sm sm:text-base font-bold ${index === stages.length - 1 ? 'text-blue-600' : 'text-slate-900'}`}>
                   {stage.title}
                 </h3>
-                <p className={`text-sm font-medium ${index === stages.length - 1 ? 'text-blue-500' : 'text-slate-500'}`}>
+                <p className={`text-xs sm:text-sm font-medium ${index === stages.length - 1 ? 'text-blue-500' : 'text-slate-500'}`}>
                   {stage.subtitle}
                 </p>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
                   {stage.description}
                 </p>
               </div>

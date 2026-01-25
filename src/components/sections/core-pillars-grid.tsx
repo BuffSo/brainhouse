@@ -21,7 +21,7 @@ const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 
 export function CorePillarsGrid({ pillars }: CorePillarsGridProps) {
   return (
-    <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+    <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {pillars.map((pillar, index) => {
         const IconComponent = iconMap[pillar.icon] || Icons.Lightbulb;
 
@@ -36,29 +36,29 @@ export function CorePillarsGrid({ pillars }: CorePillarsGridProps) {
         return (
           <div
             key={index}
-            className="group rounded-xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all hover:shadow-lg hover:border-slate-300"
+            className="group rounded-xl border border-slate-200 bg-white p-4 sm:p-5 md:p-6 shadow-sm transition-all hover:shadow-lg hover:border-slate-300"
           >
             {/* Icon */}
-            <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${color.bg} ${color.text} transition-colors ${color.hover} group-hover:text-white`}>
-              <IconComponent className="h-6 w-6" aria-hidden="true" />
+            <div className={`mb-3 sm:mb-4 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg ${color.bg} ${color.text} transition-colors ${color.hover} group-hover:text-white`}>
+              <IconComponent className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-bold text-slate-900 mb-2">
+            <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5 sm:mb-2">
               {pillar.title}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-slate-600 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3 sm:mb-4">
               {pillar.description}
             </p>
 
             {/* Outcomes */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {pillar.outcomes.map((outcome, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700"
+                  className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium text-slate-700"
                 >
                   {outcome}
                 </span>

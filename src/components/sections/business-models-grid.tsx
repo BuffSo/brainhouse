@@ -42,7 +42,7 @@ export function BusinessModelsGrid({ models }: BusinessModelsGridProps) {
   ];
 
   return (
-    <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 xl:grid-cols-3">
       {models.map((model, index) => {
         const IconComponent = iconMap[model.icon] || Icons.Brain;
         const color = colorSchemes[index % colorSchemes.length];
@@ -50,46 +50,46 @@ export function BusinessModelsGrid({ models }: BusinessModelsGridProps) {
         return (
           <div
             key={model.id}
-            className="group rounded-xl border border-slate-200 bg-white p-5 sm:p-6 shadow-sm transition-all hover:shadow-lg hover:border-slate-300"
+            className="group rounded-xl border border-slate-200 bg-white p-4 sm:p-5 md:p-6 shadow-sm transition-all hover:shadow-lg hover:border-slate-300"
           >
             {/* Header */}
-            <div className="flex items-start gap-3 mb-4">
-              <div className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg ${color.bg} ${color.text} transition-colors ${color.hover} group-hover:text-white`}>
-                <IconComponent className="h-5 w-5" aria-hidden="true" />
+            <div className="flex items-start gap-3 mb-3 sm:mb-4">
+              <div className={`flex h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-lg ${color.bg} ${color.text} transition-colors ${color.hover} group-hover:text-white`}>
+                <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-base font-bold text-slate-900 truncate">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-tight">
                   {model.title}
                 </h3>
-                <p className="text-sm text-slate-500">
+                <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
                   {model.subtitle}
                 </p>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-sm text-slate-600 leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3 sm:mb-4">
               {model.description}
             </p>
 
             {/* Method */}
-            <div className="mb-4 p-3 rounded-lg bg-slate-50">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 tracking-wider mb-1">
+            <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 rounded-lg bg-slate-50">
+              <div className="flex items-center gap-2 text-[10px] sm:text-xs font-semibold text-slate-500 tracking-wider mb-1">
                 방식
               </div>
-              <p className="text-sm text-slate-700">
+              <p className="text-xs sm:text-sm text-slate-700">
                 {model.pricing}
               </p>
             </div>
 
             {/* Examples */}
             <div>
-              <div className="text-xs font-semibold text-slate-500 tracking-wider mb-2">
+              <div className="text-[10px] sm:text-xs font-semibold text-slate-500 tracking-wider mb-1.5 sm:mb-2">
                 대표 사례
               </div>
-              <ul className="space-y-1.5">
+              <ul className="space-y-1 sm:space-y-1.5">
                 {model.examples.map((example, idx) => (
-                  <li key={idx} className="text-sm text-slate-600">
+                  <li key={idx} className="text-xs sm:text-sm text-slate-600">
                     <span className="font-medium text-slate-800">{example.name}</span>
                     <span className="text-slate-500">: {example.desc}</span>
                   </li>

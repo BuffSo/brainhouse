@@ -97,35 +97,35 @@ export function ConsultingFramework({ phases }: ConsultingFrameworkProps) {
             <div key={phase.phase} className="relative">
               {/* Connector */}
               {index < phases.length - 1 && (
-                <div className="absolute left-6 top-full h-4 w-0.5 bg-blue-200" />
+                <div className="absolute left-5 sm:left-6 top-full h-4 w-0.5 bg-blue-200" />
               )}
 
-              <div className="rounded-xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-slate-200 bg-white p-3.5 sm:p-4 md:p-5 shadow-sm">
                 {/* Phase Header */}
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white flex-shrink-0">
-                    <IconComponent className="h-5 w-5" />
+                <div className="flex items-center gap-2.5 sm:gap-3 mb-3">
+                  <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-blue-600 text-white flex-shrink-0">
+                    <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
+                    <span className="text-[10px] sm:text-xs font-semibold text-blue-600 uppercase tracking-wider">
                       Phase {phase.phase}
                     </span>
-                    <h3 className="text-base font-bold text-slate-900">
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900">
                       {phase.title}
                     </h3>
                   </div>
                 </div>
 
-                <div className="ml-13 grid sm:grid-cols-2 gap-4">
+                <div className="mt-3 grid sm:grid-cols-2 gap-3 sm:gap-4">
                   {/* Activities */}
                   <div>
-                    <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                    <h4 className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5 sm:mb-2">
                       Activities
                     </h4>
                     <ul className="space-y-1">
                       {phase.activities.map((activity, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-slate-600">
-                          <Icons.Check className="mr-1.5 mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-blue-500" />
+                        <li key={idx} className="flex items-start text-xs sm:text-sm text-slate-600">
+                          <Icons.Check className="mr-1.5 mt-0.5 h-3 w-3 sm:h-3.5 sm:w-3.5 flex-shrink-0 text-blue-500" />
                           <span>{activity}</span>
                         </li>
                       ))}
@@ -133,15 +133,15 @@ export function ConsultingFramework({ phases }: ConsultingFrameworkProps) {
                   </div>
 
                   {/* Deliverables */}
-                  <div>
-                    <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                  <div className="mt-2 sm:mt-0">
+                    <h4 className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1.5 sm:mb-2">
                       Deliverables
                     </h4>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-1 sm:gap-1.5">
                       {phase.deliverables.map((deliverable, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700"
+                          className="inline-flex items-center rounded-full bg-blue-50 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium text-blue-700"
                         >
                           {deliverable}
                         </span>

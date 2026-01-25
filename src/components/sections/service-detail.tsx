@@ -45,12 +45,21 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-12 sm:py-16 md:py-24">
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-20" />
         <Container className="relative z-10">
-          <div className="mx-auto max-w-3xl text-center px-1">
-            <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+          <div className="mx-auto max-w-3xl text-center px-2 sm:px-4">
+            <h1 className="text-xl font-bold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl break-keep">
               {serviceDetails.title}
             </h1>
-            <p className="mt-3 text-base text-blue-100 sm:mt-4 sm:text-lg md:text-xl">
-              {serviceDetails.subtitle}
+            <p className="mt-3 text-sm text-blue-100 sm:mt-4 sm:text-base md:text-lg lg:text-xl">
+              {serviceDetails.subtitle.includes(' 및 ') ? (
+                <>
+                  {serviceDetails.subtitle.split(' 및 ')[0]} 및
+                  <br className="sm:hidden" />
+                  <span className="sm:inline"> </span>
+                  {serviceDetails.subtitle.split(' 및 ').slice(1).join(' 및 ')}
+                </>
+              ) : (
+                serviceDetails.subtitle
+              )}
             </p>
           </div>
         </Container>
