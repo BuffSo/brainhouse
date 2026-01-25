@@ -1,17 +1,34 @@
 'use client';
 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useRef, Suspense } from 'react';
+import { useRef, Suspense, useEffect, useState } from 'react';
 import { BrainNetwork } from './network';
 import * as THREE from 'three';
 
 function Rig({ mouse }: { mouse: React.MutableRefObject<[number, number]> }) {
-  const { camera } = useThree();
+  const { camera, viewport } = useThree();
+  const isMobile = viewport.width < 10;
+
   useFrame(() => {
-    camera.position.x += (mouse.current[0] * 2 - camera.position.x) * 0.05;
-    camera.position.y += (mouse.current[1] * 2 - camera.position.y) * 0.05;
+    // Less mouse movement on mobile
+    const moveStrength = isMobile ? 0.5 : 2;
+    camera.position.x += (mouse.current[0] * moveStrength - camera.position.x) * 0.05;
+    camera.position.y += (mouse.current[1] * moveStrength - camera.position.y) * 0.05;
     camera.lookAt(0, 0, 0);
   });
+  return null;
+}
+
+// Adjust camera based on screen size
+function ResponsiveCamera() {
+  const { camera, viewport } = useThree();
+  const isMobile = viewport.width < 10;
+
+  useEffect(() => {
+    // Bring camera closer on mobile for better visibility
+    camera.position.z = isMobile ? 10 : 15;
+  }, [camera, isMobile]);
+
   return null;
 }
 
@@ -46,6 +63,7 @@ export default function Scene() {
           <BrainNetwork mouse={mouse} />
         </Suspense>
 
+        <ResponsiveCamera />
         <Rig mouse={mouse} />
       </Canvas>
       {/* Overlay to ensure text readability */}

@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useRef, useMemo, useState, useEffect } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
 // Elegant floating particles - subtle and clean
@@ -12,7 +12,20 @@ export function ElegantNetwork({
 }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
-  const count = 35; // Balanced count
+  const { viewport } = useThree();
+
+  // Detect mobile based on viewport width
+  const isMobile = viewport.width < 10;
+
+  // Adjust settings for mobile
+  const count = isMobile ? 18 : 35;
+  const minRadius = isMobile ? 3 : 6; // Closer to center on mobile
+  const maxRadius = isMobile ? 6 : 8;
+  const particleSize = isMobile ? 0.4 : 0.25;
+  const lineOpacity = isMobile ? 0.25 : 0.15;
+  const particleOpacity = isMobile ? 0.8 : 0.6;
+  const maxDistance = isMobile ? 4 : 5;
+
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
   const particles = useMemo(() => {
@@ -20,24 +33,23 @@ export function ElegantNetwork({
     for (let i = 0; i < count; i++) {
       // Spread particles across screen, avoiding center where text is
       const angle = Math.random() * Math.PI * 2;
-      const minRadius = 6; // Keep away from center
-      const radius = minRadius + Math.random() * 8;
+      const radius = minRadius + Math.random() * maxRadius;
 
       let x = Math.cos(angle) * radius;
-      let y = Math.sin(angle) * radius * 0.55; // Flatten vertically
+      let y = Math.sin(angle) * radius * (isMobile ? 0.7 : 0.55); // More vertical spread on mobile
 
       // Add randomness to break circular pattern
-      x += (Math.random() - 0.5) * 3;
-      y += (Math.random() - 0.5) * 2;
+      x += (Math.random() - 0.5) * (isMobile ? 2 : 3);
+      y += (Math.random() - 0.5) * (isMobile ? 1.5 : 2);
 
-      const z = -2 - Math.random() * 5;
+      const z = -2 - Math.random() * (isMobile ? 3 : 5);
       const speed = 0.0005 + Math.random() * 0.001;
       const phase = Math.random() * Math.PI * 2;
-      const size = 0.25 + Math.random() * 0.35;
+      const size = particleSize + Math.random() * (isMobile ? 0.3 : 0.35);
       temp.push({ x, y, z, speed, phase, size, baseX: x, baseY: y });
     }
     return temp;
-  }, []);
+  }, [count, minRadius, maxRadius, particleSize, isMobile]);
 
   // Pre-calculate line geometry
   const linePositions = useMemo(() => {
@@ -82,12 +94,12 @@ export function ElegantNetwork({
     // Update connecting lines
     if (currentLines) {
       let lineIndex = 0;
-      const maxDistance = 5; // Balanced connection distance
+      const connectionDistance = maxDistance; // Use responsive maxDistance
 
       for (let i = 0; i < positions.length; i++) {
         for (let j = i + 1; j < positions.length; j++) {
           const dist = positions[i].distanceTo(positions[j]);
-          if (dist < maxDistance) {
+          if (dist < connectionDistance) {
             linePositions[lineIndex++] = positions[i].x;
             linePositions[lineIndex++] = positions[i].y;
             linePositions[lineIndex++] = positions[i].z;
@@ -113,11 +125,11 @@ export function ElegantNetwork({
     <group>
       {/* Particles */}
       <instancedMesh ref={meshRef} args={[undefined, undefined, count]}>
-        <sphereGeometry args={[0.08, 12, 12]} />
+        <sphereGeometry args={[isMobile ? 0.12 : 0.08, 12, 12]} />
         <meshBasicMaterial
           color="#60a5fa"
           transparent
-          opacity={0.6}
+          opacity={particleOpacity}
         />
       </instancedMesh>
 
@@ -134,7 +146,7 @@ export function ElegantNetwork({
         <lineBasicMaterial
           color="#60a5fa"
           transparent
-          opacity={0.15}
+          opacity={lineOpacity}
         />
       </lineSegments>
     </group>
