@@ -66,7 +66,7 @@ export function Header() {
                           className="fixed inset-0 z-10"
                           onClick={() => setIsServicesMenuOpen(false)}
                         />
-                        <div className="absolute left-0 top-full z-20 mt-2 w-64 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="absolute left-0 top-full z-20 mt-2 w-48 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                           <div className="py-1">
                             <Link
                               href="/services"
@@ -83,9 +83,6 @@ export function Header() {
                                 className="flex w-full items-center px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
                               >
                                 {service.title}
-                                {service.hasPage && (
-                                  <span className="ml-auto text-xs text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">NEW</span>
-                                )}
                               </Link>
                             ))}
                           </div>
@@ -269,9 +266,6 @@ export function Header() {
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {service.shortTitle}
-                          {service.hasPage && (
-                            <span className="ml-2 text-xs text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">NEW</span>
-                          )}
                         </Link>
                       ))}
                     </div>

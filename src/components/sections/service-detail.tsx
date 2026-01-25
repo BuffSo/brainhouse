@@ -6,6 +6,12 @@ import { Icons } from '@/components/ui/icons';
 import { useLanguage } from '@/contexts/language-context';
 import { StrategyFlow } from './strategy-flow';
 import { TechDomainGrid } from './tech-domain-grid';
+import { PhysicalAISection } from './physical-ai-section';
+import { AXDefinitionSection } from './ax-definition-section';
+import { CorePillarsGrid } from './core-pillars-grid';
+import { EvolutionStages } from './evolution-stages';
+import { ConsultingFramework } from './consulting-framework';
+import { BusinessModelsGrid } from './business-models-grid';
 
 interface ServiceDetailProps {
   slug: string;
@@ -40,10 +46,6 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
         <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-20" />
         <Container className="relative z-10">
           <div className="mx-auto max-w-3xl text-center px-1">
-            <div className="mb-3 sm:mb-4 inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm font-medium text-blue-300">
-              <Icons.Rocket className="mr-1.5 h-3.5 w-3.5 sm:mr-2 sm:h-4 sm:w-4" />
-              New Service
-            </div>
             <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {serviceDetails.title}
             </h1>
@@ -76,6 +78,135 @@ export function ServiceDetail({ slug }: ServiceDetailProps) {
           </div>
         </Container>
       </section>
+
+      {/* Physical AI Section - AX Consulting Only */}
+      {'physicalAI' in serviceDetails && serviceDetails.physicalAI && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Bot className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Physical AI</span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.physicalAI.sectionTitle}
+              </h2>
+            </div>
+            <PhysicalAISection
+              sectionTitle={serviceDetails.physicalAI.sectionTitle}
+              description={serviceDetails.physicalAI.description}
+              types={serviceDetails.physicalAI.types}
+              coreTech={serviceDetails.physicalAI.coreTech}
+              expertise={serviceDetails.physicalAI.expertise}
+            />
+          </Container>
+        </section>
+      )}
+
+      {/* AX Definition Section - AX Consulting Only */}
+      {'axDefinition' in serviceDetails && serviceDetails.axDefinition && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Brain className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">AI Transformation</span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.axDefinition.sectionTitle}
+              </h2>
+            </div>
+            <AXDefinitionSection
+              description={serviceDetails.axDefinition.description}
+              keyPoint={serviceDetails.axDefinition.keyPoint}
+              comparison={serviceDetails.axDefinition.comparison}
+            />
+          </Container>
+        </section>
+      )}
+
+      {/* Core Pillars Section - AX Consulting Only */}
+      {'corePillars' in serviceDetails && serviceDetails.corePillars && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Layers className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Core Pillars</span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.corePillars.sectionTitle}
+              </h2>
+            </div>
+            <CorePillarsGrid pillars={serviceDetails.corePillars.items} />
+          </Container>
+        </section>
+      )}
+
+      {/* Evolution Stages Section - AX Consulting Only */}
+      {'evolutionStages' in serviceDetails && serviceDetails.evolutionStages && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.TrendingUp className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Evolution</span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.evolutionStages.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.evolutionStages.description}
+                </p>
+              </div>
+              <EvolutionStages stages={serviceDetails.evolutionStages.stages} />
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Consulting Framework Section - AX Consulting Only */}
+      {'consultingFramework' in serviceDetails && serviceDetails.consultingFramework && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Target className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Framework</span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.consultingFramework.sectionTitle}
+              </h2>
+              <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                {serviceDetails.consultingFramework.description}
+              </p>
+            </div>
+            <ConsultingFramework phases={serviceDetails.consultingFramework.phases} />
+          </Container>
+        </section>
+      )}
+
+      {/* Business Models Section - AX Consulting Only */}
+      {'businessModels' in serviceDetails && serviceDetails.businessModels && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Briefcase className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">Business Models</span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.businessModels.sectionTitle}
+              </h2>
+              <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                {serviceDetails.businessModels.description}
+              </p>
+            </div>
+            <BusinessModelsGrid models={serviceDetails.businessModels.models} />
+          </Container>
+        </section>
+      )}
 
       {/* Target Customers Section - MVP Development Only */}
       {'targetCustomers' in serviceDetails && serviceDetails.targetCustomers && (
