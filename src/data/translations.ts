@@ -4,10 +4,14 @@ export const translations = {
   ko: {
     serviceHighlight: {
       title: '핵심 서비스',
-      badge: 'New Service',
       description:
         'Tech Domain별 사업 아이템을 기획하고 MVP를 개발하여 시장 검증까지 지원합니다. 28년의 ICT 현장 경험을 바탕으로 실현 가능한 비즈니스 모델을 설계합니다.',
       viewMore: '자세히 보기',
+      axPillars: {
+        efficiency: '내부 효율화',
+        cx: 'CX 고도화',
+        revenue: '신규 수익',
+      },
     },
     portfolioHighlight: {
       title: '주요 프로젝트',
@@ -799,10 +803,14 @@ export const translations = {
   en: {
     serviceHighlight: {
       title: 'Our Services',
-      badge: 'New Service',
       description:
         'We plan business items by Tech Domain and develop MVPs to support market validation. Based on 28 years of ICT field experience, we design viable business models.',
       viewMore: 'Learn More',
+      axPillars: {
+        efficiency: 'Internal Efficiency',
+        cx: 'CX Enhancement',
+        revenue: 'New Revenue',
+      },
     },
     portfolioHighlight: {
       title: 'Featured Projects',
@@ -1599,10 +1607,14 @@ export const translations = {
   ja: {
     serviceHighlight: {
       title: 'コアサービス',
-      badge: 'New Service',
       description:
         'Tech Domain別に事業アイテムを企画し、MVPを開発して市場検証まで支援します。28年のICT現場経験を基に実現可能なビジネスモデルを設計します。',
       viewMore: '詳しく見る',
+      axPillars: {
+        efficiency: '内部効率化',
+        cx: 'CX高度化',
+        revenue: '新規収益',
+      },
     },
     portfolioHighlight: {
       title: '主要プロジェクト',
