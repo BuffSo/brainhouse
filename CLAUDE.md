@@ -15,6 +15,8 @@ npm run lint     # ESLint check
 npm start        # Start production server
 ```
 
+**Note**: The user always runs the dev server separately. Do NOT run `npm run dev` - just make code changes and the user will verify in their running dev server.
+
 ## Architecture
 
 **Stack**: Next.js 14 (App Router) + TypeScript + Tailwind CSS

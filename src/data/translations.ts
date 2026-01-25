@@ -2,6 +2,23 @@ export type Language = 'ko' | 'en' | 'ja';
 
 export const translations = {
   ko: {
+    serviceHighlight: {
+      title: '핵심 서비스',
+      badge: 'New Service',
+      description:
+        'Tech Domain별 사업 아이템을 기획하고 MVP를 개발하여 시장 검증까지 지원합니다. 28년의 ICT 현장 경험을 바탕으로 실현 가능한 비즈니스 모델을 설계합니다.',
+      viewMore: '자세히 보기',
+    },
+    portfolioHighlight: {
+      title: '주요 프로젝트',
+      description: '다양한 산업 분야에서 성공적으로 수행한 프로젝트',
+      viewAll: '전체 프로젝트 보기',
+    },
+    ctaSection: {
+      title: '프로젝트를 시작할 준비가 되셨나요?',
+      description: '전문 컨설턴트가 비즈니스 성장을 함께 합니다',
+      button: '문의하기',
+    },
     header: {
       about: '회사 소개',
       business: '사업 영역',
@@ -609,6 +626,23 @@ export const translations = {
     },
   },
   en: {
+    serviceHighlight: {
+      title: 'Our Services',
+      badge: 'New Service',
+      description:
+        'We plan business items by Tech Domain and develop MVPs to support market validation. Based on 28 years of ICT field experience, we design viable business models.',
+      viewMore: 'Learn More',
+    },
+    portfolioHighlight: {
+      title: 'Featured Projects',
+      description: 'Successfully delivered projects across various industries',
+      viewAll: 'View All Projects',
+    },
+    ctaSection: {
+      title: 'Ready to Start Your Project?',
+      description: 'Our experts are here to help your business grow',
+      button: 'Contact Us',
+    },
     header: {
       about: 'About',
       business: 'Business',
@@ -1221,6 +1255,23 @@ export const translations = {
     },
   },
   ja: {
+    serviceHighlight: {
+      title: 'コアサービス',
+      badge: 'New Service',
+      description:
+        'Tech Domain別に事業アイテムを企画し、MVPを開発して市場検証まで支援します。28年のICT現場経験を基に実現可能なビジネスモデルを設計します。',
+      viewMore: '詳しく見る',
+    },
+    portfolioHighlight: {
+      title: '主要プロジェクト',
+      description: '様々な産業分野で成功的に遂行したプロジェクト',
+      viewAll: '全プロジェクトを見る',
+    },
+    ctaSection: {
+      title: 'プロジェクトを始める準備はできましたか？',
+      description: '専門コンサルタントがビジネス成長をサポートします',
+      button: 'お問い合わせ',
+    },
     header: {
       about: '会社紹介',
       business: '事業領域',
