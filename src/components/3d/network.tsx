@@ -12,21 +12,28 @@ export function ElegantNetwork({
 }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
-  const count = 40; // Reduced count for cleaner look
+  const count = 35; // Balanced count
   const dummy = useMemo(() => new THREE.Object3D(), []);
 
   const particles = useMemo(() => {
     const temp = [];
     for (let i = 0; i < count; i++) {
-      // Spread particles more towards edges
+      // Spread particles across screen, avoiding center where text is
       const angle = Math.random() * Math.PI * 2;
-      const radius = 8 + Math.random() * 12; // Outer area
-      const x = Math.cos(angle) * radius * (0.5 + Math.random() * 0.5);
-      const y = (Math.random() - 0.5) * 15;
-      const z = Math.sin(angle) * radius * 0.3 - 5; // Push back in z
-      const speed = 0.0005 + Math.random() * 0.001; // Very slow
+      const minRadius = 6; // Keep away from center
+      const radius = minRadius + Math.random() * 8;
+
+      let x = Math.cos(angle) * radius;
+      let y = Math.sin(angle) * radius * 0.55; // Flatten vertically
+
+      // Add randomness to break circular pattern
+      x += (Math.random() - 0.5) * 3;
+      y += (Math.random() - 0.5) * 2;
+
+      const z = -2 - Math.random() * 5;
+      const speed = 0.0005 + Math.random() * 0.001;
       const phase = Math.random() * Math.PI * 2;
-      const size = 0.3 + Math.random() * 0.4; // Varied sizes
+      const size = 0.25 + Math.random() * 0.35;
       temp.push({ x, y, z, speed, phase, size, baseX: x, baseY: y });
     }
     return temp;
@@ -45,17 +52,18 @@ export function ElegantNetwork({
     const time = state.clock.elapsedTime;
     const positions: THREE.Vector3[] = [];
 
-    // Very subtle mouse influence
-    const mouseX = mouse.current[0] * 0.5;
-    const mouseY = mouse.current[1] * 0.5;
+    // Very subtle mouse influence - particles gently follow mouse
+    const mouseX = mouse.current[0];
+    const mouseY = mouse.current[1];
 
     particles.forEach((p, i) => {
       // Gentle floating motion
       const xOffset = Math.sin(time * p.speed * 100 + p.phase) * 0.8;
       const yOffset = Math.cos(time * p.speed * 80 + p.phase) * 0.6;
 
-      const x = p.baseX + xOffset + mouseX * 0.3;
-      const y = p.baseY + yOffset + mouseY * 0.3;
+      // Subtle attraction toward mouse position (not push away)
+      const x = p.baseX + xOffset + mouseX * 0.15;
+      const y = p.baseY + yOffset + mouseY * 0.15;
       const z = p.z + Math.sin(time * p.speed * 50) * 0.3;
 
       dummy.position.set(x, y, z);
@@ -74,7 +82,7 @@ export function ElegantNetwork({
     // Update connecting lines
     if (currentLines) {
       let lineIndex = 0;
-      const maxDistance = 6; // Connection distance threshold
+      const maxDistance = 5; // Balanced connection distance
 
       for (let i = 0; i < positions.length; i++) {
         for (let j = i + 1; j < positions.length; j++) {
@@ -109,7 +117,7 @@ export function ElegantNetwork({
         <meshBasicMaterial
           color="#60a5fa"
           transparent
-          opacity={0.4}
+          opacity={0.6}
         />
       </instancedMesh>
 
@@ -124,9 +132,9 @@ export function ElegantNetwork({
           />
         </bufferGeometry>
         <lineBasicMaterial
-          color="#3b82f6"
+          color="#60a5fa"
           transparent
-          opacity={0.08}
+          opacity={0.15}
         />
       </lineSegments>
     </group>

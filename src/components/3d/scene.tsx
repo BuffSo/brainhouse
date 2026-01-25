@@ -49,7 +49,7 @@ export default function Scene() {
         <Rig mouse={mouse} />
       </Canvas>
       {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-blue-900/50 to-slate-900/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-blue-900/30 to-slate-900/70 pointer-events-none" />
     </div>
   );
 }
