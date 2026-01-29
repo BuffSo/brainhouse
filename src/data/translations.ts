@@ -799,6 +799,63 @@ export const translations = {
         },
       },
     },
+    privacy: {
+      pageHeader: {
+        title: '개인정보 처리방침',
+        subtitle: '개인정보 보호에 관한 안내',
+      },
+      lastUpdated: '최종 수정일: 2026년 1월 29일',
+      intro: '(주)브레인하우스(이하 "회사")는 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수하고 있습니다. 회사는 본 개인정보 처리방침을 통해 이용자의 개인정보가 어떠한 목적과 방식으로 처리되고 있는지 안내드립니다.',
+      sections: {
+        purpose: {
+          title: '1. 개인정보의 처리 목적',
+          content: '회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며, 이용 목적이 변경될 경우 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.',
+          items: [
+            '문의 응대: 이용자의 문의에 대한 답변 및 상담 서비스 제공',
+            '서비스 개선: 서비스 품질 향상을 위한 피드백 분석',
+          ],
+        },
+        items: {
+          title: '2. 수집하는 개인정보 항목',
+          content: '회사는 문의하기 서비스 이용 시 다음의 개인정보를 수집합니다:',
+          items: [
+            '필수 항목: 이름, 이메일 주소',
+            '선택 항목: 회사명, 연락처, 문의 내용',
+          ],
+        },
+        retention: {
+          title: '3. 개인정보의 보유 및 이용 기간',
+          content: '회사는 원칙적으로 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 다만, 관계 법령의 규정에 의하여 보존할 필요가 있는 경우 법령에 정한 기간 동안 보관합니다.',
+          items: [
+            '문의 내역: 3년 (상법, 전자상거래법 등 관련 법률)',
+          ],
+        },
+        rights: {
+          title: '4. 이용자의 권리와 행사 방법',
+          content: '이용자는 언제든지 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다. 권리 행사는 아래 담당자에게 서면, 이메일 등으로 연락하시면 지체 없이 처리합니다.',
+        },
+        security: {
+          title: '5. 개인정보의 안전성 확보 조치',
+          content: '회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다:',
+          items: [
+            '개인정보의 암호화',
+            '해킹 등에 대비한 기술적 대책',
+            '개인정보 취급 직원의 최소화 및 교육',
+          ],
+        },
+        officer: {
+          title: '6. 개인정보 보호책임자',
+          content: '회사는 이용자의 개인정보 보호 및 관련 문의사항 처리를 위해 아래와 같이 개인정보 보호책임자를 지정하고 있습니다:',
+          name: '성명: 김현철',
+          position: '직책: 대표이사',
+          email: '이메일: comfamil@gmail.com',
+        },
+        changes: {
+          title: '7. 개인정보 처리방침의 변경',
+          content: '본 개인정보 처리방침은 법령 및 방침에 따라 변경될 수 있으며, 변경 시 웹사이트 공지를 통해 안내합니다.',
+        },
+      },
+    },
   },
   en: {
     serviceHighlight: {
@@ -1603,6 +1660,63 @@ export const translations = {
         },
       },
     },
+    privacy: {
+      pageHeader: {
+        title: 'Privacy Policy',
+        subtitle: 'Information on Privacy Protection',
+      },
+      lastUpdated: 'Last Updated: January 29, 2026',
+      intro: 'Brain House Co., Ltd. (hereinafter "the Company") values the privacy of users and complies with relevant laws and regulations including the Personal Information Protection Act. Through this Privacy Policy, we inform you of how your personal information is processed.',
+      sections: {
+        purpose: {
+          title: '1. Purpose of Processing Personal Information',
+          content: 'The Company processes personal information for the following purposes. The processed personal information will not be used for purposes other than the following, and if the purpose of use changes, necessary measures such as obtaining separate consent will be implemented.',
+          items: [
+            'Inquiry Response: Providing answers and consultation services for user inquiries',
+            'Service Improvement: Feedback analysis for service quality enhancement',
+          ],
+        },
+        items: {
+          title: '2. Personal Information Items Collected',
+          content: 'The Company collects the following personal information when using the inquiry service:',
+          items: [
+            'Required: Name, Email Address',
+            'Optional: Company Name, Contact Number, Inquiry Content',
+          ],
+        },
+        retention: {
+          title: '3. Retention and Use Period of Personal Information',
+          content: 'In principle, the Company destroys personal information without delay after the purpose of collection and use is achieved. However, if preservation is required by relevant laws and regulations, it will be retained for the period specified by law.',
+          items: [
+            'Inquiry Records: 3 years (Commercial Act, E-Commerce Act, etc.)',
+          ],
+        },
+        rights: {
+          title: '4. User Rights and How to Exercise Them',
+          content: 'Users can request access, correction, deletion, or suspension of processing of their personal information at any time. Rights can be exercised by contacting the person in charge below in writing or by email, and will be processed without delay.',
+        },
+        security: {
+          title: '5. Measures to Ensure Security of Personal Information',
+          content: 'The Company takes the following measures to ensure the security of personal information:',
+          items: [
+            'Encryption of personal information',
+            'Technical measures against hacking',
+            'Minimization and training of employees handling personal information',
+          ],
+        },
+        officer: {
+          title: '6. Privacy Officer',
+          content: 'The Company designates a Privacy Officer as follows to protect user privacy and handle related inquiries:',
+          name: 'Name: Hyuncheol Kim',
+          position: 'Position: CEO',
+          email: 'Email: comfamil@gmail.com',
+        },
+        changes: {
+          title: '7. Changes to Privacy Policy',
+          content: 'This Privacy Policy may change according to laws and policies, and any changes will be announced through the website.',
+        },
+      },
+    },
   },
   ja: {
     serviceHighlight: {
@@ -2399,6 +2513,63 @@ export const translations = {
               ],
             },
           ],
+        },
+      },
+    },
+    privacy: {
+      pageHeader: {
+        title: '個人情報処理方針',
+        subtitle: '個人情報保護に関するご案内',
+      },
+      lastUpdated: '最終更新日：2026年1月29日',
+      intro: '株式会社ブレインハウス（以下「当社」）は、ユーザーの個人情報を重視し、「個人情報保護法」等の関連法令を遵守しております。本個人情報処理方針を通じて、ユーザーの個人情報がどのような目的と方法で処理されているかご案内いたします。',
+      sections: {
+        purpose: {
+          title: '1. 個人情報の処理目的',
+          content: '当社は以下の目的のために個人情報を処理します。処理した個人情報は以下の目的以外には使用されず、利用目的が変更される場合は別途同意を得る等、必要な措置を講じます。',
+          items: [
+            'お問い合わせ対応：ユーザーのお問い合わせへの回答および相談サービスの提供',
+            'サービス改善：サービス品質向上のためのフィードバック分析',
+          ],
+        },
+        items: {
+          title: '2. 収集する個人情報項目',
+          content: '当社はお問い合わせサービス利用時に以下の個人情報を収集します：',
+          items: [
+            '必須項目：氏名、メールアドレス',
+            '任意項目：会社名、連絡先、お問い合わせ内容',
+          ],
+        },
+        retention: {
+          title: '3. 個人情報の保有および利用期間',
+          content: '当社は原則として個人情報の収集および利用目的が達成された後は、当該情報を遅滞なく廃棄します。ただし、関係法令の規定により保存する必要がある場合は、法令に定められた期間保管します。',
+          items: [
+            'お問い合わせ履歴：3年（商法、電子商取引法等関連法律）',
+          ],
+        },
+        rights: {
+          title: '4. ユーザーの権利と行使方法',
+          content: 'ユーザーはいつでも自身の個人情報について閲覧、訂正、削除、処理停止を要求することができます。権利行使は下記担当者に書面、メール等でご連絡いただければ、遅滞なく処理いたします。',
+        },
+        security: {
+          title: '5. 個人情報の安全性確保措置',
+          content: '当社は個人情報の安全性確保のため、以下の措置を講じています：',
+          items: [
+            '個人情報の暗号化',
+            'ハッキング等に対する技術的対策',
+            '個人情報取扱従業員の最小化および教育',
+          ],
+        },
+        officer: {
+          title: '6. 個人情報保護責任者',
+          content: '当社はユーザーの個人情報保護および関連お問い合わせ処理のため、以下の通り個人情報保護責任者を指定しています：',
+          name: '氏名：金鉉哲',
+          position: '役職：代表取締役',
+          email: 'メール：comfamil@gmail.com',
+        },
+        changes: {
+          title: '7. 個人情報処理方針の変更',
+          content: '本個人情報処理方針は法令および方針に従い変更される場合があり、変更時はウェブサイトでお知らせいたします。',
         },
       },
     },
