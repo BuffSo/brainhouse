@@ -8,17 +8,30 @@ import { Icons } from '@/components/ui/icons';
 import { buttonVariants } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { useLanguage } from '@/contexts/language-context';
+import { ErrorBoundary } from '@/components/error-boundary';
 
 const Scene = dynamic(() => import('@/components/3d/scene'), {
   ssr: false,
   loading: () => null,
 });
 
+function checkWebGLSupport(): boolean {
+  try {
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    return !!gl;
+  } catch {
+    return false;
+  }
+}
+
 export function Hero() {
   const { t } = useLanguage();
   const [mounted, setMounted] = useState(false);
+  const [webglSupported, setWebglSupported] = useState(true);
 
   useEffect(() => {
+    setWebglSupported(checkWebGLSupport());
     setMounted(true);
   }, []);
 
@@ -36,10 +49,12 @@ export function Hero() {
       </div>
 
       {/* 3D Network - subtle constellation effect */}
-      {mounted && (
-        <div className="absolute inset-0 z-[1]">
-          <Scene />
-        </div>
+      {mounted && webglSupported && (
+        <ErrorBoundary fallback={null}>
+          <div className="absolute inset-0 z-[1]">
+            <Scene />
+          </div>
+        </ErrorBoundary>
       )}
 
       {/* Subtle center glow */}
