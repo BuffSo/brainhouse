@@ -27,7 +27,7 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white/95 backdrop-blur-sm">
       <Container>
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
