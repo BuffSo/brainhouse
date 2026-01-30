@@ -638,7 +638,7 @@ export const translations = {
             { name: '엣지 컴퓨팅', description: '실시간 응답성 확보를 위한 분산 처리' },
             { name: '네트워크 인프라', description: 'TSN, 5G 등 초저지연 통신 기술' },
           ],
-          expertise: 'BrainHouse는 다수의 「AI 엣지 컴퓨팅」 관련 프로젝트 레퍼런스를 보유하고 있습니다.',
+          expertise: 'Brain House는 다수의 「AI 엣지 컴퓨팅」 관련 프로젝트 레퍼런스를 보유하고 있습니다.',
         },
         axDefinition: {
           sectionTitle: 'AX(AI Transformation)란?',
@@ -704,7 +704,7 @@ export const translations = {
         },
         consultingFramework: {
           sectionTitle: 'AX 컨설팅 프레임워크',
-          description: 'BrainHouse는 전략적 AI 도입부터 지속적인, 지속적인 비즈니스 가치를 창출하는 3단계 프로세스를 지원합니다.',
+          description: 'Brain House는 전략적 AI 도입부터 지속적인, 지속적인 비즈니스 가치를 창출하는 3단계 프로세스를 지원합니다.',
           phases: [
             {
               phase: 1,
@@ -728,7 +728,7 @@ export const translations = {
         },
         businessModels: {
           sectionTitle: 'AI 비즈니스 모델 발굴',
-          description: 'AI 비즈니스 모델은 인공지능 기술을 활용해 직접적인 수익 창출 또는 비즈니스 혁신을 이루는 다양한 구조를 의미합니다. BrainHouse는 버티컬 AI 솔루션을 비롯한 다양한 AI 비즈니스 모델을 수립합니다.',
+          description: 'AI 비즈니스 모델은 인공지능 기술을 활용해 직접적인 수익 창출 또는 비즈니스 혁신을 이루는 다양한 구조를 의미합니다. Brain House는 버티컬 AI 솔루션을 비롯한 다양한 AI 비즈니스 모델을 수립합니다.',
           models: [
             {
               id: 'aiaas',
@@ -1589,7 +1589,7 @@ export const translations = {
         },
         businessModels: {
           sectionTitle: 'AI Business Model Discovery',
-          description: 'AI business models refer to various structures that achieve direct revenue generation or business innovation using artificial intelligence technology. BrainHouse establishes various AI business models including Vertical AI solutions.',
+          description: 'AI business models refer to various structures that achieve direct revenue generation or business innovation using artificial intelligence technology. Brain House establishes various AI business models including Vertical AI solutions.',
           models: [
             {
               id: 'aiaas',
@@ -2355,7 +2355,7 @@ export const translations = {
             { name: 'エッジコンピューティング', description: 'リアルタイム応答性確保のための分散処理' },
             { name: 'ネットワークインフラ', description: 'TSN、5Gなど超低遅延通信技術' },
           ],
-          expertise: 'BrainHouseは多数の「AIエッジコンピューティング」関連プロジェクトリファレンスを保有しています。',
+          expertise: 'Brain Houseは多数の「AIエッジコンピューティング」関連プロジェクトリファレンスを保有しています。',
         },
         axDefinition: {
           sectionTitle: 'AX（AI Transformation）とは？',
@@ -2421,7 +2421,7 @@ export const translations = {
         },
         consultingFramework: {
           sectionTitle: 'AXコンサルティングフレームワーク',
-          description: 'BrainHouseは戦略的AI導入から持続的なビジネス価値を創出する3段階プロセスを支援します。',
+          description: 'Brain Houseは戦略的AI導入から持続的なビジネス価値を創出する3段階プロセスを支援します。',
           phases: [
             {
               phase: 1,
@@ -2445,7 +2445,7 @@ export const translations = {
         },
         businessModels: {
           sectionTitle: 'AIビジネスモデル発掘',
-          description: 'AIビジネスモデルとは、人工知能技術を活用して直接的な収益創出またはビジネス革新を実現する多様な構造を意味します。BrainHouseはバーティカルAIソリューションをはじめ、多様なAIビジネスモデルを策定します。',
+          description: 'AIビジネスモデルとは、人工知能技術を活用して直接的な収益創出またはビジネス革新を実現する多様な構造を意味します。Brain HouseはバーティカルAIソリューションをはじめ、多様なAIビジネスモデルを策定します。',
           models: [
             {
               id: 'aiaas',

@@ -39,7 +39,10 @@ export function Header() {
                 height={36}
                 className="transition-transform group-hover:scale-105"
               />
-              <span className="text-lg sm:text-xl font-bold tracking-tight leading-tight bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-clip-text text-transparent whitespace-nowrap">
+              <span
+                className="text-xl sm:text-2xl font-semibold tracking-tight leading-tight bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-clip-text text-transparent whitespace-nowrap"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
                 Brain House
               </span>
             </Link>
