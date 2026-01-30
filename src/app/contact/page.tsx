@@ -13,7 +13,7 @@ export default function ContactPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <PageHeader page="contact" />
+        <PageHeader page="contact" backgroundImage="/images/contact_bg.png" />
         <Contact />
       </main>
       <Footer />

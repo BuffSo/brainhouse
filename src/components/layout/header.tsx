@@ -15,7 +15,8 @@ export function Header() {
   const [isLangMenuOpen, setIsLangMenuOpen] = React.useState(false);
   const [isMobileLangMenuOpen, setIsMobileLangMenuOpen] = React.useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = React.useState(false);
-  const [mobileServicesExpanded, setMobileServicesExpanded] = React.useState(false);
+  const [mobileServicesExpanded, setMobileServicesExpanded] =
+    React.useState(false);
   const { language, setLanguage, t } = useLanguage();
 
   const navigation = [
@@ -23,7 +24,6 @@ export function Header() {
     { name: t.header.business, href: '/business' },
     { name: t.header.services, href: '/services', hasSubmenu: true },
     { name: t.header.portfolio, href: '/portfolio' },
-    { name: t.header.contact, href: '/contact' },
   ];
 
   return (
@@ -57,7 +57,7 @@ export function Header() {
                       <Icons.ChevronDown
                         className={cn(
                           'h-3 w-3 transition-transform',
-                          isServicesMenuOpen && 'rotate-180'
+                          isServicesMenuOpen && 'rotate-180',
                         )}
                       />
                     </button>
@@ -79,7 +79,11 @@ export function Header() {
                             {t.servicesMenu?.items?.map((service) => (
                               <Link
                                 key={service.slug}
-                                href={service.hasPage ? `/services/${service.slug}` : '/services'}
+                                href={
+                                  service.hasPage
+                                    ? `/services/${service.slug}`
+                                    : '/services'
+                                }
                                 onClick={() => setIsServicesMenuOpen(false)}
                                 className="flex w-full items-center px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
                               >
@@ -99,7 +103,7 @@ export function Header() {
                   >
                     {item.name}
                   </Link>
-                )
+                ),
               )}
               {/* Desktop Language Selector */}
               <div className="relative">
@@ -111,7 +115,11 @@ export function Header() {
                 >
                   <Icons.Globe className="h-4 w-4 text-slate-500" />
                   <span className="text-sm font-medium text-slate-700">
-                    {language === 'ko' ? '한국어' : language === 'en' ? 'English' : '日本語'}
+                    {language === 'ko'
+                      ? '한국어'
+                      : language === 'en'
+                        ? 'English'
+                        : '日本語'}
                   </span>
                   <Icons.ChevronDown className="h-3 w-3 text-slate-400" />
                 </Button>
@@ -132,7 +140,7 @@ export function Header() {
                           className={cn(
                             'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
                             language === 'ko' &&
-                              'bg-slate-50 font-semibold text-blue-600'
+                              'bg-slate-50 font-semibold text-blue-600',
                           )}
                         >
                           한국어
@@ -145,7 +153,7 @@ export function Header() {
                           className={cn(
                             'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
                             language === 'en' &&
-                              'bg-slate-50 font-semibold text-blue-600'
+                              'bg-slate-50 font-semibold text-blue-600',
                           )}
                         >
                           English
@@ -158,7 +166,7 @@ export function Header() {
                           className={cn(
                             'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
                             language === 'ja' &&
-                              'bg-slate-50 font-semibold text-blue-600'
+                              'bg-slate-50 font-semibold text-blue-600',
                           )}
                         >
                           日本語
@@ -184,12 +192,18 @@ export function Header() {
               >
                 <Icons.Globe className="h-4 w-4 text-slate-500" />
                 <span className="text-xs font-medium text-slate-700">
-                  {language === 'ko' ? 'KOR' : language === 'en' ? 'ENG' : 'JPN'}
+                  {language === 'ko'
+                    ? 'KOR'
+                    : language === 'en'
+                      ? 'ENG'
+                      : 'JPN'}
                 </span>
-                <Icons.ChevronDown className={cn(
-                  'h-3 w-3 text-slate-400 transition-transform',
-                  isMobileLangMenuOpen && 'rotate-180'
-                )} />
+                <Icons.ChevronDown
+                  className={cn(
+                    'h-3 w-3 text-slate-400 transition-transform',
+                    isMobileLangMenuOpen && 'rotate-180',
+                  )}
+                />
               </button>
               {isMobileLangMenuOpen && (
                 <>
@@ -206,7 +220,8 @@ export function Header() {
                         }}
                         className={cn(
                           'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                          language === 'ko' && 'bg-slate-50 font-semibold text-blue-600'
+                          language === 'ko' &&
+                            'bg-slate-50 font-semibold text-blue-600',
                         )}
                       >
                         KOR
@@ -218,7 +233,8 @@ export function Header() {
                         }}
                         className={cn(
                           'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                          language === 'en' && 'bg-slate-50 font-semibold text-blue-600'
+                          language === 'en' &&
+                            'bg-slate-50 font-semibold text-blue-600',
                         )}
                       >
                         ENG
@@ -230,7 +246,8 @@ export function Header() {
                         }}
                         className={cn(
                           'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                          language === 'ja' && 'bg-slate-50 font-semibold text-blue-600'
+                          language === 'ja' &&
+                            'bg-slate-50 font-semibold text-blue-600',
                         )}
                       >
                         JPN
@@ -262,14 +279,16 @@ export function Header() {
               item.hasSubmenu ? (
                 <div key={item.name}>
                   <button
-                    onClick={() => setMobileServicesExpanded(!mobileServicesExpanded)}
+                    onClick={() =>
+                      setMobileServicesExpanded(!mobileServicesExpanded)
+                    }
                     className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                   >
                     {item.name}
                     <Icons.ChevronDown
                       className={cn(
                         'h-4 w-4 transition-transform',
-                        mobileServicesExpanded && 'rotate-180'
+                        mobileServicesExpanded && 'rotate-180',
                       )}
                     />
                   </button>
@@ -285,7 +304,11 @@ export function Header() {
                       {t.servicesMenu?.items?.map((service) => (
                         <Link
                           key={service.slug}
-                          href={service.hasPage ? `/services/${service.slug}` : '/services'}
+                          href={
+                            service.hasPage
+                              ? `/services/${service.slug}`
+                              : '/services'
+                          }
                           className="flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                           onClick={() => setMobileMenuOpen(false)}
                         >
@@ -304,7 +327,7 @@ export function Header() {
                 >
                   {item.name}
                 </Link>
-              )
+              ),
             )}
             <div className="pt-4">
               <Link

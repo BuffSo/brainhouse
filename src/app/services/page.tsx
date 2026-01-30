@@ -13,7 +13,7 @@ export default function ServicesPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <PageHeader page="services" />
+        <PageHeader page="services" backgroundImage="/images/services_bg.png" />
         <Services />
       </main>
       <Footer />

@@ -11,7 +11,11 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const resolvedParams = await params;
   const titles: Record<string, string> = {
     'mvp-development': '사업 아이템 기획 및 MVP 개발 - Brain House',
@@ -25,11 +29,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: titles[resolvedParams.slug] || 'Services - Brain House',
-    description: descriptions[resolvedParams.slug] || 'Brain House ICT Professional Services',
+    description:
+      descriptions[resolvedParams.slug] ||
+      'Brain House ICT Professional Services',
   };
 }
 
-export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ServiceDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const resolvedParams = await params;
 
   if (!validSlugs.includes(resolvedParams.slug)) {
@@ -40,7 +50,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <ServiceDetail slug={resolvedParams.slug} />
+        <ServiceDetail
+          slug={resolvedParams.slug}
+          backgroundImage="/images/services_bg.png"
+        />
       </main>
       <Footer />
     </div>

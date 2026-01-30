@@ -13,7 +13,10 @@ export default function PortfolioPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <PageHeader page="portfolio" />
+        <PageHeader
+          page="portfolio"
+          backgroundImage="/images/portfolio_bg.png"
+        />
         <Portfolio />
       </main>
       <Footer />
