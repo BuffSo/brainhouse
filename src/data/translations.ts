@@ -885,7 +885,7 @@ export const translations = {
       services: 'Services',
       portfolio: 'Portfolio',
       contact: 'Contact',
-      getStarted: 'Get Started',
+      getStarted: 'Contact Us',
     },
     hero: {
       tag: 'AI Transformation Partner',
@@ -1295,7 +1295,7 @@ export const translations = {
         { slug: 'mvp-development', title: 'Item Planning & MVP', shortTitle: 'MVP Dev', hasPage: true },
         { slug: 'ax-consulting', title: 'AX Consulting', shortTitle: 'AX Consulting', hasPage: true },
         { slug: 'ict-strategy', title: 'ICT Strategy & Policy Consulting', shortTitle: 'ICT Strategy', hasPage: false },
-        { slug: 'tech-commercialization', title: 'Tech Commercialization Consulting', shortTitle: 'Tech Comm.', hasPage: false },
+        { slug: 'tech-commercialization', title: 'Tech Commercialization Consulting', shortTitle: 'Tech Commerc.', hasPage: false },
         { slug: 'startup-investment', title: 'Startup & Investment Consulting', shortTitle: 'Startup', hasPage: false },
         { slug: 'software-development', title: 'Software Development', shortTitle: 'SW Dev', hasPage: false },
       ],
@@ -1499,7 +1499,7 @@ export const translations = {
             { name: 'Edge Computing', description: 'Distributed processing for real-time responsiveness' },
             { name: 'Network Infrastructure', description: 'Ultra-low latency communication technologies like TSN, 5G' },
           ],
-          expertise: 'BrainHouse has multiple project references related to "AI Edge Computing".',
+          expertise: 'Brain House has multiple project references related to "AI Edge Computing".',
         },
         axDefinition: {
           sectionTitle: 'What is AX (AI Transformation)?',
@@ -1565,7 +1565,7 @@ export const translations = {
         },
         consultingFramework: {
           sectionTitle: 'AX Consulting Framework',
-          description: 'BrainHouse supports a 3-phase process from strategic AI adoption to continuous business value creation.',
+          description: 'Brain House supports a 3-phase process from strategic AI adoption to continuous business value creation.',
           phases: [
             {
               phase: 1,
