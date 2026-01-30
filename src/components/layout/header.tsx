@@ -7,7 +7,7 @@ import { Icons } from '@/components/ui/icons';
 
 import { cn } from '@/lib/utils';
 import { Container } from '@/components/ui/container';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/language-context';
 
 export function Header() {
@@ -179,12 +179,11 @@ export function Header() {
                   </>
                 )}
               </div>
-              <Link
-                href="/contact"
-                className={cn(buttonVariants({ size: 'sm' }))}
-              >
-                {t.header.getStarted}
-              </Link>
+              <Button asChild size="sm">
+                <Link href="/contact">
+                  {t.header.getStarted}
+                </Link>
+              </Button>
             </div>
           </div>
           <div className="md:hidden flex items-center gap-2">
@@ -333,13 +332,11 @@ export function Header() {
               ),
             )}
             <div className="pt-4">
-              <Link
-                href="/contact"
-                className={cn(buttonVariants({ className: 'w-full' }))}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {t.header.getStarted}
-              </Link>
+              <Button asChild className="w-full">
+                <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                  {t.header.getStarted}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

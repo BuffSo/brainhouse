@@ -3,8 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
-import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 export default function Error({
   error,
@@ -36,25 +35,15 @@ export default function Error({
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <button
-              onClick={reset}
-              className={cn(
-                buttonVariants({ size: 'lg' }),
-                'w-full sm:w-auto'
-              )}
-            >
+            <Button size="lg" onClick={reset} className="w-full sm:w-auto">
               다시 시도
-            </button>
+            </Button>
 
-            <Link
-              href="/"
-              className={cn(
-                buttonVariants({ size: 'lg', variant: 'outline' }),
-                'w-full border-slate-600 text-white hover:bg-slate-800 sm:w-auto'
-              )}
-            >
-              홈으로 이동
-            </Link>
+            <Button asChild size="lg" variant="outline" className="w-full border-slate-600 text-white hover:bg-slate-800 sm:w-auto">
+              <Link href="/">
+                홈으로 이동
+              </Link>
+            </Button>
           </div>
 
           <p className="mt-8 text-xs text-slate-500">

@@ -35,7 +35,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-slate-800 pt-6 text-center text-xs sm:text-sm">
+        <div className="mt-6 border-t border-slate-700 pt-6 text-center text-xs sm:text-sm">
           <p>{t.footer.rights}</p>
         </div>
       </Container>

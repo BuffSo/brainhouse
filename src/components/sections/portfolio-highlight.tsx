@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Icons } from '@/components/ui/icons';
-import { buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { useLanguage } from '@/contexts/language-context';
 
@@ -80,16 +80,12 @@ export function PortfolioHighlight() {
 
         {/* View All Button */}
         <div className="mt-10 text-center sm:mt-12">
-          <Link
-            href="/portfolio"
-            className={cn(
-              buttonVariants({ variant: 'outline', size: 'lg' }),
-              'border-slate-300 hover:border-blue-300 hover:bg-blue-50'
-            )}
-          >
-            {t.portfolioHighlight?.viewAll || '전체 프로젝트 보기'}
-            <Icons.ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          <Button asChild variant="outline" size="lg" className="border-slate-300 hover:border-blue-300 hover:bg-blue-50">
+            <Link href="/portfolio">
+              {t.portfolioHighlight?.viewAll || '전체 프로젝트 보기'}
+              <Icons.ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </Container>
     </section>

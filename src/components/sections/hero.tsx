@@ -5,7 +5,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { cn } from '@/lib/utils';
 import { Icons } from '@/components/ui/icons';
-import { buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { useLanguage } from '@/contexts/language-context';
 import { ErrorBoundary } from '@/components/error-boundary';
@@ -103,27 +103,19 @@ export function Hero() {
             className="mt-8 flex w-full flex-col gap-3 opacity-0 animate-fade-in-up sm:mt-10 sm:w-auto sm:flex-row sm:gap-4"
             style={fadeStyle4}
           >
-            <Link
-              href="/contact"
-              className={cn(
-                buttonVariants({ size: 'lg' }),
-                'w-full text-base group relative overflow-hidden sm:w-auto sm:min-w-[160px]'
-              )}
-            >
-              <span className="relative z-10 flex items-center">
-                {t.hero.contactBtn}
-                <Icons.ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-            <Link
-              href="/services"
-              className={cn(
-                buttonVariants({ size: 'lg', variant: 'outline' }),
-                'w-full border-slate-600 bg-slate-900/50 text-white backdrop-blur-sm transition-all duration-300 hover:border-blue-400 hover:bg-slate-800/50 hover:text-white sm:w-auto sm:min-w-[160px]'
-              )}
-            >
-              {t.hero.businessBtn}
-            </Link>
+            <Button asChild size="lg" className="w-full text-base group relative overflow-hidden sm:w-auto sm:min-w-[160px]">
+              <Link href="/contact">
+                <span className="relative z-10 flex items-center">
+                  {t.hero.contactBtn}
+                  <Icons.ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full border-slate-600 bg-slate-900/50 text-white backdrop-blur-sm transition-all duration-300 hover:border-blue-400 hover:bg-slate-800/50 hover:text-white sm:w-auto sm:min-w-[160px]">
+              <Link href="/services">
+                {t.hero.businessBtn}
+              </Link>
+            </Button>
           </div>
         </Container>
       </div>

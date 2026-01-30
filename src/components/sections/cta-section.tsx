@@ -1,9 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import { Icons } from '@/components/ui/icons';
-import { buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { useLanguage } from '@/contexts/language-context';
 
@@ -36,16 +35,12 @@ export function CTASection() {
               '전문 컨설턴트가 비즈니스 성장을 함께 합니다'}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/contact"
-              className={cn(
-                buttonVariants({ size: 'lg' }),
-                'w-full !bg-white !text-blue-600 hover:!bg-blue-50 sm:w-auto'
-              )}
-            >
-              {t.ctaSection?.button || '문의하기'}
-              <Icons.ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            <Button asChild size="lg" className="w-full bg-white text-blue-600 shadow-lg hover:bg-blue-50 sm:w-auto">
+              <Link href="/contact">
+                {t.ctaSection?.button || '문의하기'}
+                <Icons.ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </Container>

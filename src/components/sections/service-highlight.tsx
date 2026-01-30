@@ -1,9 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import { Icons } from '@/components/ui/icons';
-import { buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/container';
 import { useLanguage } from '@/contexts/language-context';
 
@@ -68,16 +67,12 @@ export function ServiceHighlight() {
 
             {/* CTA Button */}
             <div className="mt-8">
-              <Link
-                href="/services/ax-consulting"
-                className={cn(
-                  buttonVariants({ size: 'default' }),
-                  'w-full sm:w-auto'
-                )}
-              >
-                {t.serviceHighlight?.viewMore || '자세히 보기'}
-                <Icons.ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <Button asChild className="w-full sm:w-auto">
+                <Link href="/services/ax-consulting">
+                  {t.serviceHighlight?.viewMore || '자세히 보기'}
+                  <Icons.ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
 
             {/* Decorative gradient */}
@@ -118,16 +113,12 @@ export function ServiceHighlight() {
 
             {/* CTA Button */}
             <div className="mt-8">
-              <Link
-                href="/services/mvp-development"
-                className={cn(
-                  buttonVariants({ size: 'default', variant: 'outline' }),
-                  'w-full sm:w-auto'
-                )}
-              >
-                {t.serviceHighlight?.viewMore || '자세히 보기'}
-                <Icons.ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <Button asChild variant="outline" className="w-full sm:w-auto">
+                <Link href="/services/mvp-development">
+                  {t.serviceHighlight?.viewMore || '자세히 보기'}
+                  <Icons.ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
 
             {/* Decorative gradient */}
