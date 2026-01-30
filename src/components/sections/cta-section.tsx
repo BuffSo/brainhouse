@@ -11,13 +11,20 @@ export function CTASection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 py-16 sm:py-20">
-      {/* Background Pattern */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-16 sm:py-20">
+      {/* Mesh Gradient Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_20%_40%,rgba(59,130,246,0.4),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_60%,rgba(99,102,241,0.3),transparent)]" />
+      </div>
+
+      {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-10" />
 
-      {/* Decorative Elements */}
-      <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-blue-500 opacity-20 blur-3xl" />
-      <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-cyan-400 opacity-20 blur-3xl" />
+      {/* Decorative Gradient Orbs */}
+      <div className="absolute -left-20 -top-20 h-80 w-80 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 opacity-25 blur-3xl" />
+      <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-gradient-to-tl from-indigo-500 to-purple-500 opacity-20 blur-3xl" />
+      <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 blur-3xl" />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl text-center">

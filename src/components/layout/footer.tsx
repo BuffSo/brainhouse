@@ -8,7 +8,7 @@ import { useLanguage } from '@/contexts/language-context';
 export function Footer() {
   const { t } = useLanguage();
   return (
-    <footer className="bg-slate-900 py-8 text-slate-400 sm:py-10">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-8 text-slate-400 sm:py-10">
       <Container>
         <div className="flex flex-col items-center text-center">
           <Link href="/" className="mb-4">
