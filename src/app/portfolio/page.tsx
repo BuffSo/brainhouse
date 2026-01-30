@@ -15,7 +15,7 @@ export default function PortfolioPage() {
       <main className="flex-1">
         <PageHeader
           page="portfolio"
-          backgroundImage="/images/portfolio_bg.png"
+          backgroundImage="/images/portfolio_bg.webp"
         />
         <Portfolio />
       </main>

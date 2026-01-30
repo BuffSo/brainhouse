@@ -13,7 +13,7 @@ export default function AboutPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <PageHeader page="about" backgroundImage="/images/about_bg.png" />
+        <PageHeader page="about" backgroundImage="/images/about_bg.webp" />
         <About />
       </main>
       <Footer />

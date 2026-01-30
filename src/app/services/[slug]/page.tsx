@@ -52,7 +52,7 @@ export default async function ServiceDetailPage({
       <main className="flex-1">
         <ServiceDetail
           slug={resolvedParams.slug}
-          backgroundImage="/images/services_bg.png"
+          backgroundImage="/images/services_bg.webp"
         />
       </main>
       <Footer />

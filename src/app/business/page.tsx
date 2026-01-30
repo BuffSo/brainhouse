@@ -14,7 +14,7 @@ export default function BusinessPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <PageHeader page="business" backgroundImage="/images/business_bg.png" />
+        <PageHeader page="business" backgroundImage="/images/business_bg.webp" />
         <Business />
       </main>
       <Footer />
