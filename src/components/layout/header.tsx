@@ -19,6 +19,46 @@ export function Header() {
     React.useState(false);
   const { language, setLanguage, t } = useLanguage();
 
+  const servicesMenuRef = React.useRef<HTMLDivElement>(null);
+  const langMenuRef = React.useRef<HTMLDivElement>(null);
+  const mobileLangMenuRef = React.useRef<HTMLDivElement>(null);
+
+  // 외부 클릭 시 드롭다운 닫기
+  React.useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as Node;
+
+      if (
+        isServicesMenuOpen &&
+        servicesMenuRef.current &&
+        !servicesMenuRef.current.contains(target)
+      ) {
+        setIsServicesMenuOpen(false);
+      }
+
+      if (
+        isLangMenuOpen &&
+        langMenuRef.current &&
+        !langMenuRef.current.contains(target)
+      ) {
+        setIsLangMenuOpen(false);
+      }
+
+      if (
+        isMobileLangMenuOpen &&
+        mobileLangMenuRef.current &&
+        !mobileLangMenuRef.current.contains(target)
+      ) {
+        setIsMobileLangMenuOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isServicesMenuOpen, isLangMenuOpen, isMobileLangMenuOpen]);
+
   const navigation = [
     { name: t.header.about, href: '/about' },
     { name: t.header.business, href: '/business' },
@@ -51,7 +91,7 @@ export function Header() {
             <div className="flex items-center space-x-8">
               {navigation.map((item) =>
                 item.hasSubmenu ? (
-                  <div key={item.name} className="relative">
+                  <div key={item.name} className="relative" ref={servicesMenuRef}>
                     <button
                       onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
                       className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
@@ -65,12 +105,7 @@ export function Header() {
                       />
                     </button>
                     {isServicesMenuOpen && (
-                      <>
-                        <div
-                          className="fixed inset-0 z-10"
-                          onClick={() => setIsServicesMenuOpen(false)}
-                        />
-                        <div className="absolute left-0 top-full z-20 mt-2 w-48 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="absolute left-0 top-full z-20 mt-2 w-48 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                           <div className="py-1">
                             <Link
                               href="/services"
@@ -95,7 +130,6 @@ export function Header() {
                             ))}
                           </div>
                         </div>
-                      </>
                     )}
                   </div>
                 ) : (
@@ -109,7 +143,7 @@ export function Header() {
                 ),
               )}
               {/* Desktop Language Selector */}
-              <div className="relative">
+              <div className="relative" ref={langMenuRef}>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -128,12 +162,7 @@ export function Header() {
                 </Button>
 
                 {isLangMenuOpen && (
-                  <>
-                    <div
-                      className="fixed inset-0 z-10"
-                      onClick={() => setIsLangMenuOpen(false)}
-                    />
-                    <div className="absolute right-0 top-full z-20 mt-2 w-32 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="absolute right-0 top-full z-20 mt-2 w-32 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                       <div className="py-1">
                         <button
                           onClick={() => {
@@ -176,7 +205,6 @@ export function Header() {
                         </button>
                       </div>
                     </div>
-                  </>
                 )}
               </div>
               <Button asChild size="sm">
@@ -187,7 +215,7 @@ export function Header() {
             </div>
           </div>
           <div className="md:hidden flex items-center gap-2">
-            <div className="relative">
+            <div className="relative" ref={mobileLangMenuRef}>
               <button
                 onClick={() => setIsMobileLangMenuOpen(!isMobileLangMenuOpen)}
                 className="flex items-center gap-1 px-2 py-1.5 rounded-md hover:bg-slate-100 transition-colors"
@@ -208,12 +236,7 @@ export function Header() {
                 />
               </button>
               {isMobileLangMenuOpen && (
-                <>
-                  <div
-                    className="fixed inset-0 z-10"
-                    onClick={() => setIsMobileLangMenuOpen(false)}
-                  />
-                  <div className="absolute right-0 top-full z-20 mt-1 w-24 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute right-0 top-full z-20 mt-1 w-24 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
                     <div className="py-1">
                       <button
                         onClick={() => {
@@ -256,7 +279,6 @@ export function Header() {
                       </button>
                     </div>
                   </div>
-                </>
               )}
             </div>
             <Button
