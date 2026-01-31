@@ -498,6 +498,68 @@ export const translations = {
       ctaButton: '프로젝트 문의하기',
       ctaViewAll: '전체 서비스 보기 →',
     },
+    servicesOverview: {
+      title: '전문 서비스',
+      subtitle: 'Guru형 전문 컨설팅',
+      description:
+        '28년 ICT 현장 경험을 바탕으로 각 분야 전문가가 직접 수행하는 차별화된 서비스를 제공합니다.',
+      viewDetails: '자세히 보기',
+      services: {
+        'mvp-development': {
+          icon: 'Rocket',
+          shortDescription: '테크 도메인별 사업 아이템 발굴부터 MVP 개발까지',
+        },
+        'ax-consulting': {
+          icon: 'Brain',
+          shortDescription: 'AI Transformation을 위한 전략 수립 및 실행 지원',
+        },
+        'ict-strategy': {
+          icon: 'TrendingUp',
+          shortDescription: '정부 R&D 기획부터 ICT 정책연구까지 전략 수립',
+        },
+        'tech-commercialization': {
+          icon: 'Lightbulb',
+          shortDescription: '기술의 시장 가치 극대화 및 사업화 로드맵 제시',
+        },
+        'startup-investment': {
+          icon: 'Briefcase',
+          shortDescription: '성장 단계별 맞춤형 멘토링과 투자 유치 지원',
+        },
+        'software-development': {
+          icon: 'Code',
+          shortDescription: 'Node.js, Next.js, AWS 기반 풀스택 개발',
+        },
+      },
+      whyBrainHouse: {
+        title: '왜 브레인하우스인가?',
+        points: [
+          {
+            icon: 'Award',
+            title: '28년 ICT 현장 경험',
+            description:
+              '이론이 아닌 실무에서 검증된 노하우로 실질적인 성과를 만들어냅니다.',
+          },
+          {
+            icon: 'Users',
+            title: 'Guru형 전문가 직접 수행',
+            description:
+              '담당자가 아닌 해당 분야 최고 전문가가 처음부터 끝까지 함께합니다.',
+          },
+          {
+            icon: 'Puzzle',
+            title: '원스톱 통합 서비스',
+            description:
+              '전략 수립부터 기술 개발, 사업화까지 하나의 파트너로 일관된 서비스를 제공합니다.',
+          },
+          {
+            icon: 'Target',
+            title: '맞춤형 솔루션',
+            description:
+              '고객의 상황과 목표에 맞춘 최적의 솔루션을 설계하고 실행합니다.',
+          },
+        ],
+      },
+    },
     serviceDetails: {
       'mvp-development': {
         title: '사업 아이템 기획(발굴) 및 MVP 개발',
@@ -2242,6 +2304,68 @@ export const translations = {
       ctaDescription: 'Create innovative services with Brain House.',
       ctaButton: 'Contact for Project',
       ctaViewAll: 'View All Services →',
+    },
+    servicesOverview: {
+      title: 'Professional Services',
+      subtitle: 'Guru-Type Expert Consulting',
+      description:
+        'Based on 28 years of ICT field experience, we provide differentiated services delivered directly by domain experts.',
+      viewDetails: 'View Details',
+      services: {
+        'mvp-development': {
+          icon: 'Rocket',
+          shortDescription: 'From business item discovery to MVP development across tech domains',
+        },
+        'ax-consulting': {
+          icon: 'Brain',
+          shortDescription: 'Strategy development and implementation support for AI Transformation',
+        },
+        'ict-strategy': {
+          icon: 'TrendingUp',
+          shortDescription: 'Strategy planning from government R&D to ICT policy research',
+        },
+        'tech-commercialization': {
+          icon: 'Lightbulb',
+          shortDescription: 'Maximize technology market value with commercialization roadmap',
+        },
+        'startup-investment': {
+          icon: 'Briefcase',
+          shortDescription: 'Tailored mentoring and investment support for each growth stage',
+        },
+        'software-development': {
+          icon: 'Code',
+          shortDescription: 'Full-stack development with Node.js, Next.js, and AWS',
+        },
+      },
+      whyBrainHouse: {
+        title: 'Why Brain House?',
+        points: [
+          {
+            icon: 'Award',
+            title: '28 Years of ICT Experience',
+            description:
+              'We deliver real results with know-how proven in the field, not just theory.',
+          },
+          {
+            icon: 'Users',
+            title: 'Direct Guru-Type Expert Execution',
+            description:
+              'Top experts in their fields work with you from start to finish, not just account managers.',
+          },
+          {
+            icon: 'Puzzle',
+            title: 'One-Stop Integrated Service',
+            description:
+              'From strategy to technology development and commercialization, we provide consistent service as a single partner.',
+          },
+          {
+            icon: 'Target',
+            title: 'Customized Solutions',
+            description:
+              'We design and execute optimal solutions tailored to your situation and goals.',
+          },
+        ],
+      },
     },
     serviceDetails: {
       'mvp-development': {
@@ -4038,6 +4162,68 @@ export const translations = {
       ctaDescription: 'ブレインハウスと共に革新的なサービスを作りましょう。',
       ctaButton: 'プロジェクト問い合わせ',
       ctaViewAll: '全サービスを見る →',
+    },
+    servicesOverview: {
+      title: '専門サービス',
+      subtitle: 'Guru型専門コンサルティング',
+      description:
+        '28年のICT現場経験を基に、各分野の専門家が直接遂行する差別化されたサービスを提供します。',
+      viewDetails: '詳細を見る',
+      services: {
+        'mvp-development': {
+          icon: 'Rocket',
+          shortDescription: 'テックドメイン別の事業アイテム発掘からMVP開発まで',
+        },
+        'ax-consulting': {
+          icon: 'Brain',
+          shortDescription: 'AI Transformationのための戦略策定と実行支援',
+        },
+        'ict-strategy': {
+          icon: 'TrendingUp',
+          shortDescription: '政府R&D企画からICT政策研究まで戦略策定',
+        },
+        'tech-commercialization': {
+          icon: 'Lightbulb',
+          shortDescription: '技術の市場価値最大化と事業化ロードマップ提示',
+        },
+        'startup-investment': {
+          icon: 'Briefcase',
+          shortDescription: '成長段階別カスタムメンタリングと投資誘致支援',
+        },
+        'software-development': {
+          icon: 'Code',
+          shortDescription: 'Node.js、Next.js、AWSベースのフルスタック開発',
+        },
+      },
+      whyBrainHouse: {
+        title: 'なぜブレインハウスなのか？',
+        points: [
+          {
+            icon: 'Award',
+            title: '28年のICT現場経験',
+            description:
+              '理論ではなく現場で検証されたノウハウで実質的な成果を生み出します。',
+          },
+          {
+            icon: 'Users',
+            title: 'Guru型専門家が直接遂行',
+            description:
+              '担当者ではなく、その分野の最高専門家が最初から最後まで一緒に進めます。',
+          },
+          {
+            icon: 'Puzzle',
+            title: 'ワンストップ統合サービス',
+            description:
+              '戦略策定から技術開発、事業化まで、一つのパートナーとして一貫したサービスを提供します。',
+          },
+          {
+            icon: 'Target',
+            title: 'カスタムソリューション',
+            description:
+              'お客様の状況と目標に合わせた最適なソリューションを設計し、実行します。',
+          },
+        ],
+      },
     },
     serviceDetails: {
       'mvp-development': {

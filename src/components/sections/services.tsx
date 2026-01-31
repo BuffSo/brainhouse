@@ -1,96 +1,124 @@
 'use client';
 
+import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { Icons } from '@/components/ui/icons';
 import { useLanguage } from '@/contexts/language-context';
-import { StrategyFlow } from './strategy-flow';
-
-const serviceIcons = [
-  Icons.TrendingUp, // ICT Strategy
-  Icons.Lightbulb, // Technology Commercialization
-  Icons.Briefcase, // Startup & Investment
-  Icons.Code, // Software Development
-];
 
 export function Services() {
   const { t } = useLanguage();
 
-  if (!t.ourServices) return null;
+  const overview = t.servicesOverview;
+  const menuItems = t.servicesMenu?.items;
+
+  if (!overview || !menuItems) return null;
 
   return (
-    <section id="services" className="bg-slate-50 py-16 sm:py-24 lg:py-32">
-      <Container>
-        <div className="mb-10 text-center sm:mb-16">
-          <h2 className="text-sm font-semibold leading-6 text-blue-600 sm:text-base sm:leading-7">
-            {t.ourServices.subtitle}
-          </h2>
-          <p className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
-            {t.ourServices.title}
-          </p>
-          <p className="mt-3 text-base text-slate-600 sm:mt-4 sm:text-lg">
-            {t.ourServices.description}
-          </p>
-        </div>
-
-        <div className="space-y-10 sm:space-y-16">
-          {/* Service 1: ICT Strategy (Featured with Diagram) */}
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
-            <div className="order-2 lg:order-1">
-              <StrategyFlow steps={t.ourServices.items[0].steps || []} />
-            </div>
-            <div className="order-1 lg:order-2">
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 sm:mb-6 sm:h-12 sm:w-12">
-                <Icons.TrendingUp
-                  className="h-5 w-5 text-white sm:h-7 sm:w-7"
-                  aria-hidden="true"
-                />
-              </div>
-              <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
-                {t.ourServices.items[0].title}
-              </h3>
-              <p className="mt-3 text-base text-slate-600 sm:mt-4 sm:text-lg">
-                {t.ourServices.items[0].description}
-              </p>
-            </div>
+    <>
+      {/* Services Grid Section */}
+      <section id="services" className="bg-slate-50 py-16 sm:py-24 lg:py-32">
+        <Container>
+          <div className="mb-10 text-center sm:mb-16">
+            <h2 className="text-sm font-semibold leading-6 text-blue-600 sm:text-base sm:leading-7">
+              {overview.subtitle}
+            </h2>
+            <p className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
+              {overview.title}
+            </p>
+            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-600 sm:mt-4 sm:text-lg">
+              {overview.description}
+            </p>
           </div>
 
-          {/* Services 2, 3, 4: Cards Grid */}
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-            {t.ourServices.items.slice(1).map((service, index) => {
-              const Icon = serviceIcons[index + 1];
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {menuItems.map((item) => {
+              const serviceOverview =
+                overview.services?.[item.slug as keyof typeof overview.services];
+              const serviceDetails =
+                t.serviceDetails?.[item.slug as keyof typeof t.serviceDetails];
+              const iconName = serviceOverview?.icon || 'Code';
+              const IconComponent =
+                Icons[iconName as keyof typeof Icons] || Icons.Code;
+
               return (
-                <div
-                  key={service.title}
-                  className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:border-blue-200 hover:shadow-lg sm:p-6 lg:p-8"
+                <Link
+                  key={item.slug}
+                  href={`/services/${item.slug}`}
+                  className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-blue-300 hover:shadow-lg sm:p-8"
                 >
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white sm:mb-6 sm:h-12 sm:w-12">
-                    <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white sm:mb-6 sm:h-14 sm:w-14">
+                    <IconComponent
+                      className="h-6 w-6 sm:h-7 sm:w-7"
+                      aria-hidden="true"
+                    />
                   </div>
+
                   <h3 className="text-lg font-bold text-slate-900 sm:text-xl">
-                    {service.title}
+                    {serviceDetails?.title || item.title}
                   </h3>
-                  <p className="mt-2 text-sm text-slate-600 sm:mt-3 sm:text-base">
-                    {service.description}
+
+                  <p className="mt-2 flex-1 text-sm text-slate-600 sm:mt-3 sm:text-base">
+                    {serviceOverview?.shortDescription ||
+                      serviceDetails?.subtitle ||
+                      ''}
                   </p>
-                  {service.details && (
-                    <ul className="mt-4 space-y-2 border-t border-slate-100 pt-4 sm:mt-6 sm:space-y-2.5 sm:pt-6">
-                      {service.details.map((detail, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start text-sm text-slate-500"
-                        >
-                          <Icons.Check className="mr-2 mt-0.5 h-4 w-4 flex-shrink-0 text-blue-500" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
+
+                  <div className="mt-4 flex items-center text-sm font-medium text-blue-600 transition-colors group-hover:text-blue-700 sm:mt-6">
+                    {overview.viewDetails}
+                    <Icons.ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
               );
             })}
           </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+
+      {/* Why Brain House Section */}
+      {overview.whyBrainHouse && (
+        <section className="bg-white py-16 sm:py-24">
+          <Container>
+            <div className="mb-10 text-center sm:mb-14">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
+                {overview.whyBrainHouse.title}
+              </h2>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
+              {overview.whyBrainHouse.points.map(
+                (
+                  point: { icon: string; title: string; description: string },
+                  index: number
+                ) => {
+                  const IconComponent =
+                    Icons[point.icon as keyof typeof Icons] || Icons.Check;
+                  return (
+                    <div
+                      key={index}
+                      className="flex gap-4 rounded-xl bg-slate-50 p-6 sm:gap-5 sm:p-8"
+                    >
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-600 sm:h-14 sm:w-14">
+                        <IconComponent
+                          className="h-6 w-6 text-white sm:h-7 sm:w-7"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-slate-900 sm:text-xl">
+                          {point.title}
+                        </h3>
+                        <p className="mt-2 text-sm text-slate-600 sm:text-base">
+                          {point.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </Container>
+        </section>
+      )}
+    </>
   );
 }
