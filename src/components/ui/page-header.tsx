@@ -2,7 +2,13 @@ import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { PageHeaderContent } from './page-header-content';
 
-type PageKey = 'about' | 'business' | 'services' | 'portfolio' | 'contact';
+type PageKey =
+  | 'about'
+  | 'business'
+  | 'services'
+  | 'portfolio'
+  | 'contact'
+  | 'privacy';
 
 interface PageHeaderProps {
   page: PageKey;

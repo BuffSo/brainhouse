@@ -198,7 +198,8 @@ export const translations = {
               year: '2025',
             },
             {
-              title: '인공지능 기반 모바일에지 클라우드 서비스 플랫폼 사업화 전략 컨설팅',
+              title:
+                '인공지능 기반 모바일에지 클라우드 서비스 플랫폼 사업화 전략 컨설팅',
               client: 'ICT기업',
               year: '2024',
             },
@@ -223,7 +224,8 @@ export const translations = {
               year: '2023',
             },
             {
-              title: '디지털 헬스케어·디지털 치료제 ICT융합 기술 및 산업 동향 분석',
+              title:
+                '디지털 헬스케어·디지털 치료제 ICT융합 기술 및 산업 동향 분석',
               client: '산업융합원',
               year: '2023',
             },
@@ -233,7 +235,8 @@ export const translations = {
               year: '2022',
             },
             {
-              title: '초연결 네트워킹 인프라 기반 서비스·BM 및 PoC 활용 성과창출 전략',
+              title:
+                '초연결 네트워킹 인프라 기반 서비스·BM 및 PoC 활용 성과창출 전략',
               client: 'KANI',
               year: '2022',
             },
@@ -243,12 +246,14 @@ export const translations = {
               year: '2022',
             },
             {
-              title: '초연결 네트워킹 서비스의 리빙랩 구축 및 운영 방안 조사·분석 연구',
+              title:
+                '초연결 네트워킹 서비스의 리빙랩 구축 및 운영 방안 조사·분석 연구',
               client: 'KANI',
               year: '2021',
             },
             {
-              title: 'ICT 기술사업화 전략 컨설팅 (VR, AI, 메타버스 비즈니스 모델 발굴)',
+              title:
+                'ICT 기술사업화 전략 컨설팅 (VR, AI, 메타버스 비즈니스 모델 발굴)',
               client: 'ICT기업',
               year: '2021',
             },
@@ -263,7 +268,8 @@ export const translations = {
               year: '2020',
             },
             {
-              title: 'ICT 기술사업화 전략 컨설팅 (ICT 기반 기업성장 로드맵 수립)',
+              title:
+                'ICT 기술사업화 전략 컨설팅 (ICT 기반 기업성장 로드맵 수립)',
               client: 'ICT기업',
               year: '2020',
             },
@@ -335,7 +341,8 @@ export const translations = {
               year: '2020',
             },
             {
-              title: '팬과 아티스트를 직접 연결하는 엔터테인먼트 블록체인 투자 플랫폼',
+              title:
+                '팬과 아티스트를 직접 연결하는 엔터테인먼트 블록체인 투자 플랫폼',
               client: 'E사',
               year: '2020',
             },
@@ -384,7 +391,8 @@ export const translations = {
         message: '문의 내용 (프로젝트 개요, 예산, 일정 등)',
         submit: '문의하기',
         submitting: '전송 중...',
-        success: '문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변 드리겠습니다.',
+        success:
+          '문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변 드리겠습니다.',
         error: '메시지 전송에 실패했습니다. 잠시 후 다시 시도해주세요.',
       },
     },
@@ -427,16 +435,50 @@ export const translations = {
         title: '문의하기',
         subtitle: '성공적인 비즈니스를 위한 첫 걸음',
       },
+      privacy: {
+        title: '개인정보처리방침',
+        subtitle: '개인정보 보호에 관한 안내',
+      },
     },
     servicesMenu: {
       viewAll: '전체 서비스 보기',
       items: [
-        { slug: 'mvp-development', title: '아이템 기획 & MVP', shortTitle: 'MVP 개발', hasPage: true },
-        { slug: 'ax-consulting', title: 'AX 컨설팅', shortTitle: 'AX 컨설팅', hasPage: true },
-        { slug: 'ict-strategy', title: 'ICT 전략·정책 컨설팅', shortTitle: 'ICT 전략', hasPage: false },
-        { slug: 'tech-commercialization', title: '기술사업화 컨설팅', shortTitle: '기술사업화', hasPage: false },
-        { slug: 'startup-investment', title: '창업·투자 컨설팅', shortTitle: '창업·투자', hasPage: false },
-        { slug: 'software-development', title: '소프트웨어 개발', shortTitle: 'SW 개발', hasPage: false },
+        {
+          slug: 'mvp-development',
+          title: '아이템 기획 & MVP',
+          shortTitle: 'MVP 개발',
+          hasPage: true,
+        },
+        {
+          slug: 'ax-consulting',
+          title: 'AX 컨설팅',
+          shortTitle: 'AX 컨설팅',
+          hasPage: true,
+        },
+        {
+          slug: 'ict-strategy',
+          title: 'ICT 전략·정책 컨설팅',
+          shortTitle: 'ICT 전략',
+          hasPage: false,
+        },
+        {
+          slug: 'tech-commercialization',
+          title: '기술사업화 컨설팅',
+          shortTitle: '기술사업화',
+          hasPage: false,
+        },
+        {
+          slug: 'startup-investment',
+          title: '창업·투자 컨설팅',
+          shortTitle: '창업·투자',
+          hasPage: false,
+        },
+        {
+          slug: 'software-development',
+          title: '소프트웨어 개발',
+          shortTitle: 'SW 개발',
+          hasPage: false,
+        },
       ],
     },
     serviceDetailUI: {
@@ -449,7 +491,8 @@ export const translations = {
       processTitle: '서비스 진행 프로세스',
       techDomainsLabel: 'Tech Domains',
       techDomainsTitle: '지원 가능한 Tech Domain',
-      techDomainsDescription: '다양한 산업 분야에서 혁신적인 사업 아이템을 발굴하고 MVP를 개발합니다.',
+      techDomainsDescription:
+        '다양한 산업 분야에서 혁신적인 사업 아이템을 발굴하고 MVP를 개발합니다.',
       ctaTitle: '프로젝트를 시작해 보세요',
       ctaDescription: '브레인하우스와 함께 혁신적인 서비스를 만들어 보세요.',
       ctaButton: '프로젝트 문의하기',
@@ -459,7 +502,8 @@ export const translations = {
       'mvp-development': {
         title: '사업 아이템 기획(발굴) 및 MVP 개발',
         subtitle: 'Tech Domain별 사업 아이템 기획 및 MVP 개발 서비스',
-        description: '다양한 테크 도메인에서 사업 아이템을 발굴하고, 빠른 시장 검증을 위한 MVP(Minimum Viable Product)를 개발합니다. 28년의 ICT 현장 경험을 바탕으로 실현 가능한 비즈니스 모델을 설계하고, AI 기술을 활용한 혁신적인 서비스를 구현합니다.',
+        description:
+          '다양한 테크 도메인에서 사업 아이템을 발굴하고, 빠른 시장 검증을 위한 MVP(Minimum Viable Product)를 개발합니다. 28년의 ICT 현장 경험을 바탕으로 실현 가능한 비즈니스 모델을 설계하고, AI 기술을 활용한 혁신적인 서비스를 구현합니다.',
         targetCustomers: [
           '프리랜서',
           '퇴사준비자',
@@ -469,7 +513,13 @@ export const translations = {
           '중소기업',
           '중견기업',
         ],
-        processSteps: ['아이디어 발굴', '시장 분석', 'BM 설계', 'MVP 개발', '시장 검증'],
+        processSteps: [
+          '아이디어 발굴',
+          '시장 분석',
+          'BM 설계',
+          'MVP 개발',
+          '시장 검증',
+        ],
         techDomains: [
           {
             id: 'ax',
@@ -587,9 +637,7 @@ export const translations = {
             id: 'legaltech',
             name: '리걸테크',
             icon: 'Scale',
-            examples: [
-              'AI 기반 지능형 법률 문서 플랫폼 및 리걸테크 서비스',
-            ],
+            examples: ['AI 기반 지능형 법률 문서 플랫폼 및 리걸테크 서비스'],
           },
           {
             id: 'pettech',
@@ -624,34 +672,65 @@ export const translations = {
       'ax-consulting': {
         title: 'AX 컨설팅',
         subtitle: 'AI Transformation 전략 컨설팅',
-        description: 'AI가 단순한 도구를 넘어 비즈니스 핵심으로 자리잡는 AX(AI Transformation) 시대. 브레인하우스는 28년의 ICT 현장 경험과 AI 전문성을 바탕으로, 기업의 AI 전환을 위한 전략 수립부터 실행까지 체계적으로 지원합니다.',
+        description:
+          'AI가 단순한 도구를 넘어 비즈니스 핵심으로 자리잡는 AX(AI Transformation) 시대. 브레인하우스는 28년의 ICT 현장 경험과 AI 전문성을 바탕으로, 기업의 AI 전환을 위한 전략 수립부터 실행까지 체계적으로 지원합니다.',
         physicalAI: {
           sectionTitle: 'Physical AI 시대의 도래',
-          description: 'AI가 소프트웨어 영역을 넘어 물리 세계로 확장되는 이른바 피지컬 AI(Physical AI) 시대가 도래했습니다. 휴머노이드, 산업용 로봇, AGV/AMR 등 다양한 형태의 Physical AI가 제조, 물류, 서비스 현장에서 활용되고 있습니다.',
+          description:
+            'AI가 소프트웨어 영역을 넘어 물리 세계로 확장되는 이른바 피지컬 AI(Physical AI) 시대가 도래했습니다. 휴머노이드, 산업용 로봇, AGV/AMR 등 다양한 형태의 Physical AI가 제조, 물류, 서비스 현장에서 활용되고 있습니다.',
           types: [
-            { name: '휴머노이드', description: '인간과 유사한 형태로 다양한 환경에서 유연하게 작업 수행' },
-            { name: '산업용 로봇', description: '제조 공정에 특화된 고정밀 자동화 로봇' },
-            { name: 'AGV/AMR', description: '물류 센터, 창고에서 자율 주행하며 물품 이동' },
+            {
+              name: '휴머노이드',
+              description:
+                '인간과 유사한 형태로 다양한 환경에서 유연하게 작업 수행',
+            },
+            {
+              name: '산업용 로봇',
+              description: '제조 공정에 특화된 고정밀 자동화 로봇',
+            },
+            {
+              name: 'AGV/AMR',
+              description: '물류 센터, 창고에서 자율 주행하며 물품 이동',
+            },
           ],
           coreTech: [
             { name: 'AI 칩', description: 'GPU, NPU 등 AI 연산 특화 프로세서' },
-            { name: '엣지 컴퓨팅', description: '실시간 응답성 확보를 위한 분산 처리' },
-            { name: '네트워크 인프라', description: 'TSN, 5G 등 초저지연 통신 기술' },
+            {
+              name: '엣지 컴퓨팅',
+              description: '실시간 응답성 확보를 위한 분산 처리',
+            },
+            {
+              name: '네트워크 인프라',
+              description: 'TSN, 5G 등 초저지연 통신 기술',
+            },
           ],
-          expertise: 'Brain House는 다수의 「AI 엣지 컴퓨팅」 관련 프로젝트 레퍼런스를 보유하고 있습니다.',
+          expertise:
+            'Brain House는 다수의 「AI 엣지 컴퓨팅」 관련 프로젝트 레퍼런스를 보유하고 있습니다.',
         },
         axDefinition: {
           sectionTitle: 'AX(AI Transformation)란?',
-          description: '기존의 DX(Digital Transformation)가 단순히 아날로그 데이터를 디지털화하고 클라우드로 옮기는 수준이었다면, AX는 그 위에 있는 모든 것에 인공지능(AI)이 녹아들어 비즈니스 핵심 자체를 혁신하는 것을 의미합니다.',
-          keyPoint: '단순히 "AI 도구를 도입했다"의 수준을 넘어, 의사결정, 제품 설계, 고객 경험 전반에 AI가 신경망처럼 스며든 단계입니다.',
+          description:
+            '기존의 DX(Digital Transformation)가 단순히 아날로그 데이터를 디지털화하고 클라우드로 옮기는 수준이었다면, AX는 그 위에 있는 모든 것에 인공지능(AI)이 녹아들어 비즈니스 핵심 자체를 혁신하는 것을 의미합니다.',
+          keyPoint:
+            '단순히 "AI 도구를 도입했다"의 수준을 넘어, 의사결정, 제품 설계, 고객 경험 전반에 AI가 신경망처럼 스며든 단계입니다.',
           comparison: {
             dx: {
               title: 'DX (Digital Transformation)',
-              items: ['아날로그 → 디지털 전환', '클라우드 마이그레이션', '프로세스 자동화', '데이터 수집 및 저장'],
+              items: [
+                '아날로그 → 디지털 전환',
+                '클라우드 마이그레이션',
+                '프로세스 자동화',
+                '데이터 수집 및 저장',
+              ],
             },
             ax: {
               title: 'AX (AI Transformation)',
-              items: ['AI 기반 의사결정', 'AI 중심 제품/서비스 설계', '예측 및 자동 최적화', 'AI 네이티브 비즈니스 모델'],
+              items: [
+                'AI 기반 의사결정',
+                'AI 중심 제품/서비스 설계',
+                '예측 및 자동 최적화',
+                'AI 네이티브 비즈니스 모델',
+              ],
             },
           },
         },
@@ -661,7 +740,8 @@ export const translations = {
             {
               title: '내부 효율화',
               icon: 'Zap',
-              description: '반복적인 백오피스(Back-office) 자동화 및 리소스 최적화',
+              description:
+                '반복적인 백오피스(Back-office) 자동화 및 리소스 최적화',
               outcomes: ['비용 절감', '생산성 극대화', '업무 자동화'],
             },
             {
@@ -673,14 +753,16 @@ export const translations = {
             {
               title: '신규 수익 창출',
               icon: 'DollarSign',
-              description: 'AI 기반의 신제품 출시 및 AIaaS(AI as a Service) 사업화',
+              description:
+                'AI 기반의 신제품 출시 및 AIaaS(AI as a Service) 사업화',
               outcomes: ['시장 확대', '신규 비즈니스 모델', '매출 다각화'],
             },
           ],
         },
         evolutionStages: {
           sectionTitle: 'AX 전환 진화 단계',
-          description: '단번에 AX가 완성되는 것이 아니며, 다음 단계를 거친 흐름을 따릅니다.',
+          description:
+            '단번에 AX가 완성되는 것이 아니며, 다음 단계를 거친 흐름을 따릅니다.',
           stages: [
             {
               step: 1,
@@ -698,13 +780,15 @@ export const translations = {
               step: 3,
               title: 'AI Transformation',
               subtitle: 'AX',
-              description: 'AI가 데이터를 학습하여 스스로 판단하고 업무를 주도적으로 수행하거나 지원함',
+              description:
+                'AI가 데이터를 학습하여 스스로 판단하고 업무를 주도적으로 수행하거나 지원함',
             },
           ],
         },
         consultingFramework: {
           sectionTitle: 'AX 컨설팅 프레임워크',
-          description: 'Brain House는 전략적 AI 도입부터 지속적인, 지속적인 비즈니스 가치를 창출하는 3단계 프로세스를 지원합니다.',
+          description:
+            'Brain House는 전략적 AI 도입부터 지속적인, 지속적인 비즈니스 가치를 창출하는 3단계 프로세스를 지원합니다.',
           phases: [
             {
               phase: 1,
@@ -721,26 +805,38 @@ export const translations = {
             {
               phase: 3,
               title: '내재화 & 확산',
-              activities: ['변화 관리 전략', 'AI 리터러시 교육', '성과 모니터링'],
+              activities: [
+                '변화 관리 전략',
+                'AI 리터러시 교육',
+                '성과 모니터링',
+              ],
               deliverables: ['AI 거버넌스 체계', '지속적 AI 활용 문화'],
             },
           ],
         },
         businessModels: {
           sectionTitle: 'AI 비즈니스 모델 발굴',
-          description: 'AI 비즈니스 모델은 인공지능 기술을 활용해 직접적인 수익 창출 또는 비즈니스 혁신을 이루는 다양한 구조를 의미합니다. Brain House는 버티컬 AI 솔루션을 비롯한 다양한 AI 비즈니스 모델을 수립합니다.',
+          description:
+            'AI 비즈니스 모델은 인공지능 기술을 활용해 직접적인 수익 창출 또는 비즈니스 혁신을 이루는 다양한 구조를 의미합니다. Brain House는 버티컬 AI 솔루션을 비롯한 다양한 AI 비즈니스 모델을 수립합니다.',
           models: [
             {
               id: 'aiaas',
               title: 'AIaaS',
               subtitle: '서비스형 AI',
               icon: 'Cloud',
-              description: '기업이 직접 AI 모델을 개발하지 않고, 이미 구축된 AI 기능을 API 형태로 빌려 쓰는 모델입니다.',
+              description:
+                '기업이 직접 AI 모델을 개발하지 않고, 이미 구축된 AI 기능을 API 형태로 빌려 쓰는 모델입니다.',
               pricing: 'API 호출 횟수나 데이터 처리량에 따라 비용 지불',
               examples: [
                 { name: 'OpenAI API', desc: 'GPT 모델을 자사 서비스에 연동' },
-                { name: 'Google Cloud AI', desc: '이미지 분석, 번역, 음성 인식 기능을 API로 제공' },
-                { name: 'AWS Bedrock', desc: '다양한 오픈소스 및 상용 모델을 기업 맞춤형으로 제공' },
+                {
+                  name: 'Google Cloud AI',
+                  desc: '이미지 분석, 번역, 음성 인식 기능을 API로 제공',
+                },
+                {
+                  name: 'AWS Bedrock',
+                  desc: '다양한 오픈소스 및 상용 모델을 기업 맞춤형으로 제공',
+                },
               ],
             },
             {
@@ -748,12 +844,22 @@ export const translations = {
               title: 'AI-Native SaaS',
               subtitle: 'AI 기반 구독 모델',
               icon: 'Sparkles',
-              description: '기존의 소프트웨어(SaaS)에 AI 기능이 핵심(Core)으로 통합된 형태입니다. 단순히 도구를 제공하는 것을 넘어 결과물을 만들어주는 데 집중합니다.',
+              description:
+                '기존의 소프트웨어(SaaS)에 AI 기능이 핵심(Core)으로 통합된 형태입니다. 단순히 도구를 제공하는 것을 넘어 결과물을 만들어주는 데 집중합니다.',
               pricing: '월간/연간 구독료(Subscription)',
               examples: [
-                { name: 'Jasper / Copy.ai', desc: '마케팅 문구 및 콘텐츠 자동 생성' },
-                { name: 'GitHub Copilot', desc: '개발자용 코드 자동 완성 및 제안' },
-                { name: 'Canva Magic Studio', desc: '텍스트만으로 디자인과 이미지를 생성' },
+                {
+                  name: 'Jasper / Copy.ai',
+                  desc: '마케팅 문구 및 콘텐츠 자동 생성',
+                },
+                {
+                  name: 'GitHub Copilot',
+                  desc: '개발자용 코드 자동 완성 및 제안',
+                },
+                {
+                  name: 'Canva Magic Studio',
+                  desc: '텍스트만으로 디자인과 이미지를 생성',
+                },
               ],
             },
             {
@@ -761,11 +867,18 @@ export const translations = {
               title: 'AI 에이전트 성과 기반',
               subtitle: 'Outcome-based / Agentic AI',
               icon: 'Bot',
-              description: '단순히 소프트웨어를 빌려주는 것이 아니라, AI 에이전트가 특정 업무를 완수한 성과에 대해 비용을 받는 모델입니다. 2026년 가장 주목받는 비즈니스 모델입니다.',
+              description:
+                '단순히 소프트웨어를 빌려주는 것이 아니라, AI 에이전트가 특정 업무를 완수한 성과에 대해 비용을 받는 모델입니다. 2026년 가장 주목받는 비즈니스 모델입니다.',
               pricing: '성공적인 예약 건당 수수료, 고객 문의 해결 건당 비용 등',
               examples: [
-                { name: 'Intercom / Zendesk AI', desc: '상담원이 아닌 AI 에이전트가 고객 문제를 완결 지었을 때 과금' },
-                { name: 'AI 리쿠르팅 에이전트', desc: '적합한 인재를 찾아 면접 스케줄까지 잡았을 때 수수료 발생' },
+                {
+                  name: 'Intercom / Zendesk AI',
+                  desc: '상담원이 아닌 AI 에이전트가 고객 문제를 완결 지었을 때 과금',
+                },
+                {
+                  name: 'AI 리쿠르팅 에이전트',
+                  desc: '적합한 인재를 찾아 면접 스케줄까지 잡았을 때 수수료 발생',
+                },
               ],
             },
             {
@@ -773,11 +886,18 @@ export const translations = {
               title: 'Vertical AI',
               subtitle: '특정 산업 특화 모델',
               icon: 'Stethoscope',
-              description: '특정 산업별(리테일·헬스케어·금융·부동산·법률·제조 등) 전문 데이터를 학습시켜 해당 분야에만 최적화된 맞춤 AI 서비스를 제공하는 모델입니다.',
+              description:
+                '특정 산업별(리테일·헬스케어·금융·부동산·법률·제조 등) 전문 데이터를 학습시켜 해당 분야에만 최적화된 맞춤 AI 서비스를 제공하는 모델입니다.',
               pricing: '고부가가치 솔루션 제공 (B2B 계약 중심)',
               examples: [
-                { name: 'Harvey', desc: '변호사들을 위한 법률 문서 분석 및 리서치 특화 AI' },
-                { name: 'Lunit (루닛)', desc: '의료 영상을 분석해 암을 진단하는 의료 특화 AI' },
+                {
+                  name: 'Harvey',
+                  desc: '변호사들을 위한 법률 문서 분석 및 리서치 특화 AI',
+                },
+                {
+                  name: 'Lunit (루닛)',
+                  desc: '의료 영상을 분석해 암을 진단하는 의료 특화 AI',
+                },
                 { name: 'Ironclad', desc: '계약서 관리 및 자동 검토 전문 AI' },
               ],
             },
@@ -786,13 +906,23 @@ export const translations = {
               title: 'Enablers',
               subtitle: '데이터 및 인프라 레이어',
               icon: 'Cpu',
-              description: 'AI를 만들고 운영하는 데 필요한 기초를 판매하는 모델입니다.',
+              description:
+                'AI를 만들고 운영하는 데 필요한 기초를 판매하는 모델입니다.',
               pricing: '컴퓨팅 파워 대여, 데이터 라벨링 수수료, 칩 판매',
               examples: [
                 { name: 'NVIDIA', desc: 'AI 학습용 GPU 및 컴퓨팅 인프라 판매' },
-                { name: 'Scale AI', desc: 'AI 학습에 필요한 고품질 데이터 라벨링 서비스 제공' },
-                { name: 'Hugging Face', desc: 'AI 모델 공유 플랫폼 및 배포 환경 제공' },
-                { name: 'Palantir Foundry', desc: '사일로 데이터를 통합해 비즈니스 의사결정을 도움' },
+                {
+                  name: 'Scale AI',
+                  desc: 'AI 학습에 필요한 고품질 데이터 라벨링 서비스 제공',
+                },
+                {
+                  name: 'Hugging Face',
+                  desc: 'AI 모델 공유 플랫폼 및 배포 환경 제공',
+                },
+                {
+                  name: 'Palantir Foundry',
+                  desc: '사일로 데이터를 통합해 비즈니스 의사결정을 도움',
+                },
               ],
             },
           ],
@@ -805,11 +935,13 @@ export const translations = {
         subtitle: '개인정보 보호에 관한 안내',
       },
       lastUpdated: '최종 수정일: 2026년 1월 29일',
-      intro: '(주)브레인하우스(이하 "회사")는 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수하고 있습니다. 회사는 본 개인정보 처리방침을 통해 이용자의 개인정보가 어떠한 목적과 방식으로 처리되고 있는지 안내드립니다.',
+      intro:
+        '(주)브레인하우스(이하 "회사")는 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수하고 있습니다. 회사는 본 개인정보 처리방침을 통해 이용자의 개인정보가 어떠한 목적과 방식으로 처리되고 있는지 안내드립니다.',
       sections: {
         purpose: {
           title: '1. 개인정보의 처리 목적',
-          content: '회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며, 이용 목적이 변경될 경우 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.',
+          content:
+            '회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며, 이용 목적이 변경될 경우 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.',
           items: [
             '문의 응대: 이용자의 문의에 대한 답변 및 상담 서비스 제공',
             '서비스 개선: 서비스 품질 향상을 위한 피드백 분석',
@@ -817,7 +949,8 @@ export const translations = {
         },
         items: {
           title: '2. 수집하는 개인정보 항목',
-          content: '회사는 문의하기 서비스 이용 시 다음의 개인정보를 수집합니다:',
+          content:
+            '회사는 문의하기 서비스 이용 시 다음의 개인정보를 수집합니다:',
           items: [
             '필수 항목: 이름, 이메일 주소',
             '선택 항목: 회사명, 연락처, 문의 내용',
@@ -825,18 +958,19 @@ export const translations = {
         },
         retention: {
           title: '3. 개인정보의 보유 및 이용 기간',
-          content: '회사는 원칙적으로 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 다만, 관계 법령의 규정에 의하여 보존할 필요가 있는 경우 법령에 정한 기간 동안 보관합니다.',
-          items: [
-            '문의 내역: 3년 (상법, 전자상거래법 등 관련 법률)',
-          ],
+          content:
+            '회사는 원칙적으로 개인정보 수집 및 이용 목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 다만, 관계 법령의 규정에 의하여 보존할 필요가 있는 경우 법령에 정한 기간 동안 보관합니다.',
+          items: ['문의 내역: 3년 (상법, 전자상거래법 등 관련 법률)'],
         },
         rights: {
           title: '4. 이용자의 권리와 행사 방법',
-          content: '이용자는 언제든지 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다. 권리 행사는 아래 담당자에게 서면, 이메일 등으로 연락하시면 지체 없이 처리합니다.',
+          content:
+            '이용자는 언제든지 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다. 권리 행사는 아래 담당자에게 서면, 이메일 등으로 연락하시면 지체 없이 처리합니다.',
         },
         security: {
           title: '5. 개인정보의 안전성 확보 조치',
-          content: '회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다:',
+          content:
+            '회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다:',
           items: [
             '개인정보의 암호화',
             '해킹 등에 대비한 기술적 대책',
@@ -845,14 +979,16 @@ export const translations = {
         },
         officer: {
           title: '6. 개인정보 보호책임자',
-          content: '회사는 이용자의 개인정보 보호 및 관련 문의사항 처리를 위해 아래와 같이 개인정보 보호책임자를 지정하고 있습니다:',
+          content:
+            '회사는 이용자의 개인정보 보호 및 관련 문의사항 처리를 위해 아래와 같이 개인정보 보호책임자를 지정하고 있습니다:',
           name: '성명: 김현철',
           position: '직책: 대표이사',
           email: '이메일: comfamil@gmail.com',
         },
         changes: {
           title: '7. 개인정보 처리방침의 변경',
-          content: '본 개인정보 처리방침은 법령 및 방침에 따라 변경될 수 있으며, 변경 시 웹사이트 공지를 통해 안내합니다.',
+          content:
+            '본 개인정보 처리방침은 법령 및 방침에 따라 변경될 수 있으며, 변경 시 웹사이트 공지를 통해 안내합니다.',
         },
       },
     },
@@ -1051,7 +1187,8 @@ export const translations = {
         {
           id: 'ict-strategy',
           title: 'ICT Strategy & Policy Consulting',
-          description: 'Government R&D planning, technology commercialization, policy research',
+          description:
+            'Government R&D planning, technology commercialization, policy research',
           items: [
             {
               title: 'Wired/Wireless Communication SW House System Development',
@@ -1059,12 +1196,14 @@ export const translations = {
               year: '2025',
             },
             {
-              title: 'AI-based Mobile Edge Cloud Service Platform Commercialization Strategy',
+              title:
+                'AI-based Mobile Edge Cloud Service Platform Commercialization Strategy',
               client: 'ICT Company',
               year: '2024',
             },
             {
-              title: 'Cloud Networking Service Platform Tech Commercialization Strategy',
+              title:
+                'Cloud Networking Service Platform Tech Commercialization Strategy',
               client: 'ICT Company',
               year: '2024',
             },
@@ -1084,7 +1223,8 @@ export const translations = {
               year: '2023',
             },
             {
-              title: 'Digital Healthcare & DTx ICT Convergence Technology Analysis',
+              title:
+                'Digital Healthcare & DTx ICT Convergence Technology Analysis',
               client: 'Industrial Convergence Institute',
               year: '2023',
             },
@@ -1094,22 +1234,26 @@ export const translations = {
               year: '2022',
             },
             {
-              title: 'Hyper-connected Networking Service/BM & PoC Performance Strategy',
+              title:
+                'Hyper-connected Networking Service/BM & PoC Performance Strategy',
               client: 'KANI',
               year: '2022',
             },
             {
-              title: 'IT Community Version Service Research (Domestic & International)',
+              title:
+                'IT Community Version Service Research (Domestic & International)',
               client: 'KISTI',
               year: '2022',
             },
             {
-              title: 'Hyper-connected Networking Living Lab Development & Operation Research',
+              title:
+                'Hyper-connected Networking Living Lab Development & Operation Research',
               client: 'KANI',
               year: '2021',
             },
             {
-              title: 'ICT Tech Commercialization Consulting (VR, AI, Metaverse BM)',
+              title:
+                'ICT Tech Commercialization Consulting (VR, AI, Metaverse BM)',
               client: 'ICT Company',
               year: '2021',
             },
@@ -1119,12 +1263,14 @@ export const translations = {
               year: '2020',
             },
             {
-              title: 'AI-based Network Platform Tech Commercialization Consulting',
+              title:
+                'AI-based Network Platform Tech Commercialization Consulting',
               client: 'ICT Company',
               year: '2020',
             },
             {
-              title: 'ICT Tech Commercialization Consulting (Enterprise Growth Roadmap)',
+              title:
+                'ICT Tech Commercialization Consulting (Enterprise Growth Roadmap)',
               client: 'ICT Company',
               year: '2020',
             },
@@ -1133,7 +1279,8 @@ export const translations = {
         {
           id: 'bm-software',
           title: 'Business Model Planning & Software Development',
-          description: 'Platform service planning, BM development, MVP development',
+          description:
+            'Platform service planning, BM development, MVP development',
           items: [
             {
               title: 'AI-based Personalized Literacy Learning Platform',
@@ -1206,7 +1353,8 @@ export const translations = {
               year: '2020',
             },
             {
-              title: 'AR Digital Content Development (Ball Shooting, Trampoline)',
+              title:
+                'AR Digital Content Development (Ball Shooting, Trampoline)',
               client: 'Company J',
               year: '2019',
             },
@@ -1245,7 +1393,8 @@ export const translations = {
         message: 'Message (Project outline, budget, schedule, etc.)',
         submit: 'Send Message',
         submitting: 'Sending...',
-        success: 'Your message has been sent successfully. We will get back to you soon.',
+        success:
+          'Your message has been sent successfully. We will get back to you soon.',
         error: 'Failed to send message. Please try again later.',
       },
     },
@@ -1288,16 +1437,50 @@ export const translations = {
         title: 'Contact Us',
         subtitle: 'Your First Step to Successful Business',
       },
+      privacy: {
+        title: 'Privacy Policy',
+        subtitle: 'Information about Privacy Protection',
+      },
     },
     servicesMenu: {
       viewAll: 'View All Services',
       items: [
-        { slug: 'mvp-development', title: 'Item Planning & MVP', shortTitle: 'MVP Dev', hasPage: true },
-        { slug: 'ax-consulting', title: 'AX Consulting', shortTitle: 'AX Consulting', hasPage: true },
-        { slug: 'ict-strategy', title: 'ICT Strategy & Policy Consulting', shortTitle: 'ICT Strategy', hasPage: false },
-        { slug: 'tech-commercialization', title: 'Tech Commercialization Consulting', shortTitle: 'Tech Commerc.', hasPage: false },
-        { slug: 'startup-investment', title: 'Startup & Investment Consulting', shortTitle: 'Startup', hasPage: false },
-        { slug: 'software-development', title: 'Software Development', shortTitle: 'SW Dev', hasPage: false },
+        {
+          slug: 'mvp-development',
+          title: 'Item Planning & MVP',
+          shortTitle: 'MVP Dev',
+          hasPage: true,
+        },
+        {
+          slug: 'ax-consulting',
+          title: 'AX Consulting',
+          shortTitle: 'AX Consulting',
+          hasPage: true,
+        },
+        {
+          slug: 'ict-strategy',
+          title: 'ICT Strategy & Policy Consulting',
+          shortTitle: 'ICT Strategy',
+          hasPage: false,
+        },
+        {
+          slug: 'tech-commercialization',
+          title: 'Tech Commercialization Consulting',
+          shortTitle: 'Tech Commerc.',
+          hasPage: false,
+        },
+        {
+          slug: 'startup-investment',
+          title: 'Startup & Investment Consulting',
+          shortTitle: 'Startup',
+          hasPage: false,
+        },
+        {
+          slug: 'software-development',
+          title: 'Software Development',
+          shortTitle: 'SW Dev',
+          hasPage: false,
+        },
       ],
     },
     serviceDetailUI: {
@@ -1310,7 +1493,8 @@ export const translations = {
       processTitle: 'Service Process',
       techDomainsLabel: 'Tech Domains',
       techDomainsTitle: 'Supported Tech Domains',
-      techDomainsDescription: 'We discover innovative business items and develop MVPs across various industry sectors.',
+      techDomainsDescription:
+        'We discover innovative business items and develop MVPs across various industry sectors.',
       ctaTitle: 'Start Your Project',
       ctaDescription: 'Create innovative services with Brain House.',
       ctaButton: 'Contact for Project',
@@ -1319,8 +1503,10 @@ export const translations = {
     serviceDetails: {
       'mvp-development': {
         title: 'Business Item Planning & MVP Development',
-        subtitle: 'Tech Domain-specific Business Item Planning & MVP Development Service',
-        description: 'We discover business items across various tech domains and develop MVPs (Minimum Viable Products) for rapid market validation. Based on 28 years of ICT field experience, we design viable business models and implement innovative services utilizing AI technology.',
+        subtitle:
+          'Tech Domain-specific Business Item Planning & MVP Development Service',
+        description:
+          'We discover business items across various tech domains and develop MVPs (Minimum Viable Products) for rapid market validation. Based on 28 years of ICT field experience, we design viable business models and implement innovative services utilizing AI technology.',
         targetCustomers: [
           'Freelancers',
           'Career Changers',
@@ -1330,7 +1516,13 @@ export const translations = {
           'SMEs',
           'Mid-sized Companies',
         ],
-        processSteps: ['Idea Discovery', 'Market Analysis', 'BM Design', 'MVP Development', 'Market Validation'],
+        processSteps: [
+          'Idea Discovery',
+          'Market Analysis',
+          'BM Design',
+          'MVP Development',
+          'Market Validation',
+        ],
         techDomains: [
           {
             id: 'ax',
@@ -1485,34 +1677,73 @@ export const translations = {
       'ax-consulting': {
         title: 'AX Consulting',
         subtitle: 'AI Transformation Strategy Consulting',
-        description: 'In the era of AX (AI Transformation) where AI becomes the core of business beyond just a tool. Brain House provides systematic support from strategy development to execution for enterprise AI transformation, based on 28 years of ICT field experience and AI expertise.',
+        description:
+          'In the era of AX (AI Transformation) where AI becomes the core of business beyond just a tool. Brain House provides systematic support from strategy development to execution for enterprise AI transformation, based on 28 years of ICT field experience and AI expertise.',
         physicalAI: {
           sectionTitle: 'The Advent of Physical AI Era',
-          description: 'The era of Physical AI has arrived, where AI extends beyond software to the physical world. Various forms of Physical AI such as humanoids, industrial robots, and AGV/AMR are being utilized in manufacturing, logistics, and service sites.',
+          description:
+            'The era of Physical AI has arrived, where AI extends beyond software to the physical world. Various forms of Physical AI such as humanoids, industrial robots, and AGV/AMR are being utilized in manufacturing, logistics, and service sites.',
           types: [
-            { name: 'Humanoids', description: 'Performing tasks flexibly in various environments with human-like form' },
-            { name: 'Industrial Robots', description: 'High-precision automation robots specialized for manufacturing processes' },
-            { name: 'AGV/AMR', description: 'Autonomous navigation and material movement in logistics centers and warehouses' },
+            {
+              name: 'Humanoids',
+              description:
+                'Performing tasks flexibly in various environments with human-like form',
+            },
+            {
+              name: 'Industrial Robots',
+              description:
+                'High-precision automation robots specialized for manufacturing processes',
+            },
+            {
+              name: 'AGV/AMR',
+              description:
+                'Autonomous navigation and material movement in logistics centers and warehouses',
+            },
           ],
           coreTech: [
-            { name: 'AI Chips', description: 'AI computation-specialized processors like GPU, NPU' },
-            { name: 'Edge Computing', description: 'Distributed processing for real-time responsiveness' },
-            { name: 'Network Infrastructure', description: 'Ultra-low latency communication technologies like TSN, 5G' },
+            {
+              name: 'AI Chips',
+              description:
+                'AI computation-specialized processors like GPU, NPU',
+            },
+            {
+              name: 'Edge Computing',
+              description:
+                'Distributed processing for real-time responsiveness',
+            },
+            {
+              name: 'Network Infrastructure',
+              description:
+                'Ultra-low latency communication technologies like TSN, 5G',
+            },
           ],
-          expertise: 'Brain House has multiple project references related to "AI Edge Computing".',
+          expertise:
+            'Brain House has multiple project references related to "AI Edge Computing".',
         },
         axDefinition: {
           sectionTitle: 'What is AX (AI Transformation)?',
-          description: 'While traditional DX (Digital Transformation) was about digitizing analog data and moving to the cloud, AX means innovating the core of business itself by infusing AI into everything above it.',
-          keyPoint: 'Beyond just "adopting AI tools", it\'s the stage where AI permeates like a neural network throughout decision-making, product design, and customer experience.',
+          description:
+            'While traditional DX (Digital Transformation) was about digitizing analog data and moving to the cloud, AX means innovating the core of business itself by infusing AI into everything above it.',
+          keyPoint:
+            'Beyond just "adopting AI tools", it\'s the stage where AI permeates like a neural network throughout decision-making, product design, and customer experience.',
           comparison: {
             dx: {
               title: 'DX (Digital Transformation)',
-              items: ['Analog → Digital Conversion', 'Cloud Migration', 'Process Automation', 'Data Collection & Storage'],
+              items: [
+                'Analog → Digital Conversion',
+                'Cloud Migration',
+                'Process Automation',
+                'Data Collection & Storage',
+              ],
             },
             ax: {
               title: 'AX (AI Transformation)',
-              items: ['AI-based Decision Making', 'AI-centric Product/Service Design', 'Prediction & Auto-optimization', 'AI-native Business Models'],
+              items: [
+                'AI-based Decision Making',
+                'AI-centric Product/Service Design',
+                'Prediction & Auto-optimization',
+                'AI-native Business Models',
+              ],
             },
           },
         },
@@ -1522,26 +1753,42 @@ export const translations = {
             {
               title: 'Internal Efficiency',
               icon: 'Zap',
-              description: 'Automation of repetitive back-office tasks and resource optimization',
-              outcomes: ['Cost Reduction', 'Productivity Maximization', 'Work Automation'],
+              description:
+                'Automation of repetitive back-office tasks and resource optimization',
+              outcomes: [
+                'Cost Reduction',
+                'Productivity Maximization',
+                'Work Automation',
+              ],
             },
             {
               title: 'CX Enhancement',
               icon: 'Smile',
-              description: 'Hyper-personalized customer service and 24/7 real-time support',
-              outcomes: ['Customer Loyalty', 'Retention Improvement', 'Satisfaction Maximization'],
+              description:
+                'Hyper-personalized customer service and 24/7 real-time support',
+              outcomes: [
+                'Customer Loyalty',
+                'Retention Improvement',
+                'Satisfaction Maximization',
+              ],
             },
             {
               title: 'New Revenue Generation',
               icon: 'DollarSign',
-              description: 'AI-based new product launches and AIaaS (AI as a Service) commercialization',
-              outcomes: ['Market Expansion', 'New Business Models', 'Revenue Diversification'],
+              description:
+                'AI-based new product launches and AIaaS (AI as a Service) commercialization',
+              outcomes: [
+                'Market Expansion',
+                'New Business Models',
+                'Revenue Diversification',
+              ],
             },
           ],
         },
         evolutionStages: {
           sectionTitle: 'AX Transformation Evolution Stages',
-          description: 'AX is not completed at once, but follows a progressive flow through the following stages.',
+          description:
+            'AX is not completed at once, but follows a progressive flow through the following stages.',
           stages: [
             {
               step: 1,
@@ -1559,49 +1806,77 @@ export const translations = {
               step: 3,
               title: 'AI Transformation',
               subtitle: 'AX',
-              description: 'AI learns from data, makes autonomous decisions, and proactively performs or supports tasks',
+              description:
+                'AI learns from data, makes autonomous decisions, and proactively performs or supports tasks',
             },
           ],
         },
         consultingFramework: {
           sectionTitle: 'AX Consulting Framework',
-          description: 'Brain House supports a 3-phase process from strategic AI adoption to continuous business value creation.',
+          description:
+            'Brain House supports a 3-phase process from strategic AI adoption to continuous business value creation.',
           phases: [
             {
               phase: 1,
               title: 'Diagnosis & Strategy',
-              activities: ['AI Readiness Assessment', 'Use Case Discovery', 'Priority Definition'],
+              activities: [
+                'AI Readiness Assessment',
+                'Use Case Discovery',
+                'Priority Definition',
+              ],
               deliverables: ['AX Strategy Roadmap', 'ROI Analysis Report'],
             },
             {
               phase: 2,
               title: 'Design & Implementation',
-              activities: ['Architecture Design', 'AI Modeling', 'Pilot Development'],
+              activities: [
+                'Architecture Design',
+                'AI Modeling',
+                'Pilot Development',
+              ],
               deliverables: ['Solution Architecture', 'POC Delivery'],
             },
             {
               phase: 3,
               title: 'Internalization & Scaling',
-              activities: ['Change Management Strategy', 'AI Literacy Training', 'Performance Monitoring'],
-              deliverables: ['AI Governance Framework', 'Continuous AI Adoption Culture'],
+              activities: [
+                'Change Management Strategy',
+                'AI Literacy Training',
+                'Performance Monitoring',
+              ],
+              deliverables: [
+                'AI Governance Framework',
+                'Continuous AI Adoption Culture',
+              ],
             },
           ],
         },
         businessModels: {
           sectionTitle: 'AI Business Model Discovery',
-          description: 'AI business models refer to various structures that achieve direct revenue generation or business innovation using artificial intelligence technology. Brain House establishes various AI business models including Vertical AI solutions.',
+          description:
+            'AI business models refer to various structures that achieve direct revenue generation or business innovation using artificial intelligence technology. Brain House establishes various AI business models including Vertical AI solutions.',
           models: [
             {
               id: 'aiaas',
               title: 'AIaaS',
               subtitle: 'AI as a Service',
               icon: 'Cloud',
-              description: 'A model where companies use pre-built AI capabilities via API without developing AI models directly.',
+              description:
+                'A model where companies use pre-built AI capabilities via API without developing AI models directly.',
               pricing: 'Pay per API call or data processing volume',
               examples: [
-                { name: 'OpenAI API', desc: 'Integrate GPT models into your own services' },
-                { name: 'Google Cloud AI', desc: 'Provides image analysis, translation, voice recognition via API' },
-                { name: 'AWS Bedrock', desc: 'Offers various open-source and commercial models customized for enterprises' },
+                {
+                  name: 'OpenAI API',
+                  desc: 'Integrate GPT models into your own services',
+                },
+                {
+                  name: 'Google Cloud AI',
+                  desc: 'Provides image analysis, translation, voice recognition via API',
+                },
+                {
+                  name: 'AWS Bedrock',
+                  desc: 'Offers various open-source and commercial models customized for enterprises',
+                },
               ],
             },
             {
@@ -1609,12 +1884,22 @@ export const translations = {
               title: 'AI-Native SaaS',
               subtitle: 'AI-based Subscription Model',
               icon: 'Sparkles',
-              description: 'AI capabilities integrated as the core of traditional SaaS software. Focuses on creating deliverables beyond just providing tools.',
+              description:
+                'AI capabilities integrated as the core of traditional SaaS software. Focuses on creating deliverables beyond just providing tools.',
               pricing: 'Monthly/Annual Subscription',
               examples: [
-                { name: 'Jasper / Copy.ai', desc: 'Auto-generate marketing copy and content' },
-                { name: 'GitHub Copilot', desc: 'Code auto-completion and suggestions for developers' },
-                { name: 'Canva Magic Studio', desc: 'Generate designs and images from text prompts' },
+                {
+                  name: 'Jasper / Copy.ai',
+                  desc: 'Auto-generate marketing copy and content',
+                },
+                {
+                  name: 'GitHub Copilot',
+                  desc: 'Code auto-completion and suggestions for developers',
+                },
+                {
+                  name: 'Canva Magic Studio',
+                  desc: 'Generate designs and images from text prompts',
+                },
               ],
             },
             {
@@ -1622,11 +1907,19 @@ export const translations = {
               title: 'Outcome-based AI Agent',
               subtitle: 'Outcome-based / Agentic AI',
               icon: 'Bot',
-              description: 'A model that charges for outcomes when AI agents complete specific tasks, not just for software rental. The most watched business model in 2026.',
-              pricing: 'Per successful booking, per customer inquiry resolution, etc.',
+              description:
+                'A model that charges for outcomes when AI agents complete specific tasks, not just for software rental. The most watched business model in 2026.',
+              pricing:
+                'Per successful booking, per customer inquiry resolution, etc.',
               examples: [
-                { name: 'Intercom / Zendesk AI', desc: 'Charges when AI agent fully resolves customer issues instead of human agents' },
-                { name: 'AI Recruiting Agent', desc: 'Fee charged when finding suitable candidates and scheduling interviews' },
+                {
+                  name: 'Intercom / Zendesk AI',
+                  desc: 'Charges when AI agent fully resolves customer issues instead of human agents',
+                },
+                {
+                  name: 'AI Recruiting Agent',
+                  desc: 'Fee charged when finding suitable candidates and scheduling interviews',
+                },
               ],
             },
             {
@@ -1634,12 +1927,22 @@ export const translations = {
               title: 'Vertical AI',
               subtitle: 'Industry-specific Model',
               icon: 'Stethoscope',
-              description: 'A model providing customized AI services optimized for specific industries (retail, healthcare, finance, real estate, legal, manufacturing, etc.) by training on specialized data.',
+              description:
+                'A model providing customized AI services optimized for specific industries (retail, healthcare, finance, real estate, legal, manufacturing, etc.) by training on specialized data.',
               pricing: 'High-value solution provision (B2B contract focused)',
               examples: [
-                { name: 'Harvey', desc: 'Legal document analysis and research AI specialized for lawyers' },
-                { name: 'Lunit', desc: 'Medical AI analyzing imaging to diagnose cancer' },
-                { name: 'Ironclad', desc: 'Contract management and automated review AI' },
+                {
+                  name: 'Harvey',
+                  desc: 'Legal document analysis and research AI specialized for lawyers',
+                },
+                {
+                  name: 'Lunit',
+                  desc: 'Medical AI analyzing imaging to diagnose cancer',
+                },
+                {
+                  name: 'Ironclad',
+                  desc: 'Contract management and automated review AI',
+                },
               ],
             },
             {
@@ -1647,13 +1950,26 @@ export const translations = {
               title: 'Enablers',
               subtitle: 'Data & Infrastructure Layer',
               icon: 'Cpu',
-              description: 'A model selling the foundations needed to build and operate AI.',
+              description:
+                'A model selling the foundations needed to build and operate AI.',
               pricing: 'Computing power rental, data labeling fees, chip sales',
               examples: [
-                { name: 'NVIDIA', desc: 'AI training GPUs and computing infrastructure sales' },
-                { name: 'Scale AI', desc: 'High-quality data labeling services for AI training' },
-                { name: 'Hugging Face', desc: 'AI model sharing platform and deployment environment' },
-                { name: 'Palantir Foundry', desc: 'Integrates siloed data to support business decision-making' },
+                {
+                  name: 'NVIDIA',
+                  desc: 'AI training GPUs and computing infrastructure sales',
+                },
+                {
+                  name: 'Scale AI',
+                  desc: 'High-quality data labeling services for AI training',
+                },
+                {
+                  name: 'Hugging Face',
+                  desc: 'AI model sharing platform and deployment environment',
+                },
+                {
+                  name: 'Palantir Foundry',
+                  desc: 'Integrates siloed data to support business decision-making',
+                },
               ],
             },
           ],
@@ -1666,11 +1982,13 @@ export const translations = {
         subtitle: 'Information on Privacy Protection',
       },
       lastUpdated: 'Last Updated: January 29, 2026',
-      intro: 'Brain House Co., Ltd. (hereinafter "the Company") values the privacy of users and complies with relevant laws and regulations including the Personal Information Protection Act. Through this Privacy Policy, we inform you of how your personal information is processed.',
+      intro:
+        'Brain House Co., Ltd. (hereinafter "the Company") values the privacy of users and complies with relevant laws and regulations including the Personal Information Protection Act. Through this Privacy Policy, we inform you of how your personal information is processed.',
       sections: {
         purpose: {
           title: '1. Purpose of Processing Personal Information',
-          content: 'The Company processes personal information for the following purposes. The processed personal information will not be used for purposes other than the following, and if the purpose of use changes, necessary measures such as obtaining separate consent will be implemented.',
+          content:
+            'The Company processes personal information for the following purposes. The processed personal information will not be used for purposes other than the following, and if the purpose of use changes, necessary measures such as obtaining separate consent will be implemented.',
           items: [
             'Inquiry Response: Providing answers and consultation services for user inquiries',
             'Service Improvement: Feedback analysis for service quality enhancement',
@@ -1678,7 +1996,8 @@ export const translations = {
         },
         items: {
           title: '2. Personal Information Items Collected',
-          content: 'The Company collects the following personal information when using the inquiry service:',
+          content:
+            'The Company collects the following personal information when using the inquiry service:',
           items: [
             'Required: Name, Email Address',
             'Optional: Company Name, Contact Number, Inquiry Content',
@@ -1686,18 +2005,21 @@ export const translations = {
         },
         retention: {
           title: '3. Retention and Use Period of Personal Information',
-          content: 'In principle, the Company destroys personal information without delay after the purpose of collection and use is achieved. However, if preservation is required by relevant laws and regulations, it will be retained for the period specified by law.',
+          content:
+            'In principle, the Company destroys personal information without delay after the purpose of collection and use is achieved. However, if preservation is required by relevant laws and regulations, it will be retained for the period specified by law.',
           items: [
             'Inquiry Records: 3 years (Commercial Act, E-Commerce Act, etc.)',
           ],
         },
         rights: {
           title: '4. User Rights and How to Exercise Them',
-          content: 'Users can request access, correction, deletion, or suspension of processing of their personal information at any time. Rights can be exercised by contacting the person in charge below in writing or by email, and will be processed without delay.',
+          content:
+            'Users can request access, correction, deletion, or suspension of processing of their personal information at any time. Rights can be exercised by contacting the person in charge below in writing or by email, and will be processed without delay.',
         },
         security: {
           title: '5. Measures to Ensure Security of Personal Information',
-          content: 'The Company takes the following measures to ensure the security of personal information:',
+          content:
+            'The Company takes the following measures to ensure the security of personal information:',
           items: [
             'Encryption of personal information',
             'Technical measures against hacking',
@@ -1706,14 +2028,16 @@ export const translations = {
         },
         officer: {
           title: '6. Privacy Officer',
-          content: 'The Company designates a Privacy Officer as follows to protect user privacy and handle related inquiries:',
+          content:
+            'The Company designates a Privacy Officer as follows to protect user privacy and handle related inquiries:',
           name: 'Name: Hyuncheol Kim',
           position: 'Position: CEO',
           email: 'Email: comfamil@gmail.com',
         },
         changes: {
           title: '7. Changes to Privacy Policy',
-          content: 'This Privacy Policy may change according to laws and policies, and any changes will be announced through the website.',
+          content:
+            'This Privacy Policy may change according to laws and policies, and any changes will be announced through the website.',
         },
       },
     },
@@ -1915,12 +2239,14 @@ export const translations = {
               year: '2025',
             },
             {
-              title: '人工知能基盤モバイルエッジクラウドサービスプラットフォーム事業化戦略コンサルティング',
+              title:
+                '人工知能基盤モバイルエッジクラウドサービスプラットフォーム事業化戦略コンサルティング',
               client: 'ICT企業',
               year: '2024',
             },
             {
-              title: 'クラウドネットワーキングサービスプラットフォームの技術事業化戦略策定',
+              title:
+                'クラウドネットワーキングサービスプラットフォームの技術事業化戦略策定',
               client: 'ICT企業',
               year: '2024',
             },
@@ -1930,7 +2256,8 @@ export const translations = {
               year: '2023',
             },
             {
-              title: '超連結リビングラボ運営およびプラットフォーム自立化戦略策定',
+              title:
+                '超連結リビングラボ運営およびプラットフォーム自立化戦略策定',
               client: '韓国ネットワーク産業協会',
               year: '2023',
             },
@@ -1940,7 +2267,8 @@ export const translations = {
               year: '2023',
             },
             {
-              title: 'デジタルヘルスケア・デジタル治療剤ICT融合技術および産業動向分析',
+              title:
+                'デジタルヘルスケア・デジタル治療剤ICT融合技術および産業動向分析',
               client: '産業融合院',
               year: '2023',
             },
@@ -1950,7 +2278,8 @@ export const translations = {
               year: '2022',
             },
             {
-              title: '超連結ネットワーキングインフラ基盤サービス・BMおよびPoC活用成果創出戦略',
+              title:
+                '超連結ネットワーキングインフラ基盤サービス・BMおよびPoC活用成果創出戦略',
               client: 'KANI',
               year: '2022',
             },
@@ -1960,12 +2289,14 @@ export const translations = {
               year: '2022',
             },
             {
-              title: '超連結ネットワーキングサービスのリビングラボ構築および運営方案調査・分析研究',
+              title:
+                '超連結ネットワーキングサービスのリビングラボ構築および運営方案調査・分析研究',
               client: 'KANI',
               year: '2021',
             },
             {
-              title: 'ICT技術事業化戦略コンサルティング（VR、AI、メタバースビジネスモデル発掘）',
+              title:
+                'ICT技術事業化戦略コンサルティング（VR、AI、メタバースビジネスモデル発掘）',
               client: 'ICT企業',
               year: '2021',
             },
@@ -1975,12 +2306,14 @@ export const translations = {
               year: '2020',
             },
             {
-              title: '人工知能基盤ネットワークプラットフォーム技術事業化戦略コンサルティング',
+              title:
+                '人工知能基盤ネットワークプラットフォーム技術事業化戦略コンサルティング',
               client: 'ICT企業',
               year: '2020',
             },
             {
-              title: 'ICT技術事業化戦略コンサルティング（ICT基盤企業成長ロードマップ策定）',
+              title:
+                'ICT技術事業化戦略コンサルティング（ICT基盤企業成長ロードマップ策定）',
               client: 'ICT企業',
               year: '2020',
             },
@@ -2052,7 +2385,8 @@ export const translations = {
               year: '2020',
             },
             {
-              title: 'ファンとアーティストを直接つなぐエンターテインメントブロックチェーン投資プラットフォーム',
+              title:
+                'ファンとアーティストを直接つなぐエンターテインメントブロックチェーン投資プラットフォーム',
               client: 'E社',
               year: '2020',
             },
@@ -2062,7 +2396,8 @@ export const translations = {
               year: '2020',
             },
             {
-              title: 'ARデジタルコンテンツ開発（ボールシューティング、トランポリン）',
+              title:
+                'ARデジタルコンテンツ開発（ボールシューティング、トランポリン）',
               client: 'J社',
               year: '2019',
             },
@@ -2082,7 +2417,8 @@ export const translations = {
               year: '2019',
             },
             {
-              title: '中小企業のためのインフルエンサーマーケティングプラットフォーム',
+              title:
+                '中小企業のためのインフルエンサーマーケティングプラットフォーム',
               client: 'I社',
               year: '2019',
             },
@@ -2101,7 +2437,8 @@ export const translations = {
         message: 'お問い合わせ内容（プロジェクト概要、予算、スケジュールなど）',
         submit: 'お問い合わせ',
         submitting: '送信中...',
-        success: 'お問い合わせが正常に送信されました。近日中にご連絡いたします。',
+        success:
+          'お問い合わせが正常に送信されました。近日中にご連絡いたします。',
         error: 'メッセージの送信に失敗しました。後でもう一度お試しください。',
       },
     },
@@ -2144,16 +2481,50 @@ export const translations = {
         title: 'お問い合わせ',
         subtitle: '成功するビジネスへの第一歩',
       },
+      privacy: {
+        title: '個人情報処理方針',
+        subtitle: '個人情報保護に関するご案内',
+      },
     },
     servicesMenu: {
       viewAll: '全サービスを見る',
       items: [
-        { slug: 'mvp-development', title: 'アイテム企画 & MVP', shortTitle: 'MVP開発', hasPage: true },
-        { slug: 'ax-consulting', title: 'AXコンサルティング', shortTitle: 'AXコンサル', hasPage: true },
-        { slug: 'ict-strategy', title: 'ICT戦略・政策コンサルティング', shortTitle: 'ICT戦略', hasPage: false },
-        { slug: 'tech-commercialization', title: '技術事業化コンサルティング', shortTitle: '技術事業化', hasPage: false },
-        { slug: 'startup-investment', title: '創業・投資コンサルティング', shortTitle: '創業・投資', hasPage: false },
-        { slug: 'software-development', title: 'ソフトウェア開発', shortTitle: 'SW開発', hasPage: false },
+        {
+          slug: 'mvp-development',
+          title: 'アイテム企画 & MVP',
+          shortTitle: 'MVP開発',
+          hasPage: true,
+        },
+        {
+          slug: 'ax-consulting',
+          title: 'AXコンサルティング',
+          shortTitle: 'AXコンサル',
+          hasPage: true,
+        },
+        {
+          slug: 'ict-strategy',
+          title: 'ICT戦略・政策コンサルティング',
+          shortTitle: 'ICT戦略',
+          hasPage: false,
+        },
+        {
+          slug: 'tech-commercialization',
+          title: '技術事業化コンサルティング',
+          shortTitle: '技術事業化',
+          hasPage: false,
+        },
+        {
+          slug: 'startup-investment',
+          title: '創業・投資コンサルティング',
+          shortTitle: '創業・投資',
+          hasPage: false,
+        },
+        {
+          slug: 'software-development',
+          title: 'ソフトウェア開発',
+          shortTitle: 'SW開発',
+          hasPage: false,
+        },
       ],
     },
     serviceDetailUI: {
@@ -2166,7 +2537,8 @@ export const translations = {
       processTitle: 'サービス進行プロセス',
       techDomainsLabel: 'Tech Domains',
       techDomainsTitle: '対応可能なTech Domain',
-      techDomainsDescription: '多様な産業分野で革新的な事業アイテムを発掘し、MVPを開発します。',
+      techDomainsDescription:
+        '多様な産業分野で革新的な事業アイテムを発掘し、MVPを開発します。',
       ctaTitle: 'プロジェクトを始めましょう',
       ctaDescription: 'ブレインハウスと共に革新的なサービスを作りましょう。',
       ctaButton: 'プロジェクト問い合わせ',
@@ -2176,7 +2548,8 @@ export const translations = {
       'mvp-development': {
         title: '事業アイテム企画（発掘）およびMVP開発',
         subtitle: 'Tech Domain別事業アイテム企画およびMVP開発サービス',
-        description: '様々なテックドメインで事業アイテムを発掘し、迅速な市場検証のためのMVP（Minimum Viable Product）を開発します。28年のICT現場経験を基に実現可能なビジネスモデルを設計し、AI技術を活用した革新的なサービスを実装します。',
+        description:
+          '様々なテックドメインで事業アイテムを発掘し、迅速な市場検証のためのMVP（Minimum Viable Product）を開発します。28年のICT現場経験を基に実現可能なビジネスモデルを設計し、AI技術を活用した革新的なサービスを実装します。',
         targetCustomers: [
           'フリーランサー',
           '退職準備者',
@@ -2186,7 +2559,13 @@ export const translations = {
           '中小企業',
           '中堅企業',
         ],
-        processSteps: ['アイデア発掘', '市場分析', 'BM設計', 'MVP開発', '市場検証'],
+        processSteps: [
+          'アイデア発掘',
+          '市場分析',
+          'BM設計',
+          'MVP開発',
+          '市場検証',
+        ],
         techDomains: [
           {
             id: 'ax',
@@ -2341,34 +2720,67 @@ export const translations = {
       'ax-consulting': {
         title: 'AXコンサルティング',
         subtitle: 'AI Transformation戦略コンサルティング',
-        description: 'AIが単なるツールを超えてビジネスの核心となるAX（AI Transformation）時代。ブレインハウスは28年のICT現場経験とAI専門性を基に、企業のAI転換のための戦略策定から実行まで体系的に支援します。',
+        description:
+          'AIが単なるツールを超えてビジネスの核心となるAX（AI Transformation）時代。ブレインハウスは28年のICT現場経験とAI専門性を基に、企業のAI転換のための戦略策定から実行まで体系的に支援します。',
         physicalAI: {
           sectionTitle: 'Physical AI時代の到来',
-          description: 'AIがソフトウェア領域を超えて物理世界に拡張されるいわゆるフィジカルAI（Physical AI）時代が到来しました。ヒューマノイド、産業用ロボット、AGV/AMRなど様々な形態のPhysical AIが製造、物流、サービス現場で活用されています。',
+          description:
+            'AIがソフトウェア領域を超えて物理世界に拡張されるいわゆるフィジカルAI（Physical AI）時代が到来しました。ヒューマノイド、産業用ロボット、AGV/AMRなど様々な形態のPhysical AIが製造、物流、サービス現場で活用されています。',
           types: [
-            { name: 'ヒューマノイド', description: '人間と類似した形態で様々な環境で柔軟に作業遂行' },
-            { name: '産業用ロボット', description: '製造工程に特化した高精度自動化ロボット' },
-            { name: 'AGV/AMR', description: '物流センター、倉庫で自律走行しながら物品移動' },
+            {
+              name: 'ヒューマノイド',
+              description: '人間と類似した形態で様々な環境で柔軟に作業遂行',
+            },
+            {
+              name: '産業用ロボット',
+              description: '製造工程に特化した高精度自動化ロボット',
+            },
+            {
+              name: 'AGV/AMR',
+              description: '物流センター、倉庫で自律走行しながら物品移動',
+            },
           ],
           coreTech: [
-            { name: 'AIチップ', description: 'GPU、NPUなどAI演算特化プロセッサ' },
-            { name: 'エッジコンピューティング', description: 'リアルタイム応答性確保のための分散処理' },
-            { name: 'ネットワークインフラ', description: 'TSN、5Gなど超低遅延通信技術' },
+            {
+              name: 'AIチップ',
+              description: 'GPU、NPUなどAI演算特化プロセッサ',
+            },
+            {
+              name: 'エッジコンピューティング',
+              description: 'リアルタイム応答性確保のための分散処理',
+            },
+            {
+              name: 'ネットワークインフラ',
+              description: 'TSN、5Gなど超低遅延通信技術',
+            },
           ],
-          expertise: 'Brain Houseは多数の「AIエッジコンピューティング」関連プロジェクトリファレンスを保有しています。',
+          expertise:
+            'Brain Houseは多数の「AIエッジコンピューティング」関連プロジェクトリファレンスを保有しています。',
         },
         axDefinition: {
           sectionTitle: 'AX（AI Transformation）とは？',
-          description: '従来のDX（Digital Transformation）が単にアナログデータをデジタル化してクラウドに移行する水準だったとすれば、AXはその上にあるすべてに人工知能（AI）が溶け込みビジネスの核心自体を革新することを意味します。',
-          keyPoint: '単に「AIツールを導入した」の水準を超え、意思決定、製品設計、顧客体験全般にAIが神経網のように浸透した段階です。',
+          description:
+            '従来のDX（Digital Transformation）が単にアナログデータをデジタル化してクラウドに移行する水準だったとすれば、AXはその上にあるすべてに人工知能（AI）が溶け込みビジネスの核心自体を革新することを意味します。',
+          keyPoint:
+            '単に「AIツールを導入した」の水準を超え、意思決定、製品設計、顧客体験全般にAIが神経網のように浸透した段階です。',
           comparison: {
             dx: {
               title: 'DX (Digital Transformation)',
-              items: ['アナログ → デジタル転換', 'クラウドマイグレーション', 'プロセス自動化', 'データ収集および保存'],
+              items: [
+                'アナログ → デジタル転換',
+                'クラウドマイグレーション',
+                'プロセス自動化',
+                'データ収集および保存',
+              ],
             },
             ax: {
               title: 'AX (AI Transformation)',
-              items: ['AI基盤意思決定', 'AI中心製品/サービス設計', '予測および自動最適化', 'AIネイティブビジネスモデル'],
+              items: [
+                'AI基盤意思決定',
+                'AI中心製品/サービス設計',
+                '予測および自動最適化',
+                'AIネイティブビジネスモデル',
+              ],
             },
           },
         },
@@ -2378,26 +2790,34 @@ export const translations = {
             {
               title: '内部効率化',
               icon: 'Zap',
-              description: '反復的なバックオフィス（Back-office）自動化およびリソース最適化',
+              description:
+                '反復的なバックオフィス（Back-office）自動化およびリソース最適化',
               outcomes: ['コスト削減', '生産性極大化', '業務自動化'],
             },
             {
               title: '顧客体験（CX）高度化',
               icon: 'Smile',
-              description: '超個人化された顧客対応および24/7リアルタイムサービス',
-              outcomes: ['顧客ロイヤルティ向上', 'リテンション改善', '満足度極大化'],
+              description:
+                '超個人化された顧客対応および24/7リアルタイムサービス',
+              outcomes: [
+                '顧客ロイヤルティ向上',
+                'リテンション改善',
+                '満足度極大化',
+              ],
             },
             {
               title: '新規収益創出',
               icon: 'DollarSign',
-              description: 'AI基盤の新製品発売およびAIaaS（AI as a Service）事業化',
+              description:
+                'AI基盤の新製品発売およびAIaaS（AI as a Service）事業化',
               outcomes: ['市場拡大', '新規ビジネスモデル', '売上多角化'],
             },
           ],
         },
         evolutionStages: {
           sectionTitle: 'AX転換進化段階',
-          description: '一度でAXが完成するものではなく、次の段階を経た流れに従います。',
+          description:
+            '一度でAXが完成するものではなく、次の段階を経た流れに従います。',
           stages: [
             {
               step: 1,
@@ -2415,13 +2835,15 @@ export const translations = {
               step: 3,
               title: 'AI Transformation',
               subtitle: 'AX',
-              description: 'AIがデータを学習して自ら判断し業務を主導的に遂行または支援',
+              description:
+                'AIがデータを学習して自ら判断し業務を主導的に遂行または支援',
             },
           ],
         },
         consultingFramework: {
           sectionTitle: 'AXコンサルティングフレームワーク',
-          description: 'Brain Houseは戦略的AI導入から持続的なビジネス価値を創出する3段階プロセスを支援します。',
+          description:
+            'Brain Houseは戦略的AI導入から持続的なビジネス価値を創出する3段階プロセスを支援します。',
           phases: [
             {
               phase: 1,
@@ -2432,32 +2854,48 @@ export const translations = {
             {
               phase: 2,
               title: '設計 & 実装',
-              activities: ['アーキテクチャ設計', 'AIモデリング', 'パイロット開発'],
+              activities: [
+                'アーキテクチャ設計',
+                'AIモデリング',
+                'パイロット開発',
+              ],
               deliverables: ['ソリューションアーキテクチャ', 'POCデリバリー'],
             },
             {
               phase: 3,
               title: '内在化 & 拡散',
-              activities: ['変化管理戦略', 'AIリテラシー教育', '成果モニタリング'],
+              activities: [
+                '変化管理戦略',
+                'AIリテラシー教育',
+                '成果モニタリング',
+              ],
               deliverables: ['AIガバナンス体系', '持続的AI活用文化'],
             },
           ],
         },
         businessModels: {
           sectionTitle: 'AIビジネスモデル発掘',
-          description: 'AIビジネスモデルとは、人工知能技術を活用して直接的な収益創出またはビジネス革新を実現する多様な構造を意味します。Brain HouseはバーティカルAIソリューションをはじめ、多様なAIビジネスモデルを策定します。',
+          description:
+            'AIビジネスモデルとは、人工知能技術を活用して直接的な収益創出またはビジネス革新を実現する多様な構造を意味します。Brain HouseはバーティカルAIソリューションをはじめ、多様なAIビジネスモデルを策定します。',
           models: [
             {
               id: 'aiaas',
               title: 'AIaaS',
               subtitle: 'サービス型AI',
               icon: 'Cloud',
-              description: '企業が直接AIモデルを開発せず、すでに構築されたAI機能をAPI形態で借りて使用するモデルです。',
+              description:
+                '企業が直接AIモデルを開発せず、すでに構築されたAI機能をAPI形態で借りて使用するモデルです。',
               pricing: 'API呼び出し回数やデータ処理量に応じて費用支払い',
               examples: [
                 { name: 'OpenAI API', desc: 'GPTモデルを自社サービスに連動' },
-                { name: 'Google Cloud AI', desc: '画像分析、翻訳、音声認識機能をAPIで提供' },
-                { name: 'AWS Bedrock', desc: '様々なオープンソースおよび商用モデルを企業カスタマイズで提供' },
+                {
+                  name: 'Google Cloud AI',
+                  desc: '画像分析、翻訳、音声認識機能をAPIで提供',
+                },
+                {
+                  name: 'AWS Bedrock',
+                  desc: '様々なオープンソースおよび商用モデルを企業カスタマイズで提供',
+                },
               ],
             },
             {
@@ -2465,12 +2903,22 @@ export const translations = {
               title: 'AI-Native SaaS',
               subtitle: 'AIベースの購読モデル',
               icon: 'Sparkles',
-              description: '既存のソフトウェア（SaaS）にAI機能がコア（Core）として統合された形態です。単にツールを提供するだけでなく、成果物を作成することに集中します。',
+              description:
+                '既存のソフトウェア（SaaS）にAI機能がコア（Core）として統合された形態です。単にツールを提供するだけでなく、成果物を作成することに集中します。',
               pricing: '月間/年間購読料（Subscription）',
               examples: [
-                { name: 'Jasper / Copy.ai', desc: 'マーケティング文句およびコンテンツ自動生成' },
-                { name: 'GitHub Copilot', desc: '開発者向けコード自動完成および提案' },
-                { name: 'Canva Magic Studio', desc: 'テキストだけでデザインと画像を生成' },
+                {
+                  name: 'Jasper / Copy.ai',
+                  desc: 'マーケティング文句およびコンテンツ自動生成',
+                },
+                {
+                  name: 'GitHub Copilot',
+                  desc: '開発者向けコード自動完成および提案',
+                },
+                {
+                  name: 'Canva Magic Studio',
+                  desc: 'テキストだけでデザインと画像を生成',
+                },
               ],
             },
             {
@@ -2478,11 +2926,18 @@ export const translations = {
               title: 'AIエージェント成果ベース',
               subtitle: 'Outcome-based / Agentic AI',
               icon: 'Bot',
-              description: '単にソフトウェアを貸すのではなく、AIエージェントが特定の業務を完遂した成果に対して費用を受け取るモデルです。2026年最も注目されるビジネスモデルです。',
+              description:
+                '単にソフトウェアを貸すのではなく、AIエージェントが特定の業務を完遂した成果に対して費用を受け取るモデルです。2026年最も注目されるビジネスモデルです。',
               pricing: '予約成功ごとの手数料、顧客問い合わせ解決ごとの費用など',
               examples: [
-                { name: 'Intercom / Zendesk AI', desc: '相談員ではなくAIエージェントが顧客問題を完結した時に課金' },
-                { name: 'AIリクルーティングエージェント', desc: '適切な人材を見つけて面接スケジュールまで設定した時に手数料発生' },
+                {
+                  name: 'Intercom / Zendesk AI',
+                  desc: '相談員ではなくAIエージェントが顧客問題を完結した時に課金',
+                },
+                {
+                  name: 'AIリクルーティングエージェント',
+                  desc: '適切な人材を見つけて面接スケジュールまで設定した時に手数料発生',
+                },
               ],
             },
             {
@@ -2490,12 +2945,22 @@ export const translations = {
               title: 'Vertical AI',
               subtitle: '特定産業特化モデル',
               icon: 'Stethoscope',
-              description: '特定産業別（リテール・ヘルスケア・金融・不動産・法律・製造など）専門データを学習させ、その分野にのみ最適化されたカスタムAIサービスを提供するモデルです。',
+              description:
+                '特定産業別（リテール・ヘルスケア・金融・不動産・法律・製造など）専門データを学習させ、その分野にのみ最適化されたカスタムAIサービスを提供するモデルです。',
               pricing: '高付加価値ソリューション提供（B2B契約中心）',
               examples: [
-                { name: 'Harvey', desc: '弁護士のための法律文書分析およびリサーチ特化AI' },
-                { name: 'Lunit（ルニット）', desc: '医療映像を分析してがんを診断する医療特化AI' },
-                { name: 'Ironclad', desc: '契約書管理および自動レビュー専門AI' },
+                {
+                  name: 'Harvey',
+                  desc: '弁護士のための法律文書分析およびリサーチ特化AI',
+                },
+                {
+                  name: 'Lunit（ルニット）',
+                  desc: '医療映像を分析してがんを診断する医療特化AI',
+                },
+                {
+                  name: 'Ironclad',
+                  desc: '契約書管理および自動レビュー専門AI',
+                },
               ],
             },
             {
@@ -2503,13 +2968,27 @@ export const translations = {
               title: 'Enablers',
               subtitle: 'データおよびインフラレイヤー',
               icon: 'Cpu',
-              description: 'AIを作成し運営するのに必要な基盤を販売するモデルです。',
-              pricing: 'コンピューティングパワー貸与、データラベリング手数料、チップ販売',
+              description:
+                'AIを作成し運営するのに必要な基盤を販売するモデルです。',
+              pricing:
+                'コンピューティングパワー貸与、データラベリング手数料、チップ販売',
               examples: [
-                { name: 'NVIDIA', desc: 'AI学習用GPUおよびコンピューティングインフラ販売' },
-                { name: 'Scale AI', desc: 'AI学習に必要な高品質データラベリングサービス提供' },
-                { name: 'Hugging Face', desc: 'AIモデル共有プラットフォームおよびデプロイ環境提供' },
-                { name: 'Palantir Foundry', desc: 'サイロデータを統合してビジネス意思決定を支援' },
+                {
+                  name: 'NVIDIA',
+                  desc: 'AI学習用GPUおよびコンピューティングインフラ販売',
+                },
+                {
+                  name: 'Scale AI',
+                  desc: 'AI学習に必要な高品質データラベリングサービス提供',
+                },
+                {
+                  name: 'Hugging Face',
+                  desc: 'AIモデル共有プラットフォームおよびデプロイ環境提供',
+                },
+                {
+                  name: 'Palantir Foundry',
+                  desc: 'サイロデータを統合してビジネス意思決定を支援',
+                },
               ],
             },
           ],
@@ -2522,11 +3001,13 @@ export const translations = {
         subtitle: '個人情報保護に関するご案内',
       },
       lastUpdated: '最終更新日：2026年1月29日',
-      intro: '株式会社ブレインハウス（以下「当社」）は、ユーザーの個人情報を重視し、「個人情報保護法」等の関連法令を遵守しております。本個人情報処理方針を通じて、ユーザーの個人情報がどのような目的と方法で処理されているかご案内いたします。',
+      intro:
+        '株式会社ブレインハウス（以下「当社」）は、ユーザーの個人情報を重視し、「個人情報保護法」等の関連法令を遵守しております。本個人情報処理方針を通じて、ユーザーの個人情報がどのような目的と方法で処理されているかご案内いたします。',
       sections: {
         purpose: {
           title: '1. 個人情報の処理目的',
-          content: '当社は以下の目的のために個人情報を処理します。処理した個人情報は以下の目的以外には使用されず、利用目的が変更される場合は別途同意を得る等、必要な措置を講じます。',
+          content:
+            '当社は以下の目的のために個人情報を処理します。処理した個人情報は以下の目的以外には使用されず、利用目的が変更される場合は別途同意を得る等、必要な措置を講じます。',
           items: [
             'お問い合わせ対応：ユーザーのお問い合わせへの回答および相談サービスの提供',
             'サービス改善：サービス品質向上のためのフィードバック分析',
@@ -2534,7 +3015,8 @@ export const translations = {
         },
         items: {
           title: '2. 収集する個人情報項目',
-          content: '当社はお問い合わせサービス利用時に以下の個人情報を収集します：',
+          content:
+            '当社はお問い合わせサービス利用時に以下の個人情報を収集します：',
           items: [
             '必須項目：氏名、メールアドレス',
             '任意項目：会社名、連絡先、お問い合わせ内容',
@@ -2542,18 +3024,19 @@ export const translations = {
         },
         retention: {
           title: '3. 個人情報の保有および利用期間',
-          content: '当社は原則として個人情報の収集および利用目的が達成された後は、当該情報を遅滞なく廃棄します。ただし、関係法令の規定により保存する必要がある場合は、法令に定められた期間保管します。',
-          items: [
-            'お問い合わせ履歴：3年（商法、電子商取引法等関連法律）',
-          ],
+          content:
+            '当社は原則として個人情報の収集および利用目的が達成された後は、当該情報を遅滞なく廃棄します。ただし、関係法令の規定により保存する必要がある場合は、法令に定められた期間保管します。',
+          items: ['お問い合わせ履歴：3年（商法、電子商取引法等関連法律）'],
         },
         rights: {
           title: '4. ユーザーの権利と行使方法',
-          content: 'ユーザーはいつでも自身の個人情報について閲覧、訂正、削除、処理停止を要求することができます。権利行使は下記担当者に書面、メール等でご連絡いただければ、遅滞なく処理いたします。',
+          content:
+            'ユーザーはいつでも自身の個人情報について閲覧、訂正、削除、処理停止を要求することができます。権利行使は下記担当者に書面、メール等でご連絡いただければ、遅滞なく処理いたします。',
         },
         security: {
           title: '5. 個人情報の安全性確保措置',
-          content: '当社は個人情報の安全性確保のため、以下の措置を講じています：',
+          content:
+            '当社は個人情報の安全性確保のため、以下の措置を講じています：',
           items: [
             '個人情報の暗号化',
             'ハッキング等に対する技術的対策',
@@ -2562,14 +3045,16 @@ export const translations = {
         },
         officer: {
           title: '6. 個人情報保護責任者',
-          content: '当社はユーザーの個人情報保護および関連お問い合わせ処理のため、以下の通り個人情報保護責任者を指定しています：',
+          content:
+            '当社はユーザーの個人情報保護および関連お問い合わせ処理のため、以下の通り個人情報保護責任者を指定しています：',
           name: '氏名：金鉉哲',
           position: '役職：代表取締役',
           email: 'メール：comfamil@gmail.com',
         },
         changes: {
           title: '7. 個人情報処理方針の変更',
-          content: '本個人情報処理方針は法令および方針に従い変更される場合があり、変更時はウェブサイトでお知らせいたします。',
+          content:
+            '本個人情報処理方針は法令および方針に従い変更される場合があり、変更時はウェブサイトでお知らせいたします。',
         },
       },
     },

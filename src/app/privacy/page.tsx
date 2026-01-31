@@ -3,26 +3,18 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Container } from '@/components/ui/container';
+import { PageHeader } from '@/components/ui/page-header';
 import { useLanguage } from '@/contexts/language-context';
 
 export default function PrivacyPage() {
   const { t } = useLanguage();
-  const { pageHeader, lastUpdated, intro, sections } = t.privacy;
+  const { lastUpdated, intro, sections } = t.privacy;
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 px-4 py-16 pt-24 sm:px-6 sm:py-20 sm:pt-32">
-          <Container className="text-center">
-            <h1 className="text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-              {pageHeader.title}
-            </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-slate-300 sm:mt-4 sm:text-lg">
-              {pageHeader.subtitle}
-            </p>
-          </Container>
-        </section>
+        <PageHeader page="privacy" backgroundImage="/images/privacy_bg.webp" />
 
         <section className="bg-slate-900 px-4 py-12 sm:px-6 sm:py-16">
           <Container className="max-w-4xl">
@@ -64,7 +56,9 @@ export default function PrivacyPage() {
                   <h2 className="mb-3 text-lg font-semibold text-white">
                     {sections.officer.title}
                   </h2>
-                  <p className="mb-3 text-slate-300">{sections.officer.content}</p>
+                  <p className="mb-3 text-slate-300">
+                    {sections.officer.content}
+                  </p>
                   <ul className="space-y-1 text-slate-300">
                     <li>{sections.officer.name}</li>
                     <li>{sections.officer.position}</li>

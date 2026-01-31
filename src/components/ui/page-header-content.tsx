@@ -2,7 +2,13 @@
 
 import { useLanguage } from '@/contexts/language-context';
 
-type PageKey = 'about' | 'business' | 'services' | 'portfolio' | 'contact';
+type PageKey =
+  | 'about'
+  | 'business'
+  | 'services'
+  | 'portfolio'
+  | 'contact'
+  | 'privacy';
 
 interface PageHeaderContentProps {
   page: PageKey;
