@@ -471,7 +471,7 @@ export const translations = {
           slug: 'startup-investment',
           title: '창업·투자 컨설팅',
           shortTitle: '창업·투자',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'software-development',
@@ -1205,6 +1205,299 @@ export const translations = {
           ],
         },
       },
+      'startup-investment': {
+        title: '창업·투자 컨설팅',
+        subtitle:
+          '예비창업자부터 스케일업 중견기업까지 성장 단계별 맞춤형 멘토링·컨설팅과 투자 유치 지원',
+        description:
+          '창업 컨설팅은 아이디어의 발굴부터 실제 시장 안착, 그리고 성장 전략까지를 포괄하는 사례중심의 실전형으로 구성됩니다. 최근 창업 멘토링·컨설팅은 이론보다는 피칭 데이나 멘토링 같은 실행 중심의 워크숍 비중이 매우 높습니다.',
+        processSteps: ['아이템 발굴', 'BM 수립', '시장 진입', '투자 유치'],
+        targetCustomers: [
+          '예비창업자',
+          '초기 스타트업',
+          '성장기 스타트업',
+          '스케일업 중견기업',
+          'IPO 준비 기업',
+        ],
+        mentoringModules: {
+          sectionTitle: '핵심 단계별 창업 멘토링·컨설팅 4대 모듈',
+          modules: [
+            {
+              title: '아이템 발굴 및 비즈니스 모델(BM) 수립',
+              description:
+                '창업의 기초를 다지는 단계로, "누구의 문제를 어떻게 해결할 것인가"에 집중합니다.',
+              icon: 'Lightbulb',
+              items: [
+                '기회 포착: 시장 트렌드 분석 및 페인 포인트(Pain Point) 발견',
+                'BM 설계: 비즈니스 모델 캔버스(BMC, 9 Blocks) 작성 및 수익 구조 설계',
+                '아이디어 검증: 린 스타트업(Lean Startup) 방법론을 통한 가설 설정 및 고객 인터뷰',
+              ],
+            },
+            {
+              title: '제품 개발 및 시장 진입 (Go-to-Market)',
+              description:
+                '아이디어를 구체적인 결과물로 만들고 초기 시장의 반응을 확인하는 과정입니다.',
+              icon: 'Rocket',
+              items: [
+                'MVP 제작: 최소 요건 제품(Minimum Viable Product) 개발 및 테스트',
+                '마케팅 전략: 그로스 해킹(Growth Hacking) 및 디지털 마케팅 실무',
+                'PMF 도출: 제품-시장 적합성(Product-Market Fit) 확인 및 피보팅(Pivoting) 전략',
+              ],
+            },
+            {
+              title: '스타트업 금융 및 투자 유치 (IR)',
+              description:
+                '사업 확장을 위한 자금 조달과 재무 관리 능력을 배양합니다.',
+              icon: 'DollarSign',
+              items: [
+                '자금 조달: 정부지원사업 활용, 엔젤 투자, VC(벤처캐피탈)의 이해',
+                'IR 피칭: 투자자를 설득하는 피칭 덱(Pitch Deck) 작성 및 발표 스킬',
+                '기업가치 평가: 밸류에이션 산정 방식 및 지분 구조(Cap Table) 관리',
+              ],
+            },
+            {
+              title: '조직 운영 및 스케일업 (Scale-up)',
+              description:
+                '본격적인 성장 단계에서 발생하는 경영 이슈를 다룹니다.',
+              icon: 'TrendingUp',
+              items: [
+                '조직 관리: 스타트업 기업 문화 구축 및 핵심 인재 채용(HR)',
+                '법률 및 특허: 창업 법무, 주주 간 계약서 작성, 지식재산권(IP) 보호',
+                '출구 전략(Exit): M&A(인수합병) 및 IPO(기업공개)의 이해',
+              ],
+            },
+          ],
+        },
+        bmConsulting: {
+          sectionTitle: '비즈니스 모델(BM) 수립 컨설팅',
+          description:
+            '비즈니스 모델(BM)은 단순히 "어떻게 돈을 벌 것인가"를 넘어, "어떤 가치를 누구에게 전달하고, 그 과정에서 어떻게 수익을 창출하며 지속할 것인가"에 대한 설계도입니다.',
+          steps: [
+            {
+              step: 1,
+              title: '문제 정의 & 고객 세분화',
+              description:
+                'BM의 출발점은 제품이 아니라 문제, 페인 포인트입니다. 누구의 문제인가, 그 문제가 얼마나 아픈가를 분석합니다.',
+            },
+            {
+              step: 2,
+              title: '가치 제안(Value Proposition) 정리',
+              description:
+                '고객이 왜 당신을 선택해야 하는지 명확히 합니다. 비용 절감, 성능 향상, 운영 단순화, 리스크 감소 등.',
+            },
+            {
+              step: 3,
+              title: 'BM 구조화 (Business Model Canvas)',
+              description:
+                '고객 세그먼트, 가치 제안, 채널, 고객 관계, 수익원, 핵심 자원, 핵심 활동, 핵심 파트너, 비용 구조의 9가지 블록으로 구조화합니다.',
+            },
+            {
+              step: 4,
+              title: '수익 모델 설계 (Monetization)',
+              description:
+                '라이선스/구독(SaaS), 사용량 기반, 유지보수/운영 서비스, 플랫폼 수수료, 데이터/부가서비스 등 수익 구조를 설계합니다.',
+            },
+            {
+              step: 5,
+              title: '시장성 검증 (Minimum Validation)',
+              description:
+                'PoC/파일럿 고객 확보, 실제 지불 의향 확인, 고객 인터뷰를 통한 빠른 검증을 진행합니다.',
+            },
+          ],
+        },
+        bmAdvanced: {
+          sectionTitle: 'BM 고도화를 위한 3대 전략',
+          description:
+            '초기 모델이 나왔다면, 시장 피드백을 바탕으로 다음 세 가지 관점에서 고도화해야 합니다.',
+          strategies: [
+            {
+              title: '문제-솔루션 적합성 (Problem-Solution Fit)',
+              description:
+                '실제 고객이 우리가 해결하려는 문제를 "돈을 낼 만큼" 심각하게 느끼는지 확인합니다.',
+              icon: 'Target',
+            },
+            {
+              title: '수익 모델의 다각화 및 안정화',
+              description:
+                'Lock-in 전략과 Upselling & Cross-selling을 통해 수익원을 정교화합니다.',
+              icon: 'Layers',
+            },
+            {
+              title: '유닛 이코노믹스 (Unit Economics) 분석',
+              description:
+                'CAC(고객 획득 비용)보다 LTV(고객 생애 가치)가 큰지 수치로 검증합니다.',
+              icon: 'BarChart',
+            },
+          ],
+          checklist: {
+            title: '고도화 체크리스트 (Self-Audit)',
+            items: [
+              '차별성: 경쟁사가 3개월 안에 따라 할 수 없는 우리만의 해자(Moat)가 있는가?',
+              '확장성: 매출이 늘어날 때 비용도 비례해서 급격히 늘어나는 구조는 아닌가?',
+              '지속성: 한 번의 구매로 끝나는가, 아니면 반복적인 구매가 일어나는가?',
+            ],
+          },
+        },
+        aiBMC: {
+          sectionTitle: 'AI 비즈니스 모델 캔버스(AI-BMC) 활용 전략',
+          description:
+            'AI-BMC는 기존의 비즈니스 모델 캔버스(BMC)를 AI 기술의 특성에 맞춰 변형한 전략 도구입니다.',
+          quote:
+            '어떤 데이터를 통해 어떤 AI 기능을 구현하고, 이를 어떻게 비즈니스 가치로 연결할 것인가',
+          components: [
+            {
+              category: '가치창출',
+              items: ['문제정의', 'AI핵심기능', '알고리즘', '데이터', '평가지표'],
+            },
+            {
+              category: '가치제안',
+              items: ['사용자에게 전달할 가치를 구체화'],
+            },
+            {
+              category: '가치전달',
+              items: ['사용자', '채널', '학습루프'],
+            },
+            {
+              category: '가치획득',
+              items: ['혁신비용', '혁신편익'],
+            },
+          ],
+        },
+        irStrategy: {
+          sectionTitle: 'IR 전략 수립 및 투자 유치',
+          description:
+            '성공적인 IR(Investor Relations) 전략은 단순히 기업을 홍보하는 것을 넘어, 투자자와의 신뢰를 구축하고 기업의 적정 가치를 시장에서 인정받는 과정입니다.',
+          elements: [
+            {
+              title: '투자 하이라이트(Equity Story) 구축',
+              description:
+                '기업의 비전, 기술적 차별성, 시장 규모, 그리고 수익 모델을 하나의 매력적인 서사로 연결합니다.',
+              icon: 'FileText',
+            },
+            {
+              title: '타겟 투자자 식별',
+              description:
+                '산업군, 성장 단계(Seed, Series A~C, Pre-IPO), 투자 규모에 적합한 VC, PE, 또는 기관 투자자를 리스트업합니다.',
+              icon: 'Users',
+            },
+            {
+              title: '커뮤니케이션 채널 다각화',
+              description:
+                '정기적인 IR 자료 업데이트, 실적 발표회, NDR, 1:1 미팅 등을 통해 접점을 넓힙니다.',
+              icon: 'MessageSquare',
+            },
+            {
+              title: '리스크 관리 및 투명성',
+              description:
+                '기업의 약점이나 시장의 우려 사항에 대해 논리적이고 투명한 대응 논리를 준비합니다.',
+              icon: 'Shield',
+            },
+          ],
+          process: [
+            {
+              step: 1,
+              title: 'Internal Audit (내부 진단)',
+              description: '우리 회사의 현재 위치와 지표(KPI)를 객관적으로 분석',
+            },
+            {
+              step: 2,
+              title: 'Messaging (메시징)',
+              description:
+                "시장의 트렌드에 맞춰 투자자가 듣고 싶어 하는 '성장 로드맵' 설계",
+            },
+            {
+              step: 3,
+              title: 'Execution (실행)',
+              description: 'IR 북(Deck) 제작, 피칭, 피드백 수렴 및 전략 수정 반복',
+            },
+          ],
+        },
+        investorNetwork: {
+          sectionTitle: 'VC/AC/엔젤투자 네트워크 연계 및 자금조달 자문',
+          description:
+            '스타트업 성장의 핵심 동력인 자금조달(Fundraising) 체계는 투자 주체별 역할과 네트워크 활용법을 이해하는 것에서 시작됩니다.',
+          investors: [
+            {
+              type: '엔젤투자',
+              stage: '극초기 (Seed)',
+              description:
+                '개인 혹은 소규모 그룹. 아이디어와 팀을 보고 투자하며, 초기자본금 확보에 유용.',
+            },
+            {
+              type: 'AC (액셀러레이터)',
+              stage: '초기 (Seed ~ Pre-A)',
+              description:
+                '보육(Incubating) 중심. 단기 교육 프로그램과 초기 자금, 멘토링, 후속 투자 연계 제공.',
+            },
+            {
+              type: 'VC (벤처캐피탈)',
+              stage: '성장기 (Series A 이후)',
+              description:
+                '기관 투자자. 시장 확장성과 수익 모델을 검증하며, 대규모 자금을 투입하여 성장을 가속화.',
+            },
+          ],
+          strategies: [
+            'IR 피칭 및 데모데이: AC/VC가 주최하는 행사 참여를 통해 비즈니스 모델을 노출하고 신뢰도를 확보',
+            'LP(출자자) 및 유관기관 활용: 중기부, 창업진흥원 등 공공기관의 매칭 펀드나 팁스(TIPS) 프로그램 연계',
+            "신뢰 기반의 Referral: 기존 포트폴리오 대표나 신뢰받는 심사역의 소개를 통한 '따뜻한 소개(Warm Intro)'",
+          ],
+        },
+        exitStrategy: {
+          sectionTitle: 'IPO 성공 전략 및 M&A 전략 자문',
+          description:
+            '기업의 성장 단계에서 IPO(기업공개)와 M&A(인수합병)는 가장 중요한 전환점입니다.',
+          ipo: {
+            title: 'IPO(기업공개) 성공 전략',
+            items: [
+              {
+                title: '성장 스토리텔링 (Equity Story)',
+                description:
+                  '명확한 비즈니스 모델, 시장 점유율 확대 계획, 차별화된 기술력을 바탕으로 매력적인 투자 시나리오 구축',
+              },
+              {
+                title: '투명한 지배구조 및 내부통제',
+                description:
+                  '상장 전 회계 투명성을 확보하고 경영권 분쟁 소지를 없애는 등 거래소의 상장 심사 기준에 맞춘 질적 요건 정비',
+              },
+              {
+                title: '적정 밸류에이션(Valuation)',
+                description:
+                  '유사 기업 대비 경쟁력을 수치화하여 합리적인 공모가 산정',
+              },
+              {
+                title: 'IR(투자자 관계) 강화',
+                description:
+                  '기관 투자자들과의 지속적인 소통을 통해 신뢰를 쌓고, 상장 이후의 주가 관리 계획까지 사전 준비',
+              },
+            ],
+          },
+          mna: {
+            title: 'M&A(인수합병) 전략 자문',
+            items: [
+              {
+                title: '전략적 정합성(Strategic Fit) 검토',
+                description:
+                  '기존 사업과의 시너지가 발생하는지 혹은 포트폴리오 다각화에 실질적인 도움이 되는지 최우선으로 분석',
+              },
+              {
+                title: '철저한 실사(Due Diligence)',
+                description:
+                  '재무, 법률, 영업, IT 등 전 분야에 걸친 리스크 파악 및 숨겨진 우발 채무나 조직 문화의 이질성 사전 점검',
+              },
+              {
+                title: 'PMI(인수 후 통합) 계획',
+                description:
+                  '인사 시스템, IT 인프라, 조직 문화를 어떻게 하나로 합칠 것인지에 대한 구체적인 실행 방안 수립',
+              },
+              {
+                title: '딜 구조(Deal Structure) 설계',
+                description:
+                  '현금 매수, 주식 교환, LBO(차입 매수) 등 기업 상황에 맞는 최적의 거래 구조 설계',
+              },
+            ],
+          },
+        },
+      },
     },
     privacy: {
       pageHeader: {
@@ -1750,7 +2043,7 @@ export const translations = {
           slug: 'startup-investment',
           title: 'Startup & Investment Consulting',
           shortTitle: 'Startup',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'software-development',
@@ -2538,6 +2831,299 @@ export const translations = {
           ],
         },
       },
+      'startup-investment': {
+        title: 'Startup & Investment Consulting',
+        subtitle:
+          'Customized mentoring, consulting and investment attraction support for each growth stage from pre-founders to scale-up mid-sized companies',
+        description:
+          'Startup consulting is composed of practical, case-centered content covering idea discovery to market entry and growth strategy. Recent startup mentoring and consulting emphasizes execution-oriented workshops such as pitching days and mentoring sessions rather than theory.',
+        processSteps: ['Item Discovery', 'BM Setup', 'Market Entry', 'Investment Attraction'],
+        targetCustomers: [
+          'Pre-founders',
+          'Early-stage Startups',
+          'Growth-stage Startups',
+          'Scale-up Mid-sized Companies',
+          'IPO-ready Companies',
+        ],
+        mentoringModules: {
+          sectionTitle: 'Core Stage-by-Stage Startup Mentoring & Consulting 4 Modules',
+          modules: [
+            {
+              title: 'Item Discovery & Business Model (BM) Establishment',
+              description:
+                'The stage of laying the foundation for startup, focusing on "whose problem to solve and how."',
+              icon: 'Lightbulb',
+              items: [
+                'Opportunity Capture: Market trend analysis and Pain Point discovery',
+                'BM Design: Business Model Canvas (BMC, 9 Blocks) creation and revenue structure design',
+                'Idea Validation: Hypothesis setting and customer interviews through Lean Startup methodology',
+              ],
+            },
+            {
+              title: 'Product Development & Market Entry (Go-to-Market)',
+              description:
+                'The process of turning ideas into concrete results and confirming initial market response.',
+              icon: 'Rocket',
+              items: [
+                'MVP Production: Minimum Viable Product development and testing',
+                'Marketing Strategy: Growth Hacking and digital marketing practice',
+                'PMF Derivation: Product-Market Fit confirmation and Pivoting strategy',
+              ],
+            },
+            {
+              title: 'Startup Finance & Investment Attraction (IR)',
+              description:
+                'Building fundraising and financial management capabilities for business expansion.',
+              icon: 'DollarSign',
+              items: [
+                'Fundraising: Government support program utilization, Angel investment, VC understanding',
+                'IR Pitching: Pitch Deck creation and presentation skills to persuade investors',
+                'Valuation: Valuation methods and Cap Table management',
+              ],
+            },
+            {
+              title: 'Organization Management & Scale-up',
+              description:
+                'Addressing management issues arising at the full-fledged growth stage.',
+              icon: 'TrendingUp',
+              items: [
+                'Organization Management: Startup culture building and key talent recruitment (HR)',
+                'Legal & Patents: Startup legal affairs, shareholder agreements, IP protection',
+                'Exit Strategy: Understanding M&A (Mergers & Acquisitions) and IPO (Initial Public Offering)',
+              ],
+            },
+          ],
+        },
+        bmConsulting: {
+          sectionTitle: 'Business Model (BM) Establishment Consulting',
+          description:
+            'A business model (BM) is a blueprint not just for "how to make money" but for "what value to deliver to whom, and how to generate and sustain revenue in the process."',
+          steps: [
+            {
+              step: 1,
+              title: 'Problem Definition & Customer Segmentation',
+              description:
+                'The starting point of BM is not the product but the problem, the pain point. Analyze whose problem it is and how painful it is.',
+            },
+            {
+              step: 2,
+              title: 'Value Proposition Organization',
+              description:
+                'Clarify why customers should choose you. Cost reduction, performance improvement, operational simplification, risk reduction, etc.',
+            },
+            {
+              step: 3,
+              title: 'BM Structuring (Business Model Canvas)',
+              description:
+                'Structure into 9 blocks: Customer Segments, Value Proposition, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partners, Cost Structure.',
+            },
+            {
+              step: 4,
+              title: 'Revenue Model Design (Monetization)',
+              description:
+                'Design revenue structure including License/Subscription (SaaS), usage-based, maintenance/operation services, platform fees, data/additional services.',
+            },
+            {
+              step: 5,
+              title: 'Market Validation (Minimum Validation)',
+              description:
+                'Conduct rapid validation through PoC/pilot customer acquisition, actual payment intent confirmation, and customer interviews.',
+            },
+          ],
+        },
+        bmAdvanced: {
+          sectionTitle: '3 Key Strategies for BM Enhancement',
+          description:
+            'Once the initial model is out, it needs to be enhanced from the following three perspectives based on market feedback.',
+          strategies: [
+            {
+              title: 'Problem-Solution Fit',
+              description:
+                'Verify whether actual customers feel the problem we\'re trying to solve is serious enough "to pay for."',
+              icon: 'Target',
+            },
+            {
+              title: 'Revenue Model Diversification & Stabilization',
+              description:
+                'Refine revenue sources through Lock-in strategy and Upselling & Cross-selling.',
+              icon: 'Layers',
+            },
+            {
+              title: 'Unit Economics Analysis',
+              description:
+                'Verify numerically that LTV (Customer Lifetime Value) is greater than CAC (Customer Acquisition Cost).',
+              icon: 'BarChart',
+            },
+          ],
+          checklist: {
+            title: 'Enhancement Checklist (Self-Audit)',
+            items: [
+              'Differentiation: Do we have a unique Moat that competitors cannot copy within 3 months?',
+              'Scalability: Is the cost structure not proportionally increasing when revenue grows?',
+              'Sustainability: Is it a one-time purchase or recurring purchases?',
+            ],
+          },
+        },
+        aiBMC: {
+          sectionTitle: 'AI Business Model Canvas (AI-BMC) Utilization Strategy',
+          description:
+            'AI-BMC is a strategic tool that adapts the traditional Business Model Canvas (BMC) to the characteristics of AI technology.',
+          quote:
+            'How to implement which AI functions with what data and connect them to business value',
+          components: [
+            {
+              category: 'Value Creation',
+              items: ['Problem Definition', 'AI Core Functions', 'Algorithm', 'Data', 'Evaluation Metrics'],
+            },
+            {
+              category: 'Value Proposition',
+              items: ['Specify the value to deliver to users'],
+            },
+            {
+              category: 'Value Delivery',
+              items: ['Users', 'Channels', 'Learning Loop'],
+            },
+            {
+              category: 'Value Capture',
+              items: ['Innovation Cost', 'Innovation Benefit'],
+            },
+          ],
+        },
+        irStrategy: {
+          sectionTitle: 'IR Strategy Establishment & Investment Attraction',
+          description:
+            'A successful IR (Investor Relations) strategy goes beyond simply promoting the company; it is a process of building trust with investors and getting the company\'s fair value recognized in the market.',
+          elements: [
+            {
+              title: 'Building Investment Highlights (Equity Story)',
+              description:
+                'Connect the company\'s vision, technological differentiation, market size, and revenue model into one compelling narrative.',
+              icon: 'FileText',
+            },
+            {
+              title: 'Target Investor Identification',
+              description:
+                'List up VCs, PEs, or institutional investors appropriate for industry, growth stage (Seed, Series A~C, Pre-IPO), and investment size.',
+              icon: 'Users',
+            },
+            {
+              title: 'Communication Channel Diversification',
+              description:
+                'Broaden touchpoints through regular IR material updates, earnings calls, NDR, 1:1 meetings, etc.',
+              icon: 'MessageSquare',
+            },
+            {
+              title: 'Risk Management & Transparency',
+              description:
+                'Prepare logical and transparent response logic for company weaknesses or market concerns.',
+              icon: 'Shield',
+            },
+          ],
+          process: [
+            {
+              step: 1,
+              title: 'Internal Audit',
+              description: 'Objectively analyze the current position and KPIs of our company',
+            },
+            {
+              step: 2,
+              title: 'Messaging',
+              description:
+                "Design a 'growth roadmap' that investors want to hear according to market trends",
+            },
+            {
+              step: 3,
+              title: 'Execution',
+              description: 'Repeat IR Deck production, pitching, feedback collection, and strategy revision',
+            },
+          ],
+        },
+        investorNetwork: {
+          sectionTitle: 'VC/AC/Angel Investment Network Connection & Fundraising Advisory',
+          description:
+            'The fundraising system, a core driver of startup growth, starts with understanding the roles and network utilization methods by investor type.',
+          investors: [
+            {
+              type: 'Angel Investment',
+              stage: 'Very Early (Seed)',
+              description:
+                'Individual or small group. Invests based on idea and team, useful for early capital acquisition.',
+            },
+            {
+              type: 'AC (Accelerator)',
+              stage: 'Early (Seed ~ Pre-A)',
+              description:
+                'Incubating-focused. Provides short-term education programs, initial funding, mentoring, and follow-up investment connection.',
+            },
+            {
+              type: 'VC (Venture Capital)',
+              stage: 'Growth (Series A and after)',
+              description:
+                'Institutional investor. Validates market scalability and revenue model, and injects large-scale capital to accelerate growth.',
+            },
+          ],
+          strategies: [
+            'IR Pitching & Demo Day: Expose business model and build credibility through participation in events hosted by AC/VC',
+            'LP & Related Agency Utilization: Connect with matching funds from government agencies or TIPS programs',
+            "Trust-based Referral: 'Warm Intro' through introduction from existing portfolio representatives or trusted screeners",
+          ],
+        },
+        exitStrategy: {
+          sectionTitle: 'IPO Success Strategy & M&A Strategy Advisory',
+          description:
+            'IPO (Initial Public Offering) and M&A (Mergers & Acquisitions) are the most important turning points in a company\'s growth stage.',
+          ipo: {
+            title: 'IPO Success Strategy',
+            items: [
+              {
+                title: 'Growth Storytelling (Equity Story)',
+                description:
+                  'Build an attractive investment scenario based on clear business model, market share expansion plan, and differentiated technology',
+              },
+              {
+                title: 'Transparent Governance & Internal Control',
+                description:
+                  'Ensure accounting transparency before listing and prepare qualitative requirements meeting exchange listing standards',
+              },
+              {
+                title: 'Fair Valuation',
+                description:
+                  'Quantify competitiveness compared to similar companies for reasonable IPO price determination',
+              },
+              {
+                title: 'IR (Investor Relations) Strengthening',
+                description:
+                  'Build trust through continuous communication with institutional investors and prepare for post-listing stock price management',
+              },
+            ],
+          },
+          mna: {
+            title: 'M&A Strategy Advisory',
+            items: [
+              {
+                title: 'Strategic Fit Review',
+                description:
+                  'Prioritize analysis of whether synergy with existing business occurs or contributes to portfolio diversification',
+              },
+              {
+                title: 'Thorough Due Diligence',
+                description:
+                  'Identify risks across finance, legal, sales, IT and pre-check hidden contingent liabilities or organizational culture heterogeneity',
+              },
+              {
+                title: 'PMI (Post-Merger Integration) Planning',
+                description:
+                  'Establish concrete execution plans for how to integrate HR systems, IT infrastructure, and organizational culture',
+              },
+              {
+                title: 'Deal Structure Design',
+                description:
+                  'Design optimal transaction structure suitable for company situation including cash acquisition, stock exchange, LBO',
+              },
+            ],
+          },
+        },
+      },
     },
     privacy: {
       pageHeader: {
@@ -3080,7 +3666,7 @@ export const translations = {
           slug: 'startup-investment',
           title: '創業・投資コンサルティング',
           shortTitle: '創業・投資',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'software-development',
@@ -3833,6 +4419,299 @@ export const translations = {
                 '既存の製造技術にICT戦略を結合してSaaSやプラットフォームビジネスへ転換するビジネスモデル革新が可能になります。',
             },
           ],
+        },
+      },
+      'startup-investment': {
+        title: '創業・投資コンサルティング',
+        subtitle:
+          '予備創業者からスケールアップ中堅企業まで、成長段階別のカスタマイズメンタリング・コンサルティングと投資誘致支援',
+        description:
+          '創業コンサルティングは、アイデアの発掘から実際の市場定着、そして成長戦略までを網羅する事例中心の実践型で構成されています。最近の創業メンタリング・コンサルティングは理論よりもピッチングデーやメンタリングのような実行中心のワークショップの比重が非常に高いです。',
+        processSteps: ['アイテム発掘', 'BM構築', '市場参入', '投資誘致'],
+        targetCustomers: [
+          '予備創業者',
+          '初期スタートアップ',
+          '成長期スタートアップ',
+          'スケールアップ中堅企業',
+          'IPO準備企業',
+        ],
+        mentoringModules: {
+          sectionTitle: '核心段階別創業メンタリング・コンサルティング4大モジュール',
+          modules: [
+            {
+              title: 'アイテム発掘およびビジネスモデル（BM）構築',
+              description:
+                '創業の基礎を固める段階で、「誰の問題をどのように解決するか」に集中します。',
+              icon: 'Lightbulb',
+              items: [
+                '機会捕捉：市場トレンド分析およびペインポイント（Pain Point）発見',
+                'BM設計：ビジネスモデルキャンバス（BMC、9 Blocks）作成および収益構造設計',
+                'アイデア検証：リーンスタートアップ（Lean Startup）方法論による仮説設定および顧客インタビュー',
+              ],
+            },
+            {
+              title: '製品開発および市場参入（Go-to-Market）',
+              description:
+                'アイデアを具体的な成果物にし、初期市場の反応を確認する過程です。',
+              icon: 'Rocket',
+              items: [
+                'MVP制作：最小要件製品（Minimum Viable Product）開発およびテスト',
+                'マーケティング戦略：グロースハッキング（Growth Hacking）およびデジタルマーケティング実務',
+                'PMF導出：製品-市場適合性（Product-Market Fit）確認およびピボティング（Pivoting）戦略',
+              ],
+            },
+            {
+              title: 'スタートアップ金融および投資誘致（IR）',
+              description:
+                '事業拡張のための資金調達と財務管理能力を育成します。',
+              icon: 'DollarSign',
+              items: [
+                '資金調達：政府支援事業活用、エンジェル投資、VC（ベンチャーキャピタル）の理解',
+                'IRピッチング：投資家を説得するピッチデッキ（Pitch Deck）作成および発表スキル',
+                '企業価値評価：バリュエーション算定方式および持分構造（Cap Table）管理',
+              ],
+            },
+            {
+              title: '組織運営およびスケールアップ（Scale-up）',
+              description:
+                '本格的な成長段階で発生する経営イシューを扱います。',
+              icon: 'TrendingUp',
+              items: [
+                '組織管理：スタートアップ企業文化構築および核心人材採用（HR）',
+                '法律および特許：創業法務、株主間契約書作成、知的財産権（IP）保護',
+                '出口戦略（Exit）：M&A（合併買収）およびIPO（株式公開）の理解',
+              ],
+            },
+          ],
+        },
+        bmConsulting: {
+          sectionTitle: 'ビジネスモデル（BM）構築コンサルティング',
+          description:
+            'ビジネスモデル（BM）は単に「どうやって稼ぐか」を超えて、「どのような価値を誰に伝え、その過程でどのように収益を創出し持続するか」についての設計図です。',
+          steps: [
+            {
+              step: 1,
+              title: '問題定義＆顧客セグメンテーション',
+              description:
+                'BMの出発点は製品ではなく問題、ペインポイントです。誰の問題か、その問題がどれほど深刻かを分析します。',
+            },
+            {
+              step: 2,
+              title: '価値提案（Value Proposition）整理',
+              description:
+                '顧客がなぜあなたを選ぶべきかを明確にします。コスト削減、性能向上、運営簡素化、リスク削減など。',
+            },
+            {
+              step: 3,
+              title: 'BM構造化（Business Model Canvas）',
+              description:
+                '顧客セグメント、価値提案、チャネル、顧客関係、収益源、核心資源、核心活動、核心パートナー、コスト構造の9つのブロックで構造化します。',
+            },
+            {
+              step: 4,
+              title: '収益モデル設計（Monetization）',
+              description:
+                'ライセンス/サブスクリプション（SaaS）、使用量ベース、保守/運営サービス、プラットフォーム手数料、データ/付加サービスなど収益構造を設計します。',
+            },
+            {
+              step: 5,
+              title: '市場性検証（Minimum Validation）',
+              description:
+                'PoC/パイロット顧客確保、実際の支払い意向確認、顧客インタビューによる迅速な検証を行います。',
+            },
+          ],
+        },
+        bmAdvanced: {
+          sectionTitle: 'BM高度化のための3大戦略',
+          description:
+            '初期モデルが出たら、市場フィードバックを基に次の3つの観点から高度化する必要があります。',
+          strategies: [
+            {
+              title: '問題-ソリューション適合性（Problem-Solution Fit）',
+              description:
+                '実際の顧客が私たちが解決しようとする問題を「お金を払うほど」深刻に感じているかを確認します。',
+              icon: 'Target',
+            },
+            {
+              title: '収益モデルの多角化および安定化',
+              description:
+                'ロックイン戦略とアップセリング＆クロスセリングを通じて収益源を精緻化します。',
+              icon: 'Layers',
+            },
+            {
+              title: 'ユニットエコノミクス（Unit Economics）分析',
+              description:
+                'CAC（顧客獲得費用）よりLTV（顧客生涯価値）が大きいか数値で検証します。',
+              icon: 'BarChart',
+            },
+          ],
+          checklist: {
+            title: '高度化チェックリスト（Self-Audit）',
+            items: [
+              '差別性：競合が3ヶ月以内にまねできない独自の堀（Moat）があるか？',
+              '拡張性：売上が増えてもコストが比例して急激に増える構造ではないか？',
+              '持続性：一度の購入で終わるか、それとも繰り返し購入が起きるか？',
+            ],
+          },
+        },
+        aiBMC: {
+          sectionTitle: 'AIビジネスモデルキャンバス（AI-BMC）活用戦略',
+          description:
+            'AI-BMCは既存のビジネスモデルキャンバス（BMC）をAI技術の特性に合わせて変形した戦略ツールです。',
+          quote:
+            'どのデータでどのAI機能を実装し、それをどのようにビジネス価値に結びつけるか',
+          components: [
+            {
+              category: '価値創出',
+              items: ['問題定義', 'AI核心機能', 'アルゴリズム', 'データ', '評価指標'],
+            },
+            {
+              category: '価値提案',
+              items: ['ユーザーに伝える価値を具体化'],
+            },
+            {
+              category: '価値伝達',
+              items: ['ユーザー', 'チャネル', '学習ループ'],
+            },
+            {
+              category: '価値獲得',
+              items: ['革新費用', '革新便益'],
+            },
+          ],
+        },
+        irStrategy: {
+          sectionTitle: 'IR戦略樹立および投資誘致',
+          description:
+            '成功的なIR（Investor Relations）戦略は単に企業を広報することを超えて、投資家との信頼を構築し企業の適正価値を市場で認められる過程です。',
+          elements: [
+            {
+              title: '投資ハイライト（Equity Story）構築',
+              description:
+                '企業のビジョン、技術的差別性、市場規模、そして収益モデルを一つの魅力的なストーリーに結びつけます。',
+              icon: 'FileText',
+            },
+            {
+              title: 'ターゲット投資家識別',
+              description:
+                '産業群、成長段階（Seed、Series A~C、Pre-IPO）、投資規模に適したVC、PE、または機関投資家をリストアップします。',
+              icon: 'Users',
+            },
+            {
+              title: 'コミュニケーションチャネル多角化',
+              description:
+                '定期的なIR資料アップデート、実績発表会、NDR、1:1ミーティングなどを通じて接点を広げます。',
+              icon: 'MessageSquare',
+            },
+            {
+              title: 'リスク管理および透明性',
+              description:
+                '企業の弱点や市場の懸念事項に対して論理的で透明な対応論理を準備します。',
+              icon: 'Shield',
+            },
+          ],
+          process: [
+            {
+              step: 1,
+              title: 'Internal Audit（内部診断）',
+              description: '当社の現在位置と指標（KPI）を客観的に分析',
+            },
+            {
+              step: 2,
+              title: 'Messaging（メッセージング）',
+              description:
+                "市場のトレンドに合わせて投資家が聞きたい'成長ロードマップ'を設計",
+            },
+            {
+              step: 3,
+              title: 'Execution（実行）',
+              description: 'IR Deck（ブック）制作、ピッチング、フィードバック収集および戦略修正を繰り返す',
+            },
+          ],
+        },
+        investorNetwork: {
+          sectionTitle: 'VC/AC/エンジェル投資ネットワーク連携および資金調達諮問',
+          description:
+            'スタートアップ成長の核心動力である資金調達（Fundraising）体系は投資主体別の役割とネットワーク活用法を理解することから始まります。',
+          investors: [
+            {
+              type: 'エンジェル投資',
+              stage: '極初期（Seed）',
+              description:
+                '個人または小規模グループ。アイデアとチームを見て投資し、初期資本金確保に有用。',
+            },
+            {
+              type: 'AC（アクセラレーター）',
+              stage: '初期（Seed ~ Pre-A）',
+              description:
+                '保育（Incubating）中心。短期教育プログラムと初期資金、メンタリング、後続投資連携を提供。',
+            },
+            {
+              type: 'VC（ベンチャーキャピタル）',
+              stage: '成長期（Series A以後）',
+              description:
+                '機関投資家。市場拡張性と収益モデルを検証し、大規模資金を投入して成長を加速化。',
+            },
+          ],
+          strategies: [
+            'IRピッチングおよびデモデー：AC/VCが主催するイベント参加を通じてビジネスモデルを露出し信頼度を確保',
+            'LP（出資者）および関連機関活用：政府機関のマッチングファンドやTIPSプログラム連携',
+            "信頼基盤のReferral：既存ポートフォリオ代表や信頼される審査役の紹介による'ウォームイントロ（Warm Intro）'",
+          ],
+        },
+        exitStrategy: {
+          sectionTitle: 'IPO成功戦略およびM&A戦略諮問',
+          description:
+            '企業の成長段階でIPO（株式公開）とM&A（合併買収）は最も重要な転換点です。',
+          ipo: {
+            title: 'IPO（株式公開）成功戦略',
+            items: [
+              {
+                title: '成長ストーリーテリング（Equity Story）',
+                description:
+                  '明確なビジネスモデル、市場シェア拡大計画、差別化された技術力を基に魅力的な投資シナリオを構築',
+              },
+              {
+                title: '透明なガバナンスおよび内部統制',
+                description:
+                  '上場前に会計透明性を確保し経営権紛争の余地をなくすなど取引所の上場審査基準に合わせた質的要件整備',
+              },
+              {
+                title: '適正バリュエーション（Valuation）',
+                description:
+                  '類似企業対比競争力を数値化して合理的な公募価格を算定',
+              },
+              {
+                title: 'IR（投資家関係）強化',
+                description:
+                  '機関投資家との持続的なコミュニケーションを通じて信頼を築き、上場後の株価管理計画まで事前準備',
+              },
+            ],
+          },
+          mna: {
+            title: 'M&A（合併買収）戦略諮問',
+            items: [
+              {
+                title: '戦略的整合性（Strategic Fit）検討',
+                description:
+                  '既存事業とのシナジーが発生するかまたはポートフォリオ多角化に実質的な助けになるか最優先で分析',
+              },
+              {
+                title: '徹底した実査（Due Diligence）',
+                description:
+                  '財務、法律、営業、IT等全分野にわたるリスク把握および隠れた偶発債務や組織文化の異質性を事前点検',
+              },
+              {
+                title: 'PMI（買収後統合）計画',
+                description:
+                  '人事システム、ITインフラ、組織文化をどのように一つに合わせるかについての具体的な実行方案樹立',
+              },
+              {
+                title: 'ディール構造（Deal Structure）設計',
+                description:
+                  '現金買収、株式交換、LBO（借入買収）など企業状況に合わせた最適な取引構造設計',
+              },
+            ],
+          },
         },
       },
     },

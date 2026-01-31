@@ -8,6 +8,7 @@ const validSlugs = [
   'ax-consulting',
   'ict-strategy',
   'tech-commercialization',
+  'startup-investment',
 ];
 
 export function generateStaticParams() {
@@ -27,6 +28,7 @@ export async function generateMetadata({
     'ax-consulting': 'AX 컨설팅 - Brain House',
     'ict-strategy': 'ICT 전략·정책 컨설팅 - Brain House',
     'tech-commercialization': '기술사업화 컨설팅 - Brain House',
+    'startup-investment': '창업·투자 컨설팅 - Brain House',
   };
 
   const descriptions: Record<string, string> = {
@@ -36,6 +38,8 @@ export async function generateMetadata({
       '정부 R&D 기획부터 ICT 정책연구까지, 미래 경쟁력 확보를 위한 전략 수립',
     'tech-commercialization':
       '기술을 시장으로 끌어내어 경제적 가치를 창출하는 전문 컨설팅 서비스',
+    'startup-investment':
+      '예비창업자부터 스케일업 중견기업까지 성장 단계별 맞춤형 멘토링·컨설팅과 투자 유치 지원',
   };
 
   return {

@@ -893,6 +893,500 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
         </section>
       )}
 
+      {/* Mentoring Modules Section - Startup Investment Only */}
+      {'mentoringModules' in serviceDetails &&
+        serviceDetails.mentoringModules && (
+          <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-5xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Mentoring Modules
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.mentoringModules.sectionTitle}
+                  </h2>
+                </div>
+                <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+                  {serviceDetails.mentoringModules.modules.map(
+                    (
+                      module: {
+                        title: string;
+                        description: string;
+                        icon: string;
+                        items: string[];
+                      },
+                      index: number
+                    ) => {
+                      const IconComponent =
+                        Icons[module.icon as keyof typeof Icons] ||
+                        Icons.Lightbulb;
+                      return (
+                        <div
+                          key={index}
+                          className="rounded-xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
+                        >
+                          <div className="mb-4 flex items-center gap-3">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+                              <IconComponent className="h-5 w-5 text-blue-600" />
+                            </div>
+                            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+                              {index + 1}
+                            </div>
+                          </div>
+                          <h3 className="mb-2 text-lg font-semibold text-slate-900">
+                            {module.title}
+                          </h3>
+                          <p className="mb-4 text-sm text-slate-600">
+                            {module.description}
+                          </p>
+                          <ul className="space-y-2">
+                            {module.items.map(
+                              (item: string, itemIndex: number) => (
+                                <li
+                                  key={itemIndex}
+                                  className="flex items-start gap-2 text-sm text-slate-600"
+                                >
+                                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+                                  {item}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* BM Consulting Section - Startup Investment Only */}
+      {'bmConsulting' in serviceDetails && serviceDetails.bmConsulting && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.FileText className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Business Model
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.bmConsulting.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.bmConsulting.description}
+                </p>
+              </div>
+              <div className="space-y-4">
+                {serviceDetails.bmConsulting.steps.map(
+                  (
+                    step: { step: number; title: string; description: string },
+                    index: number
+                  ) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 rounded-lg bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-200"
+                    >
+                      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                        {step.step}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-slate-900">
+                          {step.title}
+                        </h3>
+                        <p className="mt-1 text-sm text-slate-600">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* BM Advanced Section - Startup Investment Only */}
+      {'bmAdvanced' in serviceDetails && serviceDetails.bmAdvanced && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.TrendingUp className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    BM Enhancement
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.bmAdvanced.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.bmAdvanced.description}
+                </p>
+              </div>
+              <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+                {serviceDetails.bmAdvanced.strategies.map(
+                  (
+                    strategy: {
+                      title: string;
+                      description: string;
+                      icon: string;
+                    },
+                    index: number
+                  ) => {
+                    const IconComponent =
+                      Icons[strategy.icon as keyof typeof Icons] || Icons.Target;
+                    return (
+                      <div
+                        key={index}
+                        className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+                      >
+                        <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+                          <IconComponent className="h-5 w-5 text-blue-600" />
+                        </div>
+                        <h3 className="mb-2 font-semibold text-slate-900">
+                          {strategy.title}
+                        </h3>
+                        <p className="text-sm text-slate-600">
+                          {strategy.description}
+                        </p>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+              {/* Checklist */}
+              <div className="mt-8 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                <h3 className="mb-4 font-semibold text-slate-900">
+                  {serviceDetails.bmAdvanced.checklist.title}
+                </h3>
+                <ul className="space-y-3">
+                  {serviceDetails.bmAdvanced.checklist.items.map(
+                    (item: string, index: number) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-3 text-sm text-slate-600"
+                      >
+                        <Icons.CheckCircle className="h-5 w-5 flex-shrink-0 text-green-500" />
+                        {item}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* AI BMC Section - Startup Investment Only */}
+      {'aiBMC' in serviceDetails && serviceDetails.aiBMC && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Brain className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    AI-BMC
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.aiBMC.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.aiBMC.description}
+                </p>
+                <p className="mt-4 text-lg font-semibold text-blue-600 italic">
+                  &ldquo;{serviceDetails.aiBMC.quote}&rdquo;
+                </p>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {serviceDetails.aiBMC.components.map(
+                  (
+                    component: { category: string; items: string[] },
+                    index: number
+                  ) => (
+                    <div
+                      key={index}
+                      className="rounded-xl bg-gradient-to-br from-blue-50 to-white p-5 shadow-sm ring-1 ring-blue-100"
+                    >
+                      <h3 className="mb-3 font-semibold text-slate-900">
+                        {component.category}
+                      </h3>
+                      <ul className="space-y-2">
+                        {component.items.map(
+                          (item: string, itemIndex: number) => (
+                            <li
+                              key={itemIndex}
+                              className="flex items-center gap-2 text-sm text-slate-600"
+                            >
+                              <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+                              {item}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* IR Strategy Section - Startup Investment Only */}
+      {'irStrategy' in serviceDetails && serviceDetails.irStrategy && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Presentation className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    IR Strategy
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.irStrategy.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.irStrategy.description}
+                </p>
+              </div>
+
+              {/* Key Elements */}
+              <div className="mb-8 grid gap-4 sm:grid-cols-2">
+                {serviceDetails.irStrategy.elements.map(
+                  (
+                    element: {
+                      title: string;
+                      description: string;
+                      icon: string;
+                    },
+                    index: number
+                  ) => {
+                    const IconComponent =
+                      Icons[element.icon as keyof typeof Icons] ||
+                      Icons.FileText;
+                    return (
+                      <div
+                        key={index}
+                        className="flex gap-4 rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+                      >
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
+                          <IconComponent className="h-5 w-5 text-blue-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-slate-900">
+                            {element.title}
+                          </h3>
+                          <p className="mt-1 text-sm text-slate-600">
+                            {element.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+
+              {/* Process */}
+              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                <h3 className="mb-4 text-center font-semibold text-slate-900">
+                  IR 전략 수립 프로세스 3단계
+                </h3>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+                  {serviceDetails.irStrategy.process.map(
+                    (
+                      step: { step: number; title: string; description: string },
+                      index: number
+                    ) => (
+                      <div key={index} className="flex items-center gap-4">
+                        <div className="flex flex-col items-center text-center">
+                          <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                            {step.step}
+                          </div>
+                          <h4 className="font-medium text-slate-900">
+                            {step.title}
+                          </h4>
+                          <p className="mt-1 max-w-[200px] text-xs text-slate-500">
+                            {step.description}
+                          </p>
+                        </div>
+                        {index <
+                          serviceDetails.irStrategy.process.length - 1 && (
+                          <Icons.ArrowRight className="hidden h-5 w-5 text-slate-300 sm:block" />
+                        )}
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Investor Network Section - Startup Investment Only */}
+      {'investorNetwork' in serviceDetails &&
+        serviceDetails.investorNetwork && (
+          <section className="py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-5xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.Network className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Investor Network
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.investorNetwork.sectionTitle}
+                  </h2>
+                  <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                    {serviceDetails.investorNetwork.description}
+                  </p>
+                </div>
+
+                {/* Investor Types */}
+                <div className="mb-8 grid gap-4 md:grid-cols-3">
+                  {serviceDetails.investorNetwork.investors.map(
+                    (
+                      investor: {
+                        type: string;
+                        stage: string;
+                        description: string;
+                      },
+                      index: number
+                    ) => (
+                      <div
+                        key={index}
+                        className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-6 text-white"
+                      >
+                        <h3 className="mb-2 text-lg font-semibold">
+                          {investor.type}
+                        </h3>
+                        <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs">
+                          {investor.stage}
+                        </span>
+                        <p className="mt-4 text-sm text-blue-100">
+                          {investor.description}
+                        </p>
+                      </div>
+                    )
+                  )}
+                </div>
+
+                {/* Strategies */}
+                <div className="rounded-xl bg-slate-50 p-6">
+                  <h3 className="mb-4 font-semibold text-slate-900">
+                    네트워크 연계 전략
+                  </h3>
+                  <ul className="space-y-3">
+                    {serviceDetails.investorNetwork.strategies.map(
+                      (strategy: string, index: number) => (
+                        <li
+                          key={index}
+                          className="flex items-start gap-3 text-sm text-slate-600"
+                        >
+                          <Icons.CheckCircle className="h-5 w-5 flex-shrink-0 text-blue-500" />
+                          {strategy}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* Exit Strategy Section - Startup Investment Only */}
+      {'exitStrategy' in serviceDetails && serviceDetails.exitStrategy && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Flag className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Exit Strategy
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.exitStrategy.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.exitStrategy.description}
+                </p>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* IPO */}
+                <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                  <h3 className="mb-4 text-lg font-semibold text-slate-900">
+                    {serviceDetails.exitStrategy.ipo.title}
+                  </h3>
+                  <ul className="space-y-4">
+                    {serviceDetails.exitStrategy.ipo.items.map(
+                      (
+                        item: { title: string; description: string },
+                        index: number
+                      ) => (
+                        <li key={index}>
+                          <h4 className="font-medium text-slate-900">
+                            {item.title}
+                          </h4>
+                          <p className="mt-1 text-sm text-slate-600">
+                            {item.description}
+                          </p>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+
+                {/* M&A */}
+                <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                  <h3 className="mb-4 text-lg font-semibold text-slate-900">
+                    {serviceDetails.exitStrategy.mna.title}
+                  </h3>
+                  <ul className="space-y-4">
+                    {serviceDetails.exitStrategy.mna.items.map(
+                      (
+                        item: { title: string; description: string },
+                        index: number
+                      ) => (
+                        <li key={index}>
+                          <h4 className="font-medium text-slate-900">
+                            {item.title}
+                          </h4>
+                          <p className="mt-1 text-sm text-slate-600">
+                            {item.description}
+                          </p>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-10 sm:py-12 md:py-16">
         <Container>
