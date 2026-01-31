@@ -110,6 +110,264 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
         </Container>
       </section>
 
+      {/* Service Types Section - Software Development Only */}
+      {'serviceTypes' in serviceDetails && serviceDetails.serviceTypes && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Briefcase className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                  Service Types
+                </span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.serviceTypes.sectionTitle}
+              </h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {serviceDetails.serviceTypes.types.map(
+                (
+                  type: {
+                    title: string;
+                    icon: string;
+                    target: string;
+                    description: string;
+                    features: string[];
+                  },
+                  index: number
+                ) => {
+                  const IconComponent =
+                    Icons[type.icon as keyof typeof Icons] || Icons.Code;
+                  return (
+                    <div
+                      key={index}
+                      className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
+                    >
+                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+                        <IconComponent className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="mb-1 text-lg font-semibold text-slate-900">
+                        {type.title}
+                      </h3>
+                      <p className="mb-3 text-xs text-blue-600 font-medium">
+                        {type.target}
+                      </p>
+                      <p className="mb-4 text-sm text-slate-600">
+                        {type.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {type.features.map((feature: string, fIndex: number) => (
+                          <li
+                            key={fIndex}
+                            className="flex items-start gap-2 text-sm text-slate-600"
+                          >
+                            <Icons.Check className="h-4 w-4 flex-shrink-0 text-green-500 mt-0.5" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Tech Stack Section - Software Development Only */}
+      {'techStack' in serviceDetails && serviceDetails.techStack && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mb-6 sm:mb-8 text-center">
+              <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                <Icons.Code className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                  Tech Stack
+                </span>
+              </div>
+              <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                {serviceDetails.techStack.sectionTitle}
+              </h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {serviceDetails.techStack.categories.map(
+                (
+                  category: {
+                    name: string;
+                    icon: string;
+                    items: string[];
+                  },
+                  index: number
+                ) => {
+                  const IconComponent =
+                    Icons[category.icon as keyof typeof Icons] || Icons.Code;
+                  return (
+                    <div
+                      key={index}
+                      className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-5 text-white"
+                    >
+                      <div className="mb-3 flex items-center gap-2">
+                        <IconComponent className="h-5 w-5 text-blue-300" />
+                        <h3 className="font-semibold">{category.name}</h3>
+                      </div>
+                      <ul className="space-y-1.5">
+                        {category.items.map((item: string, iIndex: number) => (
+                          <li
+                            key={iIndex}
+                            className="text-sm text-blue-100"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Development Process Section - Software Development Only */}
+      {'developmentProcess' in serviceDetails &&
+        serviceDetails.developmentProcess && (
+          <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-5xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.Settings className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Process
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.developmentProcess.sectionTitle}
+                  </h2>
+                </div>
+                <div className="space-y-4">
+                  {serviceDetails.developmentProcess.steps.map(
+                    (
+                      step: {
+                        step: number;
+                        title: string;
+                        duration: string;
+                        icon: string;
+                        description: string;
+                        deliverables: string[];
+                      },
+                      index: number
+                    ) => {
+                      const IconComponent =
+                        Icons[step.icon as keyof typeof Icons] || Icons.Target;
+                      return (
+                        <div
+                          key={index}
+                          className="flex gap-4 rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+                        >
+                          <div className="flex flex-col items-center">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                              {step.step}
+                            </div>
+                            {index <
+                              serviceDetails.developmentProcess.steps.length - 1 && (
+                              <div className="mt-2 h-full w-0.5 bg-blue-200" />
+                            )}
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex flex-wrap items-center gap-2 mb-2">
+                              <IconComponent className="h-5 w-5 text-blue-600" />
+                              <h3 className="font-semibold text-slate-900">
+                                {step.title}
+                              </h3>
+                              <span className="rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700">
+                                {step.duration}
+                              </span>
+                            </div>
+                            <p className="mb-3 text-sm text-slate-600">
+                              {step.description}
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                              {step.deliverables.map(
+                                (deliverable: string, dIndex: number) => (
+                                  <span
+                                    key={dIndex}
+                                    className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-600"
+                                  >
+                                    <Icons.CheckCircle className="h-3 w-3 text-green-500" />
+                                    {deliverable}
+                                  </span>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* Why Brain House Section - Software Development Only */}
+      {'whyBrainHouse' in serviceDetails && serviceDetails.whyBrainHouse && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Why Us
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.whyBrainHouse.sectionTitle}
+                </h2>
+              </div>
+              <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+                {serviceDetails.whyBrainHouse.points.map(
+                  (
+                    point: {
+                      title: string;
+                      icon: string;
+                      description: string;
+                    },
+                    index: number
+                  ) => {
+                    const IconComponent =
+                      Icons[point.icon as keyof typeof Icons] || Icons.Star;
+                    return (
+                      <div
+                        key={index}
+                        className="flex gap-4 rounded-xl bg-gradient-to-br from-blue-50 to-white p-5 shadow-sm ring-1 ring-blue-100"
+                      >
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-600">
+                          <IconComponent className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="mb-1 font-semibold text-slate-900">
+                            {point.title}
+                          </h3>
+                          <p className="text-sm text-slate-600">
+                            {point.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Physical AI Section - AX Consulting Only */}
       {'physicalAI' in serviceDetails && serviceDetails.physicalAI && (
         <section className="bg-slate-50 py-8 sm:py-12 md:py-16">

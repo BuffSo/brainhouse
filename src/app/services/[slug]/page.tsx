@@ -9,6 +9,7 @@ const validSlugs = [
   'ict-strategy',
   'tech-commercialization',
   'startup-investment',
+  'software-development',
 ];
 
 export function generateStaticParams() {
@@ -29,6 +30,7 @@ export async function generateMetadata({
     'ict-strategy': 'ICT 전략·정책 컨설팅 - Brain House',
     'tech-commercialization': '기술사업화 컨설팅 - Brain House',
     'startup-investment': '창업·투자 컨설팅 - Brain House',
+    'software-development': '소프트웨어 개발 - Brain House',
   };
 
   const descriptions: Record<string, string> = {
@@ -40,6 +42,8 @@ export async function generateMetadata({
       '기술을 시장으로 끌어내어 경제적 가치를 창출하는 전문 컨설팅 서비스',
     'startup-investment':
       '예비창업자부터 스케일업 중견기업까지 성장 단계별 맞춤형 멘토링·컨설팅과 투자 유치 지원',
+    'software-development':
+      'Node.js, Next.js, AWS 기반 MVP 개발 및 기업 웹서비스 개발',
   };
 
   return {

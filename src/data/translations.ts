@@ -477,7 +477,7 @@ export const translations = {
           slug: 'software-development',
           title: '소프트웨어 개발',
           shortTitle: 'SW 개발',
-          hasPage: false,
+          hasPage: true,
         },
       ],
     },
@@ -1498,6 +1498,179 @@ export const translations = {
           },
         },
       },
+      'software-development': {
+        title: '소프트웨어 개발',
+        subtitle: 'Node.js 기반 풀스택 개발 및 클라우드 인프라 구축',
+        description:
+          '브레인하우스는 Node.js 생태계를 중심으로 한 풀스택 웹 개발 서비스를 제공합니다. 기획 컨설팅을 통해 검증된 아이디어를 실제 서비스로 구현하고, 초기 창업자의 MVP 개발부터 기업의 웹서비스 고도화까지 기술 개발 파트너로서 함께합니다.',
+        targetCustomers: [
+          '아이디어를 서비스로 구현하고 싶은 초기 창업자',
+          '기존 시스템의 현대화가 필요한 기업',
+          '신규 웹서비스 개발을 계획하는 기업',
+          '컨설팅 결과를 기술로 구현하고자 하는 고객',
+          '빠른 시장 검증이 필요한 스타트업',
+        ],
+        processSteps: [
+          '요구사항 분석',
+          '설계 & 프로토타입',
+          '개발 & 테스트',
+          '배포 & 런칭',
+          '운영 & 유지보수',
+        ],
+        techStack: {
+          sectionTitle: '기술 스택',
+          categories: [
+            {
+              name: 'Backend',
+              icon: 'Server',
+              items: ['Node.js', 'NestJS', 'Express.js', 'TypeScript'],
+            },
+            {
+              name: 'Frontend',
+              icon: 'Monitor',
+              items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+            },
+            {
+              name: 'Cloud & Infra',
+              icon: 'Cloud',
+              items: ['AWS (EC2, S3, RDS, Lambda)', 'Docker', 'GitHub Actions'],
+            },
+            {
+              name: 'Database',
+              icon: 'Database',
+              items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma ORM'],
+            },
+            {
+              name: 'AI Integration',
+              icon: 'Brain',
+              items: ['OpenAI API', 'Claude API', 'Gemini API', 'LangChain'],
+            },
+          ],
+        },
+        serviceTypes: {
+          sectionTitle: '서비스 유형',
+          types: [
+            {
+              title: 'MVP 개발',
+              icon: 'Rocket',
+              target: '초기 창업자 / 스타트업',
+              description:
+                '린 스타트업 방법론에 기반하여 핵심 기능에 집중한 MVP를 4-8주 내에 개발하고 빠른 시장 검증을 지원합니다.',
+              features: [
+                '핵심 기능 중심의 빠른 개발',
+                '반응형 웹 애플리케이션',
+                '기본 인프라 구축 (AWS 기반)',
+                '런칭 후 1개월 무상 유지보수',
+              ],
+            },
+            {
+              title: '기업 웹서비스 개발',
+              icon: 'Building',
+              target: '중소기업 / 중견기업',
+              description:
+                'B2B/B2C 플랫폼, 사내 시스템, 고객 포털 등 기업의 비즈니스 요구에 맞춘 확장 가능한 웹서비스를 개발합니다.',
+              features: [
+                '마이크로서비스 아키텍처 설계',
+                '레거시 시스템 현대화',
+                '기업 시스템 연동 (ERP, CRM 등)',
+                'SLA 기반 유지보수 계약',
+              ],
+            },
+            {
+              title: '컨설팅 연계 개발',
+              icon: 'Briefcase',
+              target: '컨설팅 고객',
+              description:
+                '브레인하우스의 기술사업화 컨설팅, AX 컨설팅 결과를 실제 서비스로 구현합니다. 기획부터 개발까지 원스톱으로 진행됩니다.',
+              features: [
+                '컨설팅 결과의 기술 구현',
+                'PoC/파일럿 개발',
+                'AI 서비스 프로토타입',
+                '후속 투자 유치 지원',
+              ],
+            },
+          ],
+        },
+        developmentProcess: {
+          sectionTitle: '개발 프로세스',
+          steps: [
+            {
+              step: 1,
+              title: '요구사항 분석',
+              duration: '1-2주',
+              icon: 'Search',
+              description:
+                '비즈니스 요구사항을 분석하고 기술적 실현 가능성을 검토합니다. 프로젝트 범위와 일정을 확정합니다.',
+              deliverables: ['요구사항 정의서', '기술 검토 보고서', '프로젝트 계획서'],
+            },
+            {
+              step: 2,
+              title: '설계 & 프로토타입',
+              duration: '1-2주',
+              icon: 'Layers',
+              description:
+                '시스템 아키텍처를 설계하고 UI/UX 프로토타입을 제작합니다. 데이터베이스 스키마와 API 명세를 정의합니다.',
+              deliverables: ['시스템 설계서', 'UI/UX 프로토타입', 'API 명세서'],
+            },
+            {
+              step: 3,
+              title: '개발 & 테스트',
+              duration: '4-8주',
+              icon: 'Code',
+              description:
+                '애자일 방법론으로 2주 단위 스프린트를 진행합니다. 지속적인 통합과 테스트로 품질을 보장합니다.',
+              deliverables: ['소스 코드', '테스트 결과 보고서', '기술 문서'],
+            },
+            {
+              step: 4,
+              title: '배포 & 런칭',
+              duration: '1주',
+              icon: 'Rocket',
+              description:
+                '클라우드 인프라에 서비스를 배포하고 런칭을 지원합니다. 모니터링 시스템을 구축합니다.',
+              deliverables: ['배포된 서비스', '운영 가이드', '모니터링 대시보드'],
+            },
+            {
+              step: 5,
+              title: '운영 & 유지보수',
+              duration: '지속',
+              icon: 'Settings',
+              description:
+                '런칭 후 안정적인 운영을 지원합니다. 버그 수정, 기능 개선, 성능 최적화를 진행합니다.',
+              deliverables: ['월간 운영 보고서', '기능 개선 사항', '성능 분석 리포트'],
+            },
+          ],
+        },
+        whyBrainHouse: {
+          sectionTitle: 'Why Brain House?',
+          points: [
+            {
+              title: '28년 ICT 경험',
+              icon: 'Trophy',
+              description:
+                'ICT 분야 28년의 현장 경험과 노하우를 바탕으로 단순 개발을 넘어 비즈니스 가치를 창출하는 솔루션을 제공합니다.',
+            },
+            {
+              title: '컨설팅 연계',
+              icon: 'Network',
+              description:
+                '기술사업화 컨설팅, AX 컨설팅과 연계하여 기획부터 개발까지 원스톱 서비스를 제공합니다.',
+            },
+            {
+              title: '최신 기술 스택',
+              icon: 'Zap',
+              description:
+                'Node.js, Next.js, AWS 등 검증된 최신 기술 스택을 활용하여 확장 가능하고 유지보수가 용이한 시스템을 구축합니다.',
+            },
+            {
+              title: '풀사이클 지원',
+              icon: 'Repeat',
+              description:
+                '요구사항 분석부터 설계, 개발, 배포, 운영까지 프로젝트의 전 생명주기를 책임집니다.',
+            },
+          ],
+        },
+      },
     },
     privacy: {
       pageHeader: {
@@ -2049,7 +2222,7 @@ export const translations = {
           slug: 'software-development',
           title: 'Software Development',
           shortTitle: 'SW Dev',
-          hasPage: false,
+          hasPage: true,
         },
       ],
     },
@@ -3124,6 +3297,179 @@ export const translations = {
           },
         },
       },
+      'software-development': {
+        title: 'Software Development',
+        subtitle: 'Full-stack Development with Node.js and Cloud Infrastructure',
+        description:
+          'Brain House provides full-stack web development services centered on the Node.js ecosystem. We transform validated ideas from planning consultations into real services, partnering as a technology development partner from MVP development for early-stage founders to enterprise web service enhancement.',
+        targetCustomers: [
+          'Early-stage founders who want to turn ideas into services',
+          'Enterprises needing legacy system modernization',
+          'Companies planning new web service development',
+          'Consulting clients wanting to implement results in technology',
+          'Startups needing rapid market validation',
+        ],
+        processSteps: [
+          'Requirements Analysis',
+          'Design & Prototype',
+          'Development & Testing',
+          'Deployment & Launch',
+          'Operations & Maintenance',
+        ],
+        techStack: {
+          sectionTitle: 'Technology Stack',
+          categories: [
+            {
+              name: 'Backend',
+              icon: 'Server',
+              items: ['Node.js', 'NestJS', 'Express.js', 'TypeScript'],
+            },
+            {
+              name: 'Frontend',
+              icon: 'Monitor',
+              items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+            },
+            {
+              name: 'Cloud & Infra',
+              icon: 'Cloud',
+              items: ['AWS (EC2, S3, RDS, Lambda)', 'Docker', 'GitHub Actions'],
+            },
+            {
+              name: 'Database',
+              icon: 'Database',
+              items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma ORM'],
+            },
+            {
+              name: 'AI Integration',
+              icon: 'Brain',
+              items: ['OpenAI API', 'Claude API', 'Gemini API', 'LangChain'],
+            },
+          ],
+        },
+        serviceTypes: {
+          sectionTitle: 'Service Types',
+          types: [
+            {
+              title: 'MVP Development',
+              icon: 'Rocket',
+              target: 'Early-stage Founders / Startups',
+              description:
+                'Based on Lean Startup methodology, we develop MVPs focused on core features within 4-8 weeks and support rapid market validation.',
+              features: [
+                'Fast development focused on core features',
+                'Responsive web applications',
+                'Basic infrastructure setup (AWS-based)',
+                '1 month free maintenance after launch',
+              ],
+            },
+            {
+              title: 'Enterprise Web Services',
+              icon: 'Building',
+              target: 'SMEs / Mid-sized Companies',
+              description:
+                'We develop scalable web services tailored to business requirements including B2B/B2C platforms, internal systems, and customer portals.',
+              features: [
+                'Microservices architecture design',
+                'Legacy system modernization',
+                'Enterprise system integration (ERP, CRM, etc.)',
+                'SLA-based maintenance contracts',
+              ],
+            },
+            {
+              title: 'Consulting-linked Development',
+              icon: 'Briefcase',
+              target: 'Consulting Clients',
+              description:
+                'We implement the results of Brain House technology commercialization and AX consulting into actual services. One-stop from planning to development.',
+              features: [
+                'Technical implementation of consulting results',
+                'PoC/Pilot development',
+                'AI service prototypes',
+                'Follow-up investment attraction support',
+              ],
+            },
+          ],
+        },
+        developmentProcess: {
+          sectionTitle: 'Development Process',
+          steps: [
+            {
+              step: 1,
+              title: 'Requirements Analysis',
+              duration: '1-2 weeks',
+              icon: 'Search',
+              description:
+                'We analyze business requirements and review technical feasibility. Project scope and schedule are finalized.',
+              deliverables: ['Requirements document', 'Technical review report', 'Project plan'],
+            },
+            {
+              step: 2,
+              title: 'Design & Prototype',
+              duration: '1-2 weeks',
+              icon: 'Layers',
+              description:
+                'We design system architecture and create UI/UX prototypes. Database schema and API specifications are defined.',
+              deliverables: ['System design document', 'UI/UX prototype', 'API specification'],
+            },
+            {
+              step: 3,
+              title: 'Development & Testing',
+              duration: '4-8 weeks',
+              icon: 'Code',
+              description:
+                'We conduct 2-week sprints using Agile methodology. Quality is ensured through continuous integration and testing.',
+              deliverables: ['Source code', 'Test result report', 'Technical documentation'],
+            },
+            {
+              step: 4,
+              title: 'Deployment & Launch',
+              duration: '1 week',
+              icon: 'Rocket',
+              description:
+                'We deploy services to cloud infrastructure and support launch. Monitoring systems are established.',
+              deliverables: ['Deployed service', 'Operations guide', 'Monitoring dashboard'],
+            },
+            {
+              step: 5,
+              title: 'Operations & Maintenance',
+              duration: 'Ongoing',
+              icon: 'Settings',
+              description:
+                'We support stable operations after launch. Bug fixes, feature improvements, and performance optimization are conducted.',
+              deliverables: ['Monthly operations report', 'Feature improvements', 'Performance analysis report'],
+            },
+          ],
+        },
+        whyBrainHouse: {
+          sectionTitle: 'Why Brain House?',
+          points: [
+            {
+              title: '28 Years ICT Experience',
+              icon: 'Trophy',
+              description:
+                'Based on 28 years of ICT field experience and know-how, we provide solutions that create business value beyond simple development.',
+            },
+            {
+              title: 'Consulting Integration',
+              icon: 'Network',
+              description:
+                'We provide one-stop services from planning to development, linked with technology commercialization and AX consulting.',
+            },
+            {
+              title: 'Modern Tech Stack',
+              icon: 'Zap',
+              description:
+                'We build scalable and maintainable systems using proven modern tech stacks including Node.js, Next.js, and AWS.',
+            },
+            {
+              title: 'Full-cycle Support',
+              icon: 'Repeat',
+              description:
+                'We take responsibility for the entire project lifecycle from requirements analysis to design, development, deployment, and operations.',
+            },
+          ],
+        },
+      },
     },
     privacy: {
       pageHeader: {
@@ -3672,7 +4018,7 @@ export const translations = {
           slug: 'software-development',
           title: 'ソフトウェア開発',
           shortTitle: 'SW開発',
-          hasPage: false,
+          hasPage: true,
         },
       ],
     },
@@ -4712,6 +5058,179 @@ export const translations = {
               },
             ],
           },
+        },
+      },
+      'software-development': {
+        title: 'ソフトウェア開発',
+        subtitle: 'Node.jsベースのフルスタック開発およびクラウドインフラ構築',
+        description:
+          'ブレインハウスは、Node.jsエコシステムを中心としたフルスタックWeb開発サービスを提供しています。企画コンサルティングで検証されたアイデアを実際のサービスとして実装し、初期創業者のMVP開発から企業のWebサービス高度化まで、技術開発パートナーとして共に歩みます。',
+        targetCustomers: [
+          'アイデアをサービスとして実装したい初期創業者',
+          '既存システムの現代化が必要な企業',
+          '新規Webサービス開発を計画している企業',
+          'コンサルティング結果を技術で実装したい顧客',
+          '迅速な市場検証が必要なスタートアップ',
+        ],
+        processSteps: [
+          '要求事項分析',
+          '設計＆プロトタイプ',
+          '開発＆テスト',
+          'デプロイ＆ローンチ',
+          '運用＆保守',
+        ],
+        techStack: {
+          sectionTitle: '技術スタック',
+          categories: [
+            {
+              name: 'Backend',
+              icon: 'Server',
+              items: ['Node.js', 'NestJS', 'Express.js', 'TypeScript'],
+            },
+            {
+              name: 'Frontend',
+              icon: 'Monitor',
+              items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+            },
+            {
+              name: 'Cloud & Infra',
+              icon: 'Cloud',
+              items: ['AWS (EC2, S3, RDS, Lambda)', 'Docker', 'GitHub Actions'],
+            },
+            {
+              name: 'Database',
+              icon: 'Database',
+              items: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma ORM'],
+            },
+            {
+              name: 'AI Integration',
+              icon: 'Brain',
+              items: ['OpenAI API', 'Claude API', 'Gemini API', 'LangChain'],
+            },
+          ],
+        },
+        serviceTypes: {
+          sectionTitle: 'サービス類型',
+          types: [
+            {
+              title: 'MVP開発',
+              icon: 'Rocket',
+              target: '初期創業者 / スタートアップ',
+              description:
+                'リーンスタートアップ方法論に基づき、コア機能に集中したMVPを4-8週間以内に開発し、迅速な市場検証を支援します。',
+              features: [
+                'コア機能中心の迅速な開発',
+                'レスポンシブWebアプリケーション',
+                '基本インフラ構築（AWSベース）',
+                'ローンチ後1ヶ月無償保守',
+              ],
+            },
+            {
+              title: '企業Webサービス開発',
+              icon: 'Building',
+              target: '中小企業 / 中堅企業',
+              description:
+                'B2B/B2Cプラットフォーム、社内システム、顧客ポータルなど、企業のビジネス要件に合わせた拡張可能なWebサービスを開発します。',
+              features: [
+                'マイクロサービスアーキテクチャ設計',
+                'レガシーシステム現代化',
+                '企業システム連携（ERP、CRMなど）',
+                'SLAベースの保守契約',
+              ],
+            },
+            {
+              title: 'コンサルティング連携開発',
+              icon: 'Briefcase',
+              target: 'コンサルティング顧客',
+              description:
+                'ブレインハウスの技術事業化コンサルティング、AXコンサルティングの結果を実際のサービスとして実装します。企画から開発までワンストップで進行します。',
+              features: [
+                'コンサルティング結果の技術実装',
+                'PoC/パイロット開発',
+                'AIサービスプロトタイプ',
+                '後続投資誘致支援',
+              ],
+            },
+          ],
+        },
+        developmentProcess: {
+          sectionTitle: '開発プロセス',
+          steps: [
+            {
+              step: 1,
+              title: '要求事項分析',
+              duration: '1-2週',
+              icon: 'Search',
+              description:
+                'ビジネス要件を分析し、技術的実現可能性を検討します。プロジェクトの範囲と日程を確定します。',
+              deliverables: ['要求事項定義書', '技術検討報告書', 'プロジェクト計画書'],
+            },
+            {
+              step: 2,
+              title: '設計＆プロトタイプ',
+              duration: '1-2週',
+              icon: 'Layers',
+              description:
+                'システムアーキテクチャを設計し、UI/UXプロトタイプを制作します。データベーススキーマとAPI仕様を定義します。',
+              deliverables: ['システム設計書', 'UI/UXプロトタイプ', 'API仕様書'],
+            },
+            {
+              step: 3,
+              title: '開発＆テスト',
+              duration: '4-8週',
+              icon: 'Code',
+              description:
+                'アジャイル方法論で2週間単位のスプリントを進行します。継続的な統合とテストで品質を保証します。',
+              deliverables: ['ソースコード', 'テスト結果報告書', '技術文書'],
+            },
+            {
+              step: 4,
+              title: 'デプロイ＆ローンチ',
+              duration: '1週',
+              icon: 'Rocket',
+              description:
+                'クラウドインフラにサービスをデプロイし、ローンチを支援します。モニタリングシステムを構築します。',
+              deliverables: ['デプロイされたサービス', '運用ガイド', 'モニタリングダッシュボード'],
+            },
+            {
+              step: 5,
+              title: '運用＆保守',
+              duration: '継続',
+              icon: 'Settings',
+              description:
+                'ローンチ後の安定的な運用を支援します。バグ修正、機能改善、性能最適化を進行します。',
+              deliverables: ['月間運用報告書', '機能改善事項', '性能分析レポート'],
+            },
+          ],
+        },
+        whyBrainHouse: {
+          sectionTitle: 'Why Brain House?',
+          points: [
+            {
+              title: '28年のICT経験',
+              icon: 'Trophy',
+              description:
+                'ICT分野28年の現場経験とノウハウを基に、単純な開発を超えてビジネス価値を創出するソリューションを提供します。',
+            },
+            {
+              title: 'コンサルティング連携',
+              icon: 'Network',
+              description:
+                '技術事業化コンサルティング、AXコンサルティングと連携して、企画から開発までワンストップサービスを提供します。',
+            },
+            {
+              title: '最新技術スタック',
+              icon: 'Zap',
+              description:
+                'Node.js、Next.js、AWSなど検証された最新技術スタックを活用し、拡張可能で保守が容易なシステムを構築します。',
+            },
+            {
+              title: 'フルサイクルサポート',
+              icon: 'Repeat',
+              description:
+                '要求事項分析から設計、開発、デプロイ、運用までプロジェクトの全ライフサイクルを責任持ちます。',
+            },
+          ],
         },
       },
     },
