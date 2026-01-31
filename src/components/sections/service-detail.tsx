@@ -623,6 +623,276 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
           </section>
         )}
 
+      {/* Consulting Process Section - Tech Commercialization Only */}
+      {'consultingProcess' in serviceDetails &&
+        serviceDetails.consultingProcess && (
+          <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-4xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.Settings className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Process
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.consultingProcess.sectionTitle}
+                  </h2>
+                  <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                    {serviceDetails.consultingProcess.description}
+                  </p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {serviceDetails.consultingProcess.steps.map(
+                    (
+                      step: { title: string; icon: string; description: string },
+                      index: number
+                    ) => {
+                      const IconComponent =
+                        Icons[step.icon as keyof typeof Icons] || Icons.Target;
+                      return (
+                        <div
+                          key={index}
+                          className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
+                        >
+                          <div className="mb-3 flex items-center gap-3">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+                              <IconComponent className="h-5 w-5 text-blue-600" />
+                            </div>
+                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-xs font-bold text-slate-600">
+                              {index + 1}
+                            </span>
+                          </div>
+                          <h3 className="mb-2 font-semibold text-slate-900">
+                            {step.title}
+                          </h3>
+                          <p className="text-sm text-slate-600">
+                            {step.description}
+                          </p>
+                        </div>
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* Expected Benefits Section - Tech Commercialization Only */}
+      {'expectedBenefits' in serviceDetails &&
+        serviceDetails.expectedBenefits && (
+          <section className="py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-4xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Benefits
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.expectedBenefits.sectionTitle}
+                  </h2>
+                </div>
+                <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
+                  {serviceDetails.expectedBenefits.benefits.map(
+                    (
+                      benefit: {
+                        title: string;
+                        icon: string;
+                        description: string;
+                      },
+                      index: number
+                    ) => {
+                      const IconComponent =
+                        Icons[benefit.icon as keyof typeof Icons] ||
+                        Icons.CheckCircle;
+                      return (
+                        <div
+                          key={index}
+                          className="rounded-xl bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm ring-1 ring-blue-100"
+                        >
+                          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+                            <IconComponent className="h-6 w-6 text-white" />
+                          </div>
+                          <h3 className="mb-2 text-lg font-semibold text-slate-900">
+                            {benefit.title}
+                          </h3>
+                          <p className="text-sm text-slate-600">
+                            {benefit.description}
+                          </p>
+                        </div>
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* ICT Synergy Section - Tech Commercialization Only */}
+      {'ictSynergy' in serviceDetails && serviceDetails.ictSynergy && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Network className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Synergy
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.ictSynergy.sectionTitle}
+                </h2>
+                <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                  {serviceDetails.ictSynergy.description}
+                </p>
+                <p className="mt-4 text-lg font-semibold text-blue-600 italic">
+                  {serviceDetails.ictSynergy.quote}
+                </p>
+              </div>
+
+              {/* Comparison Table */}
+              <div className="mb-8 grid gap-4 md:grid-cols-2">
+                <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                  <h3 className="mb-4 text-lg font-semibold text-slate-900">
+                    {serviceDetails.ictSynergy.comparison.techComm.title}
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-medium text-slate-700">
+                        핵심 목표:{' '}
+                      </span>
+                      <span className="text-slate-600">
+                        {serviceDetails.ictSynergy.comparison.techComm.goal}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-slate-700">
+                        주요 활동:{' '}
+                      </span>
+                      <span className="text-slate-600">
+                        {
+                          serviceDetails.ictSynergy.comparison.techComm
+                            .activities
+                        }
+                      </span>
+                    </div>
+                    <div className="rounded-lg bg-blue-50 p-3">
+                      <span className="font-medium text-blue-700">
+                        {serviceDetails.ictSynergy.comparison.techComm.role}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+                  <h3 className="mb-4 text-lg font-semibold text-slate-900">
+                    {serviceDetails.ictSynergy.comparison.ictStrategy.title}
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-medium text-slate-700">
+                        핵심 목표:{' '}
+                      </span>
+                      <span className="text-slate-600">
+                        {serviceDetails.ictSynergy.comparison.ictStrategy.goal}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-slate-700">
+                        주요 활동:{' '}
+                      </span>
+                      <span className="text-slate-600">
+                        {
+                          serviceDetails.ictSynergy.comparison.ictStrategy
+                            .activities
+                        }
+                      </span>
+                    </div>
+                    <div className="rounded-lg bg-green-50 p-3">
+                      <span className="font-medium text-green-700">
+                        {serviceDetails.ictSynergy.comparison.ictStrategy.role}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Key Points */}
+              <div className="grid gap-4 sm:grid-cols-3">
+                {serviceDetails.ictSynergy.keyPoints.map(
+                  (
+                    point: { title: string; description: string },
+                    index: number
+                  ) => (
+                    <div
+                      key={index}
+                      className="rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-200"
+                    >
+                      <h4 className="mb-2 font-semibold text-slate-900">
+                        {point.title}
+                      </h4>
+                      <p className="text-sm text-slate-600">
+                        {point.description}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* DX Synergy Section - Tech Commercialization Only */}
+      {'dxSynergy' in serviceDetails && serviceDetails.dxSynergy && (
+        <section className="py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Zap className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    DX Synergy
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.dxSynergy.sectionTitle}
+                </h2>
+              </div>
+              <div className="grid gap-4 md:grid-cols-3">
+                {serviceDetails.dxSynergy.effects.map(
+                  (
+                    effect: { title: string; description: string },
+                    index: number
+                  ) => (
+                    <div
+                      key={index}
+                      className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-6 text-white"
+                    >
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/10">
+                        <span className="text-lg font-bold">{index + 1}</span>
+                      </div>
+                      <h3 className="mb-2 text-lg font-semibold">
+                        {effect.title}
+                      </h3>
+                      <p className="text-sm text-blue-100">
+                        {effect.description}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-10 sm:py-12 md:py-16">
         <Container>

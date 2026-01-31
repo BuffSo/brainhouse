@@ -465,7 +465,7 @@ export const translations = {
           slug: 'tech-commercialization',
           title: '기술사업화 컨설팅',
           shortTitle: '기술사업화',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'startup-investment',
@@ -1070,6 +1070,141 @@ export const translations = {
           ],
         },
       },
+      'tech-commercialization': {
+        title: '기술사업화 컨설팅',
+        subtitle:
+          '기술을 시장으로 끌어내어 경제적 가치(수익)를 창출하는 전문 서비스',
+        description:
+          '연구소나 기업이 보유한 기술을 단순히 개발하는 단계에서 끝내지 않고, 이를 시장으로 끌어내어 경제적 가치를 창출하도록 돕는 전문 서비스입니다. "좋은 기술이 있는데, 이걸 어떻게 팔아서 돈을 벌까?"에 대한 해답을 제시합니다.',
+        processSteps: [
+          '기술 진단',
+          '시장 분석',
+          '가치 평가',
+          '파트너 발굴',
+          '이전/계약',
+        ],
+        targetCustomers: [
+          '대학 및 공공연구기관',
+          '스타트업 및 중소기업',
+          '중견·대기업 (Open Innovation)',
+        ],
+        consultingProcess: {
+          sectionTitle: '기술사업화 컨설팅 프로세스',
+          description:
+            '기술의 탄생부터 시장 안착까지의 전 과정을 체계적으로 지원합니다.',
+          steps: [
+            {
+              title: '기술 진단 및 유망기술 발굴',
+              icon: 'Search',
+              description:
+                '보유한 기술의 완성도(TRL), 독창성, 권리 관계를 분석합니다.',
+            },
+            {
+              title: '시장 분석 및 BM 수립',
+              icon: 'BarChart',
+              description:
+                '누가 이 기술을 필요로 하는지 시장 규모를 파악하고, 수익 구조를 설계합니다.',
+            },
+            {
+              title: '기술 가치 평가',
+              icon: 'DollarSign',
+              description:
+                '해당 기술이 화폐 단위로 얼마만큼의 가치가 있는지 산정합니다.',
+            },
+            {
+              title: '마케팅 및 파트너 발굴',
+              icon: 'Users',
+              description:
+                '기술을 사갈 수요 기업을 찾거나, 공동 사업화 파트너를 연결합니다.',
+            },
+            {
+              title: '기술 이전 및 계약 지원',
+              icon: 'FileText',
+              description:
+                '기술료(Royalty) 협상과 법적 계약 체결을 돕습니다.',
+            },
+          ],
+        },
+        expectedBenefits: {
+          sectionTitle: '핵심 기대 효과',
+          benefits: [
+            {
+              title: '시행착오 감소',
+              icon: 'Shield',
+              description: '시장성 없는 기술에 투자하는 리스크를 방지합니다.',
+            },
+            {
+              title: '자금 조달 용이',
+              icon: 'Wallet',
+              description:
+                '객관적인 기술 가치 평가를 통해 정부 지원금이나 VC 투자를 받기 수월해집니다.',
+            },
+            {
+              title: '수익 극대화',
+              icon: 'TrendingUp',
+              description:
+                '라이선싱, 합작 투자 등 다양한 수익 루트를 확보합니다.',
+            },
+          ],
+        },
+        ictSynergy: {
+          sectionTitle: '기술사업화와 ICT 전략의 연계',
+          description:
+            '기술사업화와 ICT 전략 수립은 현대 비즈니스 환경에서 떼려야 뗄 수 없는 상호보완적 관계입니다.',
+          quote: '"기술은 씨앗, ICT는 토양"',
+          comparison: {
+            techComm: {
+              title: '기술사업화 컨설팅',
+              goal: 'R&D 성과물을 시장에 출시하여 수익 창출',
+              activities: '기술 가치 평가, 시장 분석, BM 개발',
+              role: '"무엇을(What)" 팔 것인가를 결정',
+            },
+            ictStrategy: {
+              title: 'ICT 전략 수립',
+              goal: '비즈니스 목표 달성을 위한 효율적인 IT 인프라 및 시스템 구축',
+              activities: '프로세스 혁신(PI), 시스템 아키텍처 설계, 디지털 전환(DX)',
+              role: '"어떻게(How)" 효율적으로 운영할 것인가를 결정',
+            },
+          },
+          keyPoints: [
+            {
+              title: '비즈니스 모델(BM)의 구체화',
+              description:
+                '최신 기술(AI, 클라우드, 빅데이터 등)을 사업화할 때, ICT 전략은 서비스가 고객에게 전달되는 플랫폼의 구조를 설계합니다.',
+            },
+            {
+              title: '데이터 기반의 시장 검증',
+              description:
+                'ICT 전략은 고객 데이터를 수집, 분석하는 데이터 거버넌스 체계를 마련하여 사업화의 성공 확률을 높입니다.',
+            },
+            {
+              title: '운영 효율성 및 비용 절감',
+              description:
+                'ERP나 CRM 체계를 구축하면, 사업화 초기 단계의 운영 리스크를 크게 줄일 수 있습니다.',
+            },
+          ],
+        },
+        dxSynergy: {
+          sectionTitle: '디지털 전환(DX) 중심의 시너지 효과',
+          effects: [
+            {
+              title: 'Time-to-Market 단축',
+              description:
+                'ICT 인프라(클라우드 등)를 활용하면 기술 개발부터 시장 출시까지의 기간을 획기적으로 줄일 수 있습니다.',
+            },
+            {
+              title: '확장성(Scalability) 확보',
+              description:
+                '사업화 초기 단계부터 확장 가능한 ICT 아키텍처를 설계하면, 사용자가 급증하더라도 서비스 중단 없이 사업을 키울 수 있습니다.',
+            },
+            {
+              title: '신규 가치 창출',
+              description:
+                '기존 제조 기술에 ICT 전략을 결합하여 SaaS나 플랫폼 비즈니스로 전환하는 비즈니스 모델 혁신이 가능해집니다.',
+            },
+          ],
+        },
+      },
     },
     privacy: {
       pageHeader: {
@@ -1609,7 +1744,7 @@ export const translations = {
           slug: 'tech-commercialization',
           title: 'Tech Commercialization Consulting',
           shortTitle: 'Tech Commerc.',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'startup-investment',
@@ -2266,6 +2401,143 @@ export const translations = {
           ],
         },
       },
+      'tech-commercialization': {
+        title: 'Tech Commercialization Consulting',
+        subtitle:
+          'Professional service that brings technology to market and creates economic value',
+        description:
+          'A professional service that helps research institutes and companies not just develop technology, but bring it to market to create economic value. We provide answers to "We have good technology, but how do we sell it and make money?"',
+        processSteps: [
+          'Tech Assessment',
+          'Market Analysis',
+          'Valuation',
+          'Partner Discovery',
+          'Transfer/Contract',
+        ],
+        targetCustomers: [
+          'Universities & Public Research Institutes',
+          'Startups & SMEs',
+          'Mid-sized & Large Enterprises (Open Innovation)',
+        ],
+        consultingProcess: {
+          sectionTitle: 'Tech Commercialization Consulting Process',
+          description:
+            'We systematically support the entire process from technology creation to market establishment.',
+          steps: [
+            {
+              title: 'Technology Assessment & Discovery',
+              icon: 'Search',
+              description:
+                'Analyze the technology readiness level (TRL), originality, and IP rights.',
+            },
+            {
+              title: 'Market Analysis & BM Development',
+              icon: 'BarChart',
+              description:
+                'Identify market size and who needs this technology, and design revenue structures.',
+            },
+            {
+              title: 'Technology Valuation',
+              icon: 'DollarSign',
+              description:
+                'Calculate how much the technology is worth in monetary terms.',
+            },
+            {
+              title: 'Marketing & Partner Discovery',
+              icon: 'Users',
+              description:
+                'Find companies that will buy the technology or connect joint commercialization partners.',
+            },
+            {
+              title: 'Technology Transfer & Contract Support',
+              icon: 'FileText',
+              description:
+                'Assist with royalty negotiations and legal contract execution.',
+            },
+          ],
+        },
+        expectedBenefits: {
+          sectionTitle: 'Key Expected Benefits',
+          benefits: [
+            {
+              title: 'Reduce Trial and Error',
+              icon: 'Shield',
+              description:
+                'Prevent risks of investing in technologies without market potential.',
+            },
+            {
+              title: 'Easier Funding',
+              icon: 'Wallet',
+              description:
+                'Objective technology valuation makes it easier to receive government grants or VC investment.',
+            },
+            {
+              title: 'Maximize Revenue',
+              icon: 'TrendingUp',
+              description:
+                'Secure various revenue routes including licensing and joint ventures.',
+            },
+          ],
+        },
+        ictSynergy: {
+          sectionTitle: 'Synergy between Tech Commercialization and ICT Strategy',
+          description:
+            'Tech commercialization and ICT strategy development are inseparable complementary relationships in the modern business environment.',
+          quote: '"Technology is the seed, ICT is the soil"',
+          comparison: {
+            techComm: {
+              title: 'Tech Commercialization Consulting',
+              goal: 'Launch R&D outputs to market and generate revenue',
+              activities: 'Technology valuation, market analysis, BM development',
+              role: 'Decide "What" to sell',
+            },
+            ictStrategy: {
+              title: 'ICT Strategy Planning',
+              goal: 'Build efficient IT infrastructure and systems to achieve business goals',
+              activities:
+                'Process Innovation (PI), System Architecture Design, Digital Transformation (DX)',
+              role: 'Decide "How" to operate efficiently',
+            },
+          },
+          keyPoints: [
+            {
+              title: 'Business Model (BM) Concretization',
+              description:
+                'When commercializing latest technologies (AI, Cloud, Big Data, etc.), ICT strategy designs the platform structure that delivers services to customers.',
+            },
+            {
+              title: 'Data-driven Market Verification',
+              description:
+                'ICT strategy establishes data governance systems for collecting and analyzing customer data, increasing the success rate of commercialization.',
+            },
+            {
+              title: 'Operational Efficiency & Cost Reduction',
+              description:
+                'Building ERP or CRM systems can significantly reduce operational risks in the early stages of commercialization.',
+            },
+          ],
+        },
+        dxSynergy: {
+          sectionTitle: 'Synergy Effects Centered on Digital Transformation (DX)',
+          effects: [
+            {
+              title: 'Shorten Time-to-Market',
+              description:
+                'Using ICT infrastructure (cloud, etc.) can dramatically reduce the period from technology development to market launch.',
+            },
+            {
+              title: 'Secure Scalability',
+              description:
+                'Designing scalable ICT architecture from the early commercialization stage allows business growth without service interruption even when users surge.',
+            },
+            {
+              title: 'Create New Value',
+              description:
+                'Combining ICT strategy with existing manufacturing technology enables business model innovation transitioning to SaaS or platform business.',
+            },
+          ],
+        },
+      },
     },
     privacy: {
       pageHeader: {
@@ -2802,7 +3074,7 @@ export const translations = {
           slug: 'tech-commercialization',
           title: '技術事業化コンサルティング',
           shortTitle: '技術事業化',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'startup-investment',
@@ -3423,6 +3695,142 @@ export const translations = {
               coreValue: '顧客体験と物流最適化',
               keyTech: 'ビッグデータ、AR/VR、配送自動化',
               priority: 'チャネル統合とラストマイル革新',
+            },
+          ],
+        },
+      },
+      'tech-commercialization': {
+        title: '技術事業化コンサルティング',
+        subtitle: '技術を市場に引き出し、経済的価値（収益）を創出する専門サービス',
+        description:
+          '研究所や企業が保有する技術を単に開発する段階で終わらせず、市場に引き出して経済的価値を創出する専門サービスです。「良い技術があるが、これをどう売ってお金を稼ぐか？」に対する解答を提示します。',
+        processSteps: [
+          '技術診断',
+          '市場分析',
+          '価値評価',
+          'パートナー発掘',
+          '移転/契約',
+        ],
+        targetCustomers: [
+          '大学および公共研究機関',
+          'スタートアップおよび中小企業',
+          '中堅・大企業（Open Innovation）',
+        ],
+        consultingProcess: {
+          sectionTitle: '技術事業化コンサルティングプロセス',
+          description:
+            '技術の誕生から市場定着までの全過程を体系的に支援します。',
+          steps: [
+            {
+              title: '技術診断および有望技術発掘',
+              icon: 'Search',
+              description:
+                '保有技術の完成度（TRL）、独創性、権利関係を分析します。',
+            },
+            {
+              title: '市場分析およびBM策定',
+              icon: 'BarChart',
+              description:
+                '誰がこの技術を必要としているか市場規模を把握し、収益構造を設計します。',
+            },
+            {
+              title: '技術価値評価',
+              icon: 'DollarSign',
+              description:
+                '該当技術が金銭単位でどれだけの価値があるかを算定します。',
+            },
+            {
+              title: 'マーケティングおよびパートナー発掘',
+              icon: 'Users',
+              description:
+                '技術を購入する需要企業を探したり、共同事業化パートナーを連結します。',
+            },
+            {
+              title: '技術移転および契約支援',
+              icon: 'FileText',
+              description:
+                '技術料（Royalty）交渉と法的契約締結を支援します。',
+            },
+          ],
+        },
+        expectedBenefits: {
+          sectionTitle: '主要期待効果',
+          benefits: [
+            {
+              title: '試行錯誤の減少',
+              icon: 'Shield',
+              description:
+                '市場性のない技術に投資するリスクを防止します。',
+            },
+            {
+              title: '資金調達の容易化',
+              icon: 'Wallet',
+              description:
+                '客観的な技術価値評価により、政府支援金やVC投資を受けやすくなります。',
+            },
+            {
+              title: '収益最大化',
+              icon: 'TrendingUp',
+              description:
+                'ライセンシング、合弁投資など多様な収益ルートを確保します。',
+            },
+          ],
+        },
+        ictSynergy: {
+          sectionTitle: '技術事業化とICT戦略の連携',
+          description:
+            '技術事業化とICT戦略策定は、現代のビジネス環境において切り離せない相互補完的な関係です。',
+          quote: '"技術は種、ICTは土壌"',
+          comparison: {
+            techComm: {
+              title: '技術事業化コンサルティング',
+              goal: 'R&D成果物を市場に出して収益創出',
+              activities: '技術価値評価、市場分析、BM開発',
+              role: '「何を（What）」売るかを決定',
+            },
+            ictStrategy: {
+              title: 'ICT戦略策定',
+              goal: 'ビジネス目標達成のための効率的なITインフラとシステム構築',
+              activities:
+                'プロセス革新（PI）、システムアーキテクチャ設計、デジタル転換（DX）',
+              role: '「どのように（How）」効率的に運営するかを決定',
+            },
+          },
+          keyPoints: [
+            {
+              title: 'ビジネスモデル（BM）の具体化',
+              description:
+                '最新技術（AI、クラウド、ビッグデータなど）を事業化する際、ICT戦略はサービスが顧客に届くプラットフォームの構造を設計します。',
+            },
+            {
+              title: 'データ基盤の市場検証',
+              description:
+                'ICT戦略は顧客データを収集、分析するデータガバナンス体系を整え、事業化の成功確率を高めます。',
+            },
+            {
+              title: '運営効率性およびコスト削減',
+              description:
+                'ERPやCRM体系を構築すると、事業化初期段階の運営リスクを大幅に減らすことができます。',
+            },
+          ],
+        },
+        dxSynergy: {
+          sectionTitle: 'デジタル転換（DX）中心のシナジー効果',
+          effects: [
+            {
+              title: 'Time-to-Market短縮',
+              description:
+                'ICTインフラ（クラウドなど）を活用すると、技術開発から市場出荷までの期間を画期的に短縮できます。',
+            },
+            {
+              title: '拡張性（Scalability）確保',
+              description:
+                '事業化初期段階から拡張可能なICTアーキテクチャを設計すると、ユーザーが急増してもサービス中断なく事業を拡大できます。',
+            },
+            {
+              title: '新規価値創出',
+              description:
+                '既存の製造技術にICT戦略を結合してSaaSやプラットフォームビジネスへ転換するビジネスモデル革新が可能になります。',
             },
           ],
         },
