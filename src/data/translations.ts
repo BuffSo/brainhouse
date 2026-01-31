@@ -459,7 +459,7 @@ export const translations = {
           slug: 'ict-strategy',
           title: 'ICT 전략·정책 컨설팅',
           shortTitle: 'ICT 전략',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'tech-commercialization',
@@ -924,6 +924,148 @@ export const translations = {
                   desc: '사일로 데이터를 통합해 비즈니스 의사결정을 도움',
                 },
               ],
+            },
+          ],
+        },
+      },
+      'ict-strategy': {
+        title: 'ICT 전략·정책 컨설팅',
+        subtitle:
+          '정부 R&D 기획부터 ICT 정책연구까지, 공공기관과 기업의 미래 경쟁력 확보를 위한 전략 수립',
+        description:
+          '정부·공공기관·기업을 대상으로 ICT 기술 변화 및 트렌드(디지털, AI, 네트워크 등)를 국가·산업·조직 전략과 정책으로 미래 방향을 설계하는 서비스입니다. "기술은 많은데, 어디에 어떻게 써야 하나?"에 답을 주는 영역입니다.',
+        processSteps: ['환경 분석', '역량 진단', '전략 수립', '실행 지원'],
+        targetCustomers: [
+          '중앙정부 / 지자체',
+          '공공기관 / 연구기관',
+          '대기업·공기업 (ICT·통신·플랫폼)',
+          '국제기구 및 해외 정부',
+        ],
+        objectives: {
+          sectionTitle: '주요 목적',
+          items: [
+            '국가·산업 경쟁력 강화',
+            '인공지능 전환(AX), 디지털 전환(DX) 가속화',
+            'ICT 기반 신성장 산업 육성',
+            '기술 변화에 대응하는 제도·규제 설계',
+          ],
+        },
+        consultingAreas: {
+          sectionTitle: '주요 컨설팅 영역',
+          areas: [
+            {
+              title: 'ICT 전략 수립',
+              icon: 'Target',
+              items: [
+                '국가/산업 ICT 중장기 로드맵',
+                '디지털·AI·데이터·클라우드·네트워크 전략',
+                'ICT 기반 신산업·신사업·BM 발굴',
+              ],
+            },
+            {
+              title: '정책·제도 설계',
+              icon: 'FileText',
+              items: [
+                'ICT 관련 법·제도·규제 개선',
+                '데이터/AI/플랫폼 거버넌스',
+                '공공 ICT 정책 및 투자 방향 설정',
+              ],
+            },
+            {
+              title: '기술·산업 분석',
+              icon: 'BarChart',
+              items: [
+                '기술 트렌드 분석 (AI, 5G/6G, 클라우드, 반도체 등)',
+                '글로벌 정책·시장 벤치마킹',
+                '산업 생태계 및 밸류체인 분석',
+              ],
+            },
+            {
+              title: '실행·이행 지원',
+              icon: 'Rocket',
+              items: [
+                '정책 실행계획 및 KPI 설계',
+                '공공사업 기획(RFP, 예타, 로드맵)',
+                '민관 협력 모델 설계',
+              ],
+            },
+          ],
+        },
+        outputs: {
+          sectionTitle: '컨설팅 산출물',
+          items: [
+            'ICT 중장기 전략 보고서',
+            '정책 로드맵 및 실행계획',
+            '제도·규제 개선안',
+            '산업 육성 및 투자 전략',
+          ],
+        },
+        newBusinessFramework: {
+          sectionTitle: 'ICT 신사업 발굴 프레임워크',
+          description:
+            '기업의 신규 사업 발굴을 위한 ICT 전략 컨설팅은 단순히 "새로운 기술을 도입하는 것"을 넘어, 기술을 통해 비즈니스 모델을 혁신하거나 완전히 새로운 시장을 창출하는 것에 목적을 둡니다.',
+          steps: [
+            {
+              step: 1,
+              title: '시장·기술 트렌드 분석',
+              description:
+                '5G, AI, 메타버스 등 파괴적 기술이 산업에 미칠 영향 분석',
+            },
+            {
+              step: 2,
+              title: '내부 역량 진단',
+              description:
+                '기업이 보유한 자산(Asset)과 ICT 기술의 결합 가능성 검토',
+            },
+            {
+              step: 3,
+              title: 'Ideation & Filtering',
+              description:
+                '수백 개의 아이디어 중 수익성과 실행 가능성이 높은 후보군 선별',
+            },
+            {
+              step: 4,
+              title: 'PoC 설계',
+              description: '실제 사업화 전 기술적 구현 가능성 검증',
+            },
+            {
+              step: 5,
+              title: 'Roadmap 수립',
+              description: '중장기 투자 계획 및 조직 개편 방안 마련',
+            },
+          ],
+        },
+        trends: {
+          sectionTitle: 'ICT 전략 컨설팅 트렌드',
+          items: [
+            'AI First 전략 (업무 자동화, 의사결정 고도화)',
+            'Cloud Native & Platform',
+            'Data-driven Enterprise',
+            'Open / API / Ecosystem 전략',
+            'NetOps·DevOps·AIOps',
+            '보안 내재화(Security by Design)',
+          ],
+        },
+        industryComparison: {
+          sectionTitle: '산업별 ICT 전략 비교',
+          industries: [
+            {
+              name: '제조 (Manufacturing)',
+              coreValue: '생산 효율 및 품질',
+              keyTech: 'IoT, 로봇, 디지털 트윈',
+              priority: '공정 자동화 및 비용 절감',
+            },
+            {
+              name: '금융 (Finance)',
+              coreValue: '신뢰, 규제 대응, 편의성',
+              keyTech: 'AI, 클라우드, 블록체인',
+              priority: '데이터 기반 초개인화 서비스',
+            },
+            {
+              name: '유통 (Retail)',
+              coreValue: '고객 경험 및 물류 최적화',
+              keyTech: '빅데이터, AR/VR, 배송 자동화',
+              priority: '채널 통합 및 라스트마일 혁신',
             },
           ],
         },
@@ -1461,7 +1603,7 @@ export const translations = {
           slug: 'ict-strategy',
           title: 'ICT Strategy & Policy Consulting',
           shortTitle: 'ICT Strategy',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'tech-commercialization',
@@ -1971,6 +2113,155 @@ export const translations = {
                   desc: 'Integrates siloed data to support business decision-making',
                 },
               ],
+            },
+          ],
+        },
+      },
+      'ict-strategy': {
+        title: 'ICT Strategy & Policy Consulting',
+        subtitle:
+          'From government R&D planning to ICT policy research, establishing strategies for future competitiveness',
+        description:
+          'A service that designs future directions through national, industrial, and organizational strategies and policies based on ICT technology changes and trends (digital, AI, network, etc.) for governments, public institutions, and enterprises. This is the field that answers "We have many technologies, but where and how should we use them?"',
+        processSteps: [
+          'Environment Analysis',
+          'Capability Assessment',
+          'Strategy Development',
+          'Implementation Support',
+        ],
+        targetCustomers: [
+          'Central Government / Local Governments',
+          'Public Institutions / Research Institutes',
+          'Large Enterprises / Public Corporations (ICT, Telecom, Platform)',
+          'International Organizations and Foreign Governments',
+        ],
+        objectives: {
+          sectionTitle: 'Key Objectives',
+          items: [
+            'Strengthen national and industrial competitiveness',
+            'Accelerate AI Transformation (AX) and Digital Transformation (DX)',
+            'Foster ICT-based new growth industries',
+            'Design systems and regulations responding to technological change',
+          ],
+        },
+        consultingAreas: {
+          sectionTitle: 'Key Consulting Areas',
+          areas: [
+            {
+              title: 'ICT Strategy Development',
+              icon: 'Target',
+              items: [
+                'National/Industry ICT mid-to-long-term roadmap',
+                'Digital, AI, Data, Cloud, Network strategies',
+                'ICT-based new industry/business/BM discovery',
+              ],
+            },
+            {
+              title: 'Policy & System Design',
+              icon: 'FileText',
+              items: [
+                'ICT-related law, system, regulation improvement',
+                'Data/AI/Platform governance',
+                'Public ICT policy and investment direction setting',
+              ],
+            },
+            {
+              title: 'Technology & Industry Analysis',
+              icon: 'BarChart',
+              items: [
+                'Technology trend analysis (AI, 5G/6G, Cloud, Semiconductor, etc.)',
+                'Global policy and market benchmarking',
+                'Industry ecosystem and value chain analysis',
+              ],
+            },
+            {
+              title: 'Execution & Implementation Support',
+              icon: 'Rocket',
+              items: [
+                'Policy execution plan and KPI design',
+                'Public project planning (RFP, preliminary feasibility, roadmap)',
+                'Public-private partnership model design',
+              ],
+            },
+          ],
+        },
+        outputs: {
+          sectionTitle: 'Consulting Deliverables',
+          items: [
+            'ICT mid-to-long-term strategy report',
+            'Policy roadmap and action plan',
+            'System and regulation improvement proposals',
+            'Industry development and investment strategy',
+          ],
+        },
+        newBusinessFramework: {
+          sectionTitle: 'ICT New Business Discovery Framework',
+          description:
+            'ICT strategy consulting for discovering new business goes beyond simply "adopting new technology" - it aims to innovate business models through technology or create entirely new markets.',
+          steps: [
+            {
+              step: 1,
+              title: 'Market & Technology Trend Analysis',
+              description:
+                'Analyze the impact of disruptive technologies like 5G, AI, Metaverse on industries',
+            },
+            {
+              step: 2,
+              title: 'Internal Capability Assessment',
+              description:
+                'Review the possibility of combining assets owned by the company with ICT technology',
+            },
+            {
+              step: 3,
+              title: 'Ideation & Filtering',
+              description:
+                'Select candidates with high profitability and feasibility from hundreds of ideas',
+            },
+            {
+              step: 4,
+              title: 'PoC Design',
+              description:
+                'Verify technical implementation feasibility before actual commercialization',
+            },
+            {
+              step: 5,
+              title: 'Roadmap Development',
+              description:
+                'Prepare mid-to-long-term investment plans and organizational restructuring',
+            },
+          ],
+        },
+        trends: {
+          sectionTitle: 'ICT Strategy Consulting Trends',
+          items: [
+            'AI First Strategy (Work automation, decision-making advancement)',
+            'Cloud Native & Platform',
+            'Data-driven Enterprise',
+            'Open / API / Ecosystem Strategy',
+            'NetOps·DevOps·AIOps',
+            'Security by Design',
+          ],
+        },
+        industryComparison: {
+          sectionTitle: 'ICT Strategy Comparison by Industry',
+          industries: [
+            {
+              name: 'Manufacturing',
+              coreValue: 'Production efficiency and quality',
+              keyTech: 'IoT, Robotics, Digital Twin',
+              priority: 'Process automation and cost reduction',
+            },
+            {
+              name: 'Finance',
+              coreValue: 'Trust, regulatory compliance, convenience',
+              keyTech: 'AI, Cloud, Blockchain',
+              priority: 'Data-driven hyper-personalized services',
+            },
+            {
+              name: 'Retail',
+              coreValue: 'Customer experience and logistics optimization',
+              keyTech: 'Big Data, AR/VR, Delivery automation',
+              priority: 'Channel integration and last-mile innovation',
             },
           ],
         },
@@ -2505,7 +2796,7 @@ export const translations = {
           slug: 'ict-strategy',
           title: 'ICT戦略・政策コンサルティング',
           shortTitle: 'ICT戦略',
-          hasPage: false,
+          hasPage: true,
         },
         {
           slug: 'tech-commercialization',
@@ -2990,6 +3281,148 @@ export const translations = {
                   desc: 'サイロデータを統合してビジネス意思決定を支援',
                 },
               ],
+            },
+          ],
+        },
+      },
+      'ict-strategy': {
+        title: 'ICT戦略・政策コンサルティング',
+        subtitle:
+          '政府R&D企画からICT政策研究まで、公共機関と企業の将来競争力確保のための戦略策定',
+        description:
+          '政府・公共機関・企業を対象に、ICT技術の変化とトレンド（デジタル、AI、ネットワークなど）を国家・産業・組織の戦略と政策として将来の方向性を設計するサービスです。「技術は多いが、どこにどう使うべきか？」に答える領域です。',
+        processSteps: ['環境分析', '能力診断', '戦略策定', '実行支援'],
+        targetCustomers: [
+          '中央政府 / 地方自治体',
+          '公共機関 / 研究機関',
+          '大企業・公企業（ICT・通信・プラットフォーム）',
+          '国際機関および海外政府',
+        ],
+        objectives: {
+          sectionTitle: '主要目的',
+          items: [
+            '国家・産業競争力の強化',
+            'AI転換（AX）、デジタル転換（DX）の加速化',
+            'ICT基盤の新成長産業育成',
+            '技術変化に対応する制度・規制設計',
+          ],
+        },
+        consultingAreas: {
+          sectionTitle: '主要コンサルティング領域',
+          areas: [
+            {
+              title: 'ICT戦略策定',
+              icon: 'Target',
+              items: [
+                '国家/産業ICT中長期ロードマップ',
+                'デジタル・AI・データ・クラウド・ネットワーク戦略',
+                'ICT基盤の新産業・新事業・BM発掘',
+              ],
+            },
+            {
+              title: '政策・制度設計',
+              icon: 'FileText',
+              items: [
+                'ICT関連法・制度・規制改善',
+                'データ/AI/プラットフォームガバナンス',
+                '公共ICT政策および投資方向設定',
+              ],
+            },
+            {
+              title: '技術・産業分析',
+              icon: 'BarChart',
+              items: [
+                '技術トレンド分析（AI、5G/6G、クラウド、半導体など）',
+                'グローバル政策・市場ベンチマーキング',
+                '産業エコシステムとバリューチェーン分析',
+              ],
+            },
+            {
+              title: '実行・履行支援',
+              icon: 'Rocket',
+              items: [
+                '政策実行計画とKPI設計',
+                '公共事業企画（RFP、事前妥当性、ロードマップ）',
+                '官民協力モデル設計',
+              ],
+            },
+          ],
+        },
+        outputs: {
+          sectionTitle: 'コンサルティング成果物',
+          items: [
+            'ICT中長期戦略報告書',
+            '政策ロードマップと実行計画',
+            '制度・規制改善案',
+            '産業育成と投資戦略',
+          ],
+        },
+        newBusinessFramework: {
+          sectionTitle: 'ICT新事業発掘フレームワーク',
+          description:
+            '企業の新規事業発掘のためのICT戦略コンサルティングは、単に「新しい技術を導入すること」を超え、技術を通じてビジネスモデルを革新したり、全く新しい市場を創出することを目的としています。',
+          steps: [
+            {
+              step: 1,
+              title: '市場・技術トレンド分析',
+              description:
+                '5G、AI、メタバースなど破壊的技術が産業に及ぼす影響を分析',
+            },
+            {
+              step: 2,
+              title: '内部能力診断',
+              description:
+                '企業が保有する資産（Asset）とICT技術の結合可能性を検討',
+            },
+            {
+              step: 3,
+              title: 'アイデア創出とフィルタリング',
+              description:
+                '数百のアイデアの中から収益性と実行可能性の高い候補を選別',
+            },
+            {
+              step: 4,
+              title: 'PoC設計',
+              description: '実際の事業化前に技術的実装可能性を検証',
+            },
+            {
+              step: 5,
+              title: 'ロードマップ策定',
+              description: '中長期投資計画と組織再編方案の策定',
+            },
+          ],
+        },
+        trends: {
+          sectionTitle: 'ICT戦略コンサルティングトレンド',
+          items: [
+            'AI First戦略（業務自動化、意思決定高度化）',
+            'Cloud Native & Platform',
+            'Data-driven Enterprise',
+            'Open / API / Ecosystem戦略',
+            'NetOps·DevOps·AIOps',
+            'セキュリティ内在化（Security by Design）',
+          ],
+        },
+        industryComparison: {
+          sectionTitle: '産業別ICT戦略比較',
+          industries: [
+            {
+              name: '製造業',
+              coreValue: '生産効率と品質',
+              keyTech: 'IoT、ロボット、デジタルツイン',
+              priority: '工程自動化とコスト削減',
+            },
+            {
+              name: '金融',
+              coreValue: '信頼、規制対応、利便性',
+              keyTech: 'AI、クラウド、ブロックチェーン',
+              priority: 'データ基盤の超個人化サービス',
+            },
+            {
+              name: '流通',
+              coreValue: '顧客体験と物流最適化',
+              keyTech: 'ビッグデータ、AR/VR、配送自動化',
+              priority: 'チャネル統合とラストマイル革新',
             },
           ],
         },

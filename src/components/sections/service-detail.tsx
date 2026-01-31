@@ -336,6 +336,293 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
           </section>
         )}
 
+      {/* Objectives Section - ICT Strategy Only */}
+      {'objectives' in serviceDetails && serviceDetails.objectives && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Target className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Objectives
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.objectives.sectionTitle}
+                </h2>
+              </div>
+              <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
+                {serviceDetails.objectives.items.map(
+                  (item: string, index: number) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm ring-1 ring-slate-200"
+                    >
+                      <Icons.CheckCircle className="h-5 w-5 flex-shrink-0 text-blue-600" />
+                      <span className="text-sm sm:text-base text-slate-700">
+                        {item}
+                      </span>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Consulting Areas Section - ICT Strategy Only */}
+      {'consultingAreas' in serviceDetails &&
+        serviceDetails.consultingAreas && (
+          <section className="py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.Layers className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Consulting Areas
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.consultingAreas.sectionTitle}
+                </h2>
+              </div>
+              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+                {serviceDetails.consultingAreas.areas.map(
+                  (
+                    area: {
+                      title: string;
+                      icon: string;
+                      items: string[];
+                    },
+                    index: number
+                  ) => {
+                    const IconComponent =
+                      Icons[area.icon as keyof typeof Icons] || Icons.Layers;
+                    return (
+                      <div
+                        key={index}
+                        className="rounded-xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
+                      >
+                        <div className="mb-4 flex items-center gap-3">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+                            <IconComponent className="h-5 w-5 text-blue-600" />
+                          </div>
+                          <h3 className="text-lg font-semibold text-slate-900">
+                            {area.title}
+                          </h3>
+                        </div>
+                        <ul className="space-y-2">
+                          {area.items.map((item: string, itemIndex: number) => (
+                            <li
+                              key={itemIndex}
+                              className="flex items-start gap-2 text-sm text-slate-600"
+                            >
+                              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* Outputs Section - ICT Strategy Only */}
+      {'outputs' in serviceDetails && serviceDetails.outputs && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-3xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.FileText className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Deliverables
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.outputs.sectionTitle}
+                </h2>
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                {serviceDetails.outputs.items.map(
+                  (item: string, index: number) => (
+                    <span
+                      key={index}
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm ring-1 ring-slate-200"
+                    >
+                      <Icons.CheckCircle className="h-4 w-4 text-green-500" />
+                      {item}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* New Business Framework Section - ICT Strategy Only */}
+      {'newBusinessFramework' in serviceDetails &&
+        serviceDetails.newBusinessFramework && (
+          <section className="py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-4xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.Rocket className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Framework
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.newBusinessFramework.sectionTitle}
+                  </h2>
+                  <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
+                    {serviceDetails.newBusinessFramework.description}
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  {serviceDetails.newBusinessFramework.steps.map(
+                    (
+                      step: { step: number; title: string; description: string },
+                      index: number
+                    ) => (
+                      <div
+                        key={index}
+                        className="flex items-start gap-4 rounded-lg bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-200"
+                      >
+                        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                          {step.step}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-slate-900">
+                            {step.title}
+                          </h3>
+                          <p className="mt-1 text-sm text-slate-600">
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+      {/* Trends Section - ICT Strategy Only */}
+      {'trends' in serviceDetails && serviceDetails.trends && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.TrendingUp className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Trends
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.trends.sectionTitle}
+                </h2>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                {serviceDetails.trends.items.map(
+                  (item: string, index: number) => (
+                    <span
+                      key={index}
+                      className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 ring-1 ring-blue-200"
+                    >
+                      {item}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Industry Comparison Section - ICT Strategy Only */}
+      {'industryComparison' in serviceDetails &&
+        serviceDetails.industryComparison && (
+          <section className="py-8 sm:py-12 md:py-16">
+            <Container>
+              <div className="mx-auto max-w-5xl">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                    <Icons.BarChart className="h-4 w-4 sm:h-5 sm:w-5" />
+                    <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                      Industry Analysis
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                    {serviceDetails.industryComparison.sectionTitle}
+                  </h2>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[600px] border-collapse">
+                    <thead>
+                      <tr className="border-b border-slate-200 bg-slate-50">
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
+                          산업
+                        </th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
+                          핵심 가치
+                        </th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
+                          주요 기술
+                        </th>
+                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900">
+                          최우선 과제
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {serviceDetails.industryComparison.industries.map(
+                        (
+                          industry: {
+                            name: string;
+                            coreValue: string;
+                            keyTech: string;
+                            priority: string;
+                          },
+                          index: number
+                        ) => (
+                          <tr
+                            key={index}
+                            className="border-b border-slate-100 transition-colors hover:bg-slate-50"
+                          >
+                            <td className="px-4 py-3 text-sm font-medium text-slate-900">
+                              {industry.name}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-slate-600">
+                              {industry.coreValue}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-slate-600">
+                              {industry.keyTech}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-slate-600">
+                              {industry.priority}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-10 sm:py-12 md:py-16">
         <Container>

@@ -3,7 +3,7 @@ import { Footer } from '@/components/layout/footer';
 import { ServiceDetail } from '@/components/sections/service-detail';
 import { notFound } from 'next/navigation';
 
-const validSlugs = ['mvp-development', 'ax-consulting'];
+const validSlugs = ['mvp-development', 'ax-consulting', 'ict-strategy'];
 
 export function generateStaticParams() {
   return validSlugs.map((slug) => ({
@@ -20,11 +20,13 @@ export async function generateMetadata({
   const titles: Record<string, string> = {
     'mvp-development': '사업 아이템 기획 및 MVP 개발 - Brain House',
     'ax-consulting': 'AX 컨설팅 - Brain House',
+    'ict-strategy': 'ICT 전략·정책 컨설팅 - Brain House',
   };
 
   const descriptions: Record<string, string> = {
     'mvp-development': 'Tech Domain별 사업 아이템 기획 및 MVP 개발 서비스',
     'ax-consulting': 'AI Transformation 컨설팅 서비스',
+    'ict-strategy': '정부 R&D 기획부터 ICT 정책연구까지, 미래 경쟁력 확보를 위한 전략 수립',
   };
 
   return {
