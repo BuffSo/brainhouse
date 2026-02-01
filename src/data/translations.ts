@@ -522,6 +522,12 @@ export const translations = {
           hasPage: true,
         },
         {
+          slug: 'ai-algorithm-development',
+          title: '맞춤형 AI 알고리즘 개발',
+          shortTitle: 'AI 알고리즘',
+          hasPage: true,
+        },
+        {
           slug: 'software-development',
           title: '소프트웨어 개발',
           shortTitle: 'SW 개발',
@@ -576,6 +582,10 @@ export const translations = {
         'education-training': {
           icon: 'GraduationCap',
           shortDescription: '벤처 비즈니스 교육 및 ICT 트렌드 특강',
+        },
+        'ai-algorithm-development': {
+          icon: 'Cpu',
+          shortDescription: '자연어 처리, 컴퓨터 비전, 예측 분석 등 맞춤형 AI 개발',
         },
         'software-development': {
           icon: 'Code',
@@ -1845,6 +1855,379 @@ export const translations = {
           ],
         },
       },
+      'ai-algorithm-development': {
+        title: '맞춤형 AI 알고리즘 개발',
+        subtitle: '자연어 처리, 컴퓨터 비전, 오디오 처리 등 고난도 AI 프로젝트 외주를 전문으로 수행합니다.',
+        description: [
+          '기업이 원하는 기술의 종류(LLM, 컴퓨터 비전, 음성 인식 등), 특정 AI 알고리즘과 타겟 시장(B2B 솔루션, 하드웨어, 외주 개발)에 따라 처음부터 끝까지 맞춤형으로 개발해 드립니다.',
+          '금융, 의료 등 특정 산업의 워크플로우를 최적화하는 머신러닝 모델 및 맞춤형 AI 소프트웨어 개발 서비스를 제공합니다.',
+          '제조 및 산업 현장에 특화된 AI 알고리즘을 개발하여 이상 탐지(Anomaly Detection), 공정 최적화 등 딥러닝 기반의 산업용 AI 솔루션을 제공합니다.',
+        ],
+        targetCustomers: [
+          'LLM, 컴퓨터 비전, 음성 인식 등 고난도 AI 기술이 필요한 기업',
+          'B2B AI 솔루션 개발을 원하는 기업',
+          '금융, 의료 등 특정 산업 워크플로우 최적화가 필요한 기업',
+          '제조 및 산업 현장에 이상 탐지, 공정 최적화 AI가 필요한 기업',
+          'AI 하드웨어 연동 솔루션을 개발하려는 기업',
+        ],
+        processSteps: [
+          '요구사항 분석 & 데이터 검토',
+          '알고리즘 설계 & 모델 선정',
+          '학습 데이터 구축 & 전처리',
+          '모델 학습 & 최적화',
+          '배포 & 통합',
+          '모니터링 & 유지보수',
+        ],
+        serviceTypes: {
+          sectionTitle: '서비스 유형',
+          types: [
+            {
+              title: '자연어 처리 (NLP)',
+              icon: 'MessageSquare',
+              target: 'B2B SaaS / 고객 서비스',
+              description: 'Transformer 기반 LLM 파인튜닝, 텍스트 분류, 감성 분석, 챗봇, 문서 요약, 번역 서비스를 개발합니다.',
+              features: [
+                'GPT, BERT 기반 모델 파인튜닝',
+                '기업 맞춤형 챗봇 및 대화형 AI',
+                '문서 자동 분류 및 요약',
+                '다국어 번역 및 텍스트 분석',
+              ],
+            },
+            {
+              title: '컴퓨터 비전',
+              icon: 'Eye',
+              target: '제조 / 의료 / 보안',
+              description: 'CNN, YOLO 기반 이미지 인식, 객체 탐지, 영상 분석, 품질 검사 AI 시스템을 개발합니다.',
+              features: [
+                '이미지 분류 및 객체 탐지',
+                '의료 영상 진단 AI',
+                '제조 품질 검사 자동화',
+                '얼굴 인식 및 보안 시스템',
+              ],
+            },
+            {
+              title: '예측 분석 & 이상 탐지',
+              icon: 'TrendingUp',
+              target: '금융 / 제조 / 물류',
+              description: 'XGBoost, LSTM 등을 활용한 시계열 예측, 수요 예측, 이상 탐지, 사기 적발 시스템을 개발합니다.',
+              features: [
+                '수요 예측 및 재고 최적화',
+                '금융 사기 탐지 (FDS)',
+                '설비 예측 유지보수',
+                '시계열 데이터 분석',
+              ],
+            },
+          ],
+        },
+        aiModels: {
+          sectionTitle: 'AI 모델 및 알고리즘 분류',
+          intro: '머신러닝(ML)은 데이터에서 패턴을 학습하는 포괄적인 기술이고, 딥러닝(DL)은 그중에서도 \'인공신경망\'을 깊게 쌓아 복잡한 데이터를 처리하는 특수한 분야입니다.',
+          machineLearning: {
+            title: '1. 머신러닝 (Machine Learning)',
+            description: '머신러닝은 학습 방식에 따라 크게 세 가지로 나뉩니다.',
+            categories: [
+              {
+                title: '1) 지도 학습 (Supervised Learning)',
+                description: '정답(Label)이 있는 데이터를 학습하여 새로운 데이터의 정답을 예측합니다.',
+                algorithms: [
+                  {
+                    name: '선형 회귀 (Linear Regression)',
+                    description: '수치형 데이터를 예측할 때 사용, 변수 간의 선형 관계를 파악해 수치를 예측합니다.',
+                    examples: '부동산 가격 예측, 광고비 대비 매출, 재고량 예측, 기온과 교통량 관계',
+                  },
+                  {
+                    name: '로지스틱 회귀 (Logistic Regression)',
+                    description: '분류 문제에 사용, 데이터가 특정 범주에 속할 확률을 계산합니다.',
+                    examples: '합격/불합격, 스팸 메일 여부, 광고 클릭률(CTR) 예측',
+                  },
+                  {
+                    name: '결정 트리 (Decision Tree)',
+                    description: '스무고개처럼 질문을 던지며 데이터를 분류합니다.',
+                    examples: '의료 진단, 금융 대출 심사, 고객 이탈 예측, 마케팅 타겟팅',
+                  },
+                  {
+                    name: '랜덤 포레스트 (Random Forest)',
+                    description: '여러 결정 트리를 결합해 정확도를 높인 앙상블 모델',
+                    examples: '금융 사기 탐지, 고객 이탈 예측, 의료 질병 진단, 전자상거래 추천 시스템, 고장예측',
+                  },
+                  {
+                    name: 'SVM (Support Vector Machine)',
+                    description: '데이터를 분류하는 최적의 경계선을 찾습니다.',
+                    examples: '텍스트 분류, 이미지 인식, 바이오인포매틱스(단백질 분류), 채권 등급 평가',
+                  },
+                ],
+              },
+              {
+                title: '○ 앙상블 (Ensemble)',
+                description: '여러 개의 모델을 결합해 더 높은 정확도를 내는 기법입니다.',
+                algorithms: [
+                  {
+                    name: '랜덤 포레스트 (Random Forest)',
+                    description: '여러 개의 의사결정나무를 만들어 다수결로 결과를 정합니다.',
+                    examples: '',
+                  },
+                  {
+                    name: 'XGBoost / LightGBM',
+                    description: '이전 모델의 오차를 보완하며 학습하는 방식(Boosting)으로, 데이터 분석 대회에서 매우 인기가 높습니다.',
+                    examples: '매출 예측',
+                  },
+                ],
+              },
+              {
+                title: '2) 비지도 학습 (Unsupervised Learning)',
+                description: '정답 없이 데이터의 숨겨진 구조나 패턴을 찾아냅니다.',
+                algorithms: [
+                  {
+                    name: 'K-평균 군집화 (K-Means Clustering)',
+                    description: '유사한 특성을 가진 데이터끼리 그룹화합니다.',
+                    examples: '마케팅 고객 세분화, 이미지 색상 압축, 이상 탐지',
+                  },
+                  {
+                    name: 'PCA (주성분 분석)',
+                    description: '데이터의 차원을 축소하여 핵심 정보만 추출합니다.',
+                    examples: '고차원 데이터 시각화, 이미지 압축 및 처리, 신호처리 및 패턴인식',
+                  },
+                ],
+              },
+              {
+                title: '3) 강화 학습 (Reinforcement Learning)',
+                description: '행동에 대한 보상(Reward)을 통해 최적의 행동을 학습합니다. 시행착오를 통해 배우는 방식입니다.',
+                examples: '게임 AI(알파고-바둑), 자율주행, 피지컬 AI, 로봇제어 및 자동화',
+                algorithms: [],
+              },
+            ],
+          },
+          deepLearning: {
+            title: '2. 딥러닝 (Deep Learning)',
+            description: '딥러닝은 인간의 뇌 구조를 모방한 인공신경망(ANN)을 기반으로 합니다. 복잡한 비정형 데이터 처리에 강합니다. 데이터의 특징을 컴퓨터가 스스로 추출한다는 점이 머신러닝과의 가장 큰 차이점입니다.',
+            models: [
+              {
+                name: 'CNN (합성곱 신경망)',
+                description: '이미지의 특징을 추출하는 데 특화되어 있어 이미지 인식에 주로 쓰입니다. 이미지의 특징(선, 면, 형태)을 포착하는 데 뛰어납니다.',
+                examples: '의료 영상 진단 및 분석, 자율주행 자동차 및 드론, 제조 및 품질 검사, 컴퓨터 비전 및 얼굴 인식, 오디오 및 자연어 처리',
+              },
+              {
+                name: 'RNN (순환 신경망)',
+                description: '시계열 데이터나 자연어(텍스트) 처리에 사용 쓰였으나 최근에는 Transformer 구조가 이를 대체하고 있습니다. 이전 단계의 정보를 기억하여 다음 단계에 반영합니다.',
+                examples: '챗봇 및 음성 비서, 수요/매출 예측, 이상탐지, 음성인식, 비디오 분석/분류',
+              },
+              {
+                name: 'GAN (생성적 적대 신경망)',
+                description: '가짜 데이터를 만드는 모델과 이를 판별하는 모델이 경쟁하며 진짜 같은 데이터를 생성합니다.',
+                examples: '딥페이크, 이미지 생성 및 편집, 의료 데이터 생성, 음악 및 음성 합성',
+              },
+              {
+                name: 'Transformer',
+                description: '현재 AI 열풍의 주역. 문장 속 단어 간의 관계를 파악하는 \'Attention\' 메커니즘을 사용하며, ChatGPT의 기반이 된 모델입니다.',
+                examples: '대화형 AI 및 챗봇, 코드 생성 및 자동 완성, 컴퓨터 비전, 멀티모달 AI, 음성인식 및 TTS',
+              },
+            ],
+          },
+          comparison: {
+            title: '3. 머신러닝 vs 딥러닝 비교 요약',
+            items: [
+              { aspect: '데이터 의존도', ml: '상대적으로 적은 데이터로도 가능', dl: '막대한 양의 데이터 필요' },
+              { aspect: '특징 추출', ml: '사람이 직접 특징을 정의해야 함', dl: '알고리즘이 스스로 특징을 학습' },
+              { aspect: '하드웨어', ml: '저사양 PC에서도 구동 가능', dl: '고성능 GPU 필수' },
+              { aspect: '주요 활용', ml: '통계 분석, 마케팅 타겟팅 등', dl: '이미지 인식, 번역, 생성형 AI 등' },
+            ],
+          },
+        },
+        algorithmGuide: {
+          sectionTitle: '4. 알고리즘 선택 가이드',
+          items: [
+            { purpose: '수치 예측 (가격, 매출)', algorithms: '선형 회귀, 랜덤 포레스트' },
+            { purpose: '이미지 분류 및 인식', algorithms: 'CNN, ResNet' },
+            { purpose: '자연어 처리 (번역, 챗봇)', algorithms: 'Transformer (GPT, BERT)' },
+            { purpose: '비정상 탐지 (사기 적발)', algorithms: 'Isolation Forest, AutoEncoder' },
+          ],
+        },
+        industryCases: {
+          sectionTitle: '3) AI 알고리즘의 산업별 적용 사례',
+          cases: [
+            {
+              title: '1. 커머스 및 마케팅 (추천 시스템)',
+              description: '가장 피부로 와닿는 분야입니다. 주로 비지도 학습(Clustering)과 딥러닝이 결합되어 사용됩니다.',
+              icon: 'ShoppingCart',
+              examples: [
+                {
+                  name: '넷플릭스/유튜브',
+                  detail: '사용자가 시청한 콘텐츠의 패턴을 분석해 \'당신이 좋아할 만한 영상\'을 추천합니다. (협업 필터링)'
+                },
+                {
+                  name: '쿠팡/아마존',
+                  detail: '장바구니에 담은 물건과 유사한 구매 패턴을 가진 다른 사용자의 데이터를 대조해 연관 상품을 노출합니다.'
+                },
+              ],
+            },
+            {
+              title: '2. 금융 및 보안 (이상 탐지)',
+              description: '방대한 숫자 데이터를 실시간으로 처리해야 하는 분야입니다.',
+              icon: 'Shield',
+              examples: [
+                {
+                  name: 'FDS (이상거래 탐지 시스템)',
+                  detail: '평소 패턴과 다른 해외 결제나 거액 송금이 발생하면 알고리즘이 이를 즉시 차단합니다. (의사결정나무, XGBoost)'
+                },
+                {
+                  name: '신용 점수 산정',
+                  detail: '대출 신청자의 금융 기록을 바탕으로 부도 확률을 계산합니다. (로지스틱 회귀)'
+                },
+              ],
+            },
+            {
+              title: '3. 의료 및 헬스케어 (이미지 판독)',
+              description: '시각 데이터 분석에 특화된 CNN(합성곱 신경망)이 맹활약하는 분야입니다.',
+              icon: 'Heart',
+              examples: [
+                {
+                  name: '암 진단 AI',
+                  detail: '엑스레이나 MRI 사진을 분석해 의사보다 더 정확하고 빠르게 종양의 위치를 찾아냅니다.'
+                },
+                {
+                  name: '신약 개발',
+                  detail: '수조 개의 화합물 조합 중 질병 치료에 효과가 있을 법한 후보 물질을 예측해 개발 기간을 단축합니다.'
+                },
+              ],
+            },
+            {
+              title: '4. 제조 및 물류 (예측 유지보수)',
+              description: '효율성을 극대화하기 위해 시계열 분석과 강화 학습을 활용합니다.',
+              icon: 'Factory',
+              examples: [
+                {
+                  name: '스마트 팩토리',
+                  detail: '공장 설비의 진동이나 온도 데이터를 분석해 고장이 나기 직전에 미리 알람을 줍니다. (RNN, LSTM)'
+                },
+                {
+                  name: '물류 로봇',
+                  detail: '창고 내에서 가장 최적의 이동 경로를 찾아 물건을 운반합니다. (강화 학습)'
+                },
+              ],
+            },
+            {
+              title: '5. 자율 주행 및 모빌리티',
+              description: '모든 AI 기술의 집약체라고 볼 수 있습니다.',
+              icon: 'Car',
+              examples: [
+                {
+                  name: '사물 인식',
+                  detail: '차량에 달린 카메라와 라이다(LiDAR)를 통해 보행자, 신호등, 주변 차량을 실시간으로 구별합니다. (CNN, YOLO)'
+                },
+                {
+                  name: '주행 판단',
+                  detail: '갑작스러운 돌발 상황에서 멈출지, 피할지를 순식간에 결정합니다.'
+                },
+              ],
+            },
+            {
+              title: '6. AI 활용 네트워크 분야',
+              description: '지능화된 N/W 제어 및 관리 위해 SDN/NFV 기반 플랫폼에 기계학습 기술 접목, 제어와 관리를 자체적으로 수행하는 자율형 네트워크 프레임워크에 강화학습 적용',
+              icon: 'Network',
+              applications: '트래픽 예측/분류/라우팅, 혼잡 제어, 자원 관리(수락 제어, 자원 할당 등), 오류 관리, QoS/QoE, 네트워크 보안/운영/관리 자동화 등',
+              networkingTable: [
+                {
+                  category: '트래픽 예측',
+                  content: '단대단 대역폭 가용성 예측, 링크 부하 및 트래픽 양 예측, 데이터센터 사이의 트래픽 양 예측',
+                  mlTech: '지도: MLP-NN, 지도: SVR, 지도: KBR,LSTM-RNN',
+                },
+                {
+                  category: '트래픽 분류',
+                  content: '포트 번호, 패킷 페이로드, 호스트 동작, 플로우 특징 활용분류',
+                  mlTech: '지도 SVM, 지도 NB, 지도 NBKE, 비지도 HCA, 지도 RF',
+                },
+                {
+                  category: '트래픽 라우팅',
+                  content: '유니캐스트 라우팅, 멀티캐스팅 라우팅, Opportunistic routing, QoS-aware adaptive routing(SDN)',
+                  mlTech: '강화학습 Q-learning, DRQ-learning',
+                },
+                {
+                  category: '혼잡제어',
+                  content: '패킷손실(혼잡 손실, 무선 손실, 경쟁 손실, 재정렬), 혼잡추론',
+                  mlTech: '비지도: EM for HMM, 지도: Bayesian, 지도: SVR',
+                },
+                {
+                  category: '자원관리',
+                  content: '자원할당, 수락제어',
+                  mlTech: '지도 NN, 지도 MLP-NN, 지도 RNN, 강화: Q-learning',
+                },
+                {
+                  category: '결함관리',
+                  content: '결함예측/탐지/국소화(네트워크/CPU/메모리 고장의 예측, 링크 품질 추정',
+                  mlTech: '지도 BN, 지도: DES, SVM, 지도: RNN, 비지도: discrete',
+                },
+                {
+                  category: 'QoS/QoE 관리',
+                  content: '비디오 QoE 향상, QoS/QoE 상관 모델(지연, 지터, 패킷 손실 등)',
+                  mlTech: '지도 HMM/SVM/NN, 강화 Q-learning',
+                },
+                {
+                  category: '네트워크 보안',
+                  content: '오용 탐지, 이상 탐지, 침입탐지',
+                  mlTech: '지도 NN/SVM, 비지도 RF/k-Means, 강화 Q-learning',
+                },
+              ],
+            },
+          ],
+          summary: {
+            title: '산업별 적용사례 요약',
+            items: [
+              { field: '콘텐츠', algorithm: '추천 알고리즘 (RecSys)', example: '넷플릭스 맞춤형 추천, 인스타그램 광고' },
+              { field: '금융', algorithm: '분류 및 회귀 (XGBoost)', example: '카드 부정 사용 탐지, 챗봇 상담' },
+              { field: '의료', algorithm: '이미지 처리 (CNN)', example: '루닛(Lunit) 등 AI 판독 보조 솔루션' },
+              { field: '언어', algorithm: '생성형 AI (Transformer)', example: 'ChatGPT, DeepL 번역, 회의록 요약' },
+            ],
+          },
+        },
+        recentCases: {
+          sectionTitle: '4) 최근 AI 개발 사례',
+          intro: '다양한 머신러닝 모델 6개(LSTM 시계열, GRU 경량화, Transformer 어텐션, Bayesian 확률모델, CNN 패턴인식, XGBoost 부스팅)와 Ensemble 통합 기반 결과 예측',
+          models: [
+            {
+              name: '1. LSTM (Long Short-Term Memory)',
+              subtitle: '시계열의 기록',
+              features: '일반적인 RNN의 고질병인 \'장기 기억 상실(Gradient Vanishing)\' 문제를 해결했습니다.',
+              core: '\'Cell State\'라는 통로를 통해 과거의 정보를 얼마나 유지하고 버릴지 결정합니다. 주가 예측이나 날씨 변화 같은 긴 흐름의 데이터에 강합니다.',
+            },
+            {
+              name: '2. GRU (Gated Recurrent Unit)',
+              subtitle: 'RNN의 다이어트 버전',
+              features: 'LSTM의 복잡한 구조를 단순화하여 경량화한 모델입니다.',
+              core: '게이트 수를 줄여 계산 속도는 빠르면서도 LSTM과 유사한 성능을 냅니다. 자원이 제한된 환경이나 빠른 학습이 필요할 때 유리합니다.',
+            },
+            {
+              name: '3. Transformer',
+              subtitle: '어텐션(Attention)의 혁명',
+              features: '데이터의 순서를 차례대로 읽지 않고 한꺼번에 처리합니다.',
+              core: 'Self-Attention 메커니즘을 통해 문장 내 단어들 간의 관계를 한눈에 파악합니다. 현재 GPT 같은 거대 언어 모델(LLM)의 뿌리가 되는 기술입니다.',
+            },
+            {
+              name: '4. Bayesian (베이지안 확률 모델)',
+              subtitle: '확신하는 통계학자',
+              features: '결과값만 내놓는 게 아니라, 그 결과에 대한 \'불확실성(확률)\'을 함께 계산합니다.',
+              core: '\'사전 지식\'에 새로운 데이터를 더해 \'사후 확률\'을 업데이트합니다. 데이터가 부족하거나 의사결정의 위험도를 평가해야 할 때 필수적입니다.',
+            },
+            {
+              name: '5. CNN (Convolutional Neural Network)',
+              subtitle: '패턴의 포식자',
+              features: '데이터의 공간적인 구조(선, 면, 형체)를 추출하는 데 특화되어 있습니다.',
+              core: '필터를 사용하여 이미지나 신호 데이터에서 반복되는 패턴을 찾아냅니다. 자율주행의 사물 인식이나 의료 영상 분석의 일등 공신입니다.',
+            },
+            {
+              name: '6. XGBoost (Extreme Gradient Boosting)',
+              subtitle: '표 형식 데이터의 강자',
+              features: '여러 개의 약한 결정 트리(Decision Tree)를 순차적으로 결합해 오차를 보정합니다.',
+              core: '병렬 학습과 최적화를 통해 압도적인 속도와 정확도를 자랑합니다. 캐글(Kaggle) 같은 데이터 분석 대회에서 정형 데이터(엑셀 형태) 처리 시 가장 선호되는 알고리즘입니다.',
+            },
+            {
+              name: '7. Ensemble (앙상블)',
+              subtitle: '집단지성의 힘',
+              features: '하나의 강력한 모델을 만들기보다, 여러 모델의 의견을 종합하는 전략입니다.',
+              core: '투표(Voting), 평균(Averaging), 혹은 위에서 언급한 부스팅(Boosting) 기법 등을 사용합니다. 개별 모델의 편향을 줄여 전체적인 안정성과 예측력을 극대화합니다.',
+            },
+          ],
+        },
+      },
       'software-development': {
         title: '소프트웨어 개발',
         subtitle: 'Node.js 기반 풀스택 개발 및 클라우드 인프라 구축',
@@ -2614,6 +2997,12 @@ export const translations = {
           hasPage: true,
         },
         {
+          slug: 'ai-algorithm-development',
+          title: 'Custom AI Algorithm Development',
+          shortTitle: 'AI Algorithm',
+          hasPage: true,
+        },
+        {
           slug: 'software-development',
           title: 'Software Development',
           shortTitle: 'SW Dev',
@@ -2668,6 +3057,10 @@ export const translations = {
         'education-training': {
           icon: 'GraduationCap',
           shortDescription: 'Venture business education and ICT trend lectures',
+        },
+        'ai-algorithm-development': {
+          icon: 'Cpu',
+          shortDescription: 'Custom AI development for NLP, computer vision, and predictive analytics',
         },
         'software-development': {
           icon: 'Code',
@@ -3991,6 +4384,379 @@ export const translations = {
           ],
         },
       },
+      'ai-algorithm-development': {
+        title: 'Custom AI Algorithm Development',
+        subtitle: 'We specialize in high-complexity AI projects including NLP, computer vision, and audio processing.',
+        description: [
+          'We provide end-to-end custom development based on the type of technology (LLM, computer vision, speech recognition, etc.), specific AI algorithms, and target markets (B2B solutions, hardware, outsourced development) that enterprises need.',
+          'We develop machine learning models and custom AI software that optimize workflows in specific industries such as finance and healthcare.',
+          'We develop AI algorithms specialized for manufacturing and industrial sites, providing deep learning-based industrial AI solutions for anomaly detection, process optimization, and more.',
+        ],
+        targetCustomers: [
+          'Companies needing high-complexity AI technologies like LLM, computer vision, and speech recognition',
+          'Companies wanting to develop B2B AI solutions',
+          'Companies needing workflow optimization for specific industries like finance and healthcare',
+          'Companies requiring anomaly detection and process optimization AI for manufacturing and industrial sites',
+          'Companies developing AI-hardware integrated solutions',
+        ],
+        processSteps: [
+          'Requirements Analysis & Data Review',
+          'Algorithm Design & Model Selection',
+          'Training Data Construction & Preprocessing',
+          'Model Training & Optimization',
+          'Deployment & Integration',
+          'Monitoring & Maintenance',
+        ],
+        serviceTypes: {
+          sectionTitle: 'Service Types',
+          types: [
+            {
+              title: 'Natural Language Processing (NLP)',
+              icon: 'MessageSquare',
+              target: 'B2B SaaS / Customer Service',
+              description: 'We develop Transformer-based LLM fine-tuning, text classification, sentiment analysis, chatbots, document summarization, and translation services.',
+              features: [
+                'GPT, BERT-based model fine-tuning',
+                'Enterprise-customized chatbots and conversational AI',
+                'Automatic document classification and summarization',
+                'Multilingual translation and text analysis',
+              ],
+            },
+            {
+              title: 'Computer Vision',
+              icon: 'Eye',
+              target: 'Manufacturing / Healthcare / Security',
+              description: 'We develop CNN, YOLO-based image recognition, object detection, video analysis, and quality inspection AI systems.',
+              features: [
+                'Image classification and object detection',
+                'Medical image diagnosis AI',
+                'Manufacturing quality inspection automation',
+                'Facial recognition and security systems',
+              ],
+            },
+            {
+              title: 'Predictive Analytics & Anomaly Detection',
+              icon: 'TrendingUp',
+              target: 'Finance / Manufacturing / Logistics',
+              description: 'We develop time series prediction, demand forecasting, anomaly detection, and fraud detection systems using XGBoost, LSTM, and more.',
+              features: [
+                'Demand forecasting and inventory optimization',
+                'Financial fraud detection (FDS)',
+                'Predictive equipment maintenance',
+                'Time series data analysis',
+              ],
+            },
+          ],
+        },
+        aiModels: {
+          sectionTitle: 'AI Models and Algorithm Classification',
+          intro: 'Machine Learning (ML) is a comprehensive technology that learns patterns from data, while Deep Learning (DL) is a specialized field that stacks "artificial neural networks" deeply to process complex data.',
+          machineLearning: {
+            title: '1. Machine Learning',
+            description: 'Machine learning is broadly divided into three types based on learning methods.',
+            categories: [
+              {
+                title: '1) Supervised Learning',
+                description: 'Learns from labeled data to predict answers for new data.',
+                algorithms: [
+                  {
+                    name: 'Linear Regression',
+                    description: 'Used for predicting numerical data by identifying linear relationships between variables.',
+                    examples: 'Real estate price prediction, advertising spend vs. sales, inventory prediction, temperature and traffic volume relationships',
+                  },
+                  {
+                    name: 'Logistic Regression',
+                    description: 'Used for classification problems, calculates the probability that data belongs to a specific category.',
+                    examples: 'Pass/fail, spam email detection, click-through rate (CTR) prediction',
+                  },
+                  {
+                    name: 'Decision Tree',
+                    description: 'Classifies data like a game of 20 questions by asking sequential questions.',
+                    examples: 'Medical diagnosis, loan approval, customer churn prediction, marketing targeting',
+                  },
+                  {
+                    name: 'Random Forest',
+                    description: 'An ensemble model that combines multiple decision trees for improved accuracy.',
+                    examples: 'Financial fraud detection, customer churn prediction, medical disease diagnosis, e-commerce recommendation systems, failure prediction',
+                  },
+                  {
+                    name: 'SVM (Support Vector Machine)',
+                    description: 'Finds the optimal boundary line to classify data.',
+                    examples: 'Text classification, image recognition, bioinformatics (protein classification), bond rating evaluation',
+                  },
+                ],
+              },
+              {
+                title: '○ Ensemble',
+                description: 'Techniques that combine multiple models to achieve higher accuracy.',
+                algorithms: [
+                  {
+                    name: 'Random Forest',
+                    description: 'Creates multiple decision trees and determines results by majority vote.',
+                    examples: '',
+                  },
+                  {
+                    name: 'XGBoost / LightGBM',
+                    description: 'Boosting methods that learn by compensating for errors from previous models, very popular in data analysis competitions.',
+                    examples: 'Sales prediction',
+                  },
+                ],
+              },
+              {
+                title: '2) Unsupervised Learning',
+                description: 'Finds hidden structures or patterns in data without labeled answers.',
+                algorithms: [
+                  {
+                    name: 'K-Means Clustering',
+                    description: 'Groups data with similar characteristics together.',
+                    examples: 'Marketing customer segmentation, image color compression, anomaly detection',
+                  },
+                  {
+                    name: 'PCA (Principal Component Analysis)',
+                    description: 'Reduces data dimensions to extract only key information.',
+                    examples: 'High-dimensional data visualization, image compression and processing, signal processing and pattern recognition',
+                  },
+                ],
+              },
+              {
+                title: '3) Reinforcement Learning',
+                description: 'Learns optimal behavior through rewards for actions. A trial-and-error learning approach.',
+                examples: 'Game AI (AlphaGo-Go), autonomous driving, physical AI, robot control and automation',
+                algorithms: [],
+              },
+            ],
+          },
+          deepLearning: {
+            title: '2. Deep Learning',
+            description: 'Deep learning is based on artificial neural networks (ANN) that mimic human brain structure. It excels at processing complex unstructured data. The biggest difference from machine learning is that computers extract features by themselves.',
+            models: [
+              {
+                name: 'CNN (Convolutional Neural Network)',
+                description: 'Specialized in extracting image features, mainly used for image recognition. Excellent at capturing image features (lines, surfaces, shapes).',
+                examples: 'Medical image diagnosis and analysis, autonomous vehicles and drones, manufacturing and quality inspection, computer vision and facial recognition, audio and natural language processing',
+              },
+              {
+                name: 'RNN (Recurrent Neural Network)',
+                description: 'Used for time series data or natural language (text) processing, but recently being replaced by Transformer architecture. Remembers information from previous steps to reflect in next steps.',
+                examples: 'Chatbots and voice assistants, demand/sales prediction, anomaly detection, speech recognition, video analysis/classification',
+              },
+              {
+                name: 'GAN (Generative Adversarial Network)',
+                description: 'A model that creates fake data and a model that discriminates compete to generate realistic data.',
+                examples: 'Deepfakes, image generation and editing, medical data generation, music and voice synthesis',
+              },
+              {
+                name: 'Transformer',
+                description: 'The driving force behind the current AI boom. Uses the "Attention" mechanism to understand relationships between words in sentences, and is the foundation of ChatGPT.',
+                examples: 'Conversational AI and chatbots, code generation and auto-completion, computer vision, multimodal AI, speech recognition and TTS',
+              },
+            ],
+          },
+          comparison: {
+            title: '3. Machine Learning vs Deep Learning Comparison',
+            items: [
+              { aspect: 'Data Dependency', ml: 'Possible with relatively little data', dl: 'Requires massive amounts of data' },
+              { aspect: 'Feature Extraction', ml: 'Humans must define features manually', dl: 'Algorithm learns features by itself' },
+              { aspect: 'Hardware', ml: 'Can run on low-spec PCs', dl: 'High-performance GPU required' },
+              { aspect: 'Main Applications', ml: 'Statistical analysis, marketing targeting, etc.', dl: 'Image recognition, translation, generative AI, etc.' },
+            ],
+          },
+        },
+        algorithmGuide: {
+          sectionTitle: '4. Algorithm Selection Guide',
+          items: [
+            { purpose: 'Numerical Prediction (Price, Sales)', algorithms: 'Linear Regression, Random Forest' },
+            { purpose: 'Image Classification and Recognition', algorithms: 'CNN, ResNet' },
+            { purpose: 'Natural Language Processing (Translation, Chatbot)', algorithms: 'Transformer (GPT, BERT)' },
+            { purpose: 'Anomaly Detection (Fraud Detection)', algorithms: 'Isolation Forest, AutoEncoder' },
+          ],
+        },
+        industryCases: {
+          sectionTitle: 'AI Algorithm Applications by Industry',
+          cases: [
+            {
+              title: '1. Commerce and Marketing (Recommendation Systems)',
+              description: 'The most tangible field. Primarily uses a combination of unsupervised learning (Clustering) and deep learning.',
+              icon: 'ShoppingCart',
+              examples: [
+                {
+                  name: 'Netflix/YouTube',
+                  detail: 'Analyzes patterns of content watched by users to recommend "videos you might like." (Collaborative Filtering)'
+                },
+                {
+                  name: 'Coupang/Amazon',
+                  detail: 'Compares data from users with similar purchase patterns to items in your cart to display related products.'
+                },
+              ],
+            },
+            {
+              title: '2. Finance and Security (Anomaly Detection)',
+              description: 'A field that requires real-time processing of massive numerical data.',
+              icon: 'Shield',
+              examples: [
+                {
+                  name: 'FDS (Fraud Detection System)',
+                  detail: 'When overseas payments or large transfers different from usual patterns occur, algorithms immediately block them. (Decision Tree, XGBoost)'
+                },
+                {
+                  name: 'Credit Score Calculation',
+                  detail: 'Calculates default probability based on loan applicants\' financial records. (Logistic Regression)'
+                },
+              ],
+            },
+            {
+              title: '3. Healthcare (Image Analysis)',
+              description: 'A field where CNN (Convolutional Neural Networks) specialized in visual data analysis excel.',
+              icon: 'Heart',
+              examples: [
+                {
+                  name: 'Cancer Diagnosis AI',
+                  detail: 'Analyzes X-rays and MRI images to find tumor locations faster and more accurately than doctors.'
+                },
+                {
+                  name: 'Drug Development',
+                  detail: 'Predicts candidate compounds likely to be effective in disease treatment from trillions of compound combinations to shorten development time.'
+                },
+              ],
+            },
+            {
+              title: '4. Manufacturing and Logistics (Predictive Maintenance)',
+              description: 'Uses time series analysis and reinforcement learning to maximize efficiency.',
+              icon: 'Factory',
+              examples: [
+                {
+                  name: 'Smart Factory',
+                  detail: 'Analyzes vibration and temperature data from factory equipment to alert just before breakdown. (RNN, LSTM)'
+                },
+                {
+                  name: 'Logistics Robots',
+                  detail: 'Finds the optimal movement path in warehouses to transport goods. (Reinforcement Learning)'
+                },
+              ],
+            },
+            {
+              title: '5. Autonomous Driving and Mobility',
+              description: 'Can be considered the culmination of all AI technologies.',
+              icon: 'Car',
+              examples: [
+                {
+                  name: 'Object Recognition',
+                  detail: 'Distinguishes pedestrians, traffic lights, and surrounding vehicles in real-time through cameras and LiDAR mounted on vehicles. (CNN, YOLO)'
+                },
+                {
+                  name: 'Driving Decisions',
+                  detail: 'Decides instantly whether to stop or avoid in sudden unexpected situations.'
+                },
+              ],
+            },
+            {
+              title: '6. AI-Enabled Networking',
+              description: 'Applying machine learning technology to SDN/NFV-based platforms for intelligent N/W control and management, applying reinforcement learning to autonomous network frameworks that perform control and management on their own.',
+              icon: 'Network',
+              applications: 'Traffic prediction/classification/routing, congestion control, resource management (admission control, resource allocation, etc.), fault management, QoS/QoE, network security/operations/management automation, etc.',
+              networkingTable: [
+                {
+                  category: 'Traffic Prediction',
+                  content: 'End-to-end bandwidth availability prediction, link load and traffic volume prediction, inter-datacenter traffic volume prediction',
+                  mlTech: 'Supervised: MLP-NN, Supervised: SVR, Supervised: KBR, LSTM-RNN',
+                },
+                {
+                  category: 'Traffic Classification',
+                  content: 'Classification using port number, packet payload, host behavior, flow characteristics',
+                  mlTech: 'Supervised SVM, Supervised NB, Supervised NBKE, Unsupervised HCA, Supervised RF',
+                },
+                {
+                  category: 'Traffic Routing',
+                  content: 'Unicast routing, multicast routing, opportunistic routing, QoS-aware adaptive routing (SDN)',
+                  mlTech: 'Reinforcement Q-learning, DRQ-learning',
+                },
+                {
+                  category: 'Congestion Control',
+                  content: 'Packet loss (congestion loss, wireless loss, competition loss, reordering), congestion inference',
+                  mlTech: 'Unsupervised: EM for HMM, Supervised: Bayesian, Supervised: SVR',
+                },
+                {
+                  category: 'Resource Management',
+                  content: 'Resource allocation, admission control',
+                  mlTech: 'Supervised NN, Supervised MLP-NN, Supervised RNN, Reinforcement: Q-learning',
+                },
+                {
+                  category: 'Fault Management',
+                  content: 'Fault prediction/detection/localization (network/CPU/memory failure prediction, link quality estimation)',
+                  mlTech: 'Supervised BN, Supervised: DES, SVM, Supervised: RNN, Unsupervised: discrete',
+                },
+                {
+                  category: 'QoS/QoE Management',
+                  content: 'Video QoE enhancement, QoS/QoE correlation model (delay, jitter, packet loss, etc.)',
+                  mlTech: 'Supervised HMM/SVM/NN, Reinforcement Q-learning',
+                },
+                {
+                  category: 'Network Security',
+                  content: 'Misuse detection, anomaly detection, intrusion detection',
+                  mlTech: 'Supervised NN/SVM, Unsupervised RF/k-Means, Reinforcement Q-learning',
+                },
+              ],
+            },
+          ],
+          summary: {
+            title: 'Industry Application Summary',
+            items: [
+              { field: 'Content', algorithm: 'Recommendation Algorithm (RecSys)', example: 'Netflix personalized recommendations, Instagram ads' },
+              { field: 'Finance', algorithm: 'Classification and Regression (XGBoost)', example: 'Card fraud detection, chatbot consultation' },
+              { field: 'Healthcare', algorithm: 'Image Processing (CNN)', example: 'Lunit and other AI diagnostic assistance solutions' },
+              { field: 'Language', algorithm: 'Generative AI (Transformer)', example: 'ChatGPT, DeepL translation, meeting summary' },
+            ],
+          },
+        },
+        recentCases: {
+          sectionTitle: 'Recent AI Development Cases',
+          intro: 'Result prediction based on 6 diverse machine learning models (LSTM time series, GRU lightweight, Transformer attention, Bayesian probability model, CNN pattern recognition, XGBoost boosting) with Ensemble integration',
+          models: [
+            {
+              name: '1. LSTM (Long Short-Term Memory)',
+              subtitle: 'Recorder of Time Series',
+              features: 'Solved the chronic "long-term memory loss (Gradient Vanishing)" problem of general RNNs.',
+              core: 'Decides how much past information to retain or discard through a pathway called "Cell State." Strong for long-flow data like stock price prediction or weather changes.',
+            },
+            {
+              name: '2. GRU (Gated Recurrent Unit)',
+              subtitle: 'Diet Version of RNN',
+              features: 'A lightweight model that simplified the complex structure of LSTM.',
+              core: 'Achieves similar performance to LSTM with faster computation by reducing the number of gates. Advantageous in resource-limited environments or when fast training is needed.',
+            },
+            {
+              name: '3. Transformer',
+              subtitle: 'Revolution of Attention',
+              features: 'Processes data all at once instead of reading in order.',
+              core: 'Grasps relationships between words in sentences at a glance through the Self-Attention mechanism. The root technology behind large language models (LLM) like GPT.',
+            },
+            {
+              name: '4. Bayesian (Bayesian Probability Model)',
+              subtitle: 'Confident Statistician',
+              features: 'Calculates not just the result but also the "uncertainty (probability)" of that result.',
+              core: 'Updates "posterior probability" by adding new data to "prior knowledge." Essential when data is scarce or when evaluating decision-making risks.',
+            },
+            {
+              name: '5. CNN (Convolutional Neural Network)',
+              subtitle: 'Predator of Patterns',
+              features: 'Specialized in extracting spatial structures (lines, surfaces, shapes) from data.',
+              core: 'Uses filters to find repeating patterns in image or signal data. The hero of object recognition in autonomous driving and medical image analysis.',
+            },
+            {
+              name: '6. XGBoost (Extreme Gradient Boosting)',
+              subtitle: 'Champion of Tabular Data',
+              features: 'Corrects errors by sequentially combining multiple weak decision trees.',
+              core: 'Boasts overwhelming speed and accuracy through parallel learning and optimization. The most preferred algorithm for processing structured data (Excel format) in data analysis competitions like Kaggle.',
+            },
+            {
+              name: '7. Ensemble',
+              subtitle: 'Power of Collective Intelligence',
+              features: 'A strategy of combining opinions from multiple models rather than creating one powerful model.',
+              core: 'Uses voting, averaging, or boosting techniques mentioned above. Maximizes overall stability and predictive power by reducing bias of individual models.',
+            },
+          ],
+        },
+      },
       'software-development': {
         title: 'Software Development',
         subtitle: 'Full-stack Development with Node.js and Cloud Infrastructure',
@@ -4757,6 +5523,12 @@ export const translations = {
           hasPage: true,
         },
         {
+          slug: 'ai-algorithm-development',
+          title: 'カスタムAIアルゴリズム開発',
+          shortTitle: 'AIアルゴリズム',
+          hasPage: true,
+        },
+        {
           slug: 'software-development',
           title: 'ソフトウェア開発',
           shortTitle: 'SW開発',
@@ -4811,6 +5583,10 @@ export const translations = {
         'education-training': {
           icon: 'GraduationCap',
           shortDescription: 'ベンチャービジネス教育およびICTトレンド特別講義',
+        },
+        'ai-algorithm-development': {
+          icon: 'Cpu',
+          shortDescription: '自然言語処理、コンピュータビジョン、予測分析などカスタムAI開発',
         },
         'software-development': {
           icon: 'Code',
@@ -6097,6 +6873,379 @@ export const translations = {
                   description: 'AIが企業の核心ビジネスモデルそのものになる',
                 },
               ],
+            },
+          ],
+        },
+      },
+      'ai-algorithm-development': {
+        title: 'カスタムAIアルゴリズム開発',
+        subtitle: '自然言語処理、コンピュータビジョン、オーディオ処理など高難度AIプロジェクトを専門的に遂行します。',
+        description: [
+          '企業が求める技術の種類（LLM、コンピュータビジョン、音声認識など）、特定のAIアルゴリズムとターゲット市場（B2Bソリューション、ハードウェア、受託開発）に応じて、最初から最後までカスタム開発いたします。',
+          '金融、医療など特定産業のワークフローを最適化するマシンラーニングモデルおよびカスタムAIソフトウェア開発サービスを提供します。',
+          '製造および産業現場に特化したAIアルゴリズムを開発し、異常検知（Anomaly Detection）、工程最適化などディープラーニングベースの産業用AIソリューションを提供します。',
+        ],
+        targetCustomers: [
+          'LLM、コンピュータビジョン、音声認識など高難度AI技術が必要な企業',
+          'B2B AIソリューション開発を希望する企業',
+          '金融、医療など特定産業ワークフロー最適化が必要な企業',
+          '製造および産業現場に異常検知、工程最適化AIが必要な企業',
+          'AIハードウェア連動ソリューションを開発しようとする企業',
+        ],
+        processSteps: [
+          '要求事項分析＆データ検討',
+          'アルゴリズム設計＆モデル選定',
+          '学習データ構築＆前処理',
+          'モデル学習＆最適化',
+          'デプロイ＆統合',
+          'モニタリング＆保守',
+        ],
+        serviceTypes: {
+          sectionTitle: 'サービスタイプ',
+          types: [
+            {
+              title: '自然言語処理（NLP）',
+              icon: 'MessageSquare',
+              target: 'B2B SaaS / カスタマーサービス',
+              description: 'TransformerベースLLMファインチューニング、テキスト分類、感情分析、チャットボット、文書要約、翻訳サービスを開発します。',
+              features: [
+                'GPT、BERTベースモデルファインチューニング',
+                '企業カスタマイズチャットボットおよび対話型AI',
+                '文書自動分類および要約',
+                '多言語翻訳およびテキスト分析',
+              ],
+            },
+            {
+              title: 'コンピュータビジョン',
+              icon: 'Eye',
+              target: '製造 / 医療 / セキュリティ',
+              description: 'CNN、YOLOベース画像認識、物体検出、映像分析、品質検査AIシステムを開発します。',
+              features: [
+                '画像分類および物体検出',
+                '医療映像診断AI',
+                '製造品質検査自動化',
+                '顔認識およびセキュリティシステム',
+              ],
+            },
+            {
+              title: '予測分析＆異常検知',
+              icon: 'TrendingUp',
+              target: '金融 / 製造 / 物流',
+              description: 'XGBoost、LSTMなどを活用した時系列予測、需要予測、異常検知、詐欺検出システムを開発します。',
+              features: [
+                '需要予測および在庫最適化',
+                '金融詐欺検知（FDS）',
+                '設備予測メンテナンス',
+                '時系列データ分析',
+              ],
+            },
+          ],
+        },
+        aiModels: {
+          sectionTitle: 'AIモデルおよびアルゴリズム分類',
+          intro: 'マシンラーニング（ML）はデータからパターンを学習する包括的な技術であり、ディープラーニング（DL）はその中でも「人工神経網」を深く積み重ねて複雑なデータを処理する特殊な分野です。',
+          machineLearning: {
+            title: '1. マシンラーニング（Machine Learning）',
+            description: 'マシンラーニングは学習方式によって大きく3つに分かれます。',
+            categories: [
+              {
+                title: '1) 教師あり学習（Supervised Learning）',
+                description: '正解（Label）があるデータを学習して新しいデータの正解を予測します。',
+                algorithms: [
+                  {
+                    name: '線形回帰（Linear Regression）',
+                    description: '数値型データを予測する際に使用、変数間の線形関係を把握して数値を予測します。',
+                    examples: '不動産価格予測、広告費対売上、在庫量予測、気温と交通量の関係',
+                  },
+                  {
+                    name: 'ロジスティック回帰（Logistic Regression）',
+                    description: '分類問題に使用、データが特定カテゴリに属する確率を計算します。',
+                    examples: '合格/不合格、スパムメール判定、広告クリック率（CTR）予測',
+                  },
+                  {
+                    name: '決定木（Decision Tree）',
+                    description: '20の質問ゲームのように質問を投げかけながらデータを分類します。',
+                    examples: '医療診断、金融ローン審査、顧客離脱予測、マーケティングターゲティング',
+                  },
+                  {
+                    name: 'ランダムフォレスト（Random Forest）',
+                    description: '複数の決定木を組み合わせて精度を高めたアンサンブルモデル',
+                    examples: '金融詐欺検知、顧客離脱予測、医療疾病診断、Eコマース推薦システム、故障予測',
+                  },
+                  {
+                    name: 'SVM（Support Vector Machine）',
+                    description: 'データを分類する最適な境界線を見つけます。',
+                    examples: 'テキスト分類、画像認識、バイオインフォマティクス（タンパク質分類）、債券格付け評価',
+                  },
+                ],
+              },
+              {
+                title: '○ アンサンブル（Ensemble）',
+                description: '複数のモデルを組み合わせてより高い精度を出す技法です。',
+                algorithms: [
+                  {
+                    name: 'ランダムフォレスト（Random Forest）',
+                    description: '複数の決定木を作り多数決で結果を決定します。',
+                    examples: '',
+                  },
+                  {
+                    name: 'XGBoost / LightGBM',
+                    description: '以前のモデルの誤差を補完しながら学習する方式（Boosting）で、データ分析競技会で非常に人気があります。',
+                    examples: '売上予測',
+                  },
+                ],
+              },
+              {
+                title: '2) 教師なし学習（Unsupervised Learning）',
+                description: '正解なしでデータの隠れた構造やパターンを見つけます。',
+                algorithms: [
+                  {
+                    name: 'K-平均クラスタリング（K-Means Clustering）',
+                    description: '類似した特性を持つデータ同士をグループ化します。',
+                    examples: 'マーケティング顧客セグメンテーション、画像色圧縮、異常検知',
+                  },
+                  {
+                    name: 'PCA（主成分分析）',
+                    description: 'データの次元を縮小して核心情報のみを抽出します。',
+                    examples: '高次元データ可視化、画像圧縮および処理、信号処理およびパターン認識',
+                  },
+                ],
+              },
+              {
+                title: '3) 強化学習（Reinforcement Learning）',
+                description: '行動に対する報酬（Reward）を通じて最適な行動を学習します。試行錯誤を通じて学ぶ方式です。',
+                examples: 'ゲームAI（AlphaGo-囲碁）、自動運転、フィジカルAI、ロボット制御および自動化',
+                algorithms: [],
+              },
+            ],
+          },
+          deepLearning: {
+            title: '2. ディープラーニング（Deep Learning）',
+            description: 'ディープラーニングは人間の脳構造を模倣した人工神経網（ANN）を基盤とします。複雑な非定型データ処理に強いです。データの特徴をコンピュータが自ら抽出するという点がマシンラーニングとの最大の違いです。',
+            models: [
+              {
+                name: 'CNN（畳み込みニューラルネットワーク）',
+                description: '画像の特徴を抽出することに特化しており、画像認識に主に使われます。画像の特徴（線、面、形態）を捉えることに優れています。',
+                examples: '医療映像診断および分析、自動運転車およびドローン、製造および品質検査、コンピュータビジョンおよび顔認識、オーディオおよび自然言語処理',
+              },
+              {
+                name: 'RNN（リカレントニューラルネットワーク）',
+                description: '時系列データや自然言語（テキスト）処理に使用されましたが、最近はTransformer構造がこれを代替しています。以前のステップの情報を記憶して次のステップに反映します。',
+                examples: 'チャットボットおよび音声アシスタント、需要/売上予測、異常検知、音声認識、ビデオ分析/分類',
+              },
+              {
+                name: 'GAN（生成敵対ネットワーク）',
+                description: '偽データを作るモデルとそれを判別するモデルが競争しながら本物のようなデータを生成します。',
+                examples: 'ディープフェイク、画像生成および編集、医療データ生成、音楽および音声合成',
+              },
+              {
+                name: 'Transformer',
+                description: '現在のAIブームの主役。文章内の単語間の関係を把握する「Attention」メカニズムを使用し、ChatGPTの基盤となったモデルです。',
+                examples: '対話型AIおよびチャットボット、コード生成および自動補完、コンピュータビジョン、マルチモーダルAI、音声認識およびTTS',
+              },
+            ],
+          },
+          comparison: {
+            title: '3. マシンラーニング vs ディープラーニング比較要約',
+            items: [
+              { aspect: 'データ依存度', ml: '比較的少ないデータでも可能', dl: '膨大な量のデータが必要' },
+              { aspect: '特徴抽出', ml: '人が直接特徴を定義する必要あり', dl: 'アルゴリズムが自ら特徴を学習' },
+              { aspect: 'ハードウェア', ml: '低スペックPCでも駆動可能', dl: '高性能GPU必須' },
+              { aspect: '主要活用', ml: '統計分析、マーケティングターゲティングなど', dl: '画像認識、翻訳、生成AIなど' },
+            ],
+          },
+        },
+        algorithmGuide: {
+          sectionTitle: '4. アルゴリズム選択ガイド',
+          items: [
+            { purpose: '数値予測（価格、売上）', algorithms: '線形回帰、ランダムフォレスト' },
+            { purpose: '画像分類および認識', algorithms: 'CNN、ResNet' },
+            { purpose: '自然言語処理（翻訳、チャットボット）', algorithms: 'Transformer（GPT、BERT）' },
+            { purpose: '異常検知（詐欺検出）', algorithms: 'Isolation Forest、AutoEncoder' },
+          ],
+        },
+        industryCases: {
+          sectionTitle: '3) AIアルゴリズムの産業別適用事例',
+          cases: [
+            {
+              title: '1. コマースおよびマーケティング（推薦システム）',
+              description: '最も身近に感じられる分野です。主に教師なし学習（Clustering）とディープラーニングが組み合わされて使用されます。',
+              icon: 'ShoppingCart',
+              examples: [
+                {
+                  name: 'Netflix/YouTube',
+                  detail: 'ユーザーが視聴したコンテンツのパターンを分析して「あなたが好きそうな動画」を推薦します。（協調フィルタリング）'
+                },
+                {
+                  name: 'Coupang/Amazon',
+                  detail: 'カートに入れた商品と類似した購買パターンを持つ他のユーザーのデータを照合して関連商品を表示します。'
+                },
+              ],
+            },
+            {
+              title: '2. 金融およびセキュリティ（異常検知）',
+              description: '膨大な数値データをリアルタイムで処理する必要がある分野です。',
+              icon: 'Shield',
+              examples: [
+                {
+                  name: 'FDS（異常取引検知システム）',
+                  detail: '普段のパターンと異なる海外決済や高額送金が発生すると、アルゴリズムがこれを即座にブロックします。（決定木、XGBoost）'
+                },
+                {
+                  name: '信用スコア算定',
+                  detail: 'ローン申請者の金融記録を基に債務不履行確率を計算します。（ロジスティック回帰）'
+                },
+              ],
+            },
+            {
+              title: '3. 医療およびヘルスケア（画像判読）',
+              description: '視覚データ分析に特化したCNN（畳み込みニューラルネットワーク）が活躍する分野です。',
+              icon: 'Heart',
+              examples: [
+                {
+                  name: 'がん診断AI',
+                  detail: 'X線やMRI写真を分析して医師よりも正確かつ迅速に腫瘍の位置を見つけます。'
+                },
+                {
+                  name: '新薬開発',
+                  detail: '数兆個の化合物組み合わせの中から疾病治療に効果がありそうな候補物質を予測して開発期間を短縮します。'
+                },
+              ],
+            },
+            {
+              title: '4. 製造および物流（予測メンテナンス）',
+              description: '効率性を最大化するために時系列分析と強化学習を活用します。',
+              icon: 'Factory',
+              examples: [
+                {
+                  name: 'スマートファクトリー',
+                  detail: '工場設備の振動や温度データを分析して故障する直前に事前アラームを出します。（RNN、LSTM）'
+                },
+                {
+                  name: '物流ロボット',
+                  detail: '倉庫内で最適な移動経路を見つけて物品を運搬します。（強化学習）'
+                },
+              ],
+            },
+            {
+              title: '5. 自動運転およびモビリティ',
+              description: 'すべてのAI技術の集約体といえます。',
+              icon: 'Car',
+              examples: [
+                {
+                  name: '物体認識',
+                  detail: '車両に搭載されたカメラとLiDARを通じて歩行者、信号機、周辺車両をリアルタイムで区別します。（CNN、YOLO）'
+                },
+                {
+                  name: '走行判断',
+                  detail: '突然の突発状況で止まるか避けるかを瞬時に決定します。'
+                },
+              ],
+            },
+            {
+              title: '6. AI活用ネットワーク分野',
+              description: '知能化されたN/W制御および管理のためSDN/NFVベースプラットフォームに機械学習技術を接目、制御と管理を自体的に遂行する自律型ネットワークフレームワークに強化学習を適用',
+              icon: 'Network',
+              applications: 'トラフィック予測/分類/ルーティング、輻輳制御、リソース管理（受付制御、リソース割り当てなど）、障害管理、QoS/QoE、ネットワークセキュリティ/運用/管理自動化など',
+              networkingTable: [
+                {
+                  category: 'トラフィック予測',
+                  content: 'エンドツーエンド帯域幅可用性予測、リンク負荷およびトラフィック量予測、データセンター間トラフィック量予測',
+                  mlTech: '教師あり: MLP-NN、教師あり: SVR、教師あり: KBR、LSTM-RNN',
+                },
+                {
+                  category: 'トラフィック分類',
+                  content: 'ポート番号、パケットペイロード、ホスト動作、フロー特徴活用分類',
+                  mlTech: '教師あり SVM、教師あり NB、教師あり NBKE、教師なし HCA、教師あり RF',
+                },
+                {
+                  category: 'トラフィックルーティング',
+                  content: 'ユニキャストルーティング、マルチキャストルーティング、Opportunistic routing、QoS-aware adaptive routing（SDN）',
+                  mlTech: '強化学習 Q-learning、DRQ-learning',
+                },
+                {
+                  category: '輻輳制御',
+                  content: 'パケットロス（輻輳ロス、無線ロス、競争ロス、再整列）、輻輳推論',
+                  mlTech: '教師なし: EM for HMM、教師あり: Bayesian、教師あり: SVR',
+                },
+                {
+                  category: 'リソース管理',
+                  content: 'リソース割り当て、受付制御',
+                  mlTech: '教師あり NN、教師あり MLP-NN、教師あり RNN、強化: Q-learning',
+                },
+                {
+                  category: '障害管理',
+                  content: '障害予測/検出/局所化（ネットワーク/CPU/メモリ故障の予測、リンク品質推定',
+                  mlTech: '教師あり BN、教師あり: DES、SVM、教師あり: RNN、教師なし: discrete',
+                },
+                {
+                  category: 'QoS/QoE管理',
+                  content: 'ビデオQoE向上、QoS/QoE相関モデル（遅延、ジッター、パケットロスなど）',
+                  mlTech: '教師あり HMM/SVM/NN、強化 Q-learning',
+                },
+                {
+                  category: 'ネットワークセキュリティ',
+                  content: '誤用検出、異常検知、侵入検知',
+                  mlTech: '教師あり NN/SVM、教師なし RF/k-Means、強化 Q-learning',
+                },
+              ],
+            },
+          ],
+          summary: {
+            title: '産業別適用事例要約',
+            items: [
+              { field: 'コンテンツ', algorithm: '推薦アルゴリズム（RecSys）', example: 'Netflixカスタマイズ推薦、Instagram広告' },
+              { field: '金融', algorithm: '分類および回帰（XGBoost）', example: 'カード不正使用検知、チャットボット相談' },
+              { field: '医療', algorithm: '画像処理（CNN）', example: 'Lunit（ルニット）などAI判読補助ソリューション' },
+              { field: '言語', algorithm: '生成AI（Transformer）', example: 'ChatGPT、DeepL翻訳、会議録要約' },
+            ],
+          },
+        },
+        recentCases: {
+          sectionTitle: '4) 最近のAI開発事例',
+          intro: '多様なマシンラーニングモデル6個（LSTM時系列、GRU軽量化、Transformerアテンション、Bayesian確率モデル、CNNパターン認識、XGBoostブースティング）とEnsemble統合ベースの結果予測',
+          models: [
+            {
+              name: '1. LSTM（Long Short-Term Memory）',
+              subtitle: '時系列の記録',
+              features: '一般的なRNNの慢性病である「長期記憶喪失（Gradient Vanishing）」問題を解決しました。',
+              core: '「Cell State」という通路を通じて過去の情報をどれだけ維持し捨てるかを決定します。株価予測や天気変化のような長い流れのデータに強いです。',
+            },
+            {
+              name: '2. GRU（Gated Recurrent Unit）',
+              subtitle: 'RNNのダイエットバージョン',
+              features: 'LSTMの複雑な構造を単純化して軽量化したモデルです。',
+              core: 'ゲート数を減らして計算速度は速いながらもLSTMと類似した性能を出します。リソースが制限された環境や高速学習が必要な時に有利です。',
+            },
+            {
+              name: '3. Transformer',
+              subtitle: 'アテンション（Attention）の革命',
+              features: 'データの順序を順番に読まず一度に処理します。',
+              core: 'Self-Attentionメカニズムを通じて文章内の単語間の関係を一目で把握します。現在GPTのような巨大言語モデル（LLM）のルーツとなる技術です。',
+            },
+            {
+              name: '4. Bayesian（ベイズ確率モデル）',
+              subtitle: '確信する統計学者',
+              features: '結果値だけを出すのではなく、その結果に対する「不確実性（確率）」を一緒に計算します。',
+              core: '「事前知識」に新しいデータを加えて「事後確率」をアップデートします。データが不足している場合や意思決定のリスクを評価する必要がある時に必須です。',
+            },
+            {
+              name: '5. CNN（Convolutional Neural Network）',
+              subtitle: 'パターンの捕食者',
+              features: 'データの空間的な構造（線、面、形体）を抽出することに特化しています。',
+              core: 'フィルタを使用して画像や信号データで繰り返されるパターンを見つけます。自動運転の物体認識や医療映像分析の立役者です。',
+            },
+            {
+              name: '6. XGBoost（Extreme Gradient Boosting）',
+              subtitle: '表形式データの強者',
+              features: '複数の弱い決定木（Decision Tree）を順次組み合わせて誤差を補正します。',
+              core: '並列学習と最適化を通じて圧倒的なスピードと精度を誇ります。Kaggleのようなデータ分析競技会で定型データ（Excel形式）処理時に最も好まれるアルゴリズムです。',
+            },
+            {
+              name: '7. Ensemble（アンサンブル）',
+              subtitle: '集団知性の力',
+              features: '一つの強力なモデルを作るよりも、複数のモデルの意見を総合する戦略です。',
+              core: '投票（Voting）、平均（Averaging）、または上記のブースティング（Boosting）技法などを使用します。個別モデルの偏りを減らして全体的な安定性と予測力を最大化します。',
             },
           ],
         },

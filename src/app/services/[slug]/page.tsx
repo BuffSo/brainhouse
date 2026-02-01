@@ -10,6 +10,7 @@ const validSlugs = [
   'tech-commercialization',
   'startup-investment',
   'education-training',
+  'ai-algorithm-development',
   'software-development',
 ];
 
@@ -32,6 +33,7 @@ export async function generateMetadata({
     'tech-commercialization': '기술사업화 컨설팅 - Brain House',
     'startup-investment': '창업·투자 컨설팅 - Brain House',
     'education-training': '교육 및 특강 - Brain House',
+    'ai-algorithm-development': '맞춤형 AI 알고리즘 개발 - Brain House',
     'software-development': '소프트웨어 개발 - Brain House',
   };
 
@@ -46,6 +48,8 @@ export async function generateMetadata({
       '예비창업자부터 스케일업 중견기업까지 성장 단계별 맞춤형 멘토링·컨설팅과 투자 유치 지원',
     'education-training':
       '벤처 비즈니스 교육·워크샵 및 ICT 트렌드 특강 서비스',
+    'ai-algorithm-development':
+      '자연어 처리, 컴퓨터 비전, 오디오 처리 등 고난도 AI 프로젝트 맞춤형 개발',
     'software-development':
       'Node.js, Next.js, AWS 기반 MVP 개발 및 기업 웹서비스 개발',
   };
