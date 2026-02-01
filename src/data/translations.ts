@@ -1959,17 +1959,17 @@ export const translations = {
               },
               {
                 title: '○ 앙상블 (Ensemble)',
-                description: '여러 개의 모델을 결합해 더 높은 정확도를 내는 기법입니다.',
+                description: '여러 개의 약한 모델을 결합해 단일 모델보다 더 높은 정확도와 안정성을 확보하는 기법입니다. 크게 배깅(Bagging)과 부스팅(Boosting) 방식으로 나뉩니다.',
                 algorithms: [
                   {
-                    name: '랜덤 포레스트 (Random Forest)',
-                    description: '여러 개의 의사결정나무를 만들어 다수결로 결과를 정합니다.',
-                    examples: '',
+                    name: '배깅 (Bagging)',
+                    description: '데이터를 여러 번 샘플링하여 각각 독립적인 모델을 학습시킨 뒤, 결과를 투표(분류) 또는 평균(회귀)으로 결합합니다. 대표적으로 랜덤 포레스트가 있습니다.',
+                    examples: '이상치에 강한 예측, 과적합 방지',
                   },
                   {
-                    name: 'XGBoost / LightGBM',
-                    description: '이전 모델의 오차를 보완하며 학습하는 방식(Boosting)으로, 데이터 분석 대회에서 매우 인기가 높습니다.',
-                    examples: '매출 예측',
+                    name: '부스팅 (Boosting)',
+                    description: '이전 모델이 틀린 부분에 가중치를 두어 순차적으로 학습하는 방식입니다. XGBoost, LightGBM, CatBoost 등이 대표적이며, 캐글(Kaggle) 대회에서 가장 많이 사용됩니다.',
+                    examples: '정형 데이터 예측, 금융 사기 탐지, 고객 이탈 예측',
                   },
                 ],
               },
@@ -2043,7 +2043,7 @@ export const translations = {
           ],
         },
         industryCases: {
-          sectionTitle: '3) AI 알고리즘의 산업별 적용 사례',
+          sectionTitle: 'AI 알고리즘의 산업별 적용 사례',
           cases: [
             {
               title: '1. 커머스 및 마케팅 (추천 시스템)',
@@ -2180,7 +2180,7 @@ export const translations = {
           },
         },
         recentCases: {
-          sectionTitle: '4) 최근 AI 개발 사례',
+          sectionTitle: '최근 AI 개발 사례',
           intro: '다양한 머신러닝 모델 6개(LSTM 시계열, GRU 경량화, Transformer 어텐션, Bayesian 확률모델, CNN 패턴인식, XGBoost 부스팅)와 Ensemble 통합 기반 결과 예측',
           models: [
             {
@@ -4488,17 +4488,17 @@ export const translations = {
               },
               {
                 title: '○ Ensemble',
-                description: 'Techniques that combine multiple models to achieve higher accuracy.',
+                description: 'Techniques that combine multiple weak models to achieve higher accuracy and stability than single models. Broadly divided into Bagging and Boosting approaches.',
                 algorithms: [
                   {
-                    name: 'Random Forest',
-                    description: 'Creates multiple decision trees and determines results by majority vote.',
-                    examples: '',
+                    name: 'Bagging',
+                    description: 'Trains independent models on multiple data samples, then combines results through voting (classification) or averaging (regression). Random Forest is a representative example.',
+                    examples: 'Robust prediction against outliers, overfitting prevention',
                   },
                   {
-                    name: 'XGBoost / LightGBM',
-                    description: 'Boosting methods that learn by compensating for errors from previous models, very popular in data analysis competitions.',
-                    examples: 'Sales prediction',
+                    name: 'Boosting',
+                    description: 'Sequential learning that focuses on errors from previous models. XGBoost, LightGBM, and CatBoost are representative examples and most commonly used in Kaggle competitions.',
+                    examples: 'Tabular data prediction, fraud detection, customer churn prediction',
                   },
                 ],
               },
@@ -6981,17 +6981,17 @@ export const translations = {
               },
               {
                 title: '○ アンサンブル（Ensemble）',
-                description: '複数のモデルを組み合わせてより高い精度を出す技法です。',
+                description: '複数の弱いモデルを組み合わせて、単一モデルよりも高い精度と安定性を確保する技法です。大きくバギング（Bagging）とブースティング（Boosting）方式に分かれます。',
                 algorithms: [
                   {
-                    name: 'ランダムフォレスト（Random Forest）',
-                    description: '複数の決定木を作り多数決で結果を決定します。',
-                    examples: '',
+                    name: 'バギング（Bagging）',
+                    description: 'データを複数回サンプリングしてそれぞれ独立したモデルを学習させた後、結果を投票（分類）または平均（回帰）で結合します。代表的にランダムフォレストがあります。',
+                    examples: '外れ値に強い予測、過学習防止',
                   },
                   {
-                    name: 'XGBoost / LightGBM',
-                    description: '以前のモデルの誤差を補完しながら学習する方式（Boosting）で、データ分析競技会で非常に人気があります。',
-                    examples: '売上予測',
+                    name: 'ブースティング（Boosting）',
+                    description: '以前のモデルが間違えた部分に重みを置いて順次学習する方式です。XGBoost、LightGBM、CatBoostなどが代表的で、Kaggle競技会で最も多く使用されます。',
+                    examples: '定型データ予測、金融詐欺検出、顧客離脱予測',
                   },
                 ],
               },
@@ -7065,7 +7065,7 @@ export const translations = {
           ],
         },
         industryCases: {
-          sectionTitle: '3) AIアルゴリズムの産業別適用事例',
+          sectionTitle: 'AIアルゴリズムの産業別適用事例',
           cases: [
             {
               title: '1. コマースおよびマーケティング（推薦システム）',
@@ -7202,7 +7202,7 @@ export const translations = {
           },
         },
         recentCases: {
-          sectionTitle: '4) 最近のAI開発事例',
+          sectionTitle: '最近のAI開発事例',
           intro: '多様なマシンラーニングモデル6個（LSTM時系列、GRU軽量化、Transformerアテンション、Bayesian確率モデル、CNNパターン認識、XGBoostブースティング）とEnsemble統合ベースの結果予測',
           models: [
             {

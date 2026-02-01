@@ -423,11 +423,16 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                         examples?: string;
                       },
                       catIndex: number
-                    ) => (
-                      <div key={catIndex} className="rounded-lg bg-slate-50 p-3 sm:p-4">
-                        <h4 className="mb-1.5 sm:mb-2 text-sm sm:text-base font-semibold text-slate-900">
-                          {category.title}
-                        </h4>
+                    ) => {
+                      const isSubCategory = category.title.startsWith('○');
+                      return (
+                        <div
+                          key={catIndex}
+                          className={`rounded-lg bg-slate-50 p-3 sm:p-4 ${isSubCategory ? 'ml-3 sm:ml-4 border-l-2 border-blue-200' : ''}`}
+                        >
+                          <h4 className={`mb-1.5 sm:mb-2 font-semibold text-slate-900 ${isSubCategory ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'}`}>
+                            {category.title}
+                          </h4>
                         <p className="mb-2 sm:mb-3 text-xs sm:text-sm text-slate-600">
                           {category.description}
                         </p>
@@ -458,8 +463,9 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                             ))}
                           </div>
                         )}
-                      </div>
-                    )
+                        </div>
+                      );
+                    }
                   )}
                 </div>
               </div>
@@ -547,63 +553,50 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                   </table>
                 </div>
               </div>
-            </div>
-          </Container>
-        </section>
-      )}
 
-      {/* Algorithm Guide Section - AI Algorithm Development Only */}
-      {'algorithmGuide' in serviceDetails && serviceDetails.algorithmGuide && (
-        <section className="py-8 sm:py-12 md:py-16">
-          <Container>
-            <div className="mx-auto max-w-4xl">
-              <div className="mb-6 sm:mb-8 text-center">
-                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
-                  <Icons.Compass className="h-4 w-4 sm:h-5 sm:w-5" />
-                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
-                    Guide
-                  </span>
-                </div>
-                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
-                  {serviceDetails.algorithmGuide.sectionTitle}
-                </h2>
-              </div>
-              <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                <div className="-mx-4 sm:mx-0 overflow-x-auto">
-                  <table className="w-full min-w-[320px] border-collapse text-xs sm:text-sm">
-                    <thead>
-                      <tr className="border-b border-slate-200 bg-blue-50">
-                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
-                          목적
-                        </th>
-                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
-                          추천 알고리즘
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {serviceDetails.algorithmGuide.items.map(
-                        (
-                          item: { purpose: string; algorithms: string },
-                          itemIndex: number
-                        ) => (
-                          <tr
-                            key={itemIndex}
-                            className="border-b border-slate-100 transition-colors hover:bg-slate-50"
-                          >
-                            <td className="px-3 sm:px-4 py-2 sm:py-3 font-medium text-slate-900">
-                              {item.purpose}
-                            </td>
-                            <td className="px-3 sm:px-4 py-2 sm:py-3 text-blue-600 font-medium">
-                              {item.algorithms}
-                            </td>
+              {/* Algorithm Guide - Same level as Comparison */}
+              {'algorithmGuide' in serviceDetails &&
+                serviceDetails.algorithmGuide && (
+                  <div className="mt-6 sm:mt-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                    <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-bold text-slate-900">
+                      {serviceDetails.algorithmGuide.sectionTitle}
+                    </h3>
+                    <div className="-mx-4 sm:mx-0 overflow-x-auto">
+                      <table className="w-full min-w-[320px] border-collapse text-xs sm:text-sm">
+                        <thead>
+                          <tr className="border-b border-slate-200 bg-blue-50">
+                            <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
+                              목적
+                            </th>
+                            <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
+                              추천 알고리즘
+                            </th>
                           </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+                        </thead>
+                        <tbody>
+                          {serviceDetails.algorithmGuide.items.map(
+                            (
+                              item: { purpose: string; algorithms: string },
+                              itemIndex: number
+                            ) => (
+                              <tr
+                                key={itemIndex}
+                                className="border-b border-slate-100 transition-colors hover:bg-slate-50"
+                              >
+                                <td className="px-3 sm:px-4 py-2 sm:py-3 font-medium text-slate-900">
+                                  {item.purpose}
+                                </td>
+                                <td className="px-3 sm:px-4 py-2 sm:py-3 text-blue-600 font-medium">
+                                  {item.algorithms}
+                                </td>
+                              </tr>
+                            )
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
             </div>
           </Container>
         </section>
