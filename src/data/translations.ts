@@ -1923,11 +1923,12 @@ export const translations = {
           sectionTitle: 'AI 모델 및 알고리즘 분류',
           intro: '머신러닝(ML)은 데이터에서 패턴을 학습하는 포괄적인 기술이고, 딥러닝(DL)은 그중에서도 \'인공신경망\'을 깊게 쌓아 복잡한 데이터를 처리하는 특수한 분야입니다.',
           machineLearning: {
-            title: '1. 머신러닝 (Machine Learning)',
+            title: '머신러닝 (Machine Learning)',
+            icon: 'Cpu',
             description: '머신러닝은 학습 방식에 따라 크게 세 가지로 나뉩니다.',
             categories: [
               {
-                title: '1) 지도 학습 (Supervised Learning)',
+                title: '지도 학습 (Supervised Learning)',
                 description: '정답(Label)이 있는 데이터를 학습하여 새로운 데이터의 정답을 예측합니다.',
                 algorithms: [
                   {
@@ -1974,7 +1975,7 @@ export const translations = {
                 ],
               },
               {
-                title: '2) 비지도 학습 (Unsupervised Learning)',
+                title: '비지도 학습 (Unsupervised Learning)',
                 description: '정답 없이 데이터의 숨겨진 구조나 패턴을 찾아냅니다.',
                 algorithms: [
                   {
@@ -1990,7 +1991,7 @@ export const translations = {
                 ],
               },
               {
-                title: '3) 강화 학습 (Reinforcement Learning)',
+                title: '강화 학습 (Reinforcement Learning)',
                 description: '행동에 대한 보상(Reward)을 통해 최적의 행동을 학습합니다. 시행착오를 통해 배우는 방식입니다.',
                 examples: '게임 AI(알파고-바둑), 자율주행, 피지컬 AI, 로봇제어 및 자동화',
                 algorithms: [],
@@ -1998,7 +1999,8 @@ export const translations = {
             ],
           },
           deepLearning: {
-            title: '2. 딥러닝 (Deep Learning)',
+            title: '딥러닝 (Deep Learning)',
+            icon: 'Brain',
             description: '딥러닝은 인간의 뇌 구조를 모방한 인공신경망(ANN)을 기반으로 합니다. 복잡한 비정형 데이터 처리에 강합니다. 데이터의 특징을 컴퓨터가 스스로 추출한다는 점이 머신러닝과의 가장 큰 차이점입니다.',
             models: [
               {
@@ -2024,7 +2026,8 @@ export const translations = {
             ],
           },
           comparison: {
-            title: '3. 머신러닝 vs 딥러닝 비교 요약',
+            title: '머신러닝 vs 딥러닝 비교 요약',
+            icon: 'Scale',
             items: [
               { aspect: '데이터 의존도', ml: '상대적으로 적은 데이터로도 가능', dl: '막대한 양의 데이터 필요' },
               { aspect: '특징 추출', ml: '사람이 직접 특징을 정의해야 함', dl: '알고리즘이 스스로 특징을 학습' },
@@ -2034,7 +2037,8 @@ export const translations = {
           },
         },
         algorithmGuide: {
-          sectionTitle: '4. 알고리즘 선택 가이드',
+          sectionTitle: '알고리즘 선택 가이드',
+          icon: 'Compass',
           items: [
             { purpose: '수치 예측 (가격, 매출)', algorithms: '선형 회귀, 랜덤 포레스트' },
             { purpose: '이미지 분류 및 인식', algorithms: 'CNN, ResNet' },
@@ -2046,7 +2050,7 @@ export const translations = {
           sectionTitle: 'AI 알고리즘의 산업별 적용 사례',
           cases: [
             {
-              title: '1. 커머스 및 마케팅 (추천 시스템)',
+              title: '커머스 및 마케팅 (추천 시스템)',
               description: '가장 피부로 와닿는 분야입니다. 주로 비지도 학습(Clustering)과 딥러닝이 결합되어 사용됩니다.',
               icon: 'ShoppingCart',
               examples: [
@@ -2061,7 +2065,7 @@ export const translations = {
               ],
             },
             {
-              title: '2. 금융 및 보안 (이상 탐지)',
+              title: '금융 및 보안 (이상 탐지)',
               description: '방대한 숫자 데이터를 실시간으로 처리해야 하는 분야입니다.',
               icon: 'Shield',
               examples: [
@@ -2076,7 +2080,7 @@ export const translations = {
               ],
             },
             {
-              title: '3. 의료 및 헬스케어 (이미지 판독)',
+              title: '의료 및 헬스케어 (이미지 판독)',
               description: '시각 데이터 분석에 특화된 CNN(합성곱 신경망)이 맹활약하는 분야입니다.',
               icon: 'Heart',
               examples: [
@@ -2091,7 +2095,7 @@ export const translations = {
               ],
             },
             {
-              title: '4. 제조 및 물류 (예측 유지보수)',
+              title: '제조 및 물류 (예측 유지보수)',
               description: '효율성을 극대화하기 위해 시계열 분석과 강화 학습을 활용합니다.',
               icon: 'Factory',
               examples: [
@@ -2106,7 +2110,7 @@ export const translations = {
               ],
             },
             {
-              title: '5. 자율 주행 및 모빌리티',
+              title: '자율 주행 및 모빌리티',
               description: '모든 AI 기술의 집약체라고 볼 수 있습니다.',
               icon: 'Car',
               examples: [
@@ -2121,7 +2125,7 @@ export const translations = {
               ],
             },
             {
-              title: '6. AI 활용 네트워크 분야',
+              title: 'AI 활용 네트워크 분야',
               description: '지능화된 N/W 제어 및 관리 위해 SDN/NFV 기반 플랫폼에 기계학습 기술 접목, 제어와 관리를 자체적으로 수행하는 자율형 네트워크 프레임워크에 강화학습 적용',
               icon: 'Network',
               applications: '트래픽 예측/분류/라우팅, 혼잡 제어, 자원 관리(수락 제어, 자원 할당 등), 오류 관리, QoS/QoE, 네트워크 보안/운영/관리 자동화 등',

@@ -157,12 +157,14 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                       key={index}
                       className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
                     >
-                      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
-                        <IconComponent className="h-6 w-6 text-white" />
+                      <div className="mb-3 flex items-center gap-3">
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-600">
+                          <IconComponent className="h-6 w-6 text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-slate-900">
+                          {type.title}
+                        </h3>
                       </div>
-                      <h3 className="mb-1 text-lg font-semibold text-slate-900">
-                        {type.title}
-                      </h3>
                       <p className="mb-3 text-xs text-blue-600 font-medium">
                         {type.target}
                       </p>
@@ -403,36 +405,47 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
               {/* Machine Learning Section */}
               <div className="mb-6 sm:mb-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                <h3 className="mb-2 text-base sm:text-lg font-bold text-slate-900">
+                <h3 className="mb-2 text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <Icons.Cpu className="h-5 w-5 text-blue-600" />
                   {serviceDetails.aiModels.machineLearning.title}
                 </h3>
                 <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
                   {serviceDetails.aiModels.machineLearning.description}
                 </p>
                 <div className="space-y-4 sm:space-y-6">
-                  {serviceDetails.aiModels.machineLearning.categories.map(
-                    (
-                      category: {
-                        title: string;
-                        description: string;
-                        algorithms?: Array<{
-                          name: string;
+                  {(() => {
+                    let mainCatNum = 0;
+                    return serviceDetails.aiModels.machineLearning.categories.map(
+                      (
+                        category: {
+                          title: string;
                           description: string;
-                          examples: string;
-                        }>;
-                        examples?: string;
-                      },
-                      catIndex: number
-                    ) => {
-                      const isSubCategory = category.title.startsWith('○');
-                      return (
-                        <div
-                          key={catIndex}
-                          className={`rounded-lg bg-slate-50 p-3 sm:p-4 ${isSubCategory ? 'ml-3 sm:ml-4 border-l-2 border-blue-200' : ''}`}
-                        >
-                          <h4 className={`mb-1.5 sm:mb-2 font-semibold text-slate-900 ${isSubCategory ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'}`}>
-                            {category.title}
-                          </h4>
+                          algorithms?: Array<{
+                            name: string;
+                            description: string;
+                            examples: string;
+                          }>;
+                          examples?: string;
+                        },
+                        catIndex: number
+                      ) => {
+                        const isSubCategory = category.title.startsWith('○');
+                        if (!isSubCategory) mainCatNum++;
+                        return (
+                          <div
+                            key={catIndex}
+                            className={`rounded-lg bg-slate-50 p-3 sm:p-4 ${isSubCategory ? 'ml-3 sm:ml-4 border-l-2 border-blue-200' : ''}`}
+                          >
+                            <div className={`mb-1.5 sm:mb-2 flex items-center gap-2`}>
+                              {!isSubCategory && (
+                                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-slate-300 text-[10px] font-medium text-slate-500">
+                                  {mainCatNum}
+                                </span>
+                              )}
+                              <h4 className={`font-semibold text-slate-900 ${isSubCategory ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'}`}>
+                                {category.title}
+                              </h4>
+                            </div>
                         <p className="mb-2 sm:mb-3 text-xs sm:text-sm text-slate-600">
                           {category.description}
                         </p>
@@ -463,16 +476,18 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                             ))}
                           </div>
                         )}
-                        </div>
-                      );
-                    }
-                  )}
+                          </div>
+                        );
+                      }
+                    );
+                  })()}
                 </div>
               </div>
 
               {/* Deep Learning Section */}
               <div className="mb-6 sm:mb-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                <h3 className="mb-2 text-base sm:text-lg font-bold text-slate-900">
+                <h3 className="mb-2 text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <Icons.Brain className="h-5 w-5 text-purple-600" />
                   {serviceDetails.aiModels.deepLearning.title}
                 </h3>
                 <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
@@ -509,7 +524,8 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
               {/* Comparison Table */}
               <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-bold text-slate-900">
+                <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                  <Icons.Scale className="h-5 w-5 text-emerald-600" />
                   {serviceDetails.aiModels.comparison.title}
                 </h3>
                 <div className="-mx-4 sm:mx-0 overflow-x-auto">
@@ -558,7 +574,8 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
               {'algorithmGuide' in serviceDetails &&
                 serviceDetails.algorithmGuide && (
                   <div className="mt-6 sm:mt-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                    <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-bold text-slate-900">
+                    <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                      <Icons.Compass className="h-5 w-5 text-amber-600" />
                       {serviceDetails.algorithmGuide.sectionTitle}
                     </h3>
                     <div className="-mx-4 sm:mx-0 overflow-x-auto">
