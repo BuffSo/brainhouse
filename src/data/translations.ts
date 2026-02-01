@@ -44,23 +44,34 @@ export const translations = {
       title: 'About Brain House',
       subtitle: '디지털 대전환 시대의 네비게이터',
       description:
-        '브레인하우스(Brain House)는 2020년 5월, ICT 분야의 전문가들이 모여 설립한 디지털 혁신 컨설팅 기업입니다. 우리는 단순한 기술 도입을 넘어, 기술이 창출할 수 있는 비즈니스 가치에 집중합니다. 복잡한 기술 트렌드 속에서 기업이 나아가야 할 명확한 방향을 제시하고, 실질적인 성장을 돕는 파트너가 되겠습니다.',
+        '브레인하우스(Brain House)는 2020년 5월, ICT 분야의 전문가들이 모여 설립한 AI 혁신 컨설팅 기업입니다. DX를 넘어 AX(AI Transformation) 시대를 선도하며, 단순한 기술 도입을 넘어 AI가 창출할 수 있는 비즈니스 가치에 집중합니다. 복잡한 기술 트렌드 속에서 기업이 나아가야 할 명확한 방향을 제시하고, 실질적인 성장을 돕는 파트너가 되겠습니다.',
+      ceo: {
+        title: '대표이사 인사말',
+        position: '대표이사',
+        greeting: '안녕하십니까, 브레인하우스 대표이사입니다.',
+        message:
+          '브레인하우스는 "지식과 경험을 공유하는 연결된 소셜 브레인"이라는 비전 아래, ICT 분야에서 28년간 축적해 온 전문성과 노하우를 바탕으로 고객 여러분의 AI 혁신 여정에 함께하고 있습니다.',
+        message2:
+          'DX(디지털 트랜스포메이션)를 넘어 AX(AI 트랜스포메이션) 시대를 맞이한 지금, 우리는 에이전틱 AI와 생성형 AI를 활용한 기업 혁신 전략으로 고객사의 지속 가능한 성장을 지원합니다. 단순한 기술 도입이 아닌, 기술이 창출하는 실질적인 비즈니스 가치에 집중하여 차별화된 컨설팅 서비스를 제공하겠습니다.',
+        closing:
+          '앞으로도 브레인하우스는 고객 여러분과 함께 성장하며, 대한민국 ICT 산업 발전에 기여하는 신뢰받는 파트너가 되겠습니다. 많은 관심과 성원 부탁드립니다. 감사합니다.',
+      },
       vision: {
         title: '비전 (Vision)',
-        desc: 'DX를 넘어 AX(AI Transformation) 시대를 선도하는 성장 파트너',
+        desc: 'DX를 넘어 AX(AI Transformation) 시대를 선도하는\n성장 파트너',
         details: [
-          'AI 에이전트 기반 업무 혁신 및 워크플로우 재설계',
-          '에이전틱 AI·생성형 AI 도입을 통한 기업 경쟁력 강화',
-          'AI-Ready 조직 문화 구축 및 인재 육성 지원',
+          '기술과 정책을 연결하는 ICT 혁신의 길잡이',
+          '아이디어에서 성장까지, 창업의 모든 여정을 함께',
+          'AI로 새로운 가치를 창출하는 비즈니스 혁신 파트너',
         ],
       },
       expertise: {
         title: '핵심 역량 (Core Competency)',
-        desc: 'ICT, AI, 메타버스 분야 28년 이상의 현장 경험과 노하우',
+        desc: 'ICT, AI 분야 28년 이상의 현장 경험과 노하우',
         details: [
-          '국가 R&D 기획/평가 및 정책연구 풍부한 경험 보유',
-          '다양한 산업군(제조, 서비스, 공공) DX 컨설팅 수행',
-          '스타트업부터 중견기업까지 단계별 맞춤 성장 지원',
+          '대기업 기술연구소장, 신사업추진본부장, 전략기획본부장 역임',
+          '전략컨설팅 펌, 대기업, 중견기업, 중소기업, 스타트업 등 다양한 규모의 산업체 임원 역임',
+          '엑셀러레이터, 비즈니스 컨설턴트',
         ],
       },
       clients: {
@@ -2511,23 +2522,34 @@ export const translations = {
       title: 'About Brain House',
       subtitle: 'Navigator for the Digital Era',
       description:
-        'Established in May 2020 by a group of ICT experts, Brain House is a consulting firm dedicated to digital innovation. We focus on the real business value technology creates. We aim to be a partner that provides clear direction amidst complex trends and drives tangible growth.',
+        'Established in May 2020 by a group of ICT experts, Brain House is an AI innovation consulting firm leading the AX (AI Transformation) era beyond DX. We focus on the real business value AI creates. We aim to be a partner that provides clear direction amidst complex trends and drives tangible growth.',
+      ceo: {
+        title: 'Message from the CEO',
+        position: 'CEO',
+        greeting: 'Welcome to Brain House. I am the CEO of Brain House.',
+        message:
+          'Under our vision of "Connected Social Brains Sharing Knowledge and Experience," Brain House accompanies our clients on their AI transformation journey, backed by 28 years of expertise and know-how accumulated in the ICT field.',
+        message2:
+          'As we enter the AX (AI Transformation) era beyond DX (Digital Transformation), we support sustainable growth for our clients through enterprise innovation strategies leveraging Agentic AI and Generative AI. We are committed to providing differentiated consulting services that focus on the real business value technology creates, not just technology adoption.',
+        closing:
+          'Brain House will continue to grow alongside our clients and remain a trusted partner contributing to the advancement of the ICT industry. Thank you for your interest and support.',
+      },
       vision: {
         title: 'Vision',
         desc: 'Growth Partner Leading the AX (AI Transformation) Era Beyond DX',
         details: [
-          'AI agent-driven business innovation and workflow redesign',
-          'Enhancing enterprise competitiveness through Agentic AI & Generative AI',
-          'Building AI-Ready organizational culture and talent development',
+          'Guiding ICT innovation by bridging technology and policy',
+          'From ideas to growth, partnering through every startup journey',
+          'Creating new value through AI-driven business innovation',
         ],
       },
       expertise: {
         title: 'Core Competency',
-        desc: 'Over 28 years of expertise in ICT, AI, and Metaverse',
+        desc: 'Over 28 years of field experience and expertise in ICT and AI',
         details: [
-          'Extensive experience in National R&D planning and policy research',
-          'Diverse DX consulting (Manufacturing, Service, Public)',
-          'Tailored growth support from startups to mid-sized firms',
+          'Former Head of Technology Research Institute, New Business Division, and Strategic Planning Division at major corporations',
+          'Executive experience across strategic consulting firms, large enterprises, mid-sized companies, SMEs, and startups',
+          'Accelerator and Business Consultant',
         ],
       },
       clients: {
@@ -5040,23 +5062,34 @@ export const translations = {
       title: 'About Brain House',
       subtitle: 'デジタル大転換時代のナビゲーター',
       description:
-        'ブレインハウス（Brain House）は2020年5月、ICT分野の専門家が集まって設立したデジタル革新コンサルティング企業です。単なる技術導入を超えて、技術が創出できるビジネス価値に注目します。複雑な技術トレンドの中で企業が進むべき明確な方向を提示し、実質的な成長を支援するパートナーを目指します。',
+        'ブレインハウス（Brain House）は2020年5月、ICT分野の専門家が集まって設立したAI革新コンサルティング企業です。DXを超えてAX（AIトランスフォーメーション）時代をリードし、単なる技術導入を超えてAIが創出できるビジネス価値に注目します。複雑な技術トレンドの中で企業が進むべき明確な方向を提示し、実質的な成長を支援するパートナーを目指します。',
+      ceo: {
+        title: '代表取締役ご挨拶',
+        position: '代表取締役',
+        greeting: 'こんにちは、ブレインハウス代表取締役です。',
+        message:
+          'ブレインハウスは「知識と経験を共有するつながるソーシャルブレイン」というビジョンのもと、ICT分野で28年間蓄積してきた専門性とノウハウを基盤に、お客様のAI革新の旅に寄り添っています。',
+        message2:
+          'DX（デジタルトランスフォーメーション）を超えてAX（AIトランスフォーメーション）時代を迎えた今、私たちはエージェンティックAIと生成AIを活用した企業革新戦略でお客様の持続可能な成長を支援します。単なる技術導入ではなく、技術が創出する実質的なビジネス価値に注目し、差別化されたコンサルティングサービスを提供いたします。',
+        closing:
+          '今後もブレインハウスはお客様と共に成長し、ICT産業発展に貢献する信頼されるパートナーであり続けます。皆様のご関心とご支援をお願い申し上げます。ありがとうございます。',
+      },
       vision: {
         title: 'ビジョン (Vision)',
         desc: 'DXを超えてAX（AIトランスフォーメーション）時代をリードする成長パートナー',
         details: [
-          'AIエージェント基盤の業務革新およびワークフロー再設計',
-          'エージェンティックAI・生成AI導入による企業競争力強化',
-          'AI-Ready組織文化構築および人材育成支援',
+          '技術と政策をつなぐICT革新の道しるべ',
+          'アイデアから成長まで、創業のすべての旅路を共に',
+          'AIで新たな価値を創出するビジネス革新パートナー',
         ],
       },
       expertise: {
         title: 'コアコンピタンス (Core Competency)',
-        desc: 'ICT、AI、メタバース分野28年以上の現場経験とノウハウ',
+        desc: 'ICT、AI分野28年以上の現場経験とノウハウ',
         details: [
-          '国家R&D企画/評価および政策研究の豊富な経験',
-          '多様な産業群（製造、サービス、公共）DXコンサルティング実績',
-          'スタートアップから中堅企業まで段階別カスタム成長支援',
+          '大企業技術研究所長、新事業推進本部長、戦略企画本部長を歴任',
+          '戦略コンサルティングファーム、大企業、中堅企業、中小企業、スタートアップなど多様な規模の産業体で役員を歴任',
+          'アクセラレーター、ビジネスコンサルタント',
         ],
       },
       clients: {
