@@ -6,6 +6,14 @@ import { Container } from '@/components/ui/container';
 import { Icons } from '@/components/ui/icons';
 import { useLanguage } from '@/contexts/language-context';
 
+interface PortfolioItem {
+  title: string;
+  client: string;
+  year: string;
+  note?: string;
+  details?: string[];
+}
+
 interface PortfolioDetailProps {
   slug: string;
   backgroundImage?: string;
@@ -99,7 +107,9 @@ export function PortfolioDetail({ slug, backgroundImage }: PortfolioDetailProps)
       <section className="bg-slate-50 py-8 sm:py-12 md:py-16 lg:py-20">
         <Container>
           <div className="grid gap-3 sm:gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {category.items.map((item, index) => (
+            {category.items.map((rawItem, index) => {
+              const item = rawItem as PortfolioItem;
+              return (
               <div
                 key={index}
                 className={`group rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:border-blue-200 hover:shadow-lg sm:p-5 md:p-6 ${item.details ? 'sm:col-span-2 lg:col-span-3' : ''}`}
@@ -123,7 +133,7 @@ export function PortfolioDetail({ slug, backgroundImage }: PortfolioDetailProps)
                 )}
                 {item.details && (
                   <ul className="mt-3 sm:mt-4 grid gap-1.5 sm:gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                    {item.details.map((detail: string, detailIndex: number) => (
+                    {item.details.map((detail, detailIndex) => (
                       <li
                         key={detailIndex}
                         className="flex items-start gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-slate-600"
@@ -135,7 +145,8 @@ export function PortfolioDetail({ slug, backgroundImage }: PortfolioDetailProps)
                   </ul>
                 )}
               </div>
-            ))}
+            );
+            })}
           </div>
         </Container>
       </section>

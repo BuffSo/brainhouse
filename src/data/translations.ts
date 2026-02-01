@@ -4552,6 +4552,7 @@ export const translations = {
           intro: 'Machine Learning (ML) is a comprehensive technology that learns patterns from data, while Deep Learning (DL) is a specialized field that stacks "artificial neural networks" deeply to process complex data.',
           machineLearning: {
             title: '1. Machine Learning',
+            icon: 'Cpu',
             description: 'Machine learning is broadly divided into three types based on learning methods.',
             categories: [
               {
@@ -4622,6 +4623,7 @@ export const translations = {
           },
           deepLearning: {
             title: '2. Deep Learning',
+            icon: 'Brain',
             description: 'Deep learning is based on artificial neural networks (ANN) that mimic human brain structure. It excels at processing complex unstructured data. The biggest difference from machine learning is that computers extract features by themselves.',
             models: [
               {
@@ -4648,6 +4650,7 @@ export const translations = {
           },
           comparison: {
             title: '3. Machine Learning vs Deep Learning Comparison',
+            icon: 'Scale',
             items: [
               { aspect: 'Data Dependency', ml: 'Possible with relatively little data', dl: 'Requires massive amounts of data' },
               { aspect: 'Feature Extraction', ml: 'Humans must define features manually', dl: 'Algorithm learns features by itself' },
@@ -4658,6 +4661,7 @@ export const translations = {
         },
         algorithmGuide: {
           sectionTitle: '4. Algorithm Selection Guide',
+          icon: 'Compass',
           items: [
             { purpose: 'Numerical Prediction (Price, Sales)', algorithms: 'Linear Regression, Random Forest' },
             { purpose: 'Image Classification and Recognition', algorithms: 'CNN, ResNet' },
@@ -7090,6 +7094,7 @@ export const translations = {
           intro: 'マシンラーニング（ML）はデータからパターンを学習する包括的な技術であり、ディープラーニング（DL）はその中でも「人工神経網」を深く積み重ねて複雑なデータを処理する特殊な分野です。',
           machineLearning: {
             title: '1. マシンラーニング（Machine Learning）',
+            icon: 'Cpu',
             description: 'マシンラーニングは学習方式によって大きく3つに分かれます。',
             categories: [
               {
@@ -7160,6 +7165,7 @@ export const translations = {
           },
           deepLearning: {
             title: '2. ディープラーニング（Deep Learning）',
+            icon: 'Brain',
             description: 'ディープラーニングは人間の脳構造を模倣した人工神経網（ANN）を基盤とします。複雑な非定型データ処理に強いです。データの特徴をコンピュータが自ら抽出するという点がマシンラーニングとの最大の違いです。',
             models: [
               {
@@ -7186,6 +7192,7 @@ export const translations = {
           },
           comparison: {
             title: '3. マシンラーニング vs ディープラーニング比較要約',
+            icon: 'Scale',
             items: [
               { aspect: 'データ依存度', ml: '比較的少ないデータでも可能', dl: '膨大な量のデータが必要' },
               { aspect: '特徴抽出', ml: '人が直接特徴を定義する必要あり', dl: 'アルゴリズムが自ら特徴を学習' },
@@ -7196,6 +7203,7 @@ export const translations = {
         },
         algorithmGuide: {
           sectionTitle: '4. アルゴリズム選択ガイド',
+          icon: 'Compass',
           items: [
             { purpose: '数値予測（価格、売上）', algorithms: '線形回帰、ランダムフォレスト' },
             { purpose: '画像分類および認識', algorithms: 'CNN、ResNet' },
