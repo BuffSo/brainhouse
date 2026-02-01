@@ -402,14 +402,14 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
               </div>
 
               {/* Machine Learning Section */}
-              <div className="mb-8 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-                <h3 className="mb-2 text-lg font-bold text-slate-900">
+              <div className="mb-6 sm:mb-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                <h3 className="mb-2 text-base sm:text-lg font-bold text-slate-900">
                   {serviceDetails.aiModels.machineLearning.title}
                 </h3>
-                <p className="mb-4 text-sm text-slate-600">
+                <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
                   {serviceDetails.aiModels.machineLearning.description}
                 </p>
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {serviceDetails.aiModels.machineLearning.categories.map(
                     (
                       category: {
@@ -424,33 +424,33 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                       },
                       catIndex: number
                     ) => (
-                      <div key={catIndex} className="rounded-lg bg-slate-50 p-4">
-                        <h4 className="mb-2 font-semibold text-slate-900">
+                      <div key={catIndex} className="rounded-lg bg-slate-50 p-3 sm:p-4">
+                        <h4 className="mb-1.5 sm:mb-2 text-sm sm:text-base font-semibold text-slate-900">
                           {category.title}
                         </h4>
-                        <p className="mb-3 text-sm text-slate-600">
+                        <p className="mb-2 sm:mb-3 text-xs sm:text-sm text-slate-600">
                           {category.description}
                         </p>
                         {category.examples && (
-                          <p className="text-xs text-blue-600 font-medium">
+                          <p className="text-[10px] sm:text-xs text-blue-600 font-medium">
                             예시: {category.examples}
                           </p>
                         )}
                         {category.algorithms && category.algorithms.length > 0 && (
-                          <div className="mt-3 space-y-3">
+                          <div className="mt-2 sm:mt-3 space-y-2 sm:space-y-3">
                             {category.algorithms.map((algo, algoIndex) => (
                               <div
                                 key={algoIndex}
-                                className="rounded-lg bg-white p-3 ring-1 ring-slate-200"
+                                className="rounded-lg bg-white p-2.5 sm:p-3 ring-1 ring-slate-200"
                               >
-                                <h5 className="font-medium text-slate-900 text-sm">
+                                <h5 className="font-medium text-slate-900 text-xs sm:text-sm">
                                   {algo.name}
                                 </h5>
-                                <p className="mt-1 text-xs text-slate-600">
+                                <p className="mt-1 text-[10px] sm:text-xs text-slate-600">
                                   {algo.description}
                                 </p>
                                 {algo.examples && (
-                                  <p className="mt-1 text-xs text-blue-600">
+                                  <p className="mt-1 text-[10px] sm:text-xs text-blue-600">
                                     예시: {algo.examples}
                                   </p>
                                 )}
@@ -465,14 +465,14 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
               </div>
 
               {/* Deep Learning Section */}
-              <div className="mb-8 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-                <h3 className="mb-2 text-lg font-bold text-slate-900">
+              <div className="mb-6 sm:mb-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                <h3 className="mb-2 text-base sm:text-lg font-bold text-slate-900">
                   {serviceDetails.aiModels.deepLearning.title}
                 </h3>
-                <p className="mb-4 text-sm text-slate-600">
+                <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
                   {serviceDetails.aiModels.deepLearning.description}
                 </p>
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
                   {serviceDetails.aiModels.deepLearning.models.map(
                     (
                       model: {
@@ -484,15 +484,15 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                     ) => (
                       <div
                         key={modelIndex}
-                        className="rounded-lg bg-gradient-to-br from-blue-50 to-white p-4 ring-1 ring-blue-100"
+                        className="rounded-lg bg-gradient-to-br from-blue-50 to-white p-3 sm:p-4 ring-1 ring-blue-100"
                       >
-                        <h4 className="font-semibold text-slate-900 text-sm">
+                        <h4 className="font-semibold text-slate-900 text-xs sm:text-sm">
                           {model.name}
                         </h4>
-                        <p className="mt-2 text-xs text-slate-600">
+                        <p className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs text-slate-600">
                           {model.description}
                         </p>
-                        <p className="mt-2 text-xs text-blue-600">
+                        <p className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs text-blue-600">
                           활용: {model.examples}
                         </p>
                       </div>
@@ -502,21 +502,21 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
               </div>
 
               {/* Comparison Table */}
-              <div className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-                <h3 className="mb-4 text-lg font-bold text-slate-900">
+              <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-bold text-slate-900">
                   {serviceDetails.aiModels.comparison.title}
                 </h3>
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse text-sm">
+                <div className="-mx-4 sm:mx-0 overflow-x-auto">
+                  <table className="w-full min-w-[400px] border-collapse text-xs sm:text-sm">
                     <thead>
                       <tr className="border-b border-slate-200 bg-slate-50">
-                        <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
                           구분
                         </th>
-                        <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
                           머신러닝
                         </th>
-                        <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
                           딥러닝
                         </th>
                       </tr>
@@ -531,13 +531,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                             key={itemIndex}
                             className="border-b border-slate-100"
                           >
-                            <td className="px-4 py-3 font-medium text-slate-900">
+                            <td className="px-3 sm:px-4 py-2 sm:py-3 font-medium text-slate-900">
                               {item.aspect}
                             </td>
-                            <td className="px-4 py-3 text-slate-600">
+                            <td className="px-3 sm:px-4 py-2 sm:py-3 text-slate-600">
                               {item.ml}
                             </td>
-                            <td className="px-4 py-3 text-slate-600">
+                            <td className="px-3 sm:px-4 py-2 sm:py-3 text-slate-600">
                               {item.dl}
                             </td>
                           </tr>
@@ -568,39 +568,41 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                   {serviceDetails.algorithmGuide.sectionTitle}
                 </h2>
               </div>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200 bg-blue-50">
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900">
-                        목적
-                      </th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-900">
-                        추천 알고리즘
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {serviceDetails.algorithmGuide.items.map(
-                      (
-                        item: { purpose: string; algorithms: string },
-                        itemIndex: number
-                      ) => (
-                        <tr
-                          key={itemIndex}
-                          className="border-b border-slate-100 transition-colors hover:bg-slate-50"
-                        >
-                          <td className="px-4 py-3 font-medium text-slate-900">
-                            {item.purpose}
-                          </td>
-                          <td className="px-4 py-3 text-blue-600 font-medium">
-                            {item.algorithms}
-                          </td>
-                        </tr>
-                      )
-                    )}
-                  </tbody>
-                </table>
+              <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                <div className="-mx-4 sm:mx-0 overflow-x-auto">
+                  <table className="w-full min-w-[320px] border-collapse text-xs sm:text-sm">
+                    <thead>
+                      <tr className="border-b border-slate-200 bg-blue-50">
+                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
+                          목적
+                        </th>
+                        <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
+                          추천 알고리즘
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {serviceDetails.algorithmGuide.items.map(
+                        (
+                          item: { purpose: string; algorithms: string },
+                          itemIndex: number
+                        ) => (
+                          <tr
+                            key={itemIndex}
+                            className="border-b border-slate-100 transition-colors hover:bg-slate-50"
+                          >
+                            <td className="px-3 sm:px-4 py-2 sm:py-3 font-medium text-slate-900">
+                              {item.purpose}
+                            </td>
+                            <td className="px-3 sm:px-4 py-2 sm:py-3 text-blue-600 font-medium">
+                              {item.algorithms}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </Container>
@@ -624,7 +626,7 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                 </h2>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {serviceDetails.industryCases.cases.map(
                   (
                     caseItem: {
@@ -646,35 +648,35 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                     return (
                       <div
                         key={caseIndex}
-                        className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200"
+                        className="rounded-xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-200"
                       >
-                        <div className="mb-3 flex items-center gap-3">
-                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
-                            <IconComponent className="h-5 w-5 text-blue-600" />
+                        <div className="mb-2 sm:mb-3 flex items-center gap-2 sm:gap-3">
+                          <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-blue-100">
+                            <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                           </div>
-                          <h3 className="font-semibold text-slate-900">
+                          <h3 className="font-semibold text-slate-900 text-sm sm:text-base">
                             {caseItem.title}
                           </h3>
                         </div>
-                        <p className="mb-4 text-sm text-slate-600">
+                        <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
                           {caseItem.description}
                         </p>
                         {caseItem.applications && (
-                          <p className="mb-4 text-xs text-blue-600 font-medium">
+                          <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs text-blue-600 font-medium">
                             적용 분야: {caseItem.applications}
                           </p>
                         )}
                         {caseItem.examples && caseItem.examples.length > 0 && (
-                          <div className="grid gap-3 sm:grid-cols-2">
+                          <div className="grid gap-2 sm:gap-3 sm:grid-cols-2">
                             {caseItem.examples.map((example, exIndex) => (
                               <div
                                 key={exIndex}
-                                className="rounded-lg bg-slate-50 p-3"
+                                className="rounded-lg bg-slate-50 p-2.5 sm:p-3"
                               >
-                                <h4 className="font-medium text-slate-900 text-sm">
+                                <h4 className="font-medium text-slate-900 text-xs sm:text-sm">
                                   {example.name}
                                 </h4>
-                                <p className="mt-1 text-xs text-slate-600">
+                                <p className="mt-1 text-[10px] sm:text-xs text-slate-600">
                                   {example.detail}
                                 </p>
                               </div>
@@ -683,17 +685,17 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                         )}
                         {caseItem.networkingTable &&
                           caseItem.networkingTable.length > 0 && (
-                            <div className="mt-4 overflow-x-auto">
-                              <table className="w-full border-collapse text-xs">
+                            <div className="mt-3 sm:mt-4 -mx-4 sm:mx-0 overflow-x-auto">
+                              <table className="w-full min-w-[480px] border-collapse text-[10px] sm:text-xs">
                                 <thead>
                                   <tr className="border-b border-slate-200 bg-slate-50">
-                                    <th className="px-3 py-2 text-left font-semibold text-slate-900">
+                                    <th className="px-2 sm:px-3 py-1.5 sm:py-2 text-left font-semibold text-slate-900">
                                       분류
                                     </th>
-                                    <th className="px-3 py-2 text-left font-semibold text-slate-900">
+                                    <th className="px-2 sm:px-3 py-1.5 sm:py-2 text-left font-semibold text-slate-900">
                                       내용
                                     </th>
-                                    <th className="px-3 py-2 text-left font-semibold text-slate-900">
+                                    <th className="px-2 sm:px-3 py-1.5 sm:py-2 text-left font-semibold text-slate-900">
                                       ML 기술
                                     </th>
                                   </tr>
@@ -705,13 +707,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                                         key={rowIndex}
                                         className="border-b border-slate-100"
                                       >
-                                        <td className="px-3 py-2 font-medium text-slate-900">
+                                        <td className="px-2 sm:px-3 py-1.5 sm:py-2 font-medium text-slate-900">
                                           {row.category}
                                         </td>
-                                        <td className="px-3 py-2 text-slate-600">
+                                        <td className="px-2 sm:px-3 py-1.5 sm:py-2 text-slate-600">
                                           {row.content}
                                         </td>
-                                        <td className="px-3 py-2 text-blue-600">
+                                        <td className="px-2 sm:px-3 py-1.5 sm:py-2 text-blue-600">
                                           {row.mlTech}
                                         </td>
                                       </tr>
@@ -729,21 +731,21 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
               {/* Summary Table */}
               {serviceDetails.industryCases.summary && (
-                <div className="mt-8 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-                  <h3 className="mb-4 font-bold text-slate-900">
+                <div className="mt-6 sm:mt-8 rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
+                  <h3 className="mb-3 sm:mb-4 text-sm sm:text-base font-bold text-slate-900">
                     {serviceDetails.industryCases.summary.title}
                   </h3>
-                  <div className="overflow-x-auto">
-                    <table className="w-full border-collapse text-sm">
+                  <div className="-mx-4 sm:mx-0 overflow-x-auto">
+                    <table className="w-full min-w-[400px] border-collapse text-xs sm:text-sm">
                       <thead>
                         <tr className="border-b border-slate-200 bg-blue-50">
-                          <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                          <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
                             분야
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                          <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
                             알고리즘
                           </th>
-                          <th className="px-4 py-3 text-left font-semibold text-slate-900">
+                          <th className="px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-slate-900">
                             사례
                           </th>
                         </tr>
@@ -762,13 +764,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                               key={itemIndex}
                               className="border-b border-slate-100"
                             >
-                              <td className="px-4 py-3 font-medium text-slate-900">
+                              <td className="px-3 sm:px-4 py-2 sm:py-3 font-medium text-slate-900">
                                 {item.field}
                               </td>
-                              <td className="px-4 py-3 text-blue-600">
+                              <td className="px-3 sm:px-4 py-2 sm:py-3 text-blue-600">
                                 {item.algorithm}
                               </td>
-                              <td className="px-4 py-3 text-slate-600">
+                              <td className="px-3 sm:px-4 py-2 sm:py-3 text-slate-600">
                                 {item.example}
                               </td>
                             </tr>
@@ -799,12 +801,12 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                 <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
                   {serviceDetails.recentCases.sectionTitle}
                 </h2>
-                <p className="mx-auto mt-2 sm:mt-3 max-w-3xl text-sm sm:text-base text-slate-600">
+                <p className="mx-auto mt-2 sm:mt-3 max-w-3xl text-xs sm:text-sm md:text-base text-slate-600">
                   {serviceDetails.recentCases.intro}
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {serviceDetails.recentCases.models.map(
                   (
                     model: {
@@ -817,19 +819,19 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                   ) => (
                     <div
                       key={modelIndex}
-                      className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-5 text-white"
+                      className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-4 sm:p-5 text-white"
                     >
-                      <h3 className="font-semibold text-white text-sm">
+                      <h3 className="font-semibold text-white text-xs sm:text-sm">
                         {model.name}
                       </h3>
-                      <p className="mt-1 text-xs text-blue-300 font-medium">
+                      <p className="mt-1 text-[10px] sm:text-xs text-blue-300 font-medium">
                         {model.subtitle}
                       </p>
-                      <p className="mt-3 text-xs text-blue-100">
+                      <p className="mt-2 sm:mt-3 text-[10px] sm:text-xs text-blue-100">
                         {model.features}
                       </p>
-                      <div className="mt-3 rounded-lg bg-white/10 p-3">
-                        <p className="text-xs text-blue-100">
+                      <div className="mt-2 sm:mt-3 rounded-lg bg-white/10 p-2.5 sm:p-3">
+                        <p className="text-[10px] sm:text-xs text-blue-100">
                           {model.core}
                         </p>
                       </div>
