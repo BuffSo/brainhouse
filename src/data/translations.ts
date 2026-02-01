@@ -2505,7 +2505,7 @@ export const translations = {
             '회사는 이용자의 개인정보 보호 및 관련 문의사항 처리를 위해 아래와 같이 개인정보 보호책임자를 지정하고 있습니다:',
           name: '성명: 김현철',
           position: '직책: 대표이사',
-          email: '이메일: comfamil@gmail.com',
+          email: '이메일: brainhouse26@gmail.com',
         },
         changes: {
           title: '7. 개인정보 처리방침의 변경',
@@ -5085,7 +5085,7 @@ export const translations = {
             'The Company designates a Privacy Officer as follows to protect user privacy and handle related inquiries:',
           name: 'Name: Hyuncheol Kim',
           position: 'Position: CEO',
-          email: 'Email: comfamil@gmail.com',
+          email: 'Email: brainhouse26@gmail.com',
         },
         changes: {
           title: '7. Changes to Privacy Policy',
@@ -7625,7 +7625,7 @@ export const translations = {
             '当社はユーザーの個人情報保護および関連お問い合わせ処理のため、以下の通り個人情報保護責任者を指定しています：',
           name: '氏名：金鉉哲',
           position: '役職：代表取締役',
-          email: 'メール：comfamil@gmail.com',
+          email: 'メール：brainhouse26@gmail.com',
         },
         changes: {
           title: '7. 個人情報処理方針の変更',

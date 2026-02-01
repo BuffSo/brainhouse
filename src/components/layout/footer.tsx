@@ -24,7 +24,7 @@ export function Footer() {
             </p>
             <p className="flex items-center">
               <Icons.Mail className="mr-2 h-4 w-4 flex-shrink-0" />
-              comfamil@gmail.com
+              brainhouse26@gmail.com
             </p>
             <Link
               href="/privacy"

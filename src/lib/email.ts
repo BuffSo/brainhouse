@@ -71,7 +71,7 @@ export async function sendContactEmail(data: ContactEmailData) {
 
   const result = await resend.emails.send({
     from: 'Brain House <onboarding@resend.dev>',
-    to: process.env.ADMIN_EMAIL || 'comfamil@gmail.com',
+    to: process.env.ADMIN_EMAIL || 'brainhouse26@gmail.com',
     replyTo: email,
     subject: subjects[language],
     html: htmlContent,

@@ -40,7 +40,7 @@ Resend Dashboard에서 도메인 추가 시 제공하는 DNS 레코드를 그대
 
 ```env
 RESEND_API_KEY=re_your_api_key_here
-ADMIN_EMAIL=comfamil@gmail.com
+ADMIN_EMAIL=brainhouse26@gmail.com
 ```
 
 ### Vercel Dashboard
@@ -51,7 +51,7 @@ ADMIN_EMAIL=comfamil@gmail.com
 | 변수명 | 값 |
 |--------|-----|
 | RESEND_API_KEY | re_your_api_key_here |
-| ADMIN_EMAIL | comfamil@gmail.com |
+| ADMIN_EMAIL | brainhouse26@gmail.com |
 
 3. Production, Preview, Development 모두 체크
 4. Save
