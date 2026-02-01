@@ -50,13 +50,15 @@ export function About() {
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md sm:p-8">
-            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
-              <Icons.TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
+                <Icons.TrendingUp className="h-5 w-5 sm:h-6 sm:w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">
+                {t.about.vision.title}
+              </h3>
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-slate-900 text-center">
-              {t.about.vision.title}
-            </h3>
-            <p className="mt-2 whitespace-pre-line text-center text-sm font-medium text-slate-900">
+            <p className="mt-3 whitespace-pre-line text-sm font-medium text-slate-900">
               {t.about.vision.desc}
             </p>
             {t.about.vision.details && (
@@ -75,13 +77,15 @@ export function About() {
           </div>
 
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md sm:p-8">
-            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
-              <Icons.Layers className="h-5 w-5 sm:h-6 sm:w-6" />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
+                <Icons.Layers className="h-5 w-5 sm:h-6 sm:w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">
+                {t.about.expertise.title}
+              </h3>
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-slate-900 text-center">
-              {t.about.expertise.title}
-            </h3>
-            <p className="mt-2 text-center text-sm font-medium text-slate-900">
+            <p className="mt-3 text-sm font-medium text-slate-900">
               {t.about.expertise.desc}
             </p>
             {t.about.expertise.details && (
@@ -100,13 +104,15 @@ export function About() {
           </div>
 
           <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md sm:p-8">
-            <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
-              <Icons.Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600 sm:h-12 sm:w-12">
+                <Icons.Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">
+                {t.about.clients.title}
+              </h3>
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-slate-900 text-center">
-              {t.about.clients.title}
-            </h3>
-            <p className="mt-2 text-center text-sm text-slate-500">
+            <p className="mt-3 text-sm text-slate-500">
               {t.about.clients.desc}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-2">
