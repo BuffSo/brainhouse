@@ -380,6 +380,48 @@ export const translations = {
         },
       ],
     },
+    portfolioMenu: {
+      viewAll: '전체 포트폴리오 보기',
+      items: [
+        {
+          slug: 'ict-strategy',
+          title: 'ICT 전략·정책 컨설팅',
+          shortTitle: 'ICT 전략',
+        },
+        {
+          slug: 'bm-software',
+          title: 'BM 기획 & SW 개발',
+          shortTitle: 'BM & SW',
+        },
+      ],
+    },
+    portfolioOverview: {
+      title: '포트폴리오',
+      subtitle: '성공 레퍼런스',
+      description:
+        '브레인하우스는 공공기관·기업의 ICT 전략 수립부터 스타트업의 서비스 개발까지 다양한 프로젝트를 성공적으로 수행해왔습니다.',
+      viewDetails: '프로젝트 보기',
+      categories: {
+        'ict-strategy': {
+          icon: 'TrendingUp',
+          projectCount: '15+',
+          shortDescription: '정부 R&D 기획, 기술사업화 전략, ICT 정책연구',
+        },
+        'bm-software': {
+          icon: 'Code',
+          projectCount: '19+',
+          shortDescription: '플랫폼 서비스 기획, BM 수립, MVP 개발',
+        },
+      },
+      stats: {
+        title: '실적 현황',
+        items: [
+          { value: '34+', label: '수행 프로젝트' },
+          { value: '28년', label: 'ICT 경험' },
+          { value: '50+', label: '파트너 기업' },
+        ],
+      },
+    },
     contact: {
       title: 'Contact Us',
       description:
@@ -2186,6 +2228,48 @@ export const translations = {
           ],
         },
       ],
+    },
+    portfolioMenu: {
+      viewAll: 'View All Portfolio',
+      items: [
+        {
+          slug: 'ict-strategy',
+          title: 'ICT Strategy & Policy Consulting',
+          shortTitle: 'ICT Strategy',
+        },
+        {
+          slug: 'bm-software',
+          title: 'BM Planning & SW Development',
+          shortTitle: 'BM & SW',
+        },
+      ],
+    },
+    portfolioOverview: {
+      title: 'Portfolio',
+      subtitle: 'Success References',
+      description:
+        'Brain House has successfully delivered diverse projects from ICT strategy for government & enterprises to service development for startups.',
+      viewDetails: 'View Projects',
+      categories: {
+        'ict-strategy': {
+          icon: 'TrendingUp',
+          projectCount: '15+',
+          shortDescription: 'Government R&D planning, tech commercialization, ICT policy research',
+        },
+        'bm-software': {
+          icon: 'Code',
+          projectCount: '19+',
+          shortDescription: 'Platform service planning, BM development, MVP development',
+        },
+      },
+      stats: {
+        title: 'Track Record',
+        items: [
+          { value: '34+', label: 'Projects Delivered' },
+          { value: '28yrs', label: 'ICT Experience' },
+          { value: '50+', label: 'Partner Companies' },
+        ],
+      },
     },
     contact: {
       title: 'Contact Us',
@@ -4044,6 +4128,48 @@ export const translations = {
           ],
         },
       ],
+    },
+    portfolioMenu: {
+      viewAll: '全ポートフォリオを見る',
+      items: [
+        {
+          slug: 'ict-strategy',
+          title: 'ICT戦略・政策コンサルティング',
+          shortTitle: 'ICT戦略',
+        },
+        {
+          slug: 'bm-software',
+          title: 'BM企画 & SW開発',
+          shortTitle: 'BM & SW',
+        },
+      ],
+    },
+    portfolioOverview: {
+      title: 'ポートフォリオ',
+      subtitle: '成功レファレンス',
+      description:
+        'ブレインハウスは公共機関・企業のICT戦略策定からスタートアップのサービス開発まで多様なプロジェクトを成功裏に遂行してきました。',
+      viewDetails: 'プロジェクトを見る',
+      categories: {
+        'ict-strategy': {
+          icon: 'TrendingUp',
+          projectCount: '15+',
+          shortDescription: '政府R&D企画、技術事業化戦略、ICT政策研究',
+        },
+        'bm-software': {
+          icon: 'Code',
+          projectCount: '19+',
+          shortDescription: 'プラットフォームサービス企画、BM策定、MVP開発',
+        },
+      },
+      stats: {
+        title: '実績現況',
+        items: [
+          { value: '34+', label: '遂行プロジェクト' },
+          { value: '28年', label: 'ICT経験' },
+          { value: '50+', label: 'パートナー企業' },
+        ],
+      },
     },
     contact: {
       title: 'Contact Us',

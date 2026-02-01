@@ -15,11 +15,15 @@ export function Header() {
   const [isLangMenuOpen, setIsLangMenuOpen] = React.useState(false);
   const [isMobileLangMenuOpen, setIsMobileLangMenuOpen] = React.useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = React.useState(false);
+  const [isPortfolioMenuOpen, setIsPortfolioMenuOpen] = React.useState(false);
   const [mobileServicesExpanded, setMobileServicesExpanded] =
+    React.useState(false);
+  const [mobilePortfolioExpanded, setMobilePortfolioExpanded] =
     React.useState(false);
   const { language, setLanguage, t } = useLanguage();
 
   const servicesMenuRef = React.useRef<HTMLDivElement>(null);
+  const portfolioMenuRef = React.useRef<HTMLDivElement>(null);
   const langMenuRef = React.useRef<HTMLDivElement>(null);
   const mobileLangMenuRef = React.useRef<HTMLDivElement>(null);
 
@@ -34,6 +38,14 @@ export function Header() {
         !servicesMenuRef.current.contains(target)
       ) {
         setIsServicesMenuOpen(false);
+      }
+
+      if (
+        isPortfolioMenuOpen &&
+        portfolioMenuRef.current &&
+        !portfolioMenuRef.current.contains(target)
+      ) {
+        setIsPortfolioMenuOpen(false);
       }
 
       if (
@@ -57,13 +69,13 @@ export function Header() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isServicesMenuOpen, isLangMenuOpen, isMobileLangMenuOpen]);
+  }, [isServicesMenuOpen, isPortfolioMenuOpen, isLangMenuOpen, isMobileLangMenuOpen]);
 
   const navigation = [
     { name: t.header.about, href: '/about' },
     { name: t.header.business, href: '/business' },
-    { name: t.header.services, href: '/services', hasSubmenu: true },
-    { name: t.header.portfolio, href: '/portfolio' },
+    { name: t.header.services, href: '/services', hasSubmenu: 'services' },
+    { name: t.header.portfolio, href: '/portfolio', hasSubmenu: 'portfolio' },
   ];
 
   return (
@@ -90,7 +102,7 @@ export function Header() {
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
               {navigation.map((item) =>
-                item.hasSubmenu ? (
+                item.hasSubmenu === 'services' ? (
                   <div key={item.name} className="relative" ref={servicesMenuRef}>
                     <button
                       onClick={() => setIsServicesMenuOpen(!isServicesMenuOpen)}
@@ -105,31 +117,65 @@ export function Header() {
                       />
                     </button>
                     {isServicesMenuOpen && (
-                      <div className="absolute left-0 top-full z-20 mt-2 w-48 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
-                          <div className="py-1">
+                      <div className="absolute left-0 top-full z-20 mt-2 w-52 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="py-1">
+                          <Link
+                            href="/services"
+                            onClick={() => setIsServicesMenuOpen(false)}
+                            className="flex w-full items-center px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100"
+                          >
+                            {t.servicesMenu?.viewAll || '전체 서비스 보기'}
+                          </Link>
+                          {t.servicesMenu?.items?.map((service) => (
                             <Link
-                              href="/services"
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
                               onClick={() => setIsServicesMenuOpen(false)}
-                              className="flex w-full items-center px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100"
+                              className="flex w-full items-center px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
                             >
-                              {t.servicesMenu?.viewAll || '전체 서비스 보기'}
+                              {service.title}
                             </Link>
-                            {t.servicesMenu?.items?.map((service) => (
-                              <Link
-                                key={service.slug}
-                                href={
-                                  service.hasPage
-                                    ? `/services/${service.slug}`
-                                    : '/services'
-                                }
-                                onClick={() => setIsServicesMenuOpen(false)}
-                                className="flex w-full items-center px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-                              >
-                                {service.title}
-                              </Link>
-                            ))}
-                          </div>
+                          ))}
                         </div>
+                      </div>
+                    )}
+                  </div>
+                ) : item.hasSubmenu === 'portfolio' ? (
+                  <div key={item.name} className="relative" ref={portfolioMenuRef}>
+                    <button
+                      onClick={() => setIsPortfolioMenuOpen(!isPortfolioMenuOpen)}
+                      className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {item.name}
+                      <Icons.ChevronDown
+                        className={cn(
+                          'h-3 w-3 transition-transform',
+                          isPortfolioMenuOpen && 'rotate-180',
+                        )}
+                      />
+                    </button>
+                    {isPortfolioMenuOpen && (
+                      <div className="absolute left-0 top-full z-20 mt-2 w-56 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="py-1">
+                          <Link
+                            href="/portfolio"
+                            onClick={() => setIsPortfolioMenuOpen(false)}
+                            className="flex w-full items-center px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100"
+                          >
+                            {t.portfolioMenu?.viewAll || '전체 포트폴리오 보기'}
+                          </Link>
+                          {t.portfolioMenu?.items?.map((item) => (
+                            <Link
+                              key={item.slug}
+                              href={`/portfolio/${item.slug}`}
+                              onClick={() => setIsPortfolioMenuOpen(false)}
+                              className="flex w-full items-center px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+                            >
+                              {item.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     )}
                   </div>
                 ) : (
@@ -163,54 +209,52 @@ export function Header() {
 
                 {isLangMenuOpen && (
                   <div className="absolute right-0 top-full z-20 mt-2 w-32 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
-                      <div className="py-1">
-                        <button
-                          onClick={() => {
-                            setLanguage('ko');
-                            setIsLangMenuOpen(false);
-                          }}
-                          className={cn(
-                            'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                            language === 'ko' &&
-                              'bg-slate-50 font-semibold text-blue-600',
-                          )}
-                        >
-                          한국어
-                        </button>
-                        <button
-                          onClick={() => {
-                            setLanguage('en');
-                            setIsLangMenuOpen(false);
-                          }}
-                          className={cn(
-                            'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                            language === 'en' &&
-                              'bg-slate-50 font-semibold text-blue-600',
-                          )}
-                        >
-                          English
-                        </button>
-                        <button
-                          onClick={() => {
-                            setLanguage('ja');
-                            setIsLangMenuOpen(false);
-                          }}
-                          className={cn(
-                            'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                            language === 'ja' &&
-                              'bg-slate-50 font-semibold text-blue-600',
-                          )}
-                        >
-                          日本語
-                        </button>
-                      </div>
+                    <div className="py-1">
+                      <button
+                        onClick={() => {
+                          setLanguage('ko');
+                          setIsLangMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                          language === 'ko' &&
+                            'bg-slate-50 font-semibold text-blue-600',
+                        )}
+                      >
+                        한국어
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('en');
+                          setIsLangMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                          language === 'en' &&
+                            'bg-slate-50 font-semibold text-blue-600',
+                        )}
+                      >
+                        English
+                      </button>
+                      <button
+                        onClick={() => {
+                          setLanguage('ja');
+                          setIsLangMenuOpen(false);
+                        }}
+                        className={cn(
+                          'flex w-full items-center px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                          language === 'ja' &&
+                            'bg-slate-50 font-semibold text-blue-600',
+                        )}
+                      >
+                        日本語
+                      </button>
                     </div>
+                  </div>
                 )}
               </div>
               <Button asChild size="sm">
-                <Link href="/contact">
-                  {t.header.getStarted}
-                </Link>
+                <Link href="/contact">{t.header.getStarted}</Link>
               </Button>
             </div>
           </div>
@@ -237,48 +281,48 @@ export function Header() {
               </button>
               {isMobileLangMenuOpen && (
                 <div className="absolute right-0 top-full z-20 mt-1 w-24 rounded-lg border border-slate-200 bg-white shadow-lg ring-1 ring-black/5 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="py-1">
-                      <button
-                        onClick={() => {
-                          setLanguage('ko');
-                          setIsMobileLangMenuOpen(false);
-                        }}
-                        className={cn(
-                          'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                          language === 'ko' &&
-                            'bg-slate-50 font-semibold text-blue-600',
-                        )}
-                      >
-                        KOR
-                      </button>
-                      <button
-                        onClick={() => {
-                          setLanguage('en');
-                          setIsMobileLangMenuOpen(false);
-                        }}
-                        className={cn(
-                          'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                          language === 'en' &&
-                            'bg-slate-50 font-semibold text-blue-600',
-                        )}
-                      >
-                        ENG
-                      </button>
-                      <button
-                        onClick={() => {
-                          setLanguage('ja');
-                          setIsMobileLangMenuOpen(false);
-                        }}
-                        className={cn(
-                          'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
-                          language === 'ja' &&
-                            'bg-slate-50 font-semibold text-blue-600',
-                        )}
-                      >
-                        JPN
-                      </button>
-                    </div>
+                  <div className="py-1">
+                    <button
+                      onClick={() => {
+                        setLanguage('ko');
+                        setIsMobileLangMenuOpen(false);
+                      }}
+                      className={cn(
+                        'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                        language === 'ko' &&
+                          'bg-slate-50 font-semibold text-blue-600',
+                      )}
+                    >
+                      KOR
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage('en');
+                        setIsMobileLangMenuOpen(false);
+                      }}
+                      className={cn(
+                        'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                        language === 'en' &&
+                          'bg-slate-50 font-semibold text-blue-600',
+                      )}
+                    >
+                      ENG
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage('ja');
+                        setIsMobileLangMenuOpen(false);
+                      }}
+                      className={cn(
+                        'flex w-full items-center px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors',
+                        language === 'ja' &&
+                          'bg-slate-50 font-semibold text-blue-600',
+                      )}
+                    >
+                      JPN
+                    </button>
                   </div>
+                </div>
               )}
             </div>
             <Button
@@ -300,7 +344,7 @@ export function Header() {
         <div className="md:hidden">
           <div className="space-y-1 px-4 pb-3 pt-2">
             {navigation.map((item) =>
-              item.hasSubmenu ? (
+              item.hasSubmenu === 'services' ? (
                 <div key={item.name}>
                   <button
                     onClick={() =>
@@ -328,15 +372,49 @@ export function Header() {
                       {t.servicesMenu?.items?.map((service) => (
                         <Link
                           key={service.slug}
-                          href={
-                            service.hasPage
-                              ? `/services/${service.slug}`
-                              : '/services'
-                          }
+                          href={`/services/${service.slug}`}
                           className="flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           {service.shortTitle}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : item.hasSubmenu === 'portfolio' ? (
+                <div key={item.name}>
+                  <button
+                    onClick={() =>
+                      setMobilePortfolioExpanded(!mobilePortfolioExpanded)
+                    }
+                    className="flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  >
+                    {item.name}
+                    <Icons.ChevronDown
+                      className={cn(
+                        'h-4 w-4 transition-transform',
+                        mobilePortfolioExpanded && 'rotate-180',
+                      )}
+                    />
+                  </button>
+                  {mobilePortfolioExpanded && (
+                    <div className="ml-4 mt-1 space-y-1 border-l-2 border-slate-200 pl-3">
+                      <Link
+                        href="/portfolio"
+                        className="block rounded-md px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {t.portfolioMenu?.viewAll || '전체 포트폴리오 보기'}
+                      </Link>
+                      {t.portfolioMenu?.items?.map((portfolioItem) => (
+                        <Link
+                          key={portfolioItem.slug}
+                          href={`/portfolio/${portfolioItem.slug}`}
+                          className="flex items-center rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {portfolioItem.shortTitle}
                         </Link>
                       ))}
                     </div>
