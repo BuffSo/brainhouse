@@ -1485,16 +1485,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                           className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
                         >
                           <div className="mb-3 flex items-center gap-3">
-                            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
                               <IconComponent className="h-5 w-5 text-blue-600" />
                             </div>
-                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-xs font-bold text-slate-600">
-                              {index + 1}
-                            </span>
+                            <h3 className="font-semibold text-slate-900">
+                              {step.title}
+                            </h3>
                           </div>
-                          <h3 className="mb-2 font-semibold text-slate-900">
-                            {step.title}
-                          </h3>
                           <p className="text-sm text-slate-600">
                             {step.description}
                           </p>
@@ -1543,12 +1540,14 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                           key={index}
                           className="rounded-xl bg-gradient-to-br from-blue-50 to-white p-6 shadow-sm ring-1 ring-blue-100"
                         >
-                          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
-                            <IconComponent className="h-6 w-6 text-white" />
+                          <div className="mb-3 flex items-center gap-3">
+                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-600">
+                              <IconComponent className="h-6 w-6 text-white" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-slate-900">
+                              {benefit.title}
+                            </h3>
                           </div>
-                          <h3 className="mb-2 text-lg font-semibold text-slate-900">
-                            {benefit.title}
-                          </h3>
                           <p className="text-sm text-slate-600">
                             {benefit.description}
                           </p>
@@ -1696,24 +1695,30 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
               <div className="grid gap-4 md:grid-cols-3">
                 {serviceDetails.dxSynergy.effects.map(
                   (
-                    effect: { title: string; description: string },
+                    effect: { title: string; icon: string; description: string },
                     index: number
-                  ) => (
+                  ) => {
+                    const IconComponent =
+                      Icons[effect.icon as keyof typeof Icons] || Icons.Zap;
+                    return (
                     <div
                       key={index}
                       className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-6 text-white"
                     >
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/10">
-                        <span className="text-lg font-bold">{index + 1}</span>
+                      <div className="mb-3 flex items-center gap-3">
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/10">
+                          <IconComponent className="h-5 w-5" />
+                        </div>
+                        <h3 className="text-lg font-semibold">
+                          {effect.title}
+                        </h3>
                       </div>
-                      <h3 className="mb-2 text-lg font-semibold">
-                        {effect.title}
-                      </h3>
                       <p className="text-sm text-blue-100">
                         {effect.description}
                       </p>
                     </div>
-                  )
+                    );
+                  }
                 )}
               </div>
             </div>
@@ -1758,16 +1763,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                           className="rounded-xl bg-white p-4 sm:p-5 md:p-6 shadow-sm ring-1 ring-slate-200 transition-all hover:shadow-md"
                         >
                           <div className="mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3">
-                            <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-blue-100">
+                            <div className="flex h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
                               <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
                             </div>
-                            <div className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded-full bg-blue-600 text-[10px] sm:text-xs font-bold text-white">
-                              {index + 1}
-                            </div>
+                            <h3 className="text-base sm:text-lg font-semibold text-slate-900">
+                              {module.title}
+                            </h3>
                           </div>
-                          <h3 className="mb-1.5 sm:mb-2 text-base sm:text-lg font-semibold text-slate-900">
-                            {module.title}
-                          </h3>
                           <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
                             {module.description}
                           </p>
@@ -1879,12 +1881,14 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                         key={index}
                         className="rounded-xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-200"
                       >
-                        <div className="mb-2 sm:mb-3 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-blue-100">
-                          <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
+                        <div className="mb-2 sm:mb-3 flex items-center gap-2 sm:gap-3">
+                          <div className="flex h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100">
+                            <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600" />
+                          </div>
+                          <h3 className="font-semibold text-slate-900 text-sm sm:text-base">
+                            {strategy.title}
+                          </h3>
                         </div>
-                        <h3 className="mb-1.5 sm:mb-2 font-semibold text-slate-900 text-sm sm:text-base">
-                          {strategy.title}
-                        </h3>
                         <p className="text-xs sm:text-sm text-slate-600">
                           {strategy.description}
                         </p>
@@ -2164,7 +2168,10 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
               <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
                 {/* IPO */}
                 <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                  <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-slate-900">
+                  <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-slate-900 flex items-center gap-2 sm:gap-3">
+                    <div className="flex h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-100">
+                      <Icons.TrendingUp className="h-4 w-4 sm:h-5 sm:w-5 text-emerald-600" />
+                    </div>
                     {serviceDetails.exitStrategy.ipo.title}
                   </h3>
                   <ul className="space-y-3 sm:space-y-4">
@@ -2188,7 +2195,10 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                 {/* M&A */}
                 <div className="rounded-xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-200">
-                  <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-slate-900">
+                  <h3 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold text-slate-900 flex items-center gap-2 sm:gap-3">
+                    <div className="flex h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 items-center justify-center rounded-lg bg-purple-100">
+                      <Icons.Building className="h-4 w-4 sm:h-5 sm:w-5 text-purple-600" />
+                    </div>
                     {serviceDetails.exitStrategy.mna.title}
                   </h3>
                   <ul className="space-y-3 sm:space-y-4">

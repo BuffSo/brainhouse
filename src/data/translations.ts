@@ -1313,16 +1313,19 @@ export const translations = {
           effects: [
             {
               title: 'Time-to-Market 단축',
+              icon: 'Clock',
               description:
                 'ICT 인프라(클라우드 등)를 활용하면 기술 개발부터 시장 출시까지의 기간을 획기적으로 줄일 수 있습니다.',
             },
             {
               title: '확장성(Scalability) 확보',
+              icon: 'TrendingUp',
               description:
                 '사업화 초기 단계부터 확장 가능한 ICT 아키텍처를 설계하면, 사용자가 급증하더라도 서비스 중단 없이 사업을 키울 수 있습니다.',
             },
             {
               title: '신규 가치 창출',
+              icon: 'Sparkles',
               description:
                 '기존 제조 기술에 ICT 전략을 결합하여 SaaS나 플랫폼 비즈니스로 전환하는 비즈니스 모델 혁신이 가능해집니다.',
             },
@@ -3846,16 +3849,19 @@ export const translations = {
           effects: [
             {
               title: 'Shorten Time-to-Market',
+              icon: 'Clock',
               description:
                 'Using ICT infrastructure (cloud, etc.) can dramatically reduce the period from technology development to market launch.',
             },
             {
               title: 'Secure Scalability',
+              icon: 'TrendingUp',
               description:
                 'Designing scalable ICT architecture from the early commercialization stage allows business growth without service interruption even when users surge.',
             },
             {
               title: 'Create New Value',
+              icon: 'Sparkles',
               description:
                 'Combining ICT strategy with existing manufacturing technology enables business model innovation transitioning to SaaS or platform business.',
             },
@@ -6339,16 +6345,19 @@ export const translations = {
           effects: [
             {
               title: 'Time-to-Market短縮',
+              icon: 'Clock',
               description:
                 'ICTインフラ（クラウドなど）を活用すると、技術開発から市場出荷までの期間を画期的に短縮できます。',
             },
             {
               title: '拡張性（Scalability）確保',
+              icon: 'TrendingUp',
               description:
                 '事業化初期段階から拡張可能なICTアーキテクチャを設計すると、ユーザーが急増してもサービス中断なく事業を拡大できます。',
             },
             {
               title: '新規価値創出',
+              icon: 'Sparkles',
               description:
                 '既存の製造技術にICT戦略を結合してSaaSやプラットフォームビジネスへ転換するビジネスモデル革新が可能になります。',
             },

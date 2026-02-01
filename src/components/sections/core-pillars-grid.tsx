@@ -38,15 +38,15 @@ export function CorePillarsGrid({ pillars }: CorePillarsGridProps) {
             key={index}
             className="group rounded-xl border border-slate-200 bg-white p-4 sm:p-5 md:p-6 shadow-sm transition-all hover:shadow-lg hover:border-slate-300"
           >
-            {/* Icon */}
-            <div className={`mb-3 sm:mb-4 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg ${color.bg} ${color.text} transition-colors ${color.hover} group-hover:text-white`}>
-              <IconComponent className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
+            {/* Icon + Title */}
+            <div className="mb-3 sm:mb-4 flex items-center gap-3">
+              <div className={`flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-lg ${color.bg} ${color.text} transition-colors ${color.hover} group-hover:text-white`}>
+                <IconComponent className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                {pillar.title}
+              </h3>
             </div>
-
-            {/* Title */}
-            <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1.5 sm:mb-2">
-              {pillar.title}
-            </h3>
 
             {/* Description */}
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3 sm:mb-4">
