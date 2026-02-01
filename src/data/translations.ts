@@ -1950,11 +1950,6 @@ export const translations = {
                     examples: '의료 진단, 금융 대출 심사, 고객 이탈 예측, 마케팅 타겟팅',
                   },
                   {
-                    name: '랜덤 포레스트 (Random Forest)',
-                    description: '여러 결정 트리를 결합해 정확도를 높인 앙상블 모델',
-                    examples: '금융 사기 탐지, 고객 이탈 예측, 의료 질병 진단, 전자상거래 추천 시스템, 고장예측',
-                  },
-                  {
                     name: 'SVM (Support Vector Machine)',
                     description: '데이터를 분류하는 최적의 경계선을 찾습니다.',
                     examples: '텍스트 분류, 이미지 인식, 바이오인포매틱스(단백질 분류), 채권 등급 평가',
@@ -4485,11 +4480,6 @@ export const translations = {
                     examples: 'Medical diagnosis, loan approval, customer churn prediction, marketing targeting',
                   },
                   {
-                    name: 'Random Forest',
-                    description: 'An ensemble model that combines multiple decision trees for improved accuracy.',
-                    examples: 'Financial fraud detection, customer churn prediction, medical disease diagnosis, e-commerce recommendation systems, failure prediction',
-                  },
-                  {
                     name: 'SVM (Support Vector Machine)',
                     description: 'Finds the optimal boundary line to classify data.',
                     examples: 'Text classification, image recognition, bioinformatics (protein classification), bond rating evaluation',
@@ -6979,11 +6969,6 @@ export const translations = {
                     name: '決定木（Decision Tree）',
                     description: '20の質問ゲームのように質問を投げかけながらデータを分類します。',
                     examples: '医療診断、金融ローン審査、顧客離脱予測、マーケティングターゲティング',
-                  },
-                  {
-                    name: 'ランダムフォレスト（Random Forest）',
-                    description: '複数の決定木を組み合わせて精度を高めたアンサンブルモデル',
-                    examples: '金融詐欺検知、顧客離脱予測、医療疾病診断、Eコマース推薦システム、故障予測',
                   },
                   {
                     name: 'SVM（Support Vector Machine）',

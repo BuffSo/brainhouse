@@ -412,74 +412,129 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                 <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600">
                   {serviceDetails.aiModels.machineLearning.description}
                 </p>
-                <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {(() => {
-                    let mainCatNum = 0;
-                    return serviceDetails.aiModels.machineLearning.categories.map(
-                      (
-                        category: {
-                          title: string;
-                          description: string;
-                          algorithms?: Array<{
-                            name: string;
-                            description: string;
-                            examples: string;
-                          }>;
-                          examples?: string;
-                        },
-                        catIndex: number
-                      ) => {
-                        const isSubCategory = category.title.startsWith('○');
-                        if (!isSubCategory) mainCatNum++;
-                        return (
-                          <div
-                            key={catIndex}
-                            className={`rounded-lg bg-slate-50 p-3 sm:p-4 ${isSubCategory ? 'ml-3 sm:ml-4 border-l-2 border-blue-200' : ''}`}
-                          >
-                            <div className={`mb-1.5 sm:mb-2 flex items-center gap-2`}>
-                              {!isSubCategory && (
-                                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-slate-300 text-[10px] font-medium text-slate-500">
-                                  {mainCatNum}
-                                </span>
-                              )}
-                              <h4 className={`font-semibold text-slate-900 ${isSubCategory ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'}`}>
-                                {category.title}
-                              </h4>
-                            </div>
-                        <p className="mb-2 sm:mb-3 text-xs sm:text-sm text-slate-600">
-                          {category.description}
-                        </p>
-                        {category.examples && (
-                          <p className="text-[10px] sm:text-xs text-blue-600 font-medium">
-                            예시: {category.examples}
-                          </p>
-                        )}
-                        {category.algorithms && category.algorithms.length > 0 && (
-                          <div className="mt-2 sm:mt-3 space-y-2 sm:space-y-3">
-                            {category.algorithms.map((algo, algoIndex) => (
-                              <div
-                                key={algoIndex}
-                                className="rounded-lg bg-white p-2.5 sm:p-3 ring-1 ring-slate-200"
-                              >
-                                <h5 className="font-medium text-slate-900 text-xs sm:text-sm">
-                                  {algo.name}
-                                </h5>
-                                <p className="mt-1 text-[10px] sm:text-xs text-slate-600">
-                                  {algo.description}
-                                </p>
-                                {algo.examples && (
-                                  <p className="mt-1 text-[10px] sm:text-xs text-blue-600">
-                                    예시: {algo.examples}
-                                  </p>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                          </div>
-                        );
+                    type CategoryType = {
+                      title: string;
+                      description: string;
+                      algorithms?: Array<{
+                        name: string;
+                        description: string;
+                        examples: string;
+                      }>;
+                      examples?: string;
+                    };
+
+                    // 카테고리들을 메인 + 서브카테고리 그룹으로 묶기
+                    const groupedCategories: Array<{
+                      main: CategoryType;
+                      subs: CategoryType[];
+                    }> = [];
+
+                    serviceDetails.aiModels.machineLearning.categories.forEach(
+                      (category: CategoryType) => {
+                        if (category.title.startsWith('○')) {
+                          // 서브카테고리면 마지막 그룹에 추가
+                          if (groupedCategories.length > 0) {
+                            groupedCategories[groupedCategories.length - 1].subs.push(category);
+                          }
+                        } else {
+                          // 메인 카테고리면 새 그룹 시작
+                          groupedCategories.push({ main: category, subs: [] });
+                        }
                       }
                     );
+
+                    return groupedCategories.map((group, groupIndex) => (
+                      <details
+                        key={groupIndex}
+                        className="group rounded-lg border border-slate-200 bg-slate-50"
+                      >
+                        <summary className="flex cursor-pointer items-center justify-between p-3 sm:p-4 font-semibold text-slate-900 text-sm sm:text-base hover:bg-slate-100 transition-colors">
+                          <span className="flex items-center gap-2 sm:gap-3">
+                            <span className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xs sm:text-sm font-bold">
+                              {groupIndex + 1}
+                            </span>
+                            {group.main.title}
+                          </span>
+                          <Icons.ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-500 transition-transform group-open:rotate-180 flex-shrink-0" />
+                        </summary>
+                        <div className="border-t border-slate-200 p-3 sm:p-4">
+                          <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                            {group.main.description}
+                          </p>
+                          {group.main.examples && (
+                            <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-blue-600 font-medium">
+                              예시: {group.main.examples}
+                            </p>
+                          )}
+                          {group.main.algorithms && group.main.algorithms.length > 0 && (
+                            <div className="space-y-2 sm:space-y-3">
+                              {group.main.algorithms.map((algo, algoIndex) => (
+                                <div
+                                  key={algoIndex}
+                                  className="rounded-lg bg-white p-3 sm:p-4 ring-1 ring-slate-200"
+                                >
+                                  <h5 className="font-medium text-slate-900 text-sm sm:text-base">
+                                    {algo.name}
+                                  </h5>
+                                  <p className="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    {algo.description}
+                                  </p>
+                                  {algo.examples && (
+                                    <p className="mt-1.5 text-xs sm:text-sm text-blue-600">
+                                      예시: {algo.examples}
+                                    </p>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* 서브카테고리들 렌더링 */}
+                          {group.subs.map((sub, subIndex) => (
+                            <div
+                              key={subIndex}
+                              className="mt-3 sm:mt-4 rounded-lg bg-blue-50/50 p-3 sm:p-4"
+                            >
+                              <h4 className="mb-1.5 sm:mb-2 font-semibold text-slate-900 text-sm sm:text-base">
+                                {sub.title}
+                              </h4>
+                              <p className="mb-2 sm:mb-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                {sub.description}
+                              </p>
+                              {sub.examples && (
+                                <p className="mb-3 text-xs sm:text-sm text-blue-600 font-medium">
+                                  예시: {sub.examples}
+                                </p>
+                              )}
+                              {sub.algorithms && sub.algorithms.length > 0 && (
+                                <div className="space-y-2 sm:space-y-3">
+                                  {sub.algorithms.map((algo, algoIndex) => (
+                                    <div
+                                      key={algoIndex}
+                                      className="rounded-lg bg-white p-3 sm:p-4 ring-1 ring-slate-200"
+                                    >
+                                      <h5 className="font-medium text-slate-900 text-sm sm:text-base">
+                                        {algo.name}
+                                      </h5>
+                                      <p className="mt-1.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                        {algo.description}
+                                      </p>
+                                      {algo.examples && (
+                                        <p className="mt-1.5 text-xs sm:text-sm text-blue-600">
+                                          예시: {algo.examples}
+                                        </p>
+                                      )}
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </details>
+                    ));
                   })()}
                 </div>
               </div>
@@ -507,13 +562,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                         key={modelIndex}
                         className="rounded-lg bg-gradient-to-br from-blue-50 to-white p-3 sm:p-4 ring-1 ring-blue-100"
                       >
-                        <h4 className="font-semibold text-slate-900 text-xs sm:text-sm">
+                        <h4 className="font-semibold text-slate-900 text-sm sm:text-base">
                           {model.name}
                         </h4>
-                        <p className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs text-slate-600">
+                        <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-slate-600">
                           {model.description}
                         </p>
-                        <p className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs text-blue-600">
+                        <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-blue-600">
                           활용: {model.examples}
                         </p>
                       </div>
@@ -672,7 +727,7 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                           {caseItem.description}
                         </p>
                         {caseItem.applications && (
-                          <p className="mb-3 sm:mb-4 text-[10px] sm:text-xs text-blue-600 font-medium">
+                          <p className="mb-3 sm:mb-4 text-xs sm:text-sm text-blue-600 font-medium">
                             적용 분야: {caseItem.applications}
                           </p>
                         )}
@@ -683,10 +738,10 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                                 key={exIndex}
                                 className="rounded-lg bg-slate-50 p-2.5 sm:p-3"
                               >
-                                <h4 className="font-medium text-slate-900 text-xs sm:text-sm">
+                                <h4 className="font-medium text-slate-900 text-sm sm:text-base">
                                   {example.name}
                                 </h4>
-                                <p className="mt-1 text-[10px] sm:text-xs text-slate-600">
+                                <p className="mt-1 text-xs sm:text-sm text-slate-600">
                                   {example.detail}
                                 </p>
                               </div>
@@ -696,16 +751,16 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                         {caseItem.networkingTable &&
                           caseItem.networkingTable.length > 0 && (
                             <div className="mt-3 sm:mt-4 -mx-4 sm:mx-0 overflow-x-auto">
-                              <table className="w-full min-w-[480px] border-collapse text-[10px] sm:text-xs">
+                              <table className="w-full min-w-[480px] border-collapse text-xs sm:text-sm">
                                 <thead>
                                   <tr className="border-b border-slate-200 bg-slate-50">
-                                    <th className="px-2 sm:px-3 py-1.5 sm:py-2 text-left font-semibold text-slate-900">
+                                    <th className="px-2.5 sm:px-3 py-2 sm:py-2.5 text-left font-semibold text-slate-900">
                                       분류
                                     </th>
-                                    <th className="px-2 sm:px-3 py-1.5 sm:py-2 text-left font-semibold text-slate-900">
+                                    <th className="px-2.5 sm:px-3 py-2 sm:py-2.5 text-left font-semibold text-slate-900">
                                       내용
                                     </th>
-                                    <th className="px-2 sm:px-3 py-1.5 sm:py-2 text-left font-semibold text-slate-900">
+                                    <th className="px-2.5 sm:px-3 py-2 sm:py-2.5 text-left font-semibold text-slate-900">
                                       ML 기술
                                     </th>
                                   </tr>
@@ -717,13 +772,13 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                                         key={rowIndex}
                                         className="border-b border-slate-100"
                                       >
-                                        <td className="px-2 sm:px-3 py-1.5 sm:py-2 font-medium text-slate-900">
+                                        <td className="px-2.5 sm:px-3 py-2 sm:py-2.5 font-medium text-slate-900">
                                           {row.category}
                                         </td>
-                                        <td className="px-2 sm:px-3 py-1.5 sm:py-2 text-slate-600">
+                                        <td className="px-2.5 sm:px-3 py-2 sm:py-2.5 text-slate-600">
                                           {row.content}
                                         </td>
-                                        <td className="px-2 sm:px-3 py-1.5 sm:py-2 text-blue-600">
+                                        <td className="px-2.5 sm:px-3 py-2 sm:py-2.5 text-blue-600">
                                           {row.mlTech}
                                         </td>
                                       </tr>
@@ -831,17 +886,17 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                       key={modelIndex}
                       className="rounded-xl bg-gradient-to-br from-slate-900 to-blue-900 p-4 sm:p-5 text-white"
                     >
-                      <h3 className="font-semibold text-white text-xs sm:text-sm">
+                      <h3 className="font-semibold text-white text-sm sm:text-base">
                         {model.name}
                       </h3>
-                      <p className="mt-1 text-[10px] sm:text-xs text-blue-300 font-medium">
+                      <p className="mt-1 text-xs sm:text-sm text-blue-300 font-medium">
                         {model.subtitle}
                       </p>
-                      <p className="mt-2 sm:mt-3 text-[10px] sm:text-xs text-blue-100">
+                      <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-blue-100">
                         {model.features}
                       </p>
                       <div className="mt-2 sm:mt-3 rounded-lg bg-white/10 p-2.5 sm:p-3">
-                        <p className="text-[10px] sm:text-xs text-blue-100">
+                        <p className="text-xs sm:text-sm text-blue-100">
                           {model.core}
                         </p>
                       </div>
