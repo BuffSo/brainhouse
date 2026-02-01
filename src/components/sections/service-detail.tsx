@@ -49,7 +49,7 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 px-4 py-16 pt-24 sm:px-6 sm:py-20 sm:pt-32 min-h-[260px] flex flex-col justify-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 px-3 py-12 pt-20 sm:px-6 sm:py-16 sm:pt-28 md:py-20 md:pt-32 min-h-[200px] sm:min-h-[240px] md:min-h-[260px] flex flex-col justify-center">
         {backgroundImage ? (
           <>
             <Image
@@ -65,11 +65,11 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
           <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center opacity-20" />
         )}
         <Container className="relative z-10">
-          <div className="mx-auto max-w-3xl text-center px-2 sm:px-4">
-            <h1 className="text-xl font-bold tracking-tight text-white sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl break-keep">
+          <div className="mx-auto max-w-3xl text-center px-1 sm:px-2 md:px-4">
+            <h1 className="text-lg font-bold tracking-tight text-white sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl break-keep leading-snug">
               {serviceDetails.title}
             </h1>
-            <p className="mt-3 text-sm text-blue-100 sm:mt-4 sm:text-base md:text-lg lg:text-xl break-keep">
+            <p className="mt-2 text-xs text-blue-100 sm:mt-3 sm:text-sm md:mt-4 md:text-base lg:text-lg xl:text-xl break-keep leading-relaxed">
               {serviceDetails.subtitle.includes(' 및 ') ? (
                 <>
                   {serviceDetails.subtitle.split(' 및 ')[0]} 및
@@ -87,11 +87,11 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
       {/* Coming Soon Notice */}
       {isComingSoon && (
-        <section className="bg-amber-50 py-4 sm:py-6 md:py-8">
+        <section className="bg-amber-50 py-3 sm:py-5 md:py-8">
           <Container>
-            <div className="flex items-center justify-center gap-2 sm:gap-3 text-amber-800">
+            <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3 text-amber-800">
               <Icons.Lightbulb className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-              <p className="text-sm sm:text-base font-medium text-center">
+              <p className="text-xs sm:text-sm md:text-base font-medium text-center leading-relaxed">
                 {ui.comingSoonMessage}
               </p>
             </div>
@@ -100,22 +100,22 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
       )}
 
       {/* Description Section */}
-      <section className="py-8 sm:py-12 md:py-16">
+      <section className="py-6 sm:py-10 md:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             {Array.isArray(serviceDetails.description) ? (
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {serviceDetails.description.map((paragraph, index) => (
                   <p
                     key={index}
-                    className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl"
+                    className="text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg lg:text-xl"
                   >
                     {paragraph}
                   </p>
                 ))}
               </div>
             ) : (
-              <p className="text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
+              <p className="text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg lg:text-xl">
                 {serviceDetails.description}
               </p>
             )}
@@ -2227,21 +2227,21 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
       {/* Education Programs Section - Education Training Only */}
       {'programs' in serviceDetails && serviceDetails.programs && (
-        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+        <section className="bg-slate-50 py-6 sm:py-10 md:py-16">
           <Container>
             <div className="mx-auto max-w-5xl">
-              <div className="mb-6 sm:mb-8 text-center">
-                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+              <div className="mb-4 sm:mb-6 md:mb-8 text-center">
+                <div className="mb-1 sm:mb-1.5 md:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
                   <Icons.GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
-                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                  <span className="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider">
                     Programs
                   </span>
                 </div>
-                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                <h2 className="text-lg font-bold text-slate-900 sm:text-xl md:text-2xl lg:text-3xl">
                   {serviceDetails.programs.sectionTitle}
                 </h2>
               </div>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-5 md:space-y-6">
                 {serviceDetails.programs.items.map(
                   (
                     program: {
@@ -2287,24 +2287,24 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                     return (
                       <div
                         key={index}
-                        className="rounded-xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-slate-200"
+                        className="rounded-xl bg-white p-4 sm:p-5 md:p-6 shadow-sm ring-1 ring-slate-200"
                       >
-                        <div className="mb-4 flex items-center gap-3">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
-                            <IconComponent className="h-6 w-6 text-white" />
+                        <div className="mb-3 sm:mb-4 flex items-center gap-2.5 sm:gap-3">
+                          <div className="flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-xl bg-blue-600 flex-shrink-0">
+                            <IconComponent className="h-5 w-5 sm:h-5.5 sm:w-5.5 md:h-6 md:w-6 text-white" />
                           </div>
-                          <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
+                          <h3 className="text-base font-semibold text-slate-900 sm:text-lg md:text-xl leading-snug">
                             {program.title}
                           </h3>
                         </div>
-                        <p className="mb-4 text-sm text-slate-600 sm:text-base">
+                        <p className="mb-3 sm:mb-4 text-sm text-slate-600 sm:text-base leading-relaxed">
                           {program.description}
                         </p>
 
                         {/* Objective */}
                         {program.objective && (
-                          <div className="mb-4 rounded-lg bg-blue-50 p-3 sm:p-4 border-l-4 border-blue-500">
-                            <p className="text-xs sm:text-sm text-slate-700">
+                          <div className="mb-3 sm:mb-4 rounded-lg bg-blue-50 p-2.5 sm:p-3 md:p-4 border-l-4 border-blue-500">
+                            <p className="text-[11px] sm:text-xs md:text-sm text-slate-700 leading-relaxed">
                               <span className="font-semibold text-blue-700">교육 목표: </span>
                               {program.objective}
                             </p>
@@ -2313,20 +2313,20 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                         {/* Modules */}
                         {program.modules && (
-                          <div className="mb-4">
+                          <div className="mb-3 sm:mb-4">
                             <h4 className="mb-2 sm:mb-3 font-medium text-slate-900 text-sm sm:text-base">
                               교육 모듈
                             </h4>
-                            <div className="grid gap-2 sm:gap-3 sm:grid-cols-3">
+                            <div className="grid gap-2.5 sm:gap-3 md:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                               {program.modules.map((module, mIndex) => (
                                 <div
                                   key={mIndex}
-                                  className="rounded-lg bg-blue-50 p-2.5 sm:p-3"
+                                  className="rounded-lg bg-blue-50 p-3 sm:p-4"
                                 >
-                                  <h5 className="mb-1 font-medium text-blue-700 text-xs sm:text-sm">
+                                  <h5 className="mb-1 sm:mb-1.5 font-semibold text-blue-700 text-sm sm:text-base">
                                     {module.name}
                                   </h5>
-                                  <p className="text-[10px] sm:text-xs text-slate-600">
+                                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                                     {module.content}
                                   </p>
                                 </div>
@@ -2335,53 +2335,64 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                           </div>
                         )}
 
-                        {/* Topics */}
+                        {/* Topics - Accordion */}
                         {program.topics && (
-                          <div className="mb-4">
-                            <h4 className="mb-2 sm:mb-3 font-medium text-slate-900 text-sm sm:text-base">
-                              교육 내용
-                            </h4>
-                            <div className="grid gap-1.5 sm:gap-2 sm:grid-cols-2">
-                              {program.topics.map((topic, tIndex) => (
-                                <div
-                                  key={tIndex}
-                                  className="flex items-start gap-1.5 sm:gap-2 text-xs sm:text-sm text-slate-600"
-                                >
-                                  <Icons.Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0 text-green-500 mt-0.5" />
-                                  {topic}
+                          <div className="mb-3 sm:mb-4">
+                            <details className="group rounded-lg border border-slate-200 bg-slate-50">
+                              <summary className="flex cursor-pointer items-center justify-between p-2.5 sm:p-3 md:p-4 font-medium text-slate-900 text-xs sm:text-sm md:text-base hover:bg-slate-100 transition-colors">
+                                <span className="flex items-center gap-1.5 sm:gap-2">
+                                  <Icons.BookOpen className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 flex-shrink-0" />
+                                  <span>교육 내용</span>
+                                  <span className="text-[10px] sm:text-xs md:text-sm text-slate-500 font-normal">
+                                    ({program.topics.length}개 항목)
+                                  </span>
+                                </span>
+                                <Icons.ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" />
+                              </summary>
+                              <div className="border-t border-slate-200 p-2.5 sm:p-3 md:p-4">
+                                <div className="space-y-1.5 sm:space-y-2 md:space-y-3">
+                                  {program.topics.map((topic, tIndex) => (
+                                    <div
+                                      key={tIndex}
+                                      className="flex items-start gap-1.5 sm:gap-2 md:gap-3 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed"
+                                    >
+                                      <Icons.Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0 text-green-500 mt-0.5" />
+                                      {topic}
+                                    </div>
+                                  ))}
                                 </div>
-                              ))}
-                            </div>
+                              </div>
+                            </details>
                           </div>
                         )}
 
                         {/* Sessions */}
                         {program.sessions && (
-                          <div className="mb-4">
-                            <h4 className="mb-2 sm:mb-3 font-medium text-slate-900 text-sm sm:text-base">
+                          <div className="mb-3 sm:mb-4">
+                            <h4 className="mb-2.5 sm:mb-3 md:mb-4 font-medium text-slate-900 text-sm sm:text-base">
                               회차별 커리큘럼
                             </h4>
-                            <div className="space-y-2 sm:space-y-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
                               {program.sessions.map((session, sIndex) => (
                                 <div
                                   key={sIndex}
-                                  className="rounded-lg bg-slate-50 p-3 sm:p-4"
+                                  className="rounded-lg bg-slate-50 p-3 sm:p-4 md:p-5"
                                 >
-                                  <h5 className="mb-1 font-medium text-slate-900 text-xs sm:text-sm leading-snug">
+                                  <h5 className="mb-1 sm:mb-1.5 font-semibold text-slate-900 text-sm sm:text-base leading-snug">
                                     {session.title}
                                   </h5>
                                   {session.keyConcept && (
-                                    <p className="mb-2 text-[10px] sm:text-xs font-medium text-blue-600">
+                                    <p className="mb-1.5 sm:mb-2 md:mb-3 text-xs sm:text-sm font-medium text-blue-600">
                                       핵심 개념: {session.keyConcept}
                                     </p>
                                   )}
-                                  <ul className="space-y-1">
+                                  <ul className="space-y-1 sm:space-y-1.5 md:space-y-2">
                                     {session.topics.map((topic, topicIndex) => (
                                       <li
                                         key={topicIndex}
-                                        className="flex items-start gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-slate-600"
+                                        className="flex items-start gap-1.5 sm:gap-2 text-xs sm:text-sm text-slate-600 leading-relaxed"
                                       >
-                                        <span className="mt-1 sm:mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400" />
+                                        <span className="mt-1.5 h-1 w-1 sm:h-1.5 sm:w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
                                         {topic}
                                       </li>
                                     ))}
@@ -2394,10 +2405,10 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                         {/* Tip */}
                         {program.tip && (
-                          <div className="mb-4 rounded-lg bg-amber-50 p-3 sm:p-4 border-l-4 border-amber-400">
-                            <div className="flex items-start gap-2">
+                          <div className="mb-3 sm:mb-4 rounded-lg bg-amber-50 p-2.5 sm:p-3 md:p-4 border-l-4 border-amber-400">
+                            <div className="flex items-start gap-1.5 sm:gap-2">
                               <Icons.Lightbulb className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-amber-500 mt-0.5" />
-                              <p className="text-xs sm:text-sm text-slate-700">
+                              <p className="text-[11px] sm:text-xs md:text-sm text-slate-700 leading-relaxed">
                                 {program.tip}
                               </p>
                             </div>
@@ -2406,8 +2417,8 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                         {/* Lecture Theme */}
                         {program.lectureTheme && (
-                          <div className="mb-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 p-3 sm:p-4 text-white">
-                            <p className="text-xs sm:text-sm font-medium">
+                          <div className="mb-3 sm:mb-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 p-3 sm:p-4 md:p-5 text-white">
+                            <p className="text-xs sm:text-sm md:text-base font-medium leading-relaxed">
                               <span className="opacity-80">특강 주제: </span>
                               &quot;{program.lectureTheme}&quot;
                             </p>
@@ -2416,57 +2427,57 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                         {/* Agenda */}
                         {program.agenda && (
-                          <div className="mb-4">
-                            <h4 className="mb-2 sm:mb-3 font-medium text-slate-900 text-sm sm:text-base">
+                          <div className="mb-3 sm:mb-4">
+                            <h4 className="mb-2.5 sm:mb-3 md:mb-4 font-medium text-slate-900 text-sm sm:text-base">
                               강의 구성
                             </h4>
-                            <div className="space-y-2">
+                            <div className="space-y-2.5 sm:space-y-3 md:space-y-4">
                               {program.agenda.map((item, aIndex) => (
                                 <div
                                   key={aIndex}
-                                  className="rounded-lg bg-slate-50 p-2.5 sm:p-3"
+                                  className="rounded-lg bg-slate-50 p-3 sm:p-4 md:p-5"
                                 >
-                                  <h5 className="mb-1 font-medium text-slate-900 text-xs sm:text-sm leading-snug">
+                                  <h5 className="mb-1 sm:mb-1.5 font-semibold text-slate-900 text-sm sm:text-base leading-snug">
                                     {item.title}
                                   </h5>
                                   {item.description && (
-                                    <p className="text-[10px] sm:text-xs text-slate-500 mb-1.5 sm:mb-2">
+                                    <p className="text-xs sm:text-sm text-slate-500 mb-1.5 sm:mb-2 md:mb-3">
                                       {item.description}
                                     </p>
                                   )}
                                   {item.content && (
-                                    <p className="text-[10px] sm:text-xs text-slate-600">
+                                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                                       {item.content}
                                     </p>
                                   )}
                                   {item.items && (
-                                    <ul className="mt-1.5 sm:mt-2 space-y-1">
+                                    <ul className="mt-1.5 sm:mt-2 md:mt-3 space-y-1 sm:space-y-1.5 md:space-y-2">
                                       {item.items.map((subItem, subIndex) => (
                                         <li
                                           key={subIndex}
-                                          className="flex items-start gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-slate-600"
+                                          className="flex items-start gap-1.5 sm:gap-2 text-xs sm:text-sm text-slate-600 leading-relaxed"
                                         >
-                                          <span className="mt-1 sm:mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400" />
+                                          <span className="mt-1.5 h-1 w-1 sm:h-1.5 sm:w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
                                           {subItem}
                                         </li>
                                       ))}
                                     </ul>
                                   )}
                                   {item.useCases && (
-                                    <div className="mt-2">
+                                    <div className="mt-2.5 sm:mt-3 md:mt-4">
                                       {/* Mobile: Card Layout */}
                                       <div className="space-y-2 sm:hidden">
                                         {item.useCases.map((uc, ucIndex) => (
                                           <div key={ucIndex} className="rounded-lg bg-white p-3 border border-slate-200">
-                                            <div className="mb-1.5 font-medium text-slate-900 text-xs">
+                                            <div className="mb-1.5 font-semibold text-slate-900 text-xs">
                                               {uc.field}
                                             </div>
-                                            <div className="space-y-1 text-xs">
-                                              <p className="text-slate-600">
-                                                <span className="text-slate-500">활용:</span> {uc.useCase}
+                                            <div className="space-y-1 text-[11px]">
+                                              <p className="text-slate-600 leading-relaxed">
+                                                <span className="text-slate-500 font-medium">활용:</span> {uc.useCase}
                                               </p>
-                                              <p className="text-blue-600">
-                                                <span className="text-slate-500">효과:</span> {uc.effect}
+                                              <p className="text-blue-600 leading-relaxed">
+                                                <span className="text-slate-500 font-medium">효과:</span> {uc.effect}
                                               </p>
                                             </div>
                                           </div>
@@ -2474,20 +2485,20 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                                       </div>
                                       {/* Desktop: Table Layout */}
                                       <div className="hidden sm:block overflow-x-auto">
-                                        <table className="w-full border-collapse text-xs">
+                                        <table className="w-full border-collapse text-sm">
                                           <thead>
                                             <tr className="border-b border-slate-200 bg-white">
-                                              <th className="px-2 py-1.5 text-left font-semibold text-slate-700">분야</th>
-                                              <th className="px-2 py-1.5 text-left font-semibold text-slate-700">주요 활용 사례</th>
-                                              <th className="px-2 py-1.5 text-left font-semibold text-slate-700">기대 효과</th>
+                                              <th className="px-3 py-2 text-left font-semibold text-slate-700">분야</th>
+                                              <th className="px-3 py-2 text-left font-semibold text-slate-700">주요 활용 사례</th>
+                                              <th className="px-3 py-2 text-left font-semibold text-slate-700">기대 효과</th>
                                             </tr>
                                           </thead>
                                           <tbody>
                                             {item.useCases.map((uc, ucIndex) => (
                                               <tr key={ucIndex} className="border-b border-slate-100">
-                                                <td className="px-2 py-1.5 font-medium text-slate-800">{uc.field}</td>
-                                                <td className="px-2 py-1.5 text-slate-600">{uc.useCase}</td>
-                                                <td className="px-2 py-1.5 text-slate-600">{uc.effect}</td>
+                                                <td className="px-3 py-2 font-medium text-slate-800">{uc.field}</td>
+                                                <td className="px-3 py-2 text-slate-600">{uc.useCase}</td>
+                                                <td className="px-3 py-2 text-slate-600">{uc.effect}</td>
                                               </tr>
                                             ))}
                                           </tbody>
@@ -2503,10 +2514,10 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                         {/* Differentiation */}
                         {program.differentiation && (
-                          <div className="mb-4 rounded-lg bg-purple-50 p-3 sm:p-4 border-l-4 border-purple-400">
-                            <div className="flex items-start gap-2">
+                          <div className="mb-3 sm:mb-4 rounded-lg bg-purple-50 p-2.5 sm:p-3 md:p-4 border-l-4 border-purple-400">
+                            <div className="flex items-start gap-1.5 sm:gap-2">
                               <Icons.Sparkles className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-purple-500 mt-0.5" />
-                              <p className="text-xs sm:text-sm text-slate-700">
+                              <p className="text-[11px] sm:text-xs md:text-sm text-slate-700 leading-relaxed">
                                 {program.differentiation}
                               </p>
                             </div>
@@ -2515,50 +2526,58 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
 
                         {/* Custom Note */}
                         {program.customNote && (
-                          <div className="mb-4 rounded-lg bg-slate-100 p-3 sm:p-4">
-                            <p className="text-xs sm:text-sm text-slate-600 italic">
+                          <div className="mb-3 sm:mb-4 rounded-lg bg-slate-100 p-2.5 sm:p-3 md:p-4">
+                            <p className="text-[11px] sm:text-xs md:text-sm text-slate-600 italic leading-relaxed">
                               {program.customNote}
                             </p>
                           </div>
                         )}
 
-                        {/* Assessment Areas */}
+                        {/* Assessment Areas - Accordion */}
                         {program.assessmentAreas && (
-                          <div className="mb-4">
-                            <h4 className="mb-2 font-medium text-slate-900 text-sm sm:text-base">
+                          <div className="mb-3 sm:mb-4">
+                            <h4 className="mb-2.5 sm:mb-3 md:mb-4 font-medium text-slate-900 text-sm sm:text-base">
                               주요 진단 영역
                             </h4>
                             {program.assessmentIntro && (
-                              <p className="mb-2 sm:mb-3 text-xs sm:text-sm text-slate-600">
+                              <p className="mb-2.5 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
                                 {program.assessmentIntro}
                               </p>
                             )}
-                            <div className="space-y-2 sm:space-y-3">
+                            <div className="space-y-2 sm:space-y-3 md:space-y-4">
                               {program.assessmentAreas.map((area, areaIndex) => (
-                                <div
+                                <details
                                   key={areaIndex}
-                                  className="rounded-lg bg-slate-50 p-3 sm:p-4"
+                                  className="group rounded-lg border border-slate-200 bg-slate-50"
                                 >
-                                  <h5 className="mb-1 font-medium text-slate-900 text-xs sm:text-sm">
-                                    {area.title}
-                                  </h5>
-                                  {area.areaDescription && (
-                                    <p className="mb-1.5 sm:mb-2 text-[10px] sm:text-xs text-slate-500 italic">
-                                      {area.areaDescription}
-                                    </p>
-                                  )}
-                                  <ul className="space-y-1">
-                                    {area.items.map((item, itemIndex) => (
-                                      <li
-                                        key={itemIndex}
-                                        className="flex items-start gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-slate-600"
-                                      >
-                                        <span className="mt-1 sm:mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400" />
-                                        {item}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
+                                  <summary className="flex cursor-pointer items-center justify-between p-3 sm:p-4 md:p-5 font-semibold text-slate-900 text-xs sm:text-sm md:text-base hover:bg-slate-100 transition-colors">
+                                    <span className="flex items-center gap-2 sm:gap-2.5 md:gap-3">
+                                      <span className="flex h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 items-center justify-center rounded-full bg-blue-100 text-blue-600 text-[10px] sm:text-xs md:text-sm font-bold flex-shrink-0">
+                                        {areaIndex + 1}
+                                      </span>
+                                      <span className="leading-snug">{area.title}</span>
+                                    </span>
+                                    <Icons.ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-slate-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" />
+                                  </summary>
+                                  <div className="border-t border-slate-200 p-3 sm:p-4 md:p-5">
+                                    {area.areaDescription && (
+                                      <p className="mb-2 sm:mb-3 md:mb-4 text-[11px] sm:text-xs md:text-sm text-slate-500 italic">
+                                        {area.areaDescription}
+                                      </p>
+                                    )}
+                                    <ul className="space-y-1.5 sm:space-y-2 md:space-y-3">
+                                      {area.items.map((item, itemIndex) => (
+                                        <li
+                                          key={itemIndex}
+                                          className="flex items-start gap-1.5 sm:gap-2 md:gap-3 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed"
+                                        >
+                                          <Icons.Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0 text-green-500 mt-0.5" />
+                                          {item}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                </details>
                               ))}
                             </div>
                           </div>
@@ -2568,31 +2587,36 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                         {program.maturityLevels && (
                           <div>
                             {program.maturityLevelsIntro ? (
-                              <div className="mb-2 sm:mb-3">
-                                <h4 className="font-medium text-slate-900 text-xs sm:text-sm">
+                              <div className="mb-3 sm:mb-4 md:mb-5">
+                                <h4 className="font-semibold text-slate-900 text-sm sm:text-base">
                                   {program.maturityLevelsIntro.split(' - ')[0]}
                                 </h4>
                                 {program.maturityLevelsIntro.includes(' - ') && (
-                                  <p className="mt-0.5 sm:mt-1 text-[10px] sm:text-xs text-slate-600">
+                                  <p className="mt-1 sm:mt-1.5 md:mt-2 text-[11px] sm:text-xs md:text-sm text-slate-600 leading-relaxed">
                                     {program.maturityLevelsIntro.split(' - ')[1]}
                                   </p>
                                 )}
                               </div>
                             ) : (
-                              <h4 className="mb-2 sm:mb-3 font-medium text-slate-900 text-sm sm:text-base">
+                              <h4 className="mb-3 sm:mb-4 md:mb-5 font-semibold text-slate-900 text-sm sm:text-base">
                                 AI 혁신 수준 4단계
                               </h4>
                             )}
-                            <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-4">
+                            <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 lg:grid-cols-4">
                               {program.maturityLevels.map((level, lIndex) => (
                                 <div
                                   key={lIndex}
-                                  className="rounded-lg bg-gradient-to-br from-blue-50 to-white p-2.5 sm:p-3 ring-1 ring-blue-100"
+                                  className="rounded-lg sm:rounded-xl bg-white p-3 sm:p-4 md:p-5 ring-1 ring-slate-200 hover:ring-blue-300 hover:shadow-md transition-all"
                                 >
-                                  <h5 className="mb-1 font-medium text-slate-900 text-[10px] sm:text-xs leading-tight">
-                                    {level.level}
-                                  </h5>
-                                  <p className="text-[10px] sm:text-xs text-slate-600 leading-tight">
+                                  <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2 md:mb-3">
+                                    <span className="flex h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 items-center justify-center rounded-md sm:rounded-lg bg-blue-600 text-white text-[10px] sm:text-xs md:text-sm font-bold flex-shrink-0">
+                                      {lIndex + 1}
+                                    </span>
+                                    <h5 className="font-semibold text-slate-900 text-[11px] sm:text-sm md:text-base leading-snug">
+                                      {level.level}
+                                    </h5>
+                                  </div>
+                                  <p className="text-[10px] sm:text-xs md:text-sm text-slate-600 leading-relaxed">
                                     {level.description}
                                   </p>
                                 </div>
@@ -2611,25 +2635,25 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
       )}
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-10 sm:py-12 md:py-16">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-8 sm:py-10 md:py-16">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">
+          <div className="mx-auto max-w-2xl text-center px-1">
+            <h2 className="text-lg font-bold text-white sm:text-xl md:text-2xl lg:text-3xl">
               {ui.ctaTitle}
             </h2>
-            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-blue-100">
+            <p className="mt-1.5 sm:mt-2 md:mt-3 text-xs sm:text-sm md:text-base text-blue-100 leading-relaxed">
               {ui.ctaDescription}
             </p>
-            <div className="mt-5 sm:mt-6 flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row">
+            <div className="mt-4 sm:mt-5 md:mt-6 flex flex-col items-center justify-center gap-2.5 sm:gap-3 md:gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex h-10 sm:h-11 items-center justify-center rounded-md bg-white px-6 sm:px-8 text-sm font-medium text-blue-600 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="w-full sm:w-auto inline-flex h-9 sm:h-10 md:h-11 items-center justify-center rounded-md bg-white px-5 sm:px-6 md:px-8 text-xs sm:text-sm font-medium text-blue-600 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 {ui.ctaButton}
               </Link>
               <Link
                 href="/services"
-                className="text-sm font-medium text-white hover:text-blue-100"
+                className="text-xs sm:text-sm font-medium text-white hover:text-blue-100"
               >
                 {ui.ctaViewAll}
               </Link>

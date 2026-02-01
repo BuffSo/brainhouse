@@ -1838,19 +1838,19 @@ export const translations = {
               maturityLevelsIntro: '요약: AI 혁신 수준의 4단계 - 보통 진단 결과에 따라 기업은 다음과 같은 단계로 정의됩니다.',
               maturityLevels: [
                 {
-                  level: '1. 초기 단계 (Ad-hoc)',
+                  level: '초기 단계 (Ad-hoc)',
                   description: '일부 부서에서 실험적으로 도입하는 수준',
                 },
                 {
-                  level: '2. 활성 단계 (Active)',
+                  level: '활성 단계 (Active)',
                   description: '특정 비즈니스 영역에서 성과를 내기 시작함',
                 },
                 {
-                  level: '3. 가속 단계 (Accelerated)',
+                  level: '가속 단계 (Accelerated)',
                   description: '전사적으로 데이터 기반 의사결정이 내재화됨',
                 },
                 {
-                  level: '4. 변혁 단계 (Transformational)',
+                  level: '변혁 단계 (Transformational)',
                   description: 'AI가 기업의 핵심 비즈니스 모델 그 자체가 됨',
                 },
               ],
@@ -4374,19 +4374,19 @@ export const translations = {
               maturityLevelsIntro: 'Summary: 4 Stages of AI Innovation Level - Companies are typically defined in the following stages based on diagnostic results.',
               maturityLevels: [
                 {
-                  level: '1. Ad-hoc Stage',
+                  level: 'Ad-hoc Stage',
                   description: 'Level of experimental adoption in some departments',
                 },
                 {
-                  level: '2. Active Stage',
+                  level: 'Active Stage',
                   description: 'Starting to achieve results in specific business areas',
                 },
                 {
-                  level: '3. Accelerated Stage',
+                  level: 'Accelerated Stage',
                   description: 'Data-driven decision making internalized company-wide',
                 },
                 {
-                  level: '4. Transformational Stage',
+                  level: 'Transformational Stage',
                   description: 'AI becomes the core business model itself',
                 },
               ],
@@ -6870,19 +6870,19 @@ export const translations = {
               maturityLevelsIntro: '要約：AI革新水準の4段階 - 通常診断結果に基づき企業は次のような段階で定義されます。',
               maturityLevels: [
                 {
-                  level: '1. 初期段階（Ad-hoc）',
+                  level: '初期段階（Ad-hoc）',
                   description: '一部部門で実験的に導入する水準',
                 },
                 {
-                  level: '2. 活性段階（Active）',
+                  level: '活性段階（Active）',
                   description: '特定ビジネス領域で成果を出し始める',
                 },
                 {
-                  level: '3. 加速段階（Accelerated）',
+                  level: '加速段階（Accelerated）',
                   description: '全社的にデータ基盤意思決定が内在化される',
                 },
                 {
-                  level: '4. 変革段階（Transformational）',
+                  level: '変革段階（Transformational）',
                   description: 'AIが企業の核心ビジネスモデルそのものになる',
                 },
               ],
