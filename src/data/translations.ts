@@ -204,8 +204,44 @@ export const translations = {
           description: '정부 R&D 기획, 기술사업화 전략, 정책연구 등',
           items: [
             {
-              title: '유무선 통신 소프트웨어 하우스 체계 개발',
-              client: 'IITP',
+              title: '유무선 통신 소프트웨어 하우스 체계',
+              client: '공공기관',
+              year: '2025',
+            },
+            {
+              title: '국내·외 소프트웨어(SW) 교육 인프라 White Paper(백서)',
+              client: '공공기관',
+              year: '2025',
+            },
+            {
+              title: 'DevNetOps와 NetDevOps 트렌드 및 생태계 연구',
+              client: '공공기관',
+              year: '2025',
+            },
+            {
+              title: 'SONiC 기술 및 시장 동향 분석',
+              client: '공공기관',
+              year: '2025',
+              note: 'SONiC(Software for Open Networking in the Cloud): Microsoft Azure 기반 클라우드 오픈소스 네트워크 운영체제',
+            },
+            {
+              title: '네트워크 SW 프레임워크 보급 및 확산 전략',
+              client: '공공기관',
+              year: '2025',
+            },
+            {
+              title: '네트워크 SW AI코딩과 SONiC Vibe Coding 활용 방안',
+              client: '공공기관',
+              year: '2025',
+            },
+            {
+              title: 'SONiC White Paper(아키텍처, 도입효과, Use Case 포함)',
+              client: '공공기관',
+              year: '2025',
+            },
+            {
+              title: '국내외 네트워크 SW 교육과정 분석 및 국내 SONiC 교육과정 설계',
+              client: '공공기관',
               year: '2025',
             },
             {
@@ -2688,8 +2724,44 @@ export const translations = {
             'Government R&D planning, technology commercialization, policy research',
           items: [
             {
-              title: 'Wired/Wireless Communication SW House System Development',
-              client: 'IITP',
+              title: 'Wired/Wireless Communication SW House System',
+              client: 'Public Institution',
+              year: '2025',
+            },
+            {
+              title: 'Domestic & International SW Education Infrastructure White Paper',
+              client: 'Public Institution',
+              year: '2025',
+            },
+            {
+              title: 'DevNetOps and NetDevOps Trends & Ecosystem Research',
+              client: 'Public Institution',
+              year: '2025',
+            },
+            {
+              title: 'SONiC Technology & Market Trend Analysis',
+              client: 'Public Institution',
+              year: '2025',
+              note: 'SONiC (Software for Open Networking in the Cloud): Cloud-based Open-source Network Operating System by Microsoft Azure',
+            },
+            {
+              title: 'Network SW Framework Distribution & Expansion Strategy',
+              client: 'Public Institution',
+              year: '2025',
+            },
+            {
+              title: 'Network SW AI Coding and SONiC Vibe Coding Applications',
+              client: 'Public Institution',
+              year: '2025',
+            },
+            {
+              title: 'SONiC White Paper (Architecture, Benefits, Use Cases)',
+              client: 'Public Institution',
+              year: '2025',
+            },
+            {
+              title: 'Global Network SW Curriculum Analysis & Domestic SONiC Curriculum Design',
+              client: 'Public Institution',
               year: '2025',
             },
             {
@@ -5222,8 +5294,44 @@ export const translations = {
           description: '政府R&D企画、技術事業化戦略、政策研究など',
           items: [
             {
-              title: '有無線通信ソフトウェアハウス体系開発',
-              client: 'IITP',
+              title: '有無線通信ソフトウェアハウス体系',
+              client: '公共機関',
+              year: '2025',
+            },
+            {
+              title: '国内外ソフトウェア(SW)教育インフラ White Paper(白書)',
+              client: '公共機関',
+              year: '2025',
+            },
+            {
+              title: 'DevNetOpsとNetDevOpsトレンドおよびエコシステム研究',
+              client: '公共機関',
+              year: '2025',
+            },
+            {
+              title: 'SONiC技術および市場動向分析',
+              client: '公共機関',
+              year: '2025',
+              note: 'SONiC(Software for Open Networking in the Cloud): Microsoft Azure基盤のクラウドオープンソースネットワーク運営体制',
+            },
+            {
+              title: 'ネットワークSWフレームワーク普及および拡散戦略',
+              client: '公共機関',
+              year: '2025',
+            },
+            {
+              title: 'ネットワークSW AIコーディングとSONiC Vibe Coding活用方案',
+              client: '公共機関',
+              year: '2025',
+            },
+            {
+              title: 'SONiC White Paper(アーキテクチャ、導入効果、Use Case含む)',
+              client: '公共機関',
+              year: '2025',
+            },
+            {
+              title: '国内外ネットワークSW教育課程分析および国内SONiC教育課程設計',
+              client: '公共機関',
               year: '2025',
             },
             {
