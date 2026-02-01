@@ -516,6 +516,12 @@ export const translations = {
           hasPage: true,
         },
         {
+          slug: 'education-training',
+          title: '교육 및 특강',
+          shortTitle: '교육·특강',
+          hasPage: true,
+        },
+        {
           slug: 'software-development',
           title: '소프트웨어 개발',
           shortTitle: 'SW 개발',
@@ -566,6 +572,10 @@ export const translations = {
         'startup-investment': {
           icon: 'Briefcase',
           shortDescription: '성장 단계별 맞춤형 멘토링과 투자 유치 지원',
+        },
+        'education-training': {
+          icon: 'GraduationCap',
+          shortDescription: '벤처 비즈니스 교육 및 ICT 트렌드 특강',
         },
         'software-development': {
           icon: 'Code',
@@ -1602,6 +1612,239 @@ export const translations = {
           },
         },
       },
+      'education-training': {
+        title: '교육 및 특강',
+        subtitle: '벤처 비즈니스 교육·ICT 트렌드 특강',
+        description:
+          '중소벤처기업부 창업진흥원의 창업지원사업(예비창업패키지, 초기창업패키지, 로컬 크리에이터, TIPS 등) 발굴에서 투자유치까지 One-Stop Total 서비스를 제공합니다. 벤처비즈니스 맞춤형 교육과정과 ICT 트렌드 특강을 통해 창업 역량을 강화합니다.',
+        targetCustomers: [
+          '직장인/대학생(창업준비자)',
+          '대학생',
+          '기업 및 공공기관(퇴직자 대상 중장년층 창업)',
+          '대학교(창업보육센터)',
+          '엑셀러레이터',
+          '창조경제혁신센터 등 스타트업 창업 대상자',
+        ],
+        processSteps: [
+          '교육 수요 파악',
+          '맞춤형 커리큘럼 설계',
+          '교육 진행',
+          '피드백 및 멘토링',
+        ],
+        references: '대학교(숭실대학교, 대구가톨릭대학교), 기업 및 예비창업가 대상 다수',
+        fields: [
+          '창업 아이템 발굴',
+          '사업계획서 작성',
+          'ICT 트렌드(AI, 엣지컴퓨팅, 클라우드컴퓨팅, SONiC, Private 5G, Tech별 최신 트렌드)',
+        ],
+        programs: {
+          sectionTitle: '교육 프로그램',
+          items: [
+            {
+              title: '벤처 비즈니스 교육·워크샵',
+              icon: 'BookOpen',
+              description:
+                '벤처비즈니스 실무적 역량 함양을 위한 아이템발굴, 고객/시장분석, BM수립, 팀빌딩, 사업계획서 작성, MVP 개발, 마케팅, 자금조달 전략 학습',
+              objective:
+                '벤처 생태계를 이해하고 지속가능한 BM발굴에서 투자유치, EXIT의 성공사례 및 실패사례를 분석하여 벤처비즈니스에 대한 이해도 향상 및 사업기획 역량 향상',
+              modules: [
+                {
+                  name: '인트로 및 동기부여',
+                  content:
+                    '창업이유, 창업프로세스 이해, 창업아이템 발굴 방법, 시장조사 방법, 창업인프라 활용',
+                },
+                {
+                  name: '사업기획',
+                  content:
+                    '아이템 및 시장 발굴, 고객 니즈 파악(인터뷰), 페르소나정의, BM 설정 및 피봇팅, 사업계획서 작성 및 고도화',
+                },
+                {
+                  name: '사업구현',
+                  content:
+                    '팀 빌딩, 기능구현+사업성 결합(MVP), 검증 프로그램, 사업아이템 피칭교육 및 멘토링, IR자료 작성법',
+                },
+              ],
+              topics: [
+                '벤처비즈니스 환경분석(창업생태계, 이해관계자, 정부정책), 정부 창업지원사업(예비창업패키지, 초기창업패키지, 창업도약패키지, 청년(글로벌)창업사관학교, TIPS, 초격차 스타트업 프로젝트(DIPS)) 이해, 정부 R&D지원사업(창업성장기술개발사업(디딤돌), 창업성장기술개발, 기술혁신개발, 산학연 Collabo R&D, 구매연계 상생협력형) 이해',
+                '벤처기업 트렌드 분석(테크기업, 빅테크, 딥테크, 초격차)',
+                '국내외 벤처기업 성공사례 분석(BM별, 기술별, 분야별, 시장/고객별), 벤처창업가 초빙 특강(성공/실패 사례 시사점)',
+                '벤처설립을 위한 ICT 트렌드 및 기술/시장/경쟁사 분석',
+                '벤처기업을 위한 각종 지원사업 활용 전략',
+                '벤처기업과 기업가 정신(미션, 조직관리, 문제해결능력)',
+                '벤처비즈니스 아이템 발굴(고객가치정립, 시장성(시장규모/성장율), 타켓시장, 타켓고객, STP, 차별성, 기술성 분석 등 – 디자인씽킹 툴 활용)',
+                '비즈니스 모델 수립(수익모델 설정 - BMC(Business Model Canvas) 활용(고객, 상품, 유통채널 등))',
+                '스타트업 팀빌딩(팀빌딩전략, 팀원 R&R 정립, 개발자/기획자/디자이너 등 근로/주주간 계약서)',
+                '벤처창업 사업계획서 작성(PSST작성법, 예비창업패키지, 로컬크리에이티브, TIPS, 창업성장기술개발(디딤돌))',
+                '시제품 개발 전략(인하우스, 외주 장단점, 개발 방법론), IPR전략(특허출원), 고객사/파트너사 확보전략, 제품소개서 작성',
+                '자금조달 전략(다양한 자금조달 방안의 장단점, Pitch Deck), Exit 전략',
+                '팀별 사업계획서 작성 및 발표',
+              ],
+            },
+            {
+              title: '창업 교육 특강 (Zero to Scale-up)',
+              icon: 'TrendingUp',
+              description:
+                '창업교육 특강의 핵심은 단순히 \'창업\'에 그치지 않고, 불확실성 속에서 폭발적인 성장 모델을 찾아내는 것에 있습니다. 대학생이나 예비 창업자를 대상으로 하는 4회차 핵심 특강을 진행합니다. 1:1 집중교육과 원격지 온라인(화상회의) 교육이 가능합니다.',
+              sessions: [
+                {
+                  title: '1회차: 창업가 정신과 아이템 발굴 (Problem-Solution Fit)',
+                  keyConcept: '스타트업과 일반 자영업의 차이 이해하기',
+                  topics: [
+                    'Pain Point 찾기: 시장의 불편함을 돈이 되는 기회로 전환하는 법',
+                    '시장 규모 추정: TAM-SAM-SOM 방법론',
+                    '린 스타트업(Lean Startup): 빠른 실행과 피드백의 중요성',
+                  ],
+                },
+                {
+                  title: '2회차: 비즈니스 모델과 수익 구조 (Money-Making)',
+                  keyConcept: '어떻게 지속 가능한 성장을 만들 것인가?',
+                  topics: [
+                    '비즈니스 모델 캔버스(BMC): 9가지 요소를 통한 사업 구조 시각화',
+                    '수익 모델 다각화: 구독, 수수료, 광고, 프리미엄 모델 분석',
+                    'Unit Economics: CAC와 LTV의 관계 이해',
+                  ],
+                },
+                {
+                  title: '3회차: 투자 유치와 IR 피칭 (Fundraising)',
+                  keyConcept: '투자자의 언어로 내 사업을 설명하기',
+                  topics: [
+                    '투자 생태계: 엔젤 투자, AC, VC의 차이',
+                    '데모데이 피칭: 3분 안에 투자자의 마음을 사로잡는 스토리텔링',
+                    '지분 구조와 엑시트(Exit): 지분율 방어와 IPO/M&A 이해',
+                  ],
+                },
+                {
+                  title: '4회차: 팀 빌딩과 스케일업 (Growth Strategy)',
+                  keyConcept: '혼자가 아닌 팀으로 승리하는 법',
+                  topics: [
+                    'Co-founder 매칭: 기술, 기획, 영업의 황금 조합 구성하기',
+                    '그로스 해킹(Growth Hacking): 데이터 기반의 폭발적 사용자 성장 전략',
+                    '실패 사례 분석: 벤처가 망하는 3가지 결정적 이유와 리스크 관리',
+                  ],
+                },
+              ],
+              tip: '특강 성공을 위한 Tip: 창업 특강은 이론보다 \'Case Study(사례 연구)\'가 중요합니다. 성공한 유니콘 기업의 초기 모습과, 반대로 촉망받던 스타트업이 왜 무너졌는지 실제 사례를 곁들이면 훨씬 몰입도가 높아집니다.',
+            },
+            {
+              title: 'AI 엣지 컴퓨팅 특강',
+              icon: 'Cpu',
+              description:
+                'AI 엣지 컴퓨팅(Edge AI)의 핵심은 \'데이터가 발생하는 현장(Edge)에서 즉시 지능형 처리를 수행하는 것\'입니다. 기술적 원리보다는 \'왜 쓰는가?\'와 \'실제 어디에 쓰이는가?(국내·외 산업별/기업별 Use Case)\'에 집중하는 교육입니다. (특강 시간: 약 60~90분)',
+              lectureTheme: '내 손안의 지능, AI 엣지 컴퓨팅이 바꾸는 미래 산업',
+              agenda: [
+                {
+                  title: '도입: 왜 지금 엣지 AI인가? (15분)',
+                  items: [
+                    '클라우드의 한계: 모든 데이터를 중앙 서버로 보낼 때 발생하는 지연 시간(Latency), 대역폭 비용, 보안 문제',
+                    '엣지 컴퓨팅의 정의: 데이터 생성 지점(기기, 센서)에서 직접 AI 모델을 구동하는 기술',
+                    '핵심 가치: ①실시간성, ②보안성, ③경제성',
+                  ],
+                },
+                {
+                  title: '산업별 핵심 활용 사례 (40분)',
+                  description: '가장 반응이 좋은 Use Case 4개 분야를 선정하여 \'Before & After\' 형식으로 구성합니다.',
+                  useCases: [
+                    { field: '스마트 제조', useCase: '생산 라인 실시간 결함 탐지 (비전 AI)', effect: '공정 효율화, 불량률 감소' },
+                    { field: '자율주행/모빌리티', useCase: '보행자 감지 및 즉각 제동, V2X 통신', effect: '사고 예방 (밀리초 단위 대응)' },
+                    { field: '스마트 시티', useCase: '지능형 CCTV (쓰러짐 감지, 화재 탐지)', effect: '시민 안전 확보, 개인정보 보호' },
+                    { field: '헬스케어', useCase: '웨어러블 기기 심장마비 전조 증상 감지', effect: '응급 상황 즉각 대응, 데이터 프라이버시' },
+                  ],
+                },
+                {
+                  title: '기술 트렌드와 미래 전망 (20분)',
+                  items: [
+                    '온디바이스 AI(On-Device AI): 스마트폰, 노트북 안으로 들어온 AI (예: 실시간 번역, 사진 보정)',
+                    '경량화 기술: 무거운 AI 모델을 작은 칩셋에 넣기 위한 기법(Pruning, Quantization) 소개',
+                    '하드웨어의 진화: NPU(신경망 처리 장치)의 보급',
+                  ],
+                },
+                {
+                  title: '마무리 및 질의응답 (15분)',
+                  items: [
+                    '요약: 엣지는 클라우드를 대체하는 것이 아니라 보완하는 파트너',
+                    '메시지: "데이터가 머무는 곳에 지능을 심는 것이 디지털 전환의 핵심입니다."',
+                  ],
+                },
+              ],
+              differentiation: '강의 차별성: 이론적인 설명보다는 테슬라의 자율주행(엣지)과 ChatGPT(클라우드)를 비교하며 설명하여 이해도 고취',
+              customNote: '이 설계안을 바탕으로 특정 산업군(예: 제조, 유통 등)에 맞춘 상세 커리큘럼이 더 필요하신가요? 구체적인 청중 대상을 알려주시면 톤앤매너를 맞춰 드릴 수 있습니다.',
+            },
+            {
+              title: '기업의 AI 진단 및 AX 마인드 셋 특강(워크샵)',
+              icon: 'Brain',
+              objective: '기업의 AI 혁신지수 진단에 따른 AX 전략 수립',
+              description:
+                '기업의 AI 혁신지수(AI Maturity Index/Innovation Index)는 단순히 \'AI 기술을 보유하고 있는가\'를 넘어, 조직 전체가 AI를 통해 가치를 창출할 준비가 되었는지를 다각도로 교육합니다.',
+              assessmentIntro: '주요 진단 요소는 크게 5가지 핵심 영역으로 분류할 수 있습니다.',
+              assessmentAreas: [
+                {
+                  title: '1. 전략 및 리더십 (Strategy & Leadership)',
+                  areaDescription: '가장 최상위 단계로, 경영진의 의지와 기업의 방향성을 진단합니다.',
+                  items: [
+                    'AI 비전 및 로드맵: 명확한 AI 도입 목표와 단계별 실행 계획이 수립되어 있는가?',
+                    '투자 규모: AI R&D 및 인프라 구축에 대한 예산 배정이 적절한가?',
+                    '리더십의 이해도: C-레벨 경영진이 AI의 잠재력과 리스크를 충분히 이해하고 있는가?',
+                  ],
+                },
+                {
+                  title: '2. 데이터 인프라 (Data Infrastructure)',
+                  areaDescription: 'AI의 연료가 되는 데이터의 품질과 관리 체계를 확인합니다.',
+                  items: [
+                    '데이터 거버넌스: 데이터의 수집, 저장, 활용에 대한 체계적인 규정이 있는가?',
+                    '데이터 품질 및 통합: 파편화된 데이터(Silo)가 잘 통합되어 있으며, 분석 가능한 상태인가?',
+                    '클라우드 및 컴퓨팅 자원: AI 모델을 학습시키고 배포할 수 있는 인프라(GPU, Cloud 등)를 갖추었는가?',
+                  ],
+                },
+                {
+                  title: '3. 기술 및 프로세스 (Technology & Process)',
+                  areaDescription: '실제 AI 모델을 개발하고 운영하는 기술 역량을 평가합니다.',
+                  items: [
+                    'AI 알고리즘 역량: 최신 AI 모델(LLM, 머신러닝 등)을 최적화하여 적용할 수 있는 기술력이 있는가?',
+                    'MLOps(운영 효율화): AI 모델을 지속적으로 관리하고 배포하는 자동화 프로세스가 구축되었는가?',
+                    '워크플로우 통합: 기존 비즈니스 프로세스에 AI가 자연스럽게 녹아들어 있는가?',
+                  ],
+                },
+                {
+                  title: '4. 조직 및 인적 역량 (Organization & People)',
+                  areaDescription: '기술을 다루는 사람과 기업 문화를 진단합니다.',
+                  items: [
+                    '전문 인력 확보: 데이터 사이언티스트, AI 엔지니어 등 핵심 인력을 보유하고 있는가?',
+                    '리터러시(Literacy): 일반 직원들이 AI를 이해하고 업무에 활용할 수 있는 역량을 갖추었는가?',
+                    '협업 문화: 현업 부서와 IT 부서 간의 원활한 협업 구조가 형성되어 있는가?',
+                  ],
+                },
+                {
+                  title: '5. 윤리 및 리스크 관리 (Ethics & Risk Management)',
+                  areaDescription: 'AI 도입에 따른 부작용을 제어하는 능력입니다.',
+                  items: [
+                    'AI 윤리 가이드라인: 편향성, 투명성, 설명 가능성(XAI)에 대한 내부 기준이 있는가?',
+                    '보안 및 프라이버시: 개인정보 보호 및 모델 보안(Hacking 방지) 체계가 견고한가?',
+                  ],
+                },
+              ],
+              maturityLevelsIntro: '요약: AI 혁신 수준의 4단계 - 보통 진단 결과에 따라 기업은 다음과 같은 단계로 정의됩니다.',
+              maturityLevels: [
+                {
+                  level: '1. 초기 단계 (Ad-hoc)',
+                  description: '일부 부서에서 실험적으로 도입하는 수준',
+                },
+                {
+                  level: '2. 활성 단계 (Active)',
+                  description: '특정 비즈니스 영역에서 성과를 내기 시작함',
+                },
+                {
+                  level: '3. 가속 단계 (Accelerated)',
+                  description: '전사적으로 데이터 기반 의사결정이 내재화됨',
+                },
+                {
+                  level: '4. 변혁 단계 (Transformational)',
+                  description: 'AI가 기업의 핵심 비즈니스 모델 그 자체가 됨',
+                },
+              ],
+            },
+          ],
+        },
+      },
       'software-development': {
         title: '소프트웨어 개발',
         subtitle: 'Node.js 기반 풀스택 개발 및 클라우드 인프라 구축',
@@ -2365,6 +2608,12 @@ export const translations = {
           hasPage: true,
         },
         {
+          slug: 'education-training',
+          title: 'Education & Lectures',
+          shortTitle: 'Education',
+          hasPage: true,
+        },
+        {
           slug: 'software-development',
           title: 'Software Development',
           shortTitle: 'SW Dev',
@@ -2415,6 +2664,10 @@ export const translations = {
         'startup-investment': {
           icon: 'Briefcase',
           shortDescription: 'Tailored mentoring and investment support for each growth stage',
+        },
+        'education-training': {
+          icon: 'GraduationCap',
+          shortDescription: 'Venture business education and ICT trend lectures',
         },
         'software-development': {
           icon: 'Code',
@@ -3505,6 +3758,239 @@ export const translations = {
           },
         },
       },
+      'education-training': {
+        title: 'Education & Lectures',
+        subtitle: 'Venture Business Education · ICT Trend Lectures',
+        description:
+          'We provide One-Stop Total service from discovery of startup support programs (Pre-Startup Package, Early Startup Package, Local Creator, TIPS, etc.) by the Ministry of SMEs and Startups to investment attraction. Strengthen entrepreneurial capabilities through customized venture business curriculum and ICT trend lectures.',
+        targetCustomers: [
+          'Office workers/University students (aspiring entrepreneurs)',
+          'University students',
+          'Corporations and public institutions (middle-aged entrepreneurship for retirees)',
+          'Universities (Business Incubation Centers)',
+          'Accelerators',
+          'Creative Economy Innovation Centers and startup candidates',
+        ],
+        processSteps: [
+          'Identify training needs',
+          'Design customized curriculum',
+          'Conduct training',
+          'Feedback and mentoring',
+        ],
+        references: 'Universities (Soongsil University, Daegu Catholic University), various corporate and pre-entrepreneurs',
+        fields: [
+          'Startup item discovery',
+          'Business plan writing',
+          'ICT trends (AI, Edge Computing, Cloud Computing, SONiC, Private 5G, latest tech trends)',
+        ],
+        programs: {
+          sectionTitle: 'Education Programs',
+          items: [
+            {
+              title: 'Venture Business Education & Workshop',
+              icon: 'BookOpen',
+              description:
+                'Learning practical venture business skills including item discovery, customer/market analysis, BM establishment, team building, business plan writing, MVP development, marketing, and funding strategies',
+              objective:
+                'Enhance understanding of venture business and business planning capabilities by understanding the venture ecosystem and analyzing success and failure cases from sustainable BM discovery to investment attraction and EXIT',
+              modules: [
+                {
+                  name: 'Intro & Motivation',
+                  content:
+                    'Reasons for starting a business, understanding the startup process, item discovery methods, market research, utilizing startup infrastructure',
+                },
+                {
+                  name: 'Business Planning',
+                  content:
+                    'Item and market discovery, understanding customer needs (interviews), persona definition, BM setting and pivoting, business plan writing and refinement',
+                },
+                {
+                  name: 'Business Implementation',
+                  content:
+                    'Team building, MVP (functionality + business viability), validation programs, pitching education and mentoring, IR material writing',
+                },
+              ],
+              topics: [
+                'Venture business environment analysis (startup ecosystem, stakeholders, government policies), Understanding government startup support programs (Pre-Startup Package, Early Startup Package, Startup Leap Package, Youth (Global) Startup Academy, TIPS, Ultra-Gap Startup Project (DIPS)), Understanding government R&D support programs (Startup Growth Tech Development (Stepping Stone), Startup Growth Tech Development, Technology Innovation Development, Industry-Academia-Research Collabo R&D, Purchase-linked Win-Win Cooperation)',
+                'Venture company trend analysis (Tech companies, Big Tech, Deep Tech, Technology Gap)',
+                'Success case analysis of domestic and foreign venture companies (by BM, technology, field, market/customer), Venture entrepreneur invited lecture (success/failure case implications)',
+                'ICT trends and technology/market/competitor analysis for venture establishment',
+                'Strategies for utilizing various support programs for venture companies',
+                'Venture companies and entrepreneurship (mission, organization management, problem-solving)',
+                'Venture business item discovery (customer value establishment, marketability (market size/growth rate), target market, target customer, STP, differentiation, technology analysis - using Design Thinking tools)',
+                'Business model establishment (revenue model setting - using BMC (Business Model Canvas) (customers, products, distribution channels, etc.))',
+                'Startup team building (team building strategy, team member R&R establishment, employment/shareholder contracts for developers/planners/designers)',
+                'Venture startup business plan writing (PSST method, Pre-Startup Package, Local Creative, TIPS, Startup Growth Tech Development (Stepping Stone))',
+                'Prototype development strategy (in-house, outsourcing pros/cons, development methodology), IPR strategy (patent filing), customer/partner acquisition strategy, product introduction writing',
+                'Funding strategy (pros/cons of various funding methods, Pitch Deck), Exit strategy',
+                'Team-based business plan writing and presentation',
+              ],
+            },
+            {
+              title: 'Startup Education Lecture (Zero to Scale-up)',
+              icon: 'TrendingUp',
+              description:
+                'The core of startup education lectures is not just about \'starting a business\', but about finding explosive growth models amidst uncertainty. We conduct 4-session core lectures for university students and aspiring entrepreneurs. 1:1 intensive education and remote online (video conference) education are available.',
+              sessions: [
+                {
+                  title: 'Session 1: Entrepreneurship and Item Discovery (Problem-Solution Fit)',
+                  keyConcept: 'Understanding the difference between startups and general self-employment',
+                  topics: [
+                    'Finding Pain Points: Converting market inconveniences into profitable opportunities',
+                    'Market Size Estimation: TAM-SAM-SOM methodology',
+                    'Lean Startup: Importance of quick execution and feedback',
+                  ],
+                },
+                {
+                  title: 'Session 2: Business Model and Revenue Structure (Money-Making)',
+                  keyConcept: 'How to create sustainable growth?',
+                  topics: [
+                    'Business Model Canvas (BMC): Visualizing business structure through 9 elements',
+                    'Revenue Model Diversification: Subscription, commission, advertising, freemium model analysis',
+                    'Unit Economics: Understanding the relationship between CAC and LTV',
+                  ],
+                },
+                {
+                  title: 'Session 3: Investment Attraction and IR Pitching (Fundraising)',
+                  keyConcept: 'Explaining your business in the language of investors',
+                  topics: [
+                    'Investment Ecosystem: Differences between Angel investment, AC, and VC',
+                    'Demo Day Pitching: Storytelling that captures investors in 3 minutes',
+                    'Equity Structure and Exit: Understanding equity protection and IPO/M&A',
+                  ],
+                },
+                {
+                  title: 'Session 4: Team Building and Scale-up (Growth Strategy)',
+                  keyConcept: 'How to win as a team, not alone',
+                  topics: [
+                    'Co-founder Matching: Building the golden combination of technology, planning, and sales',
+                    'Growth Hacking: Data-driven explosive user growth strategy',
+                    'Failure Case Analysis: 3 decisive reasons ventures fail and risk management',
+                  ],
+                },
+              ],
+              tip: 'Tip for Lecture Success: Case studies are more important than theory in startup lectures. Engagement increases significantly when you include real examples of successful unicorn companies in their early days, and conversely, why promising startups failed.',
+            },
+            {
+              title: 'AI Edge Computing Lecture',
+              icon: 'Cpu',
+              description:
+                'The core of AI Edge Computing (Edge AI) is \'performing intelligent processing immediately at the edge where data is generated\'. This education focuses on \'why use it?\' and \'where is it actually used? (domestic/international industry/company Use Cases)\' rather than technical principles. (Lecture duration: approximately 60-90 minutes)',
+              lectureTheme: 'Intelligence in Your Hands: How AI Edge Computing is Transforming Future Industries',
+              agenda: [
+                {
+                  title: 'Introduction: Why Edge AI Now? (15 min)',
+                  items: [
+                    'Limitations of cloud: Latency, bandwidth costs, and security issues when sending all data to central servers',
+                    'Definition of edge computing: Technology that runs AI models directly at data generation points (devices, sensors)',
+                    'Core values: ①Real-time processing, ②Security, ③Cost-effectiveness',
+                  ],
+                },
+                {
+                  title: 'Key Use Cases by Industry (40 min)',
+                  description: 'Organized in \'Before & After\' format with 4 most responsive Use Case fields.',
+                  useCases: [
+                    { field: 'Smart Manufacturing', useCase: 'Real-time defect detection on production line (Vision AI)', effect: 'Process efficiency, reduced defect rate' },
+                    { field: 'Autonomous Driving/Mobility', useCase: 'Pedestrian detection and immediate braking, V2X communication', effect: 'Accident prevention (millisecond-level response)' },
+                    { field: 'Smart City', useCase: 'Intelligent CCTV (fall detection, fire detection)', effect: 'Citizen safety, privacy protection' },
+                    { field: 'Healthcare', useCase: 'Wearable device heart attack precursor detection', effect: 'Immediate emergency response, data privacy' },
+                  ],
+                },
+                {
+                  title: 'Technology Trends and Future Outlook (20 min)',
+                  items: [
+                    'On-Device AI: AI that has entered smartphones and laptops (e.g., real-time translation, photo enhancement)',
+                    'Lightweight Technology: Techniques for fitting heavy AI models into small chipsets (Pruning, Quantization)',
+                    'Hardware Evolution: Proliferation of NPU (Neural Processing Unit)',
+                  ],
+                },
+                {
+                  title: 'Wrap-up and Q&A (15 min)',
+                  items: [
+                    'Summary: Edge is not a replacement for cloud, but a complementary partner',
+                    'Message: "Embedding intelligence where data resides is the core of digital transformation."',
+                  ],
+                },
+              ],
+              differentiation: 'Lecture Differentiation: Rather than theoretical explanations, we enhance understanding by comparing Tesla\'s autonomous driving (Edge) with ChatGPT (Cloud)',
+              customNote: 'Do you need a more detailed curriculum tailored to specific industries (e.g., manufacturing, retail) based on this design? Let us know your specific audience and we can adjust the tone and manner.',
+            },
+            {
+              title: 'Corporate AI Diagnosis & AX Mindset Workshop',
+              icon: 'Brain',
+              objective: 'AX strategy establishment based on corporate AI innovation index diagnosis',
+              description:
+                'The corporate AI Innovation Index (AI Maturity Index/Innovation Index) goes beyond simply \'having AI technology\' to provide multi-faceted education on whether the entire organization is ready to create value through AI.',
+              assessmentIntro: 'The main diagnostic elements can be classified into 5 key areas.',
+              assessmentAreas: [
+                {
+                  title: '1. Strategy & Leadership',
+                  areaDescription: 'The highest level, diagnosing management\'s commitment and corporate direction.',
+                  items: [
+                    'AI Vision & Roadmap: Are clear AI adoption goals and phased execution plans established?',
+                    'Investment Scale: Is budget allocation for AI R&D and infrastructure development appropriate?',
+                    'Leadership Understanding: Do C-level executives fully understand AI\'s potential and risks?',
+                  ],
+                },
+                {
+                  title: '2. Data Infrastructure',
+                  areaDescription: 'Verifying the quality and management system of data, the fuel of AI.',
+                  items: [
+                    'Data Governance: Are there systematic regulations for data collection, storage, and utilization?',
+                    'Data Quality & Integration: Is fragmented data (Silo) well integrated and in an analyzable state?',
+                    'Cloud & Computing Resources: Is infrastructure (GPU, Cloud, etc.) equipped to train and deploy AI models?',
+                  ],
+                },
+                {
+                  title: '3. Technology & Process',
+                  areaDescription: 'Evaluating technical capabilities to develop and operate actual AI models.',
+                  items: [
+                    'AI Algorithm Capability: Is there technical ability to optimize and apply latest AI models (LLM, Machine Learning, etc.)?',
+                    'MLOps (Operational Efficiency): Is an automated process for continuously managing and deploying AI models established?',
+                    'Workflow Integration: Is AI naturally integrated into existing business processes?',
+                  ],
+                },
+                {
+                  title: '4. Organization & People',
+                  areaDescription: 'Diagnosing the people handling technology and corporate culture.',
+                  items: [
+                    'Expert Talent Acquisition: Do you have core personnel such as Data Scientists and AI Engineers?',
+                    'Literacy: Do general employees have the capability to understand AI and utilize it in their work?',
+                    'Collaboration Culture: Is a smooth collaboration structure formed between business and IT departments?',
+                  ],
+                },
+                {
+                  title: '5. Ethics & Risk Management',
+                  areaDescription: 'The ability to control side effects from AI adoption.',
+                  items: [
+                    'AI Ethics Guidelines: Are there internal standards for bias, transparency, and explainability (XAI)?',
+                    'Security & Privacy: Is the personal information protection and model security (anti-hacking) system robust?',
+                  ],
+                },
+              ],
+              maturityLevelsIntro: 'Summary: 4 Stages of AI Innovation Level - Companies are typically defined in the following stages based on diagnostic results.',
+              maturityLevels: [
+                {
+                  level: '1. Ad-hoc Stage',
+                  description: 'Level of experimental adoption in some departments',
+                },
+                {
+                  level: '2. Active Stage',
+                  description: 'Starting to achieve results in specific business areas',
+                },
+                {
+                  level: '3. Accelerated Stage',
+                  description: 'Data-driven decision making internalized company-wide',
+                },
+                {
+                  level: '4. Transformational Stage',
+                  description: 'AI becomes the core business model itself',
+                },
+              ],
+            },
+          ],
+        },
+      },
       'software-development': {
         title: 'Software Development',
         subtitle: 'Full-stack Development with Node.js and Cloud Infrastructure',
@@ -4265,6 +4751,12 @@ export const translations = {
           hasPage: true,
         },
         {
+          slug: 'education-training',
+          title: '教育・特別講義',
+          shortTitle: '教育・特講',
+          hasPage: true,
+        },
+        {
           slug: 'software-development',
           title: 'ソフトウェア開発',
           shortTitle: 'SW開発',
@@ -4315,6 +4807,10 @@ export const translations = {
         'startup-investment': {
           icon: 'Briefcase',
           shortDescription: '成長段階別カスタムメンタリングと投資誘致支援',
+        },
+        'education-training': {
+          icon: 'GraduationCap',
+          shortDescription: 'ベンチャービジネス教育およびICTトレンド特別講義',
         },
         'software-development': {
           icon: 'Code',
@@ -5370,6 +5866,239 @@ export const translations = {
               },
             ],
           },
+        },
+      },
+      'education-training': {
+        title: '教育・特別講義',
+        subtitle: 'ベンチャービジネス教育・ICTトレンド特別講義',
+        description:
+          '中小ベンチャー企業部創業振興院の創業支援事業（予備創業パッケージ、初期創業パッケージ、ローカルクリエイター、TIPS等）発掘から投資誘致までOne-Stop Totalサービスを提供します。ベンチャービジネスカスタム教育課程とICTトレンド特別講義を通じて創業力量を強化します。',
+        targetCustomers: [
+          '会社員/大学生（創業準備者）',
+          '大学生',
+          '企業および公共機関（退職者対象の中高年層創業）',
+          '大学（創業保育センター）',
+          'アクセラレーター',
+          '創造経済革新センター等スタートアップ創業対象者',
+        ],
+        processSteps: [
+          '教育ニーズ把握',
+          'カスタムカリキュラム設計',
+          '教育実施',
+          'フィードバックおよびメンタリング',
+        ],
+        references: '大学（崇実大学、大邱カトリック大学）、企業および予備創業者対象多数',
+        fields: [
+          '創業アイテム発掘',
+          '事業計画書作成',
+          'ICTトレンド（AI、エッジコンピューティング、クラウドコンピューティング、SONiC、Private 5G、Tech別最新トレンド）',
+        ],
+        programs: {
+          sectionTitle: '教育プログラム',
+          items: [
+            {
+              title: 'ベンチャービジネス教育・ワークショップ',
+              icon: 'BookOpen',
+              description:
+                'ベンチャービジネス実務的力量涵養のためのアイテム発掘、顧客/市場分析、BM樹立、チームビルディング、事業計画書作成、MVP開発、マーケティング、資金調達戦略学習',
+              objective:
+                'ベンチャー生態系を理解し、持続可能なBM発掘から投資誘致、EXITの成功事例および失敗事例を分析してベンチャービジネスへの理解度向上および事業企画力量向上',
+              modules: [
+                {
+                  name: 'イントロおよび動機付け',
+                  content:
+                    '創業理由、創業プロセス理解、創業アイテム発掘方法、市場調査方法、創業インフラ活用',
+                },
+                {
+                  name: '事業企画',
+                  content:
+                    'アイテムおよび市場発掘、顧客ニーズ把握（インタビュー）、ペルソナ定義、BM設定およびピボッティング、事業計画書作成および高度化',
+                },
+                {
+                  name: '事業具現',
+                  content:
+                    'チームビルディング、機能具現+事業性結合（MVP）、検証プログラム、事業アイテムピッチング教育およびメンタリング、IR資料作成法',
+                },
+              ],
+              topics: [
+                'ベンチャービジネス環境分析（創業生態系、利害関係者、政府政策）、政府創業支援事業（予備創業パッケージ、初期創業パッケージ、創業跳躍パッケージ、青年（グローバル）創業士官学校、TIPS、超格差スタートアッププロジェクト（DIPS））理解、政府R&D支援事業（創業成長技術開発事業（ディディムドル）、創業成長技術開発、技術革新開発、産学研Collabo R&D、購買連携共生協力型）理解',
+                'ベンチャー企業トレンド分析（テック企業、ビッグテック、ディープテック、超格差）',
+                '国内外ベンチャー企業成功事例分析（BM別、技術別、分野別、市場/顧客別）、ベンチャー創業家招聘特別講義（成功/失敗事例示唆点）',
+                'ベンチャー設立のためのICTトレンドおよび技術/市場/競合分析',
+                'ベンチャー企業のための各種支援事業活用戦略',
+                'ベンチャー企業と起業家精神（ミッション、組織管理、問題解決能力）',
+                'ベンチャービジネスアイテム発掘（顧客価値確立、市場性（市場規模/成長率）、ターゲット市場、ターゲット顧客、STP、差別性、技術性分析等 – デザインシンキングツール活用）',
+                'ビジネスモデル樹立（収益モデル設定 - BMC（Business Model Canvas）活用（顧客、商品、流通チャネル等））',
+                'スタートアップチームビルディング（チームビルディング戦略、チームメンバーR&R確立、開発者/企画者/デザイナー等の勤労/株主間契約書）',
+                'ベンチャー創業事業計画書作成（PSST作成法、予備創業パッケージ、ローカルクリエイティブ、TIPS、創業成長技術開発（ディディムドル））',
+                '試作品開発戦略（インハウス、外注の長短所、開発方法論）、IPR戦略（特許出願）、顧客社/パートナー社確保戦略、製品紹介書作成',
+                '資金調達戦略（多様な資金調達方案の長短所、Pitch Deck）、Exit戦略',
+                'チーム別事業計画書作成および発表',
+              ],
+            },
+            {
+              title: '創業教育特別講義（Zero to Scale-up）',
+              icon: 'TrendingUp',
+              description:
+                '創業教育特別講義の核心は単に「創業」にとどまらず、不確実性の中で爆発的な成長モデルを見つけ出すことにあります。大学生や予備創業者を対象とした4回核心特別講義を実施します。1:1集中教育と遠隔地オンライン（ビデオ会議）教育が可能です。',
+              sessions: [
+                {
+                  title: '第1回：起業家精神とアイテム発掘（Problem-Solution Fit）',
+                  keyConcept: 'スタートアップと一般自営業の違いを理解する',
+                  topics: [
+                    'Pain Point発見：市場の不便さをお金になる機会に転換する方法',
+                    '市場規模推定：TAM-SAM-SOM方法論',
+                    'リーンスタートアップ（Lean Startup）：迅速な実行とフィードバックの重要性',
+                  ],
+                },
+                {
+                  title: '第2回：ビジネスモデルと収益構造（Money-Making）',
+                  keyConcept: 'いかに持続可能な成長を作るか？',
+                  topics: [
+                    'ビジネスモデルキャンバス（BMC）：9つの要素による事業構造可視化',
+                    '収益モデル多角化：購読、手数料、広告、プレミアムモデル分析',
+                    'Unit Economics：CACとLTVの関係理解',
+                  ],
+                },
+                {
+                  title: '第3回：投資誘致とIRピッチング（Fundraising）',
+                  keyConcept: '投資家の言語で自分のビジネスを説明する',
+                  topics: [
+                    '投資生態系：エンジェル投資、AC、VCの違い',
+                    'デモデイピッチング：3分で投資家の心を掴むストーリーテリング',
+                    '持分構造とエグジット（Exit）：持分率防御とIPO/M&A理解',
+                  ],
+                },
+                {
+                  title: '第4回：チームビルディングとスケールアップ（Growth Strategy）',
+                  keyConcept: '一人ではなくチームで勝利する方法',
+                  topics: [
+                    'Co-founderマッチング：技術、企画、営業の黄金組み合わせを構成する',
+                    'グロースハッキング（Growth Hacking）：データ基盤の爆発的ユーザー成長戦略',
+                    '失敗事例分析：ベンチャーが潰れる3つの決定的理由とリスク管理',
+                  ],
+                },
+              ],
+              tip: '特別講義成功のためのTip：創業特別講義は理論より「Case Study（事例研究）」が重要です。成功したユニコーン企業の初期の姿と、逆に有望だったスタートアップがなぜ崩壊したのか、実際の事例を添えるとはるかに没入度が高まります。',
+            },
+            {
+              title: 'AIエッジコンピューティング特別講義',
+              icon: 'Cpu',
+              description:
+                'AIエッジコンピューティング（Edge AI）の核心は「データが発生する現場（Edge）で即座に知能型処理を行うこと」です。技術的原理よりも「なぜ使うのか？」と「実際どこで使われるのか？（国内外産業別/企業別Use Case）」に集中する教育です。（特別講義時間：約60～90分）',
+              lectureTheme: '手のひらの知能、AIエッジコンピューティングが変える未来産業',
+              agenda: [
+                {
+                  title: '導入：なぜ今エッジAIなのか？（15分）',
+                  items: [
+                    'クラウドの限界：すべてのデータを中央サーバーに送る際に発生する遅延時間（Latency）、帯域幅コスト、セキュリティ問題',
+                    'エッジコンピューティングの定義：データ生成地点（デバイス、センサー）で直接AIモデルを駆動する技術',
+                    '核心価値：①リアルタイム性、②セキュリティ性、③経済性',
+                  ],
+                },
+                {
+                  title: '産業別核心活用事例（40分）',
+                  description: '最も反応の良いUse Case 4分野を選定し「Before & After」形式で構成します。',
+                  useCases: [
+                    { field: 'スマート製造', useCase: '生産ライン リアルタイム欠陥検出（ビジョンAI）', effect: '工程効率化、不良率減少' },
+                    { field: '自律走行/モビリティ', useCase: '歩行者感知および即時制動、V2X通信', effect: '事故予防（ミリ秒単位対応）' },
+                    { field: 'スマートシティ', useCase: '知能型CCTV（転倒感知、火災探知）', effect: '市民安全確保、個人情報保護' },
+                    { field: 'ヘルスケア', useCase: 'ウェアラブルデバイス心臓発作前兆症状感知', effect: '緊急状況即時対応、データプライバシー' },
+                  ],
+                },
+                {
+                  title: '技術トレンドと未来展望（20分）',
+                  items: [
+                    'オンデバイスAI（On-Device AI）：スマートフォン、ノートパソコンの中に入ったAI（例：リアルタイム翻訳、写真補正）',
+                    '軽量化技術：重いAIモデルを小さなチップセットに入れるための技法（Pruning、Quantization）紹介',
+                    'ハードウェアの進化：NPU（神経網処理装置）の普及',
+                  ],
+                },
+                {
+                  title: 'まとめおよび質疑応答（15分）',
+                  items: [
+                    '要約：エッジはクラウドを代替するのではなく補完するパートナー',
+                    'メッセージ：「データが留まる場所に知能を植えることがデジタル転換の核心です。」',
+                  ],
+                },
+              ],
+              differentiation: '講義差別性：理論的な説明よりもテスラの自律走行（エッジ）とChatGPT（クラウド）を比較しながら説明し理解度向上',
+              customNote: 'この設計案をもとに特定産業群（例：製造、流通など）に合わせた詳細カリキュラムがさらに必要ですか？具体的な聴衆対象を教えていただければトーン＆マナーを合わせてご提供できます。',
+            },
+            {
+              title: '企業AI診断およびAXマインドセットワークショップ',
+              icon: 'Brain',
+              objective: '企業のAI革新指数診断に基づくAX戦略樹立',
+              description:
+                '企業のAI革新指数（AI Maturity Index/Innovation Index）は単に「AI技術を保有しているか」を超え、組織全体がAIを通じて価値を創出する準備ができているかを多角度から教育します。',
+              assessmentIntro: '主要診断要素は大きく5つの核心領域に分類できます。',
+              assessmentAreas: [
+                {
+                  title: '1. 戦略およびリーダーシップ（Strategy & Leadership）',
+                  areaDescription: '最上位段階として、経営陣の意志と企業の方向性を診断します。',
+                  items: [
+                    'AIビジョンおよびロードマップ：明確なAI導入目標と段階別実行計画が樹立されているか？',
+                    '投資規模：AI R&Dおよびインフラ構築に対する予算配分は適切か？',
+                    'リーダーシップの理解度：C-レベル経営陣がAIの潜在力とリスクを十分に理解しているか？',
+                  ],
+                },
+                {
+                  title: '2. データインフラ（Data Infrastructure）',
+                  areaDescription: 'AIの燃料となるデータの品質と管理体系を確認します。',
+                  items: [
+                    'データガバナンス：データの収集、保存、活用に対する体系的な規定があるか？',
+                    'データ品質および統合：断片化されたデータ（Silo）がよく統合されており、分析可能な状態か？',
+                    'クラウドおよびコンピューティングリソース：AIモデルを学習させ配布できるインフラ（GPU、Cloud等）を備えているか？',
+                  ],
+                },
+                {
+                  title: '3. 技術およびプロセス（Technology & Process）',
+                  areaDescription: '実際のAIモデルを開発し運営する技術力量を評価します。',
+                  items: [
+                    'AIアルゴリズム力量：最新AIモデル（LLM、機械学習等）を最適化して適用できる技術力があるか？',
+                    'MLOps（運営効率化）：AIモデルを持続的に管理し配布する自動化プロセスが構築されているか？',
+                    'ワークフロー統合：既存ビジネスプロセスにAIが自然に溶け込んでいるか？',
+                  ],
+                },
+                {
+                  title: '4. 組織および人的力量（Organization & People）',
+                  areaDescription: '技術を扱う人と企業文化を診断します。',
+                  items: [
+                    '専門人材確保：データサイエンティスト、AIエンジニア等の核心人材を保有しているか？',
+                    'リテラシー（Literacy）：一般職員がAIを理解し業務に活用できる力量を備えているか？',
+                    '協業文化：現業部門とIT部門間の円滑な協業構造が形成されているか？',
+                  ],
+                },
+                {
+                  title: '5. 倫理およびリスク管理（Ethics & Risk Management）',
+                  areaDescription: 'AI導入に伴う副作用を制御する能力です。',
+                  items: [
+                    'AI倫理ガイドライン：偏向性、透明性、説明可能性（XAI）に対する内部基準があるか？',
+                    'セキュリティおよびプライバシー：個人情報保護およびモデルセキュリティ（ハッキング防止）体系が堅固か？',
+                  ],
+                },
+              ],
+              maturityLevelsIntro: '要約：AI革新水準の4段階 - 通常診断結果に基づき企業は次のような段階で定義されます。',
+              maturityLevels: [
+                {
+                  level: '1. 初期段階（Ad-hoc）',
+                  description: '一部部門で実験的に導入する水準',
+                },
+                {
+                  level: '2. 活性段階（Active）',
+                  description: '特定ビジネス領域で成果を出し始める',
+                },
+                {
+                  level: '3. 加速段階（Accelerated）',
+                  description: '全社的にデータ基盤意思決定が内在化される',
+                },
+                {
+                  level: '4. 変革段階（Transformational）',
+                  description: 'AIが企業の核心ビジネスモデルそのものになる',
+                },
+              ],
+            },
+          ],
         },
       },
       'software-development': {

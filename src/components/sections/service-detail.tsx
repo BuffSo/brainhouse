@@ -20,7 +20,7 @@ interface ServiceDetailProps {
 }
 
 export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const serviceDetails =
     t.serviceDetails?.[slug as keyof typeof t.serviceDetails];
   const ui = t.serviceDetailUI;
@@ -564,6 +564,52 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                 </h2>
               </div>
               <StrategyFlow steps={serviceDetails.processSteps} />
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* References & Fields Section - Education/Training */}
+      {'references' in serviceDetails && serviceDetails.references && (
+        <section className="bg-white py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* References */}
+                <div className="rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 p-6 border border-blue-100">
+                  <div className="mb-3 flex items-center gap-2 text-blue-700">
+                    <Icons.Building className="h-5 w-5" />
+                    <h3 className="font-bold text-lg">
+                      {language === 'ko' ? '레퍼런스' : language === 'en' ? 'References' : 'リファレンス'}
+                    </h3>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed">
+                    {serviceDetails.references}
+                  </p>
+                </div>
+
+                {/* Fields */}
+                {'fields' in serviceDetails && serviceDetails.fields && serviceDetails.fields.length > 0 && (
+                  <div className="rounded-xl bg-gradient-to-br from-purple-50 to-pink-50 p-6 border border-purple-100">
+                    <div className="mb-3 flex items-center gap-2 text-purple-700">
+                      <Icons.Layers className="h-5 w-5" />
+                      <h3 className="font-bold text-lg">
+                        {language === 'ko' ? '분야' : language === 'en' ? 'Fields' : '分野'}
+                      </h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {serviceDetails.fields.map((field: string, idx: number) => (
+                        <span
+                          key={idx}
+                          className="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-800"
+                        >
+                          {field}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </Container>
         </section>
@@ -1639,6 +1685,370 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
                     )}
                   </ul>
                 </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Education Programs Section - Education Training Only */}
+      {'programs' in serviceDetails && serviceDetails.programs && (
+        <section className="bg-slate-50 py-8 sm:py-12 md:py-16">
+          <Container>
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-6 sm:mb-8 text-center">
+                <div className="mb-1.5 sm:mb-2 flex items-center justify-center gap-1.5 sm:gap-2 text-blue-600">
+                  <Icons.GraduationCap className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                    Programs
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">
+                  {serviceDetails.programs.sectionTitle}
+                </h2>
+              </div>
+              <div className="space-y-6">
+                {serviceDetails.programs.items.map(
+                  (
+                    program: {
+                      title: string;
+                      icon: string;
+                      description: string;
+                      objective?: string;
+                      modules?: Array<{ name: string; content: string }>;
+                      topics?: string[];
+                      sessions?: Array<{
+                        title: string;
+                        keyConcept?: string;
+                        topics: string[];
+                      }>;
+                      tip?: string;
+                      lectureTheme?: string;
+                      agenda?: Array<{
+                        title: string;
+                        content?: string;
+                        items?: string[];
+                        description?: string;
+                        useCases?: Array<{ field: string; useCase: string; effect: string }>;
+                      }>;
+                      differentiation?: string;
+                      customNote?: string;
+                      assessmentIntro?: string;
+                      assessmentAreas?: Array<{
+                        title: string;
+                        areaDescription?: string;
+                        items: string[];
+                      }>;
+                      maturityLevelsIntro?: string;
+                      maturityLevels?: Array<{
+                        level: string;
+                        description: string;
+                      }>;
+                    },
+                    index: number
+                  ) => {
+                    const IconComponent =
+                      Icons[program.icon as keyof typeof Icons] ||
+                      Icons.BookOpen;
+                    return (
+                      <div
+                        key={index}
+                        className="rounded-xl bg-white p-5 sm:p-6 shadow-sm ring-1 ring-slate-200"
+                      >
+                        <div className="mb-4 flex items-center gap-3">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
+                            <IconComponent className="h-6 w-6 text-white" />
+                          </div>
+                          <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
+                            {program.title}
+                          </h3>
+                        </div>
+                        <p className="mb-4 text-sm text-slate-600 sm:text-base">
+                          {program.description}
+                        </p>
+
+                        {/* Objective */}
+                        {program.objective && (
+                          <div className="mb-4 rounded-lg bg-blue-50 p-4 border-l-4 border-blue-500">
+                            <p className="text-sm text-slate-700">
+                              <span className="font-semibold text-blue-700">교육 목표: </span>
+                              {program.objective}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Modules */}
+                        {program.modules && (
+                          <div className="mb-4">
+                            <h4 className="mb-3 font-medium text-slate-900">
+                              교육 모듈
+                            </h4>
+                            <div className="grid gap-3 sm:grid-cols-3">
+                              {program.modules.map((module, mIndex) => (
+                                <div
+                                  key={mIndex}
+                                  className="rounded-lg bg-blue-50 p-3"
+                                >
+                                  <h5 className="mb-1 font-medium text-blue-700 text-sm">
+                                    {module.name}
+                                  </h5>
+                                  <p className="text-xs text-slate-600">
+                                    {module.content}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Topics */}
+                        {program.topics && (
+                          <div className="mb-4">
+                            <h4 className="mb-3 font-medium text-slate-900">
+                              교육 내용
+                            </h4>
+                            <div className="grid gap-2 sm:grid-cols-2">
+                              {program.topics.map((topic, tIndex) => (
+                                <div
+                                  key={tIndex}
+                                  className="flex items-start gap-2 text-sm text-slate-600"
+                                >
+                                  <Icons.Check className="h-4 w-4 flex-shrink-0 text-green-500 mt-0.5" />
+                                  {topic}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Sessions */}
+                        {program.sessions && (
+                          <div className="mb-4">
+                            <h4 className="mb-3 font-medium text-slate-900">
+                              회차별 커리큘럼
+                            </h4>
+                            <div className="space-y-3">
+                              {program.sessions.map((session, sIndex) => (
+                                <div
+                                  key={sIndex}
+                                  className="rounded-lg bg-slate-50 p-4"
+                                >
+                                  <h5 className="mb-1 font-medium text-slate-900 text-sm">
+                                    {session.title}
+                                  </h5>
+                                  {session.keyConcept && (
+                                    <p className="mb-2 text-xs font-medium text-blue-600">
+                                      핵심 개념: {session.keyConcept}
+                                    </p>
+                                  )}
+                                  <ul className="space-y-1">
+                                    {session.topics.map((topic, topicIndex) => (
+                                      <li
+                                        key={topicIndex}
+                                        className="flex items-start gap-2 text-xs text-slate-600"
+                                      >
+                                        <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400" />
+                                        {topic}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Tip */}
+                        {program.tip && (
+                          <div className="mb-4 rounded-lg bg-amber-50 p-4 border-l-4 border-amber-400">
+                            <div className="flex items-start gap-2">
+                              <Icons.Lightbulb className="h-5 w-5 flex-shrink-0 text-amber-500 mt-0.5" />
+                              <p className="text-sm text-slate-700">
+                                {program.tip}
+                              </p>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Lecture Theme */}
+                        {program.lectureTheme && (
+                          <div className="mb-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 p-4 text-white">
+                            <p className="text-sm font-medium">
+                              <span className="opacity-80">특강 주제: </span>
+                              &quot;{program.lectureTheme}&quot;
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Agenda */}
+                        {program.agenda && (
+                          <div className="mb-4">
+                            <h4 className="mb-3 font-medium text-slate-900">
+                              강의 구성
+                            </h4>
+                            <div className="space-y-2">
+                              {program.agenda.map((item, aIndex) => (
+                                <div
+                                  key={aIndex}
+                                  className="rounded-lg bg-slate-50 p-3"
+                                >
+                                  <h5 className="mb-1 font-medium text-slate-900 text-sm">
+                                    {item.title}
+                                  </h5>
+                                  {item.description && (
+                                    <p className="text-xs text-slate-500 mb-2">
+                                      {item.description}
+                                    </p>
+                                  )}
+                                  {item.content && (
+                                    <p className="text-xs text-slate-600">
+                                      {item.content}
+                                    </p>
+                                  )}
+                                  {item.items && (
+                                    <ul className="mt-2 space-y-1">
+                                      {item.items.map((subItem, subIndex) => (
+                                        <li
+                                          key={subIndex}
+                                          className="flex items-start gap-2 text-xs text-slate-600"
+                                        >
+                                          <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400" />
+                                          {subItem}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
+                                  {item.useCases && (
+                                    <div className="mt-2 overflow-x-auto">
+                                      <table className="w-full min-w-[400px] border-collapse text-xs">
+                                        <thead>
+                                          <tr className="border-b border-slate-200 bg-white">
+                                            <th className="px-2 py-1.5 text-left font-semibold text-slate-700">분야</th>
+                                            <th className="px-2 py-1.5 text-left font-semibold text-slate-700">주요 활용 사례</th>
+                                            <th className="px-2 py-1.5 text-left font-semibold text-slate-700">기대 효과</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          {item.useCases.map((uc, ucIndex) => (
+                                            <tr key={ucIndex} className="border-b border-slate-100">
+                                              <td className="px-2 py-1.5 font-medium text-slate-800">{uc.field}</td>
+                                              <td className="px-2 py-1.5 text-slate-600">{uc.useCase}</td>
+                                              <td className="px-2 py-1.5 text-slate-600">{uc.effect}</td>
+                                            </tr>
+                                          ))}
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Differentiation */}
+                        {program.differentiation && (
+                          <div className="mb-4 rounded-lg bg-purple-50 p-4 border-l-4 border-purple-400">
+                            <div className="flex items-start gap-2">
+                              <Icons.Sparkles className="h-5 w-5 flex-shrink-0 text-purple-500 mt-0.5" />
+                              <p className="text-sm text-slate-700">
+                                {program.differentiation}
+                              </p>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Custom Note */}
+                        {program.customNote && (
+                          <div className="mb-4 rounded-lg bg-slate-100 p-4">
+                            <p className="text-sm text-slate-600 italic">
+                              {program.customNote}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Assessment Areas */}
+                        {program.assessmentAreas && (
+                          <div className="mb-4">
+                            <h4 className="mb-2 font-medium text-slate-900">
+                              주요 진단 영역
+                            </h4>
+                            {program.assessmentIntro && (
+                              <p className="mb-3 text-sm text-slate-600">
+                                {program.assessmentIntro}
+                              </p>
+                            )}
+                            <div className="space-y-3">
+                              {program.assessmentAreas.map((area, areaIndex) => (
+                                <div
+                                  key={areaIndex}
+                                  className="rounded-lg bg-slate-50 p-4"
+                                >
+                                  <h5 className="mb-1 font-medium text-slate-900 text-sm">
+                                    {area.title}
+                                  </h5>
+                                  {area.areaDescription && (
+                                    <p className="mb-2 text-xs text-slate-500 italic">
+                                      {area.areaDescription}
+                                    </p>
+                                  )}
+                                  <ul className="space-y-1">
+                                    {area.items.map((item, itemIndex) => (
+                                      <li
+                                        key={itemIndex}
+                                        className="flex items-start gap-2 text-xs text-slate-600"
+                                      >
+                                        <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-blue-400" />
+                                        {item}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Maturity Levels */}
+                        {program.maturityLevels && (
+                          <div>
+                            {program.maturityLevelsIntro ? (
+                              <div className="mb-3">
+                                <h4 className="font-medium text-slate-900 text-sm">
+                                  {program.maturityLevelsIntro.split(' - ')[0]}
+                                </h4>
+                                {program.maturityLevelsIntro.includes(' - ') && (
+                                  <p className="mt-1 text-xs text-slate-600">
+                                    {program.maturityLevelsIntro.split(' - ')[1]}
+                                  </p>
+                                )}
+                              </div>
+                            ) : (
+                              <h4 className="mb-3 font-medium text-slate-900">
+                                AI 혁신 수준 4단계
+                              </h4>
+                            )}
+                            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                              {program.maturityLevels.map((level, lIndex) => (
+                                <div
+                                  key={lIndex}
+                                  className="rounded-lg bg-gradient-to-br from-blue-50 to-white p-3 ring-1 ring-blue-100"
+                                >
+                                  <h5 className="mb-1 font-medium text-slate-900 text-xs">
+                                    {level.level}
+                                  </h5>
+                                  <p className="text-xs text-slate-600">
+                                    {level.description}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+                )}
               </div>
             </div>
           </Container>
