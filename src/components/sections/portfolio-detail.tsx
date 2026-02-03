@@ -59,7 +59,7 @@ export function PortfolioDetail({ slug, backgroundImage }: PortfolioDetailProps)
           <>
             <Image
               src={backgroundImage}
-              alt="Background"
+              alt={`${menuItem.title} 포트폴리오 페이지 배경 이미지`}
               fill
               className="object-cover opacity-60"
               priority

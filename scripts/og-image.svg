@@ -1,0 +1,68 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="50%" stop-color="#122a4d"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-grad)"/>
+
+  <!-- Header: Logo placeholder + Brain House text -->
+  <!-- Logo will be composited at x=460, y=30, size=70x70 -->
+  <text x="545" y="80" text-anchor="start" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="white">Brain House</text>
+
+  <!-- AI Transformation Partner Badge -->
+  <g transform="translate(600, 160)">
+    <rect x="-130" y="-18" width="260" height="36" rx="18" fill="rgba(34, 211, 238, 0.15)" stroke="rgba(34, 211, 238, 0.4)" stroke-width="1"/>
+    <circle cx="-100" cy="0" r="5" fill="#22d3ee"/>
+    <text x="10" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#22d3ee">AI Transformation Partner</text>
+  </g>
+
+  <!-- Main Title Line 1 -->
+  <text x="600" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="white">지식과 경험을 공유하는</text>
+
+  <!-- Main Title Line 2 (Cyan) -->
+  <text x="600" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="url(#cyan-grad)">연결된 소셜 브레인</text>
+
+  <!-- Description -->
+  <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">브레인하우스는 DX를 넘어 AX(AI Transformation) 시대를 선도하는 ICT 전문 파트너입니다.</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">28년의 독보적인 현장 경험과 AI 전문성을 바탕으로, 에이전틱 AI와 생성형 AI를 활용한 기업 혁신 전략을 제시합니다.</text>
+
+  <!-- Tags -->
+  <g transform="translate(600, 540)">
+    <!-- MVP 개발 -->
+    <rect x="-440" y="-18" width="110" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="-385" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">MVP 개발</text>
+
+    <!-- AX 컨설팅 -->
+    <rect x="-310" y="-18" width="120" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="-250" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">AX 컨설팅</text>
+
+    <!-- ICT 전략 -->
+    <rect x="-170" y="-18" width="110" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="-115" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">ICT 전략</text>
+
+    <!-- 기술사업화 -->
+    <rect x="-40" y="-18" width="110" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="15" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">기술사업화</text>
+
+    <!-- 창업·투자 -->
+    <rect x="90" y="-18" width="110" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="145" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">창업·투자</text>
+
+    <!-- AI 알고리즘 -->
+    <rect x="220" y="-18" width="130" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="285" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">AI 알고리즘</text>
+
+    <!-- SW 개발 -->
+    <rect x="370" y="-18" width="100" height="36" rx="18" fill="rgba(59, 130, 246, 0.25)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1"/>
+    <text x="420" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#93c5fd">SW 개발</text>
+  </g>
+</svg>

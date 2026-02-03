@@ -54,7 +54,7 @@ export function ServiceDetail({ slug, backgroundImage }: ServiceDetailProps) {
           <>
             <Image
               src={backgroundImage}
-              alt="Background"
+              alt={`${serviceDetails.title} 서비스 페이지 배경 이미지`}
               fill
               className="object-cover opacity-60"
               priority

@@ -1,11 +1,24 @@
+import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { PageHeader } from '@/components/ui/page-header';
 import { Contact } from '@/components/sections/contact';
 
-export const metadata = {
-  title: 'Contact - Brain House',
-  description: 'Contact Brain House - Get Started with Your Project',
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    'Brain House에 프로젝트 문의하기. AI 컨설팅, MVP 개발, ICT 전략 등 디지털 혁신 파트너와 함께하세요.',
+  openGraph: {
+    title: 'Contact | Brain House',
+    description:
+      '프로젝트 문의 및 상담. Brain House와 함께 디지털 혁신을 시작하세요.',
+    url: 'https://brainhouse.co.kr/contact',
+  },
+  twitter: {
+    title: 'Contact | Brain House',
+    description:
+      '프로젝트 문의 및 상담. Brain House와 함께 디지털 혁신을 시작하세요.',
+  },
 };
 
 export default function ContactPage() {

@@ -15,6 +15,15 @@ interface PageHeaderProps {
   backgroundImage?: string;
 }
 
+const pageAltTexts: Record<PageKey, string> = {
+  about: 'Brain House 회사 소개 페이지 배경 이미지',
+  business: 'Brain House 사업 영역 페이지 배경 이미지',
+  services: 'Brain House 서비스 페이지 배경 이미지',
+  portfolio: 'Brain House 포트폴리오 페이지 배경 이미지',
+  contact: 'Brain House 문의하기 페이지 배경 이미지',
+  privacy: 'Brain House 개인정보처리방침 페이지 배경 이미지',
+};
+
 export function PageHeader({ page, backgroundImage }: PageHeaderProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 px-4 py-16 pt-24 sm:px-6 sm:py-20 sm:pt-32 min-h-[260px] flex flex-col justify-center">
@@ -22,7 +31,7 @@ export function PageHeader({ page, backgroundImage }: PageHeaderProps) {
         <>
           <Image
             src={backgroundImage}
-            alt="Background"
+            alt={pageAltTexts[page]}
             fill
             className="object-cover opacity-60"
             priority

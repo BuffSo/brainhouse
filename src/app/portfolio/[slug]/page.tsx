@@ -1,9 +1,23 @@
+import type { Metadata } from 'next';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { PortfolioDetail } from '@/components/sections/portfolio-detail';
 import { notFound } from 'next/navigation';
 
 const validSlugs = ['ict-strategy', 'bm-software'];
+
+const portfolioData: Record<string, { title: string; description: string }> = {
+  'ict-strategy': {
+    title: 'ICT 전략·정책 컨설팅 포트폴리오',
+    description:
+      '정부 R&D 기획, 기술사업화 전략, ICT 정책연구 분야 프로젝트 실적. Brain House의 전략 컨설팅 역량을 확인하세요.',
+  },
+  'bm-software': {
+    title: 'BM 기획 & SW 개발 포트폴리오',
+    description:
+      '플랫폼 서비스 기획, BM 수립, MVP 개발 프로젝트 실적. Brain House의 소프트웨어 개발 역량을 확인하세요.',
+  },
+};
 
 export function generateStaticParams() {
   return validSlugs.map((slug) => ({
@@ -15,24 +29,29 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const resolvedParams = await params;
-  const titles: Record<string, string> = {
-    'ict-strategy': 'ICT 전략·정책 컨설팅 포트폴리오 - Brain House',
-    'bm-software': 'BM 기획 & SW 개발 포트폴리오 - Brain House',
-  };
+  const data = portfolioData[resolvedParams.slug];
 
-  const descriptions: Record<string, string> = {
-    'ict-strategy':
-      '정부 R&D 기획, 기술사업화 전략, ICT 정책연구 분야 프로젝트 실적',
-    'bm-software':
-      '플랫폼 서비스 기획, BM 수립, MVP 개발 프로젝트 실적',
-  };
+  if (!data) {
+    return {
+      title: 'Portfolio',
+      description: 'Brain House Portfolio',
+    };
+  }
 
   return {
-    title: titles[resolvedParams.slug] || 'Portfolio - Brain House',
-    description:
-      descriptions[resolvedParams.slug] || 'Brain House Portfolio',
+    title: data.title,
+    description: data.description,
+    openGraph: {
+      title: `${data.title} | Brain House`,
+      description: data.description,
+      url: `https://brainhouse.co.kr/portfolio/${resolvedParams.slug}`,
+    },
+    twitter: {
+      title: `${data.title} | Brain House`,
+      description: data.description,
+    },
   };
 }
 
