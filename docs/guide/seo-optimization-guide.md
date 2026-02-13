@@ -64,7 +64,7 @@ scripts/
 ```tsx
 import type { Metadata } from 'next';
 
-const BASE_URL = 'https://brainhouse.co.kr';
+const BASE_URL = 'https://brainhouse.kr';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About | Brain House',
     description: 'AI와 ICT 기술로 기업의 디지털 전환을 이끄는 전문 파트너',
-    url: 'https://brainhouse.co.kr/about',
+    url: 'https://brainhouse.kr/about',
   },
   twitter: {
     title: 'About | Brain House',
@@ -135,7 +135,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${data.title} | Brain House`,
       description: data.description,
-      url: `https://brainhouse.co.kr/services/${resolvedParams.slug}`,
+      url: `https://brainhouse.kr/services/${resolvedParams.slug}`,
     },
     twitter: {
       title: `${data.title} | Brain House`,
@@ -300,7 +300,7 @@ const organizationJsonLd = {
 // src/app/sitemap.ts
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://brainhouse.co.kr';
+const BASE_URL = 'https://brainhouse.kr';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = ['', '/about', '/business', '/services', '/portfolio', '/contact', '/privacy'];
@@ -349,7 +349,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/private/'],
     },
-    sitemap: 'https://brainhouse.co.kr/sitemap.xml',
+    sitemap: 'https://brainhouse.kr/sitemap.xml',
   };
 }
 ```

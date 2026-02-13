@@ -9,12 +9,12 @@ Brainhouse 웹사이트에 적용된 SEO 최적화 내용을 쉽게 설명합니
 ### sitemap.xml
 - 사이트의 모든 페이지 URL 목록을 자동 생성
 - 검색엔진이 사이트 구조를 쉽게 파악할 수 있음
-- 확인: `https://brainhouse.co.kr/sitemap.xml`
+- 확인: `https://brainhouse.kr/sitemap.xml`
 
 ### robots.txt
 - 검색엔진 크롤러에게 수집 가능한 페이지 안내
 - API, 관리자 페이지 등은 크롤링 제외
-- 확인: `https://brainhouse.co.kr/robots.txt`
+- 확인: `https://brainhouse.kr/robots.txt`
 
 ---
 
