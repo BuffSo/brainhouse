@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Contact | Brain House',
     description:
       '프로젝트 문의 및 상담. Brain House와 함께 디지털 혁신을 시작하세요.',
-    url: 'https://brainhouse.co.kr/contact',
+    url: 'https://brainhouse.kr/contact',
   },
   twitter: {
     title: 'Contact | Brain House',

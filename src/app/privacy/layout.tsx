@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy | Brain House',
     description: 'Brain House 개인정보처리방침 안내',
-    url: 'https://brainhouse.co.kr/privacy',
+    url: 'https://brainhouse.kr/privacy',
   },
   twitter: {
     title: 'Privacy Policy | Brain House',

@@ -85,7 +85,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${data.title} | Brain House`,
       description: data.description,
-      url: `https://brainhouse.co.kr/services/${resolvedParams.slug}`,
+      url: `https://brainhouse.kr/services/${resolvedParams.slug}`,
     },
     twitter: {
       title: `${data.title} | Brain House`,

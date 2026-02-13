@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'About | Brain House',
     description:
       'AI와 ICT 기술로 기업의 디지털 전환을 이끄는 전문 파트너, Brain House를 소개합니다.',
-    url: 'https://brainhouse.co.kr/about',
+    url: 'https://brainhouse.kr/about',
   },
   twitter: {
     title: 'About | Brain House',

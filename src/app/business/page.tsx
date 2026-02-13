@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Business Areas | Brain House',
     description:
       '기술, 경영, 투자, 플랫폼 - Brain House의 4대 핵심 사업 영역을 확인하세요.',
-    url: 'https://brainhouse.co.kr/business',
+    url: 'https://brainhouse.kr/business',
   },
   twitter: {
     title: 'Business Areas | Brain House',

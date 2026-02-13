@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Portfolio | Brain House',
     description:
       '정부 R&D, ICT 정책연구, MVP 개발 등 Brain House의 프로젝트 실적을 확인하세요.',
-    url: 'https://brainhouse.co.kr/portfolio',
+    url: 'https://brainhouse.kr/portfolio',
   },
   twitter: {
     title: 'Portfolio | Brain House',

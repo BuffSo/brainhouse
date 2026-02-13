@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/private/'],
     },
-    sitemap: 'https://brainhouse.co.kr/sitemap.xml',
+    sitemap: 'https://brainhouse.kr/sitemap.xml',
   };
 }

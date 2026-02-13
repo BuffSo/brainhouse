@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { LanguageProvider } from '@/contexts/language-context';
 
-const BASE_URL = 'https://brainhouse.co.kr';
+const BASE_URL = 'https://brainhouse.kr';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

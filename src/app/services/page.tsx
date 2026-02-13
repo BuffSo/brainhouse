@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Services | Brain House',
     description:
       'MVP 개발부터 AI 컨설팅까지, Brain House의 ICT 전문 서비스를 확인하세요.',
-    url: 'https://brainhouse.co.kr/services',
+    url: 'https://brainhouse.kr/services',
   },
   twitter: {
     title: 'Services | Brain House',

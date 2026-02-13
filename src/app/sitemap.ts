@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://brainhouse.co.kr';
+const BASE_URL = 'https://brainhouse.kr';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
