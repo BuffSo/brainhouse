@@ -8,11 +8,11 @@ const BASE_URL = 'https://brainhouse.kr';
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Brain House | AI·ICT 전문 컨설팅',
+    default: 'Brain House(브레인하우스) | AI·ICT 전문 컨설팅',
     template: '%s | Brain House',
   },
   description:
-    'Brain House는 AI Transformation, ICT 전략 컨설팅, MVP 개발, 기술사업화를 전문으로 하는 디지털 혁신 파트너입니다.',
+    'Brain House(브레인하우스)는 AI Transformation, ICT 전략 컨설팅, MVP 개발, 기술사업화를 전문으로 하는 디지털 혁신 파트너입니다.',
   keywords: [
     'AI 컨설팅',
     'ICT 전략',
@@ -43,23 +43,23 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     url: BASE_URL,
     siteName: 'Brain House',
-    title: 'Brain House | AI·ICT 전문 컨설팅',
+    title: 'Brain House(브레인하우스) | AI·ICT 전문 컨설팅',
     description:
-      'AI Transformation, ICT 전략 컨설팅, MVP 개발, 기술사업화를 전문으로 하는 디지털 혁신 파트너',
+      'Brain House(브레인하우스) - AI Transformation, ICT 전략 컨설팅, MVP 개발, 기술사업화를 전문으로 하는 디지털 혁신 파트너',
     images: [
       {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Brain House - AI·ICT 전문 컨설팅',
+        alt: 'Brain House(브레인하우스) - AI·ICT 전문 컨설팅',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brain House | AI·ICT 전문 컨설팅',
+    title: 'Brain House(브레인하우스) | AI·ICT 전문 컨설팅',
     description:
-      'AI Transformation, ICT 전략 컨설팅, MVP 개발, 기술사업화를 전문으로 하는 디지털 혁신 파트너',
+      'Brain House(브레인하우스) - AI Transformation, ICT 전략 컨설팅, MVP 개발, 기술사업화를 전문으로 하는 디지털 혁신 파트너',
     images: ['/opengraph-image.png'],
   },
   robots: {
