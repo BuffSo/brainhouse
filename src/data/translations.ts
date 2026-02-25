@@ -2339,7 +2339,7 @@ export const translations = {
                 '핵심 기능 중심의 빠른 개발',
                 '반응형 웹 애플리케이션',
                 '클라우드 인프라 및 CI/CD 구축 (AWS, Vercel)',
-                '인계 후 기본 3개월 하자보수',
+                '인계 후 6개월 하자보수',
               ],
             },
             {
@@ -4917,7 +4917,7 @@ export const translations = {
                 'Fast development focused on core features',
                 'Responsive web applications',
                 'Cloud infrastructure & CI/CD setup (AWS, Vercel)',
-                '3 months warranty support after handover',
+                '6 months warranty support after handover',
               ],
             },
             {
@@ -7459,7 +7459,7 @@ export const translations = {
                 'コア機能中心の迅速な開発',
                 'レスポンシブWebアプリケーション',
                 'クラウドインフラ及びCI/CD構築（AWS、Vercel）',
-                '引き渡し後基本3ヶ月瑕疵保守',
+                '引き渡し後6ヶ月瑕疵保守',
               ],
             },
             {
