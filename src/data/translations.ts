@@ -2338,8 +2338,8 @@ export const translations = {
               features: [
                 '핵심 기능 중심의 빠른 개발',
                 '반응형 웹 애플리케이션',
-                '기본 인프라 구축 (AWS 기반)',
-                '런칭 후 1개월 무상 유지보수',
+                '클라우드 인프라 및 CI/CD 구축 (AWS, Vercel)',
+                '인계 후 기본 3개월 하자보수',
               ],
             },
             {
@@ -2349,7 +2349,7 @@ export const translations = {
               description:
                 'B2B/B2C 플랫폼, 사내 시스템, 고객 포털 등 기업의 비즈니스 요구에 맞춘 확장 가능한 웹서비스를 개발합니다.',
               features: [
-                '마이크로서비스 아키텍처 설계',
+                '확장 가능한 서비스 아키텍처 설계',
                 '레거시 시스템 현대화',
                 '기업 시스템 연동 (ERP, CRM 등)',
                 'SLA 기반 유지보수 계약',
@@ -4916,8 +4916,8 @@ export const translations = {
               features: [
                 'Fast development focused on core features',
                 'Responsive web applications',
-                'Basic infrastructure setup (AWS-based)',
-                '1 month free maintenance after launch',
+                'Cloud infrastructure & CI/CD setup (AWS, Vercel)',
+                '3 months warranty support after handover',
               ],
             },
             {
@@ -4927,7 +4927,7 @@ export const translations = {
               description:
                 'We develop scalable web services tailored to business requirements including B2B/B2C platforms, internal systems, and customer portals.',
               features: [
-                'Microservices architecture design',
+                'Scalable service architecture design',
                 'Legacy system modernization',
                 'Enterprise system integration (ERP, CRM, etc.)',
                 'SLA-based maintenance contracts',
@@ -7458,8 +7458,8 @@ export const translations = {
               features: [
                 'コア機能中心の迅速な開発',
                 'レスポンシブWebアプリケーション',
-                '基本インフラ構築（AWSベース）',
-                'ローンチ後1ヶ月無償保守',
+                'クラウドインフラ及びCI/CD構築（AWS、Vercel）',
+                '引き渡し後基本3ヶ月瑕疵保守',
               ],
             },
             {
@@ -7469,7 +7469,7 @@ export const translations = {
               description:
                 'B2B/B2Cプラットフォーム、社内システム、顧客ポータルなど、企業のビジネス要件に合わせた拡張可能なWebサービスを開発します。',
               features: [
-                'マイクロサービスアーキテクチャ設計',
+                'スケーラブルなサービスアーキテクチャ設計',
                 'レガシーシステム現代化',
                 '企業システム連携（ERP、CRMなど）',
                 'SLAベースの保守契約',
